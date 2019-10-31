@@ -52,11 +52,28 @@
                     <navigationItem key="navigationItem" id="zKC-Hn-8S1"/>
                     <connections>
                         <outlet property="collectionView" destination="8wY-lL-dn0" id="xOM-At-vwp"/>
+                        <segue destination="dEX-qv-diC" kind="show" id="1lD-Av-Y0m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="136.60714285714286"/>
+        </scene>
+        <!--Specials Detail View Controller-->
+        <scene sceneID="KZT-YP-NmX">
+            <objects>
+                <viewController id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cv9-wQ-IsW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7zA-t5-CH7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivy-eF-CrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2719" y="137"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ND7-Ep-Gde">

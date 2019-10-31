@@ -10,7 +10,7 @@ target 'ChowTown' do
   target 'ChowTownTests' do
     inherit! :search_paths
     # Pods for testing
-pod 'Cards'
+pod 'Hero'
   end
 
   target 'ChowTownUITests' do

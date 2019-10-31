@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Cards/Cards.framework
-${BUILT_PRODUCTS_DIR}/Player/Player.framework
+${BUILT_PRODUCTS_DIR}/Hero/Hero.framework

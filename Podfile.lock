@@ -1,20 +1,16 @@
 PODS:
-  - Cards (1.4.0):
-    - Player (= 0.13.0)
-  - Player (0.13.0)
+  - Hero (1.4.0)
 
 DEPENDENCIES:
-  - Cards
+  - Hero
 
 SPEC REPOS:
   trunk:
-    - Cards
-    - Player
+    - Hero
 
 SPEC CHECKSUMS:
-  Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
-  Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
 
-PODFILE CHECKSUM: b8c6e6336da4eb0154b7377bb72bd028c733c355
+PODFILE CHECKSUM: ef881ce594e74e49335b604ae57ba77371c7914e
 
 COCOAPODS: 1.8.4

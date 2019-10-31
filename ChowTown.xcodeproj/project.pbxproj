@@ -52,6 +52,7 @@
 		11C5089D23687EE4003400D0 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087C23687EE4003400D0 /* String+extension.swift */; };
 		11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087D23687EE4003400D0 /* CustomTextField.swift */; };
 		11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087E23687EE4003400D0 /* UITextFIield+extension.swift */; };
+		11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */; };
 		223B22B7CC103DC515F8D878 /* Pods_ChowTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */; };
 		96CAC351BA88BF4EB0518F09 /* Pods_ChowTown_ChowTownUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D9AD8C8A46D42789B7E5D /* Pods_ChowTown_ChowTownUITests.framework */; };
 		E3D3D8DF263929BD0397226C /* Pods_ChowTownTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37E1DEA761CD54522153BE /* Pods_ChowTownTests.framework */; };
@@ -127,6 +128,7 @@
 		11C5087C23687EE4003400D0 /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		11C5087D23687EE4003400D0 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		11C5087E23687EE4003400D0 /* UITextFIield+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFIield+extension.swift"; sourceTree = "<group>"; };
+		11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsDetailViewController.swift; sourceTree = "<group>"; };
 		156892B447075C7AEF490C6E /* Pods-ChowTownTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTownTests.release.xcconfig"; path = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests.release.xcconfig"; sourceTree = "<group>"; };
 		64356EC0997655C12D59A928 /* Pods-ChowTownTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTownTests.debug.xcconfig"; path = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E37E1DEA761CD54522153BE /* Pods_ChowTownTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTownTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,7 @@
 			children = (
 				11C5081B23685FEA003400D0 /* ViewController.swift */,
 				11C5084C23686733003400D0 /* SpecialsViewController.swift */,
+				11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */,
 				11C5084B236866B1003400D0 /* Cells */,
 			);
 			path = ViewControllers;
@@ -554,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */,
 				11C5089D23687EE4003400D0 /* String+extension.swift in Sources */,
 				11C5089723687EE4003400D0 /* UILabel+extension.swift in Sources */,
 				11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */,
