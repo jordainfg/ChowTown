@@ -1,0 +1,6 @@
+framework module Pods_ChowTown {
+  umbrella header "Pods-ChowTown-umbrella.h"
+
+  export *
+  module * { export * }
+}

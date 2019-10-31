@@ -1,0 +1,6 @@
+framework module Pods_ChowTown_ChowTownUITests {
+  umbrella header "Pods-ChowTown-ChowTownUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
