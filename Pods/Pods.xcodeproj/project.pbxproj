@@ -8,35 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		041CA92C0D46D81F87C1B18020FE9D92 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725CE1EDAC7AD6182DA230D8F8099FD /* CALayer+Hero.swift */; };
-		053B06D670CEB4DDE6112B070B0E50FA /* Pods-ChowTown-ChowTownUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712824A11B3DCC5D240FF36A45B1B9E /* Pods-ChowTown-ChowTownUITests-dummy.m */; };
 		06B0C6AE124E92EC5809C2A7030F2060 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B39265447F7B6D1F2115FBE809574 /* MatchPreprocessor.swift */; };
 		06C88826E89A352EACFE13784F08B7F6 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D7375C67017D6632EFA6AD5B35C8BF /* HeroTransition.swift */; };
 		0D6BFBEBAF1D18452007F08B6DB37010 /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF330FD3B9F7238D6D602C4D34418F68 /* HeroViewControllerDelegate.swift */; };
-		0F6EC31973CDF297EB102475FC531A89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		0FE5A90BC0B6621E2EA004264E3DB35E /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F8E6B7DCC045DA8B95BAD4AEF0075 /* BasePreprocessor.swift */; };
 		11F8AE060A4566C9D9135514A5C68914 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98786B6AC0BF84DC5459D667B7D48DCE /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
 		1D4A0EA4421D56B62087B001686F3792 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD8A01ECD051EACA713F5DABCED985D /* HeroTransition+UITabBarControllerDelegate.swift */; };
-		1E87C6D538DC85DDC2C1A46E6FF9E23D /* Pods-ChowTownTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA0530DCA0D910817DFAAEA974DCD3D /* Pods-ChowTownTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D2BB7855E00D79B875CBC6F3DB6D9F /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C1EF8F6AAAB1D5DB45A4BC84215F7 /* Lexer.swift */; };
 		2CBBF6F1C1E540A30DC5DB1A53D3E8D9 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C440BAC382207BEFABC7033E55A8E3C /* Array+HeroModifier.swift */; };
 		2E8D7A67F82F92D81D014F2248C09597 /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47521F7AB0B71474B1D89BE78A3D41C6 /* HeroProgressRunner.swift */; };
 		36461766F1FBCA4074DBF606F39F62F4 /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED86BAF9E560C2BF4E94E0F963E17FAC /* UIView+Hero.swift */; };
-		41AA56CE828B37FD357668926C628C97 /* Pods-ChowTown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F10273DFF9F2CCA11A8FEB82C822C4B /* Pods-ChowTown-dummy.m */; };
 		4763B2EC203665F41F33D93CF55EC1F1 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E8046185D083673511612830699BD9 /* HeroTransition+Animate.swift */; };
 		4C8CA3AC7D7E3484EA8B78C20FA345CA /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF707A7501EC4A05DB7E5078E3811265 /* HeroModifier+Advanced.swift */; };
-		4D09278C8C308F17CC304CBF4FC02D30 /* Pods-ChowTown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3951046FDAAE12D3F20B3DE909A899EE /* Pods-ChowTown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52EBA869576A1B7FF128DB43C230EEE8 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD84C0F43B8EC77122C84657ADCED22 /* CascadePreprocessor.swift */; };
 		539247331D4D80E4E552FA040A59C197 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFDC3216BFD9448B9BB7F5660B53E18 /* HeroDebugView.swift */; };
 		55704DD60E8BEE2188893CABB1AADE17 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B4E46CD29DAE042C9616E8F41267C /* HeroContext.swift */; };
 		5DDC3018F680E30345A04B35009712E7 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D8FBEDC0C56DC4DBA778DB61348E42 /* CG+Hero.swift */; };
 		5DEDE15AAB513151B185392D0209F4BC /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B56E8608638FCC7E44975C8ACA232 /* HeroDebugPlugin.swift */; };
 		608632DA7CE64A8D37ACF3B8B11BD48D /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDC12B4087A05C881C520EFDB59E90 /* HeroModifier.swift */; };
-		659EFFD4DC35D8015BF5D558AC25F8EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		65E7526915C6C92F9DC44F140A3F0E60 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F5CF10ECF485B3BAB481950DD262F7 /* HeroTargetState.swift */; };
 		679E1C2EA93185E89E46AC2D7DF8BBB3 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA5B3A7E0C5CF2DF51FB51F6A0F478 /* CAMediaTimingFunction+Hero.swift */; };
-		69BF0FFA32F54A8E1A0F6355A7489062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		72177310AEDF6C437F20DF4615CB21DB /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2FA7A581B038BCE195C4CF7CB79822 /* ConditionalPreprocessor.swift */; };
-		7A33E8D33E05D50C62EDA740A73AC85F /* Pods-ChowTown-ChowTownUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C43F4F9C839BD953CC83552B0BAFA853 /* Pods-ChowTown-ChowTownUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85D6216A7732A66EB560593B3A226820 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF12203EA9D3027E13236DCE5C96CD3 /* HeroPlugin.swift */; };
 		86311C5BAE9AD426446199988F3567AF /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCD45109ED84BD82B4F2B175C6D5F9 /* HeroCompatible.swift */; };
 		8AB1E598B721098E1EB51F45D7D86629 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690DC04ACA310CB98F75F3A9C014520C /* HeroCoreAnimationViewContext.swift */; };
@@ -57,27 +49,22 @@
 		C4DFF2EA6A6AD7648BA02AB0EDB0915A /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C437F010EE491CC84190F266A6F404 /* HeroStringConvertible.swift */; };
 		CC776C8B70A6644A8A23B66CE308E096 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901BAB16470AC522F6F358818C0D037B /* HeroTransition+Interactive.swift */; };
 		CCAF138A54D9CCBE7EE681AB3A2FEE17 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787A9ABE2C22D00942B46D03D8F2DE9 /* Hero-dummy.m */; };
+		CEE2057FDB460157DE201EED69152283 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		D3C970377C27DBB458631F4B28F6904E /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFC617BD32357FE6D00A4C6CF772739 /* DefaultAnimationPreprocessor.swift */; };
 		D91F76CB9193007B6FC71FF6F511B0F8 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF26B5A30B46245E89699273F82E /* HeroTransition+UINavigationControllerDelegate.swift */; };
 		D9739FB131C5C02BA12A4E88F628EE12 /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2969BF15EF20F03AD04F6400B23441B /* HeroModifier+HeroStringConvertible.swift */; };
 		DE80B9AF667DBF5CADB551C10380A9A8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698641CA88451C16EF7A877E98B51E8C /* Parser.swift */; };
 		DE8E776E8C471D1A399FC69AFDBA36DC /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E39F16C5958BE1539E6F8C4BBBCF09 /* HeroViewPropertyViewContext.swift */; };
-		E3EF094796A268FC3834DEF9FD06AC5E /* Pods-ChowTownTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA488F211BDED21A30EA2E9E39E9A1 /* Pods-ChowTownTests-dummy.m */; };
 		E4F1B141B0DD7084DA4002CA4EF6A589 /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64AFC996D0AC1758E09FBE40B593C5D /* HeroAnimatorViewContext.swift */; };
 		F37A71B06EEFF6D96FA6CEC616734061 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		F3B3DFB249D00AB6D753460ED4BF62DA /* Pods-ChowTown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130E0E09F61A425858AAA08EF31049F /* Pods-ChowTown-dummy.m */; };
 		FD4BBEFE1DE51AEBB6E45C878A16A778 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77679870AF91E9FFF9E80D73B166CAC0 /* HeroTypes.swift */; };
 		FE2F2C0C6E8AE25776E5668D725AC6DF /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00A6B71B2E21BFD7E2052699B01CDC /* HeroTransition+Complete.swift */; };
+		FEADEBA399055BE3108C823100098BCE /* Pods-ChowTown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D682E088152A8B1F7C8ECAE19290C41D /* Pods-ChowTown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		54B3BE972EEBAC688143838F86314641 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDC13F056943F7BC424B236061F5BFC4;
-			remoteInfo = "Pods-ChowTown";
-		};
-		9E741C24521200E0664C7013A2A78D32 /* PBXContainerItemProxy */ = {
+		9C3F42579210C6ECDCCF07635DE44B71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -88,34 +75,27 @@
 
 /* Begin PBXFileReference section */
 		0A00A6B71B2E21BFD7E2052699B01CDC /* HeroTransition+Complete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Complete.swift"; path = "Sources/Transition/HeroTransition+Complete.swift"; sourceTree = "<group>"; };
-		13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hero.framework; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1889FF0AF58E47396C3EB750FD76723B /* Pods-ChowTownTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChowTownTests-frameworks.sh"; sourceTree = "<group>"; };
-		199E25300B5D56928174785497020599 /* Pods_ChowTownTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChowTownTests.framework; path = "Pods-ChowTownTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AB7E06453815DA77FC7086884A80EBA /* Pods-ChowTown-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-acknowledgements.plist"; sourceTree = "<group>"; };
+		13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD84C0F43B8EC77122C84657ADCED22 /* CascadePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CascadePreprocessor.swift; path = Sources/Preprocessors/CascadePreprocessor.swift; sourceTree = "<group>"; };
-		1CFA488F211BDED21A30EA2E9E39E9A1 /* Pods-ChowTownTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChowTownTests-dummy.m"; sourceTree = "<group>"; };
 		1F4C1EF8F6AAAB1D5DB45A4BC84215F7 /* Lexer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lexer.swift; path = Sources/Parser/Lexer.swift; sourceTree = "<group>"; };
-		20828891F9DA20C94EB215E94F351CDF /* Pods-ChowTown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChowTown.modulemap"; sourceTree = "<group>"; };
+		20D1366E0A196FAD462AF169E686F445 /* Pods-ChowTown-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChowTown-frameworks.sh"; sourceTree = "<group>"; };
 		22293F56D51C3E99F9B4C787D98C2B3F /* UIKit+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Hero.swift"; path = "Sources/Extensions/UIKit+Hero.swift"; sourceTree = "<group>"; };
 		244F8E6B7DCC045DA8B95BAD4AEF0075 /* BasePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasePreprocessor.swift; path = Sources/Preprocessors/BasePreprocessor.swift; sourceTree = "<group>"; };
 		2928FBF95CACEDCE965B28098AD4B24E /* HeroTransitionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTransitionState.swift; path = Sources/Transition/HeroTransitionState.swift; sourceTree = "<group>"; };
+		2EC802753B2A4F7000FEF397A5873011 /* Pods-ChowTown-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChowTown-acknowledgements.markdown"; sourceTree = "<group>"; };
 		30FDC12B4087A05C881C520EFDB59E90 /* HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroModifier.swift; path = Sources/HeroModifier.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		378B39265447F7B6D1F2115FBE809574 /* MatchPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchPreprocessor.swift; path = Sources/Preprocessors/MatchPreprocessor.swift; sourceTree = "<group>"; };
-		3951046FDAAE12D3F20B3DE909A899EE /* Pods-ChowTown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChowTown-umbrella.h"; sourceTree = "<group>"; };
 		40D7375C67017D6632EFA6AD5B35C8BF /* HeroTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTransition.swift; path = Sources/Transition/HeroTransition.swift; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43A2C7BBC87CC792DEBC42EE9726C08C /* Hero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Hero.modulemap; sourceTree = "<group>"; };
-		46D900658CBD1F8A1918B90EA76A1F56 /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		4725CE1EDAC7AD6182DA230D8F8099FD /* CALayer+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Hero.swift"; path = "Sources/Extensions/CALayer+Hero.swift"; sourceTree = "<group>"; };
 		47521F7AB0B71474B1D89BE78A3D41C6 /* HeroProgressRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroProgressRunner.swift; path = Sources/Transition/HeroProgressRunner.swift; sourceTree = "<group>"; };
+		4A262418FA9A56976D9F929E8BA149A1 /* Pods-ChowTown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-Info.plist"; sourceTree = "<group>"; };
 		4C440BAC382207BEFABC7033E55A8E3C /* Array+HeroModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+HeroModifier.swift"; path = "Sources/Extensions/Array+HeroModifier.swift"; sourceTree = "<group>"; };
-		4DBB1D61061535966886508F9C91BD40 /* Pods-ChowTown-ChowTownUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown-ChowTownUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4EA0530DCA0D910817DFAAEA974DCD3D /* Pods-ChowTownTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChowTownTests-umbrella.h"; sourceTree = "<group>"; };
 		52E8046185D083673511612830699BD9 /* HeroTransition+Animate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Animate.swift"; path = "Sources/Transition/HeroTransition+Animate.swift"; sourceTree = "<group>"; };
 		534B56E8608638FCC7E44975C8ACA232 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugPlugin.swift; path = "Sources/Debug Plugin/HeroDebugPlugin.swift"; sourceTree = "<group>"; };
-		5367D60420F05DC37E8A05D7EBAB9E08 /* Pods-ChowTown-ChowTownUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChowTown-ChowTownUITests.modulemap"; sourceTree = "<group>"; };
-		5712824A11B3DCC5D240FF36A45B1B9E /* Pods-ChowTown-ChowTownUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChowTown-ChowTownUITests-dummy.m"; sourceTree = "<group>"; };
+		547C544D15CDE44087286C97466D2F95 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		5787A9ABE2C22D00942B46D03D8F2DE9 /* Hero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hero-dummy.m"; sourceTree = "<group>"; };
 		58D37760DC9E63B42AB2E5BE62E274F6 /* HeroTransition+CustomTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+CustomTransition.swift"; path = "Sources/Transition/HeroTransition+CustomTransition.swift"; sourceTree = "<group>"; };
 		5B3591CCCFDFFB79E8D862053966DA47 /* Nodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Nodes.swift; path = Sources/Parser/Nodes.swift; sourceTree = "<group>"; };
@@ -124,40 +104,31 @@
 		62FCD45109ED84BD82B4F2B175C6D5F9 /* HeroCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroCompatible.swift; path = Sources/HeroCompatible.swift; sourceTree = "<group>"; };
 		690DC04ACA310CB98F75F3A9C014520C /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroCoreAnimationViewContext.swift; path = Sources/Animator/HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
 		698641CA88451C16EF7A877E98B51E8C /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser/Parser.swift; sourceTree = "<group>"; };
-		698C5F1097DE1C9C7A9DB9976D81E168 /* Pods-ChowTown-ChowTownUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-ChowTownUITests-Info.plist"; sourceTree = "<group>"; };
-		71D4850BD5D38FE338D294701C921A3A /* Pods-ChowTownTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTownTests-Info.plist"; sourceTree = "<group>"; };
 		72E39F16C5958BE1539E6F8C4BBBCF09 /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewPropertyViewContext.swift; path = Sources/Animator/HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
-		734B30F2B7074768B38954EE58EED21A /* Pods-ChowTown-ChowTownUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown-ChowTownUITests.release.xcconfig"; sourceTree = "<group>"; };
-		752002FDE9CDD1FBB6635FA44D33462B /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		77679870AF91E9FFF9E80D73B166CAC0 /* HeroTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTypes.swift; path = Sources/HeroTypes.swift; sourceTree = "<group>"; };
-		7C317A66DC35B57361CEB1156BE8FBAB /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChowTown.framework; path = "Pods-ChowTown.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F10273DFF9F2CCA11A8FEB82C822C4B /* Pods-ChowTown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChowTown-dummy.m"; sourceTree = "<group>"; };
+		7C317A66DC35B57361CEB1156BE8FBAB /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1FECEB56DE4C10ECFF6EDE69EBFE48 /* SourcePreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourcePreprocessor.swift; path = Sources/Preprocessors/SourcePreprocessor.swift; sourceTree = "<group>"; };
-		80764C1C482B4B201A9C343D21419C88 /* Pods-ChowTownTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTownTests.release.xcconfig"; sourceTree = "<group>"; };
+		8130E0E09F61A425858AAA08EF31049F /* Pods-ChowTown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChowTown-dummy.m"; sourceTree = "<group>"; };
+		826D398FFF895A341D027292D8576C3A /* Pods-ChowTown-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-acknowledgements.plist"; sourceTree = "<group>"; };
 		8423FD14AFE443037990B573FFC2BA68 /* DispatchQueue+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Hero.swift"; path = "Sources/Extensions/DispatchQueue+Hero.swift"; sourceTree = "<group>"; };
-		87360F4A8D5E60271BD206541042002C /* Pods-ChowTownTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTownTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D8FBEDC0C56DC4DBA778DB61348E42 /* CG+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CG+Hero.swift"; path = "Sources/Extensions/CG+Hero.swift"; sourceTree = "<group>"; };
 		8CD2C80D4ED2F0211F24CFD8661A86D9 /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreSubviewModifiersPreprocessor.swift; path = Sources/Preprocessors/IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
+		8F82B3F69A503F7C197096DD2D323E96 /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		901BAB16470AC522F6F358818C0D037B /* HeroTransition+Interactive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+Interactive.swift"; path = "Sources/Transition/HeroTransition+Interactive.swift"; sourceTree = "<group>"; };
 		934AE99A86E38338BF43022820CADEAF /* UIViewController+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Hero.swift"; path = "Sources/Extensions/UIViewController+Hero.swift"; sourceTree = "<group>"; };
 		9657805FB843E228A2195C2011C9BC91 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
 		98786B6AC0BF84DC5459D667B7D48DCE /* HeroTransition+UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UIViewControllerTransitioningDelegate.swift"; path = "Sources/Transition/HeroTransition+UIViewControllerTransitioningDelegate.swift"; sourceTree = "<group>"; };
-		9A34FB15AF31FDAD99E8007584C87147 /* Pods-ChowTownTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTownTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFDC3216BFD9448B9BB7F5660B53E18 /* HeroDebugView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDebugView.swift; path = "Sources/Debug Plugin/HeroDebugView.swift"; sourceTree = "<group>"; };
-		A3FC15C3B8158504ECCCDD351AD61528 /* Pods-ChowTown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-Info.plist"; sourceTree = "<group>"; };
-		AC5D4617F2FB993941CA30535E956316 /* Pods-ChowTown-ChowTownUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChowTown-ChowTownUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B169A5638869E083FF73B80F0ACA5B12 /* Pods_ChowTown_ChowTownUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChowTown_ChowTownUITests.framework; path = "Pods-ChowTown-ChowTownUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D429BA0AD84C7F10C5B65FD0041DB1 /* Pods-ChowTown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChowTown.modulemap"; sourceTree = "<group>"; };
 		B4D59B93771667941100AF7C0F6C8697 /* Hero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Hero-Info.plist"; sourceTree = "<group>"; };
-		BD118AFB25FCE4AF13178E3BCF466F86 /* Pods-ChowTownTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChowTownTests.modulemap"; sourceTree = "<group>"; };
 		BDF12203EA9D3027E13236DCE5C96CD3 /* HeroPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroPlugin.swift; path = Sources/HeroPlugin.swift; sourceTree = "<group>"; };
-		C43F4F9C839BD953CC83552B0BAFA853 /* Pods-ChowTown-ChowTownUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChowTown-ChowTownUITests-umbrella.h"; sourceTree = "<group>"; };
 		C96BCBC658A9EE4AB5EF7E94CF8B6675 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = Sources/SwiftSupport.swift; sourceTree = "<group>"; };
 		CAFC617BD32357FE6D00A4C6CF772739 /* DefaultAnimationPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAnimationPreprocessor.swift; path = Sources/Preprocessors/DefaultAnimationPreprocessor.swift; sourceTree = "<group>"; };
 		CF2FA7A581B038BCE195C4CF7CB79822 /* ConditionalPreprocessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConditionalPreprocessor.swift; path = Sources/Preprocessors/ConditionalPreprocessor.swift; sourceTree = "<group>"; };
 		D2969BF15EF20F03AD04F6400B23441B /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+HeroStringConvertible.swift"; path = "Sources/HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
 		D64AFC996D0AC1758E09FBE40B593C5D /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroAnimatorViewContext.swift; path = Sources/Animator/HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
-		D97C1F91E585230F32A7DFB2CB10FA9B /* Pods-ChowTownTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChowTownTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D682E088152A8B1F7C8ECAE19290C41D /* Pods-ChowTown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChowTown-umbrella.h"; sourceTree = "<group>"; };
 		DD65150DC2721CEA1BC21C9172AA4EBB /* HeroDefaultAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroDefaultAnimator.swift; path = Sources/Animator/HeroDefaultAnimator.swift; sourceTree = "<group>"; };
 		DF707A7501EC4A05DB7E5078E3811265 /* HeroModifier+Advanced.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroModifier+Advanced.swift"; path = "Sources/HeroModifier+Advanced.swift"; sourceTree = "<group>"; };
 		E25EFF26B5A30B46245E89699273F82E /* HeroTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UINavigationControllerDelegate.swift"; path = "Sources/Transition/HeroTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
@@ -165,9 +136,7 @@
 		E48386095F8A66952856F46849D473A6 /* Hero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hero-prefix.pch"; sourceTree = "<group>"; };
 		E56B4E46CD29DAE042C9616E8F41267C /* HeroContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroContext.swift; path = Sources/HeroContext.swift; sourceTree = "<group>"; };
 		E9842E834BB1B46549918D794F4FFB0A /* Hero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hero.xcconfig; sourceTree = "<group>"; };
-		ED030F06F393876A5660A5D3F2535FB3 /* Pods-ChowTown-ChowTownUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChowTown-ChowTownUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED86BAF9E560C2BF4E94E0F963E17FAC /* UIView+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Hero.swift"; path = "Sources/Extensions/UIView+Hero.swift"; sourceTree = "<group>"; };
-		EF1164EE4DA7CE9D071FBEF1ECFAFD7B /* Pods-ChowTown-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChowTown-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EF330FD3B9F7238D6D602C4D34418F68 /* HeroViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroViewControllerDelegate.swift; path = Sources/HeroViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F6C437F010EE491CC84190F266A6F404 /* HeroStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroStringConvertible.swift; path = Sources/Parser/HeroStringConvertible.swift; sourceTree = "<group>"; };
 		F8AA5B3A7E0C5CF2DF51FB51F6A0F478 /* CAMediaTimingFunction+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+Hero.swift"; path = "Sources/Extensions/CAMediaTimingFunction+Hero.swift"; sourceTree = "<group>"; };
@@ -175,30 +144,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D2E03B2B384476BD77EE0FAE97A560A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F6EC31973CDF297EB102475FC531A89 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66B7EEB5309C82F81FCD4D3EF70EC86C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				659EFFD4DC35D8015BF5D558AC25F8EF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6BB5765C802FB074D242E5CAB5F085B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69BF0FFA32F54A8E1A0F6355A7489062 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AB6BD99F2DE70F4FDA67AE5E0C9FF8AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,41 +153,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C76BA6CF3B166E651DEC4022EE0D25E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE2057FDB460157DE201EED69152283 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ABA401522EDA759DD80B8EBD9BDD537 /* Pods-ChowTown-ChowTownUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5367D60420F05DC37E8A05D7EBAB9E08 /* Pods-ChowTown-ChowTownUITests.modulemap */,
-				ED030F06F393876A5660A5D3F2535FB3 /* Pods-ChowTown-ChowTownUITests-acknowledgements.markdown */,
-				AC5D4617F2FB993941CA30535E956316 /* Pods-ChowTown-ChowTownUITests-acknowledgements.plist */,
-				5712824A11B3DCC5D240FF36A45B1B9E /* Pods-ChowTown-ChowTownUITests-dummy.m */,
-				698C5F1097DE1C9C7A9DB9976D81E168 /* Pods-ChowTown-ChowTownUITests-Info.plist */,
-				C43F4F9C839BD953CC83552B0BAFA853 /* Pods-ChowTown-ChowTownUITests-umbrella.h */,
-				4DBB1D61061535966886508F9C91BD40 /* Pods-ChowTown-ChowTownUITests.debug.xcconfig */,
-				734B30F2B7074768B38954EE58EED21A /* Pods-ChowTown-ChowTownUITests.release.xcconfig */,
-			);
-			name = "Pods-ChowTown-ChowTownUITests";
-			path = "Target Support Files/Pods-ChowTown-ChowTownUITests";
-			sourceTree = "<group>";
-		};
-		0D697B6AC5B31BD192011499BA6104DA /* Pods-ChowTown */ = {
-			isa = PBXGroup;
-			children = (
-				20828891F9DA20C94EB215E94F351CDF /* Pods-ChowTown.modulemap */,
-				EF1164EE4DA7CE9D071FBEF1ECFAFD7B /* Pods-ChowTown-acknowledgements.markdown */,
-				1AB7E06453815DA77FC7086884A80EBA /* Pods-ChowTown-acknowledgements.plist */,
-				7F10273DFF9F2CCA11A8FEB82C822C4B /* Pods-ChowTown-dummy.m */,
-				A3FC15C3B8158504ECCCDD351AD61528 /* Pods-ChowTown-Info.plist */,
-				3951046FDAAE12D3F20B3DE909A899EE /* Pods-ChowTown-umbrella.h */,
-				46D900658CBD1F8A1918B90EA76A1F56 /* Pods-ChowTown.debug.xcconfig */,
-				752002FDE9CDD1FBB6635FA44D33462B /* Pods-ChowTown.release.xcconfig */,
-			);
-			name = "Pods-ChowTown";
-			path = "Target Support Files/Pods-ChowTown";
-			sourceTree = "<group>";
-		};
 		12F7850DC1DE8D283E7E6FC1B95B7D86 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,8 +238,24 @@
 				934AE99A86E38338BF43022820CADEAF /* UIViewController+Hero.swift */,
 				12F7850DC1DE8D283E7E6FC1B95B7D86 /* Support Files */,
 			);
-			name = Hero;
 			path = Hero;
+			sourceTree = "<group>";
+		};
+		1AA12B76E55EF93D7ECEA78B7CFCE1CD /* Pods-ChowTown */ = {
+			isa = PBXGroup;
+			children = (
+				A2D429BA0AD84C7F10C5B65FD0041DB1 /* Pods-ChowTown.modulemap */,
+				2EC802753B2A4F7000FEF397A5873011 /* Pods-ChowTown-acknowledgements.markdown */,
+				826D398FFF895A341D027292D8576C3A /* Pods-ChowTown-acknowledgements.plist */,
+				8130E0E09F61A425858AAA08EF31049F /* Pods-ChowTown-dummy.m */,
+				20D1366E0A196FAD462AF169E686F445 /* Pods-ChowTown-frameworks.sh */,
+				4A262418FA9A56976D9F929E8BA149A1 /* Pods-ChowTown-Info.plist */,
+				D682E088152A8B1F7C8ECAE19290C41D /* Pods-ChowTown-umbrella.h */,
+				8F82B3F69A503F7C197096DD2D323E96 /* Pods-ChowTown.debug.xcconfig */,
+				547C544D15CDE44087286C97466D2F95 /* Pods-ChowTown.release.xcconfig */,
+			);
+			name = "Pods-ChowTown";
+			path = "Target Support Files/Pods-ChowTown";
 			sourceTree = "<group>";
 		};
 		43E2E73FB79D90C23AB848189076520E /* Pods */ = {
@@ -329,42 +266,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		51C23B1BF16D9745049F1AA847C2733D /* Targets Support Files */ = {
+		73F5CB4F48AE25AD7D0914230079ECA4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0D697B6AC5B31BD192011499BA6104DA /* Pods-ChowTown */,
-				0ABA401522EDA759DD80B8EBD9BDD537 /* Pods-ChowTown-ChowTownUITests */,
-				88117023C76C130B396925200788956B /* Pods-ChowTownTests */,
+				1AA12B76E55EF93D7ECEA78B7CFCE1CD /* Pods-ChowTown */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		88117023C76C130B396925200788956B /* Pods-ChowTownTests */ = {
-			isa = PBXGroup;
-			children = (
-				BD118AFB25FCE4AF13178E3BCF466F86 /* Pods-ChowTownTests.modulemap */,
-				D97C1F91E585230F32A7DFB2CB10FA9B /* Pods-ChowTownTests-acknowledgements.markdown */,
-				9A34FB15AF31FDAD99E8007584C87147 /* Pods-ChowTownTests-acknowledgements.plist */,
-				1CFA488F211BDED21A30EA2E9E39E9A1 /* Pods-ChowTownTests-dummy.m */,
-				1889FF0AF58E47396C3EB750FD76723B /* Pods-ChowTownTests-frameworks.sh */,
-				71D4850BD5D38FE338D294701C921A3A /* Pods-ChowTownTests-Info.plist */,
-				4EA0530DCA0D910817DFAAEA974DCD3D /* Pods-ChowTownTests-umbrella.h */,
-				87360F4A8D5E60271BD206541042002C /* Pods-ChowTownTests.debug.xcconfig */,
-				80764C1C482B4B201A9C343D21419C88 /* Pods-ChowTownTests.release.xcconfig */,
-			);
-			name = "Pods-ChowTownTests";
-			path = "Target Support Files/Pods-ChowTownTests";
-			sourceTree = "<group>";
-		};
-		9F16B6FAE5CF8BDEB28B16402CD8A3D2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */,
-				7C317A66DC35B57361CEB1156BE8FBAB /* Pods_ChowTown.framework */,
-				B169A5638869E083FF73B80F0ACA5B12 /* Pods_ChowTown_ChowTownUITests.framework */,
-				199E25300B5D56928174785497020599 /* Pods_ChowTownTests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -373,8 +280,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				43E2E73FB79D90C23AB848189076520E /* Pods */,
-				9F16B6FAE5CF8BDEB28B16402CD8A3D2 /* Products */,
-				51C23B1BF16D9745049F1AA847C2733D /* Targets Support Files */,
+				EA29B86E1057801D517FDFBA17E54748 /* Products */,
+				73F5CB4F48AE25AD7D0914230079ECA4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -387,22 +294,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EA29B86E1057801D517FDFBA17E54748 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13E778F4B833EE5D7ABE882406A8215E /* Hero.framework */,
+				7C317A66DC35B57361CEB1156BE8FBAB /* Pods_ChowTown.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		663FC36EB71813DF9ED71AEDFB8885C6 /* Headers */ = {
+		3F52FE5C32E5B11CEB0D2A2C1F1DA6B5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E87C6D538DC85DDC2C1A46E6FF9E23D /* Pods-ChowTownTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6AA7643CBA19AAAEED196FFAD1441B22 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D09278C8C308F17CC304CBF4FC02D30 /* Pods-ChowTown-umbrella.h in Headers */,
+				FEADEBA399055BE3108C823100098BCE /* Pods-ChowTown-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,55 +322,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BF11000D5056AAD8C69C3E5618ED7E9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A33E8D33E05D50C62EDA740A73AC85F /* Pods-ChowTown-ChowTownUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		51EDA1F64E6DF8CB63053653DFC46F1F /* Pods-ChowTownTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 680B3100E73FB78DA8FD27136501682B /* Build configuration list for PBXNativeTarget "Pods-ChowTownTests" */;
-			buildPhases = (
-				663FC36EB71813DF9ED71AEDFB8885C6 /* Headers */,
-				597D9907F25A0A0ADD7611393DF53EFF /* Sources */,
-				4D2E03B2B384476BD77EE0FAE97A560A /* Frameworks */,
-				4ACD27CA19869FD2105924016B47B73A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B9D4DA1F48FE6D34679F7B31C9BE226 /* PBXTargetDependency */,
-				8A5198BAD53BD343CBEF4F82915E4627 /* PBXTargetDependency */,
-			);
-			name = "Pods-ChowTownTests";
-			productName = "Pods-ChowTownTests";
-			productReference = 199E25300B5D56928174785497020599 /* Pods_ChowTownTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		63D8F4DD565CA89DFB5E2271420C290F /* Pods-ChowTown-ChowTownUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A172B43ECF2B416078B83AD761DF1E78 /* Build configuration list for PBXNativeTarget "Pods-ChowTown-ChowTownUITests" */;
-			buildPhases = (
-				9BF11000D5056AAD8C69C3E5618ED7E9 /* Headers */,
-				32C29DBE75B3FEC9A8799A61ED7A6392 /* Sources */,
-				6BB5765C802FB074D242E5CAB5F085B3 /* Frameworks */,
-				A408C1A38A5C0B7729F9C47110F0CFF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-ChowTown-ChowTownUITests";
-			productName = "Pods-ChowTown-ChowTownUITests";
-			productReference = B169A5638869E083FF73B80F0ACA5B12 /* Pods_ChowTown_ChowTownUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		B3893AEA4D7DBB9A086E889FC469132D /* Hero */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8A3F00AAB425AED86EEBC6CFA0C1825 /* Build configuration list for PBXNativeTarget "Hero" */;
@@ -483,16 +345,17 @@
 		};
 		EDC13F056943F7BC424B236061F5BFC4 /* Pods-ChowTown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 472481DE9384B81073A9FCE21E91DDCC /* Build configuration list for PBXNativeTarget "Pods-ChowTown" */;
+			buildConfigurationList = BE3BD83C0CB5B4EDA4F93CF406F827EC /* Build configuration list for PBXNativeTarget "Pods-ChowTown" */;
 			buildPhases = (
-				6AA7643CBA19AAAEED196FFAD1441B22 /* Headers */,
-				0B7FF18C7C9B65B8D4FF39FACCD3C85C /* Sources */,
-				66B7EEB5309C82F81FCD4D3EF70EC86C /* Frameworks */,
-				A204EDBCE1EE1BD20F54ACA5F269771C /* Resources */,
+				3F52FE5C32E5B11CEB0D2A2C1F1DA6B5 /* Headers */,
+				A954250059E10762EBAF4EC132D56706 /* Sources */,
+				C76BA6CF3B166E651DEC4022EE0D25E8 /* Frameworks */,
+				47FCE3CF77B75364BA4EE2CE6DC550BC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				20E7289782143E84BACD02CD928134A6 /* PBXTargetDependency */,
 			);
 			name = "Pods-ChowTown";
 			productName = "Pods-ChowTown";
@@ -517,20 +380,18 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9F16B6FAE5CF8BDEB28B16402CD8A3D2 /* Products */;
+			productRefGroup = EA29B86E1057801D517FDFBA17E54748 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B3893AEA4D7DBB9A086E889FC469132D /* Hero */,
 				EDC13F056943F7BC424B236061F5BFC4 /* Pods-ChowTown */,
-				63D8F4DD565CA89DFB5E2271420C290F /* Pods-ChowTown-ChowTownUITests */,
-				51EDA1F64E6DF8CB63053653DFC46F1F /* Pods-ChowTownTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4ACD27CA19869FD2105924016B47B73A /* Resources */ = {
+		47FCE3CF77B75364BA4EE2CE6DC550BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -544,44 +405,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A204EDBCE1EE1BD20F54ACA5F269771C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A408C1A38A5C0B7729F9C47110F0CFF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B7FF18C7C9B65B8D4FF39FACCD3C85C /* Sources */ = {
+		A954250059E10762EBAF4EC132D56706 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41AA56CE828B37FD357668926C628C97 /* Pods-ChowTown-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32C29DBE75B3FEC9A8799A61ED7A6392 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				053B06D670CEB4DDE6112B070B0E50FA /* Pods-ChowTown-ChowTownUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		597D9907F25A0A0ADD7611393DF53EFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3EF094796A268FC3834DEF9FD06AC5E /* Pods-ChowTownTests-dummy.m in Sources */,
+				F3B3DFB249D00AB6D753460ED4BF62DA /* Pods-ChowTown-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,102 +474,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B9D4DA1F48FE6D34679F7B31C9BE226 /* PBXTargetDependency */ = {
+		20E7289782143E84BACD02CD928134A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Hero;
 			target = B3893AEA4D7DBB9A086E889FC469132D /* Hero */;
-			targetProxy = 9E741C24521200E0664C7013A2A78D32 /* PBXContainerItemProxy */;
-		};
-		8A5198BAD53BD343CBEF4F82915E4627 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ChowTown";
-			target = EDC13F056943F7BC424B236061F5BFC4 /* Pods-ChowTown */;
-			targetProxy = 54B3BE972EEBAC688143838F86314641 /* PBXContainerItemProxy */;
+			targetProxy = 9C3F42579210C6ECDCCF07635DE44B71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12BBF5777D80DC542BF73CE0D4071B01 /* Release */ = {
+		080EC6EFC6DE5B83DF34C7A315B656D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 752002FDE9CDD1FBB6635FA44D33462B /* Pods-ChowTown.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChowTown/Pods-ChowTown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChowTown/Pods-ChowTown.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1D54BEE461F3C614683CCC39A8594FBB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80764C1C482B4B201A9C343D21419C88 /* Pods-ChowTownTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3E90B3C191DB7A56BA36DD319F709A68 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46D900658CBD1F8A1918B90EA76A1F56 /* Pods-ChowTown.debug.xcconfig */;
+			baseConfigurationReference = 8F82B3F69A503F7C197096DD2D323E96 /* Pods-ChowTown.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -773,45 +520,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		460E2D8B582B77DAEAB4217B02F15EB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 734B30F2B7074768B38954EE58EED21A /* Pods-ChowTown-ChowTownUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChowTown-ChowTownUITests/Pods-ChowTown-ChowTownUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChowTown-ChowTownUITests/Pods-ChowTown-ChowTownUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -873,9 +581,9 @@
 			};
 			name = Release;
 		};
-		5915FE93D94A6C588364751A0AD26015 /* Debug */ = {
+		57EF4B31DA432FA770D5FABCA3CCADA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBB1D61061535966886508F9C91BD40 /* Pods-ChowTown-ChowTownUITests.debug.xcconfig */;
+			baseConfigurationReference = 547C544D15CDE44087286C97466D2F95 /* Pods-ChowTown.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -888,7 +596,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChowTown-ChowTownUITests/Pods-ChowTown-ChowTownUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChowTown/Pods-ChowTown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -897,7 +605,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChowTown-ChowTownUITests/Pods-ChowTown-ChowTownUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChowTown/Pods-ChowTown.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -906,10 +614,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1011,44 +720,6 @@
 			};
 			name = Release;
 		};
-		AB773F307359153E09E03339A0BAE740 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87360F4A8D5E60271BD206541042002C /* Pods-ChowTownTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChowTownTests/Pods-ChowTownTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C6377BC51733CC942ACC24AC37EB8EF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9842E834BB1B46549918D794F4FFB0A /* Hero.xcconfig */;
@@ -1087,15 +758,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		472481DE9384B81073A9FCE21E91DDCC /* Build configuration list for PBXNativeTarget "Pods-ChowTown" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E90B3C191DB7A56BA36DD319F709A68 /* Debug */,
-				12BBF5777D80DC542BF73CE0D4071B01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1105,20 +767,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		680B3100E73FB78DA8FD27136501682B /* Build configuration list for PBXNativeTarget "Pods-ChowTownTests" */ = {
+		BE3BD83C0CB5B4EDA4F93CF406F827EC /* Build configuration list for PBXNativeTarget "Pods-ChowTown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB773F307359153E09E03339A0BAE740 /* Debug */,
-				1D54BEE461F3C614683CCC39A8594FBB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A172B43ECF2B416078B83AD761DF1E78 /* Build configuration list for PBXNativeTarget "Pods-ChowTown-ChowTownUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5915FE93D94A6C588364751A0AD26015 /* Debug */,
-				460E2D8B582B77DAEAB4217B02F15EB2 /* Release */,
+				080EC6EFC6DE5B83DF34C7A315B656D3 /* Debug */,
+				57EF4B31DA432FA770D5FABCA3CCADA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

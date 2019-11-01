@@ -11,10 +11,11 @@ import UIKit
 class SpecialCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var specialName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+      
     }
 
 }
