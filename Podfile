@@ -6,6 +6,7 @@ target 'ChowTown' do
   use_frameworks!
 
 pod 'Hero'
+pod 'MSPeekCollectionViewDelegateImplementation'
   # Pods for Nutshell
 
 end

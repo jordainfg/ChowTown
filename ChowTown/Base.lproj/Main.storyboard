@@ -211,7 +211,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="y8n-wB-3Xh" kind="relationship" relationship="viewControllers" id="RwU-jX-1zh"/>
-                        <segue destination="Sa0-yr-Tmp" kind="relationship" relationship="viewControllers" id="Gxh-YR-q2E"/>
+                        <segue destination="7UO-a4-gVp" kind="relationship" relationship="viewControllers" id="Gxh-YR-q2E"/>
                         <segue destination="lTK-Oc-c11" kind="relationship" relationship="viewControllers" id="y0k-md-vOI"/>
                     </connections>
                 </tabBarController>
@@ -240,21 +240,97 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="136.60714285714286"/>
         </scene>
-        <!--Drinks-->
+        <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
             <objects>
-                <viewController id="Sa0-yr-Tmp" sceneMemberID="viewController">
+                <viewController id="Sa0-yr-Tmp" customClass="MenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
+                                    <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
+                                    <outlet property="prefetchDataSource" destination="Sa0-yr-Tmp" id="Zt5-Lu-8Uq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="top" secondItem="ze7-Ya-FeV" secondAttribute="top" id="2rY-iz-JQ3"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="bottom" secondItem="ioa-LB-ZYz" secondAttribute="bottom" id="8O3-rY-cIF"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="leading" secondItem="ioa-LB-ZYz" secondAttribute="leading" id="j35-Wh-Ipa"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="centerX" secondItem="ze7-Ya-FeV" secondAttribute="centerX" id="s0u-uk-UVe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-LB-ZYz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drinks" image="DrinkBarItem-50" id="Ov1-3F-acC"/>
+                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="always" id="GW7-f2-x55"/>
+                    <connections>
+                        <outlet property="tableView" destination="dcL-ch-zaX" id="ZvY-Rd-w8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="-623"/>
+            <point key="canvasLocation" x="4486" y="-623"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="aZf-nM-iYb">
+            <objects>
+                <viewController id="ulw-qS-t2C" customClass="ChoiceMenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ulw-qS-t2C" id="T6S-NF-7Em"/>
+                                    <outlet property="delegate" destination="ulw-qS-t2C" id="WUG-8Y-kfa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xvf-oo-sDc" firstAttribute="trailing" secondItem="Nqa-H2-Ovw" secondAttribute="trailing" id="8py-Xn-7Kv"/>
+                            <constraint firstItem="xvf-oo-sDc" firstAttribute="top" secondItem="7xS-A4-SoV" secondAttribute="top" id="KJv-9A-gHA"/>
+                            <constraint firstItem="xvf-oo-sDc" firstAttribute="leading" secondItem="Nqa-H2-Ovw" secondAttribute="leading" id="R6Y-pg-NaD"/>
+                            <constraint firstItem="xvf-oo-sDc" firstAttribute="bottom" secondItem="Nqa-H2-Ovw" secondAttribute="bottom" id="dVU-rG-5xE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="lJj-uh-xV2"/>
+                    <connections>
+                        <outlet property="tableView" destination="xvf-oo-sDc" id="BGq-BU-3Pg"/>
+                        <segue destination="Sa0-yr-Tmp" kind="show" identifier="toMenu" id="pSN-i7-CGg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-gl-EEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3713.04347826087" y="-623.4375"/>
+        </scene>
+        <!--Drinks-->
+        <scene sceneID="w9I-Oa-JLu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7UO-a4-gVp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Drinks" image="DrinkBarItem-50" id="Ov1-3F-acC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HD3-vU-8Lz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ulw-qS-t2C" kind="relationship" relationship="rootViewController" id="me4-yn-eZE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WB1-SP-X7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860.8695652173915" y="-623.4375"/>
         </scene>
     </scenes>
     <resources>

@@ -21,7 +21,7 @@ class SpecialsViewController: UIViewController {
         guard let collectionView = collectionView else { fatalError() }
         //collectionView.decelerationRate = .fast // uncomment if necessary
         
-//       collectionView.collectionViewLayout = flowLayout
+        collectionView.collectionViewLayout = flowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
         // hide the scroll indicator
         collectionView.showsHorizontalScrollIndicator = false
