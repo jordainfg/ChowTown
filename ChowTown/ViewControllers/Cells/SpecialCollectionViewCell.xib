@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRo-p9-62V">
                         <rect key="frame" x="1" y="10" width="328" height="360"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nathan-dumlao-pMW4jzELQCw-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-aJ-OkZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-aJ-OkZ">
                                 <rect key="frame" x="0.0" y="0.0" width="328" height="360"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -28,20 +28,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SPECIAL OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19z-3k-pLx">
-                                <rect key="frame" x="20" y="105" width="258" height="150.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <rect key="frame" x="20" y="114" width="258" height="132.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hitlist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-ez-j5O">
-                                <rect key="frame" x="20" y="308.5" width="308" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheap flights and airline tickets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzA-OY-noc">
-                                <rect key="frame" x="20" y="325.5" width="288" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This delicous recipte comes from our kitchen served with a side of onions and garlic. Add some onios" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzA-OY-noc">
+                                <rect key="frame" x="20" y="297" width="288" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,14 +59,11 @@
                             <constraint firstItem="Q09-VZ-evy" firstAttribute="top" secondItem="UW1-aJ-OkZ" secondAttribute="top" constant="20" id="3cA-KM-fQr"/>
                             <constraint firstItem="Q09-VZ-evy" firstAttribute="leading" secondItem="UW1-aJ-OkZ" secondAttribute="leading" constant="20" id="84I-X7-JJf"/>
                             <constraint firstItem="XzA-OY-noc" firstAttribute="leading" secondItem="UW1-aJ-OkZ" secondAttribute="leading" constant="20" id="Jge-X5-BWp"/>
-                            <constraint firstItem="XzA-OY-noc" firstAttribute="top" secondItem="hX1-ez-j5O" secondAttribute="bottom" id="NhS-bh-8q3"/>
                             <constraint firstItem="UW1-aJ-OkZ" firstAttribute="top" secondItem="fRo-p9-62V" secondAttribute="top" id="TZ0-cu-FQL"/>
                             <constraint firstItem="19z-3k-pLx" firstAttribute="centerY" secondItem="UW1-aJ-OkZ" secondAttribute="centerY" id="TbC-rn-OdW"/>
                             <constraint firstItem="UW1-aJ-OkZ" firstAttribute="leading" secondItem="fRo-p9-62V" secondAttribute="leading" id="mbd-Rl-34a"/>
-                            <constraint firstItem="hX1-ez-j5O" firstAttribute="leading" secondItem="UW1-aJ-OkZ" secondAttribute="leading" constant="20" id="oPf-b5-2e9"/>
                             <constraint firstItem="19z-3k-pLx" firstAttribute="leading" secondItem="UW1-aJ-OkZ" secondAttribute="leading" constant="20" id="pZw-x9-fiy"/>
                             <constraint firstItem="UW1-aJ-OkZ" firstAttribute="bottom" secondItem="XzA-OY-noc" secondAttribute="bottom" constant="20" id="rji-Pm-D4C"/>
-                            <constraint firstItem="hX1-ez-j5O" firstAttribute="trailing" secondItem="UW1-aJ-OkZ" secondAttribute="trailing" id="xaa-Gy-zNp"/>
                             <constraint firstAttribute="trailing" secondItem="UW1-aJ-OkZ" secondAttribute="trailing" id="yKa-yl-0vj"/>
                             <constraint firstItem="UW1-aJ-OkZ" firstAttribute="trailing" secondItem="19z-3k-pLx" secondAttribute="trailing" constant="50" id="zty-61-0hD"/>
                         </constraints>
@@ -89,6 +80,7 @@
             <size key="customSize" width="331" height="278"/>
             <connections>
                 <outlet property="coverImageView" destination="UW1-aJ-OkZ" id="JTB-kS-qUu"/>
+                <outlet property="specialDetail" destination="XzA-OY-noc" id="c7y-xg-848"/>
                 <outlet property="specialName" destination="19z-3k-pLx" id="1qQ-JU-cXW"/>
             </connections>
             <point key="canvasLocation" x="173.91304347826087" y="156.36160714285714"/>
@@ -96,6 +88,6 @@
     </objects>
     <resources>
         <image name="Screenshot 2019-10-29 at 14.02.42" width="972" height="1114"/>
-        <image name="nathan-dumlao-pMW4jzELQCw-unsplash" width="4480" height="6720"/>
+        <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
     </resources>
 </document>

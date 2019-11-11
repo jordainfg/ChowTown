@@ -21,13 +21,15 @@ class SpecialsViewController: UIViewController {
         guard let collectionView = collectionView else { fatalError() }
         //collectionView.decelerationRate = .fast // uncomment if necessary
         
-        collectionView.collectionViewLayout = flowLayout
+//       collectionView.collectionViewLayout = flowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
         // hide the scroll indicator
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+           UIApplication.shared.statusBarStyle = .darkContent
+       }
     
     // MARK: - Prepare for Segues
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
@@ -68,6 +70,7 @@ extension SpecialsViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.backgroundColor = UIColor.clear
         cell.coverImageView.hero.id = "specialHeroID\(indexPath.row)"
         cell.specialName.hero.id = "specialNameHeroID\(indexPath.row)"
+        cell.specialDetail.hero.id = "specialDetailHeroID\(indexPath.row)"
         cell.cornerRadius = 15
         return cell
     }
@@ -77,7 +80,7 @@ extension SpecialsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 1.6  , height: collectionView.frame.size.height  / 1.5
+        return CGSize(width: collectionView.frame.size.width / 1.8  , height: collectionView.frame.size.height  / 1.8
             
         )
     }

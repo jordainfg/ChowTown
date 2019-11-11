@@ -35,7 +35,9 @@ class SpecialsDetailViewController: UIViewController {
         setupTableView()
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
     
     func setUpView(){
         
@@ -119,6 +121,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: SpecialsHeaderTableViewCell.reuseIdentifier()) as! SpecialsHeaderTableViewCell
             
             cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
+            cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
             cell.indentationLevel = 2;
             return cell
             

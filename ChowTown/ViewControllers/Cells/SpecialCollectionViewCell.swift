@@ -12,6 +12,7 @@ class SpecialCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var specialName: UILabel!
+    @IBOutlet weak var specialDetail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
