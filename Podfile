@@ -7,6 +7,11 @@ target 'ChowTown' do
 
 pod 'Hero'
 pod 'MSPeekCollectionViewDelegateImplementation'
+pod 'Firebase/Analytics'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
   # Pods for Nutshell
 
 end
