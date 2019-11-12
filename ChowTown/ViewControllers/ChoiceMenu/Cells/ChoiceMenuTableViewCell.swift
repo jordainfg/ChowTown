@@ -9,7 +9,9 @@
 import UIKit
 
 class ChoiceMenuTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var choiceName: UILabel!
+    @IBOutlet weak var choiceDetail: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

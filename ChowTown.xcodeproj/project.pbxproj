@@ -20,6 +20,8 @@
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
+		11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F1237ABC1E00E74394 /* ViewModel.swift */; };
+		11C262F4237ABD2200E74394 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F3237ABD2200E74394 /* Choice.swift */; };
 		11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081723685FEA003400D0 /* AppDelegate.swift */; };
 		11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081923685FEA003400D0 /* SceneDelegate.swift */; };
 		11C5081C23685FEA003400D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081B23685FEA003400D0 /* ViewController.swift */; };
@@ -105,6 +107,8 @@
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
 		1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		11C262F1237ABC1E00E74394 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		11C262F3237ABD2200E74394 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		11C5081423685FEA003400D0 /* ChowTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChowTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5081723685FEA003400D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C5081923685FEA003400D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 		11C5081623685FEA003400D0 /* ChowTown */ = {
 			isa = PBXGroup;
 			children = (
+				11C262F3237ABD2200E74394 /* Choice.swift */,
+				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
 				1191F5B0236C49B400649C79 /* Designables */,
 				11C5087223687EE4003400D0 /* Extensions */,
 				11C5085C23687EE4003400D0 /* Fonts */,
@@ -614,10 +620,12 @@
 				11C5081C23685FEA003400D0 /* ViewController.swift in Sources */,
 				110344912379AE930072688F /* ChoiceMenuViewController.swift in Sources */,
 				11C5089923687EE4003400D0 /* UIView+Extension.swift in Sources */,
+				11C262F4237ABD2200E74394 /* Choice.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
 				1103449A2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift in Sources */,
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
+				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				110344962379AFB40072688F /* ChoiceMenuTableViewCell.swift in Sources */,
