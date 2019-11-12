@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpecialsHeaderTableViewCell: UITableViewCell {
+class MealHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var specialName: UILabel!
     @IBOutlet weak var specialSubTitle: UILabel!
@@ -28,11 +28,11 @@ class SpecialsHeaderTableViewCell: UITableViewCell {
     
     // Reuser identifier
          class func reuseIdentifier() -> String {
-             return "SpecialsHeaderTableViewCellID"
+             return "MealHeaderTableViewCellID"
          }
          
          // Nib name
          class func nibName() -> String {
-             return "SpecialsHeaderTableViewCell"
+             return "MealHeaderTableViewCell"
          }
 }

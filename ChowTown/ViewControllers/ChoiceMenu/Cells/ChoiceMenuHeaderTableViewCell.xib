@@ -24,8 +24,15 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-yy-xPp">
                         <rect key="frame" x="20" y="10" width="280" height="318"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4I-hh-fNv">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="1"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="OLU-V7-KrW"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-11-11 at 16.30.39" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-GC-Elg">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="209"/>
+                                <rect key="frame" x="0.0" y="15" width="280" height="194"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>

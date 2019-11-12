@@ -14,14 +14,21 @@
 		110344972379AFB40072688F /* ChoiceMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344952379AFB40072688F /* ChoiceMenuTableViewCell.xib */; };
 		1103449A2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344982379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift */; };
 		1103449B2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344992379B64A0072688F /* ChoiceMenuHeaderTableViewCell.xib */; };
-		1162121C236AFD2200546EC1 /* SpecialsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162121A236AFD2200546EC1 /* SpecialsHeaderTableViewCell.swift */; };
-		1162121D236AFD2200546EC1 /* SpecialsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1162121B236AFD2200546EC1 /* SpecialsHeaderTableViewCell.xib */; };
+		1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */; };
+		1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */; };
 		1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */; };
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
 		11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F1237ABC1E00E74394 /* ViewModel.swift */; };
 		11C262F4237ABD2200E74394 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F3237ABD2200E74394 /* Choice.swift */; };
+		11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C262F5237AC4D700E74394 /* GoogleService-Info.plist */; };
+		11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
+		11C262FC237AC56E00E74394 /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262FB237AC56E00E74394 /* CoreError.swift */; };
+		11C26300237AC8E700E74394 /* AllergensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */; };
+		11C26301237AC8E700E74394 /* AllergensTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */; };
+		11C26304237AC9E600E74394 /* AllergensCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */; };
+		11C26305237AC9E600E74394 /* AllergensCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */; };
 		11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081723685FEA003400D0 /* AppDelegate.swift */; };
 		11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081923685FEA003400D0 /* SceneDelegate.swift */; };
 		11C5081C23685FEA003400D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081B23685FEA003400D0 /* ViewController.swift */; };
@@ -101,14 +108,21 @@
 		110344952379AFB40072688F /* ChoiceMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceMenuTableViewCell.xib; sourceTree = "<group>"; };
 		110344982379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceMenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		110344992379B64A0072688F /* ChoiceMenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceMenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		1162121A236AFD2200546EC1 /* SpecialsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		1162121B236AFD2200546EC1 /* SpecialsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInformationTableViewCell.swift; sourceTree = "<group>"; };
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
 		1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		11C262F1237ABC1E00E74394 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		11C262F3237ABD2200E74394 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		11C262F5237AC4D700E74394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11C262F9237AC53600E74394 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		11C262FB237AC56E00E74394 /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
+		11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergensTableViewCell.swift; sourceTree = "<group>"; };
+		11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllergensTableViewCell.xib; sourceTree = "<group>"; };
+		11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergensCollectionViewCell.swift; sourceTree = "<group>"; };
+		11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllergensCollectionViewCell.xib; sourceTree = "<group>"; };
 		11C5081423685FEA003400D0 /* ChowTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChowTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5081723685FEA003400D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C5081923685FEA003400D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +240,19 @@
 			path = Designables;
 			sourceTree = "<group>";
 		};
+		11C262FD237AC89300E74394 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */,
+				1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */,
+				1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */,
+				1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */,
+				11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */,
+				11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
 		11C5080B23685FEA003400D0 = {
 			isa = PBXGroup;
 			children = (
@@ -251,19 +278,22 @@
 		11C5081623685FEA003400D0 /* ChowTown */ = {
 			isa = PBXGroup;
 			children = (
+				11C5081723685FEA003400D0 /* AppDelegate.swift */,
+				11C262F9237AC53600E74394 /* FirebaseService.swift */,
 				11C262F3237ABD2200E74394 /* Choice.swift */,
 				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
 				1191F5B0236C49B400649C79 /* Designables */,
 				11C5087223687EE4003400D0 /* Extensions */,
 				11C5085C23687EE4003400D0 /* Fonts */,
 				11C5084A236866AA003400D0 /* ViewControllers */,
-				11C5081723685FEA003400D0 /* AppDelegate.swift */,
 				11C5081923685FEA003400D0 /* SceneDelegate.swift */,
 				11C5081D23685FEA003400D0 /* Main.storyboard */,
 				11C5082323685FEC003400D0 /* Assets.xcassets */,
 				11C5082523685FEC003400D0 /* LaunchScreen.storyboard */,
+				11C262F5237AC4D700E74394 /* GoogleService-Info.plist */,
 				11C5082823685FEC003400D0 /* Info.plist */,
 				11C5082023685FEA003400D0 /* ChowTown.xcdatamodeld */,
+				11C262FB237AC56E00E74394 /* CoreError.swift */,
 			);
 			path = ChowTown;
 			sourceTree = "<group>";
@@ -358,10 +388,7 @@
 		11C65D4B23797DFB00C69DC3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				1162121A236AFD2200546EC1 /* SpecialsHeaderTableViewCell.swift */,
-				1162121B236AFD2200546EC1 /* SpecialsHeaderTableViewCell.xib */,
-				1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */,
-				1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */,
+				11C262FD237AC89300E74394 /* Meal */,
 				11C65D4723797A2F00C69DC3 /* CollectionTableViewCell.swift */,
 				11C65D4823797A2F00C69DC3 /* CollectionTableViewCell.xib */,
 				1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */,
@@ -377,6 +404,8 @@
 				11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */,
 				11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */,
 				11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */,
+				11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */,
+				11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -512,6 +541,7 @@
 				11C5088523687EE4003400D0 /* Nunito-Regular.ttf in Resources */,
 				11C5088823687EE4003400D0 /* Nunito-BoldItalic.ttf in Resources */,
 				1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */,
+				11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */,
 				11C65D4A23797A2F00C69DC3 /* CollectionTableViewCell.xib in Resources */,
 				11C5088F23687EE4003400D0 /* Overpass-SemiBold.ttf in Resources */,
 				11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */,
@@ -526,7 +556,7 @@
 				11C5088323687EE4003400D0 /* Overpass-Regular.ttf in Resources */,
 				11C5088223687EE4003400D0 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */,
-				1162121D236AFD2200546EC1 /* SpecialsHeaderTableViewCell.xib in Resources */,
+				1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */,
 				110344972379AFB40072688F /* ChoiceMenuTableViewCell.xib in Resources */,
 				11C5088423687EE4003400D0 /* Nunito-Light.ttf in Resources */,
 				11C5088923687EE4003400D0 /* Nunito-Black.ttf in Resources */,
@@ -535,7 +565,9 @@
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
 				11C5088023687EE4003400D0 /* overpass-semibold-italic.otf in Resources */,
 				11C5089023687EE4003400D0 /* Overpass-Bold.ttf in Resources */,
+				11C26305237AC9E600E74394 /* AllergensCollectionViewCell.xib in Resources */,
 				11C5088123687EE4003400D0 /* Nunito-ExtraBold.ttf in Resources */,
+				11C26301237AC8E700E74394 /* AllergensTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,12 +641,14 @@
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
 				11C5089823687EE4003400D0 /* UIButton+extension.swift in Sources */,
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
+				11C26300237AC8E700E74394 /* AllergensTableViewCell.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
-				1162121C236AFD2200546EC1 /* SpecialsHeaderTableViewCell.swift in Sources */,
+				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
 				11C65D4923797A2F00C69DC3 /* CollectionTableViewCell.swift in Sources */,
 				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
+				11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */,
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
 				11C5089A23687EE4003400D0 /* DrawingView.swift in Sources */,
 				11C5081C23685FEA003400D0 /* ViewController.swift in Sources */,
@@ -626,11 +660,13 @@
 				1103449A2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift in Sources */,
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
+				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				110344962379AFB40072688F /* ChoiceMenuTableViewCell.swift in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
+				11C26304237AC9E600E74394 /* AllergensCollectionViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,

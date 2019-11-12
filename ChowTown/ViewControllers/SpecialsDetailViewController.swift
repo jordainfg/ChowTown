@@ -12,13 +12,14 @@ import Hero
 enum detailDatatype {
     case header
     case nutritionInfo
+    case alergens
     
     
 }
 
 class SpecialsDetailViewController: UIViewController {
     var tableViewcellTypes: [[detailDatatype]] {
-        let types: [[detailDatatype]] = [[.header,.nutritionInfo]]
+        let types: [[detailDatatype]] = [[.header,.alergens,.alergens,.nutritionInfo]]
         
         return types
     }
@@ -57,8 +58,9 @@ class SpecialsDetailViewController: UIViewController {
         self.view.addSubview(button)
     }
     func setupTableView() {
-        tableView.register(UINib(nibName: SpecialsHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SpecialsHeaderTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: MealHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MealHeaderTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: NutritionInformationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: NutritionInformationTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: AllergensTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AllergensTableViewCell.reuseIdentifier())
     }
     
     func updateHeaderView() {
@@ -118,7 +120,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             
             
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SpecialsHeaderTableViewCell.reuseIdentifier()) as! SpecialsHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
             
             cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
             cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
@@ -129,6 +131,11 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: NutritionInformationTableViewCell.reuseIdentifier()) as! NutritionInformationTableViewCell
             
             return cell
+        case .alergens:
+            let cell = tableView.dequeueReusableCell(withIdentifier: AllergensTableViewCell.reuseIdentifier()) as! AllergensTableViewCell
+                       
+                       return cell
+            
         }
         
     }
@@ -170,6 +177,8 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
           
             
             return 220
+        case .alergens:
+          return  90
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
