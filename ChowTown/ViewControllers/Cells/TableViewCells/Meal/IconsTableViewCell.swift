@@ -9,13 +9,14 @@
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
-class AllergensTableViewCell: UITableViewCell {
+class IconsTableViewCell: UITableViewCell {
     
     var delegate: MSPeekCollectionViewDelegateImplementation!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     
-    var alergens : [Int] = [1,2,3,4,5,6,7,8,9]
+    @IBOutlet weak var iconSetName: UILabel!
+    var iCons : [Int] = [1,2,3,4,5,6,7,8,9]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +33,7 @@ class AllergensTableViewCell: UITableViewCell {
 //        delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
 //        collectionView.configureForPeekingDelegate()
 //        collectionView.delegate = delegate
-        collectionView.register(UINib.init(nibName: "AllergensCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllergensCollectionViewCellID")
+        collectionView.register(UINib.init(nibName: "iconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "iconCollectionViewCellID")
         guard let collectionView = collectionView else { fatalError() }
         //collectionView.decelerationRate = .fast // uncomment if necessary
         
@@ -47,12 +48,12 @@ class AllergensTableViewCell: UITableViewCell {
     
      // Reuser identifier
      class func reuseIdentifier() -> String {
-         return "AllergensTableViewCellID"
+         return "IconsTableViewCellID"
      }
      
      // Nib name
      class func nibName() -> String {
-         return "AllergensTableViewCell"
+         return "IconsTableViewCell"
      }
     
     
@@ -64,7 +65,7 @@ class AllergensTableViewCell: UITableViewCell {
     
 }
 
-extension AllergensTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension IconsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     
@@ -86,16 +87,16 @@ extension AllergensTableViewCell: UICollectionViewDataSource, UICollectionViewDe
     //2
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return alergens.count
+        return iCons.count
         
     }
     
     //3
     func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllergensCollectionViewCellID", for: indexPath) as! AllergensCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "iconCollectionViewCellID", for: indexPath) as! iconCollectionViewCell
         cell.backgroundColor = UIColor.clear
-        cell.alergenNumber = alergens[indexPath.row]
-        cell.updateAlergen()
+        cell.iConNumber = iCons[indexPath.row]
+        cell.updateIcons()
         cell.cornerRadius = 15
         return cell
     }

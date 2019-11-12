@@ -8,21 +8,22 @@
 
 import UIKit
 
-class AllergensCollectionViewCell: UICollectionViewCell {
+class iconCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var iCon: UIImageView!
     @IBOutlet weak var alergenName: UILabel!
     
-    var alergenNumber = 1
+    var iConNumber = 1
+    var setNumber = 0
     override func awakeFromNib() {
         super.awakeFromNib()
-        updateAlergen()
+        updateIcons()
         // Initialization code
     }
     
-    func updateAlergen(){
+    func updateIcons(){
         
-        switch alergenNumber {
+        switch iConNumber {
         case 1:
             iCon.image = #imageLiteral(resourceName: "icFish")
             alergenName.text = "Fish"
@@ -51,6 +52,17 @@ class AllergensCollectionViewCell: UICollectionViewCell {
             iCon.image = #imageLiteral(resourceName: "icSesame")
             alergenName.text = "Sesame"
             
+        case 20:
+            iCon.image = #imageLiteral(resourceName: "icHalal")
+            alergenName.text = "Halal"
+            
+        case 21:
+            iCon.image = #imageLiteral(resourceName: "icVegeteriaan")
+            alergenName.text = "Vega"
+        case 22:
+            iCon.image = #imageLiteral(resourceName: "icVegan")
+            alergenName.text = "Vegan"
+            
             
         default:
             iCon.image = #imageLiteral(resourceName: "icMilk")
@@ -61,11 +73,11 @@ class AllergensCollectionViewCell: UICollectionViewCell {
     
     // Reuser identifier
     class func reuseIdentifier() -> String {
-        return "AllergensCollectionViewCellID"
+        return "iconCollectionViewCellID"
     }
     
     // Nib name
     class func nibName() -> String {
-        return "AllergensCollectionViewCell"
+        return "iconCollectionViewCell"
     }
 }

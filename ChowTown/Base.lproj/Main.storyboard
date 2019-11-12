@@ -138,7 +138,7 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7Z-am-2xx" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
                                             <rect key="frame" x="326" y="60" width="68" height="25"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="68" id="OLo-I6-qfY"/>
                                                 <constraint firstAttribute="height" constant="25" id="sOn-6z-GMU"/>

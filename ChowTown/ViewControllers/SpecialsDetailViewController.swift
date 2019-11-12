@@ -9,20 +9,11 @@
 import UIKit
 import Hero
 
-enum detailDatatype {
-    case header
-    case nutritionInfo
-    case alergens
-    
-    
-}
+
 
 class SpecialsDetailViewController: UIViewController {
-    var tableViewcellTypes: [[detailDatatype]] {
-        let types: [[detailDatatype]] = [[.header,.alergens,.alergens,.nutritionInfo]]
-        
-        return types
-    }
+  
+    let viewModel = ViewModel()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     var headerView: UIView!
@@ -60,7 +51,8 @@ class SpecialsDetailViewController: UIViewController {
     func setupTableView() {
         tableView.register(UINib(nibName: MealHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MealHeaderTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: NutritionInformationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: NutritionInformationTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: AllergensTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AllergensTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: IconsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: IconsTableViewCell.reuseIdentifier())
+               tableView.register(UINib(nibName: AddOnTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AddOnTableViewCell.reuseIdentifier())
     }
     
     func updateHeaderView() {
@@ -114,7 +106,7 @@ class SpecialsDetailViewController: UIViewController {
 extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let type = tableViewcellTypes[indexPath.section][indexPath.row]
+        let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
         
         switch type {
             
@@ -131,22 +123,33 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: NutritionInformationTableViewCell.reuseIdentifier()) as! NutritionInformationTableViewCell
             
             return cell
-        case .alergens:
-            let cell = tableView.dequeueReusableCell(withIdentifier: AllergensTableViewCell.reuseIdentifier()) as! AllergensTableViewCell
-                       
-                       return cell
+        case let .aboutIconSet(name):
+        let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
+        cell.iconSetName.text = name
+        cell.iCons = [20,21,22]
+        return cell
             
+        case let .alergenIconSet(name):
+             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
+                   cell.iconSetName.text = name
+                   cell.iCons = [1,2,3,4,5,6,7,8,9]
+                   return cell
+        case .addOns(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: AddOnTableViewCell.reuseIdentifier()) as! AddOnTableViewCell
+                       
+               
+                       return cell
         }
         
     }
     
     
     func numberOfSections(in _: UITableView) -> Int {
-        return tableViewcellTypes.count
+        return viewModel.mealDetailTableViewcellTypes.count
     }
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewcellTypes[section].count
+        return viewModel.mealDetailTableViewcellTypes[section].count
     }
     
     //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -164,27 +167,39 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
     // set the height of the row based on the chosen cell
     
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       let type = tableViewcellTypes[indexPath.section][indexPath.row]
+       let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
         
         switch type {
             
             
         case .header:
             
-            return 140
+            return 100
             
         case .nutritionInfo:
           
             
             return 220
-        case .alergens:
-          return  90
+        case .alergenIconSet:
+          return  100
+        case .aboutIconSet(_):
+            return 100
+        case .addOns(_):
+           return 40
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
     }
-    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 1:
+            return "Additions"
+        default:
+            break
+        }
+        return ""
+    }
     
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

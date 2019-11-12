@@ -14,12 +14,23 @@ enum ChoiceMenuTableViewDataType {
     //case Drinks
 }
 
+enum mealDetailTableViewDataType {
+    case header
+    case nutritionInfo
+    case aboutIconSet(String)
+    case alergenIconSet(String)
+    case addOns(AddOn)
+    
+    
+}
+
 
 public class ViewModel{
     
   
     // ChoiceMenuViewController
     var choiceMenu : [Choice] = [Choice(title: "Lunch", detail: "bla"), Choice(title: "Brunch", detail: "bla"), Choice(title: "Dinner", detail: "bla")]
+    
     
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
         
@@ -29,6 +40,18 @@ public class ViewModel{
         
         return types
     }
+    
+    //Meal Detial
+    var addons : [AddOn] = [AddOn(name: "Advocado", price: 12 , iconNumber: 0), AddOn(name: "Advocado", price: 12, iconNumber: 0),AddOn(name: "Advocado", price: 12, iconNumber: 0)]
+           
+    var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
+       
+        let AddOns = addons.map { mealDetailTableViewDataType.addOns($0) }
+          
+         let types: [[mealDetailTableViewDataType]] = [[.header,.aboutIconSet("About"),.alergenIconSet("Alergens"),.nutritionInfo],AddOns]
+         
+         return types
+     }
     
     
     

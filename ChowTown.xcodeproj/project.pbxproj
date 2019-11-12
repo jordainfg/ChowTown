@@ -25,10 +25,13 @@
 		11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C262F5237AC4D700E74394 /* GoogleService-Info.plist */; };
 		11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
 		11C262FC237AC56E00E74394 /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262FB237AC56E00E74394 /* CoreError.swift */; };
-		11C26300237AC8E700E74394 /* AllergensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */; };
-		11C26301237AC8E700E74394 /* AllergensTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */; };
-		11C26304237AC9E600E74394 /* AllergensCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */; };
-		11C26305237AC9E600E74394 /* AllergensCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */; };
+		11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C262FF237AC8E700E74394 /* IconsTableViewCell.xib */; };
+		11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */; };
+		11C26305237AC9E600E74394 /* iconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */; };
+		11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C26308237ADC7300E74394 /* IconsTableViewCell.swift */; };
+		11C2630E237AF24900E74394 /* AddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2630D237AF24900E74394 /* AddOn.swift */; };
+		11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */; };
+		11C26312237AF3E100E74394 /* AddOnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */; };
 		11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081723685FEA003400D0 /* AppDelegate.swift */; };
 		11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081923685FEA003400D0 /* SceneDelegate.swift */; };
 		11C5081C23685FEA003400D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5081B23685FEA003400D0 /* ViewController.swift */; };
@@ -119,10 +122,13 @@
 		11C262F5237AC4D700E74394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11C262F9237AC53600E74394 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		11C262FB237AC56E00E74394 /* CoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreError.swift; sourceTree = "<group>"; };
-		11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergensTableViewCell.swift; sourceTree = "<group>"; };
-		11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllergensTableViewCell.xib; sourceTree = "<group>"; };
-		11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergensCollectionViewCell.swift; sourceTree = "<group>"; };
-		11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllergensCollectionViewCell.xib; sourceTree = "<group>"; };
+		11C262FF237AC8E700E74394 /* IconsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconsTableViewCell.xib; sourceTree = "<group>"; };
+		11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconCollectionViewCell.swift; sourceTree = "<group>"; };
+		11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iconCollectionViewCell.xib; sourceTree = "<group>"; };
+		11C26308237ADC7300E74394 /* IconsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsTableViewCell.swift; sourceTree = "<group>"; };
+		11C2630D237AF24900E74394 /* AddOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
+		11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnTableViewCell.swift; sourceTree = "<group>"; };
+		11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOnTableViewCell.xib; sourceTree = "<group>"; };
 		11C5081423685FEA003400D0 /* ChowTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChowTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5081723685FEA003400D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C5081923685FEA003400D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,10 +253,21 @@
 				1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */,
 				1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */,
 				1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */,
-				11C262FE237AC8E700E74394 /* AllergensTableViewCell.swift */,
-				11C262FF237AC8E700E74394 /* AllergensTableViewCell.xib */,
+				11C26308237ADC7300E74394 /* IconsTableViewCell.swift */,
+				11C262FF237AC8E700E74394 /* IconsTableViewCell.xib */,
+				11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */,
+				11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */,
 			);
 			path = Meal;
+			sourceTree = "<group>";
+		};
+		11C2630A237AF17C00E74394 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11C262F3237ABD2200E74394 /* Choice.swift */,
+				11C2630D237AF24900E74394 /* AddOn.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		11C5080B23685FEA003400D0 = {
@@ -280,7 +297,7 @@
 			children = (
 				11C5081723685FEA003400D0 /* AppDelegate.swift */,
 				11C262F9237AC53600E74394 /* FirebaseService.swift */,
-				11C262F3237ABD2200E74394 /* Choice.swift */,
+				11C2630A237AF17C00E74394 /* Models */,
 				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
 				1191F5B0236C49B400649C79 /* Designables */,
 				11C5087223687EE4003400D0 /* Extensions */,
@@ -404,8 +421,8 @@
 				11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */,
 				11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */,
 				11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */,
-				11C26302237AC9E600E74394 /* AllergensCollectionViewCell.swift */,
-				11C26303237AC9E600E74394 /* AllergensCollectionViewCell.xib */,
+				11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */,
+				11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -557,6 +574,7 @@
 				11C5088223687EE4003400D0 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */,
 				1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */,
+				11C26312237AF3E100E74394 /* AddOnTableViewCell.xib in Resources */,
 				110344972379AFB40072688F /* ChoiceMenuTableViewCell.xib in Resources */,
 				11C5088423687EE4003400D0 /* Nunito-Light.ttf in Resources */,
 				11C5088923687EE4003400D0 /* Nunito-Black.ttf in Resources */,
@@ -565,9 +583,9 @@
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
 				11C5088023687EE4003400D0 /* overpass-semibold-italic.otf in Resources */,
 				11C5089023687EE4003400D0 /* Overpass-Bold.ttf in Resources */,
-				11C26305237AC9E600E74394 /* AllergensCollectionViewCell.xib in Resources */,
+				11C26305237AC9E600E74394 /* iconCollectionViewCell.xib in Resources */,
 				11C5088123687EE4003400D0 /* Nunito-ExtraBold.ttf in Resources */,
-				11C26301237AC8E700E74394 /* AllergensTableViewCell.xib in Resources */,
+				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,12 +659,12 @@
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
 				11C5089823687EE4003400D0 /* UIButton+extension.swift in Sources */,
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
-				11C26300237AC8E700E74394 /* AllergensTableViewCell.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
 				11C65D4923797A2F00C69DC3 /* CollectionTableViewCell.swift in Sources */,
 				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
+				11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
 				11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */,
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
@@ -656,17 +674,19 @@
 				11C5089923687EE4003400D0 /* UIView+Extension.swift in Sources */,
 				11C262F4237ABD2200E74394 /* Choice.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
+				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
 				1103449A2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift in Sources */,
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
+				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				110344962379AFB40072688F /* ChoiceMenuTableViewCell.swift in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
-				11C26304237AC9E600E74394 /* AllergensCollectionViewCell.swift in Sources */,
+				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,
