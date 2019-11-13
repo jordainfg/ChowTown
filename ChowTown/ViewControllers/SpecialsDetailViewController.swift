@@ -126,7 +126,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         case let .aboutIconSet(name):
         let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
         cell.iconSetName.text = name
-        cell.iCons = [20,21,22]
+        cell.iCons = [23,20,21,22]
         return cell
             
         case let .alergenIconSet(name):

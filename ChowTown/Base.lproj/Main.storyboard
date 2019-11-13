@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PuI-ev-v0e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfR-Wv-f0m">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862.3188405797105" y="136.60714285714286"/>
+            <point key="canvasLocation" x="3772.4637681159425" y="136.60714285714286"/>
         </scene>
         <!--Specials Detail View Controller-->
         <scene sceneID="KZT-YP-NmX">
@@ -175,7 +175,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="bottom" secondItem="cv9-wQ-IsW" secondAttribute="bottom" id="9nA-7T-T0B"/>
@@ -196,7 +196,131 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivy-eF-CrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3628.985507246377" y="136.60714285714286"/>
+            <point key="canvasLocation" x="4539.130434782609" y="136.60714285714286"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="0r1-gd-gmB">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="JQC-7o-9D2" customClass="ScanViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gnF-nD-9X9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-Gs-QIc">
+                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXm-DQ-IOO">
+                                        <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align it with the viewfinder bellow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-MA-c6Y">
+                                        <rect key="frame" x="0.0" y="46.5" width="232.5" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-TY-spI">
+                                <rect key="frame" x="134" y="826" width="147" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-zx-tdJ">
+                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-w9-Rhh">
+                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vVI-Gs-QIc" firstAttribute="centerX" secondItem="gnF-nD-9X9" secondAttribute="centerX" id="6mT-fc-GTk"/>
+                            <constraint firstItem="2OI-TY-spI" firstAttribute="bottom" secondItem="gnF-nD-9X9" secondAttribute="bottom" constant="-34" id="Str-Dw-0As"/>
+                            <constraint firstItem="2OI-TY-spI" firstAttribute="centerX" secondItem="gnF-nD-9X9" secondAttribute="centerX" id="YJj-fD-l44"/>
+                            <constraint firstItem="vVI-Gs-QIc" firstAttribute="top" secondItem="7xu-yW-3Yg" secondAttribute="top" constant="20" id="oTr-bj-l2C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7xu-yW-3Yg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="je2-a2-bAr"/>
+                    <connections>
+                        <outlet property="footerTextStackView" destination="2OI-TY-spI" id="l9x-Dm-EoW"/>
+                        <outlet property="headerTextStackView" destination="vVI-Gs-QIc" id="Ftf-et-IEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDk-XP-1iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344.9275362318842" y="136.60714285714286"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="cxI-Jc-hcn">
+            <objects>
+                <viewController id="WlX-1U-w1y" customClass="LoginViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cve-hv-8gl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s" translatesAutoresizingMaskIntoConstraints="NO" id="4dm-l3-YYc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-Tz-Rs7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WlX-1U-w1y" id="waY-6x-oCS"/>
+                                    <outlet property="delegate" destination="WlX-1U-w1y" id="pf5-X8-wVg"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-EF-wJk">
+                                <rect key="frame" x="133.5" y="826" width="147" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl7-J0-xg6">
+                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6K-RH-sbn">
+                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4dm-l3-YYc" firstAttribute="top" secondItem="cve-hv-8gl" secondAttribute="top" id="5dN-Q9-tHg"/>
+                            <constraint firstItem="4dm-l3-YYc" firstAttribute="trailing" secondItem="zJz-Ms-2Rc" secondAttribute="trailing" id="7af-HO-1vF"/>
+                            <constraint firstAttribute="bottom" secondItem="4dm-l3-YYc" secondAttribute="bottom" id="IdO-8a-1bI"/>
+                            <constraint firstItem="bgP-Tz-Rs7" firstAttribute="top" secondItem="cve-hv-8gl" secondAttribute="top" id="QHx-Ya-tpq"/>
+                            <constraint firstItem="bgP-Tz-Rs7" firstAttribute="trailing" secondItem="zJz-Ms-2Rc" secondAttribute="trailing" id="RHn-KH-yms"/>
+                            <constraint firstItem="4dm-l3-YYc" firstAttribute="leading" secondItem="zJz-Ms-2Rc" secondAttribute="leading" id="VFc-Vj-tCZ"/>
+                            <constraint firstAttribute="bottom" secondItem="eU2-EF-wJk" secondAttribute="bottom" constant="34" id="ZPt-uj-cnh"/>
+                            <constraint firstAttribute="bottom" secondItem="bgP-Tz-Rs7" secondAttribute="bottom" id="e8P-eR-dzG"/>
+                            <constraint firstItem="bgP-Tz-Rs7" firstAttribute="leading" secondItem="zJz-Ms-2Rc" secondAttribute="leading" id="eHU-k1-zJw"/>
+                            <constraint firstItem="eU2-EF-wJk" firstAttribute="centerX" secondItem="cve-hv-8gl" secondAttribute="centerX" id="jt9-Hs-6nM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zJz-Ms-2Rc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Egn-JN-Pi6"/>
+                    <connections>
+                        <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
+                        <segue destination="JQC-7o-9D2" kind="show" identifier="toScanView" id="luz-0y-2TV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnd-Wz-oWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="137"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ND7-Ep-Gde">
@@ -217,7 +341,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmY-Zh-SFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="137"/>
+            <point key="canvasLocation" x="2034.7826086956522" y="136.60714285714286"/>
         </scene>
         <!--Specials-->
         <scene sceneID="2mc-4N-BWr">
@@ -238,7 +362,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ql-Wk-Y2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.1739130434785" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2862.3188405797105" y="136.60714285714286"/>
         </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
@@ -332,6 +456,25 @@
             </objects>
             <point key="canvasLocation" x="2860.8695652173915" y="-623.4375"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="23K-Fn-f08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jfR-Wv-f0m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nGP-FJ-8oI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WlX-1U-w1y" kind="relationship" relationship="rootViewController" id="Ra2-Gg-1da"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQQ-eA-yau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="136.60714285714286"/>
+        </scene>
     </scenes>
     <resources>
         <image name="DrinkBarItem-50" width="25" height="25"/>
@@ -340,5 +483,6 @@
         <image name="iCclover" width="24" height="24"/>
         <image name="icFire" width="24" height="24"/>
         <image name="icons8-restaurant-filled-31" width="31" height="31"/>
+        <image name="s" width="972" height="1114"/>
     </resources>
 </document>

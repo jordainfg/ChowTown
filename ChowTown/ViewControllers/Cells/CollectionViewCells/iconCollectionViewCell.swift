@@ -62,7 +62,9 @@ class iconCollectionViewCell: UICollectionViewCell {
         case 22:
             iCon.image = #imageLiteral(resourceName: "icVegan")
             alergenName.text = "Vegan"
-            
+         case 23:
+            iCon.image = #imageLiteral(resourceName: "icCalories")
+            alergenName.text = "200"
             
         default:
             iCon.image = #imageLiteral(resourceName: "icMilk")

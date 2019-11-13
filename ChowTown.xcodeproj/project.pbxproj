@@ -82,6 +82,13 @@
 		11C65D4A23797A2F00C69DC3 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4823797A2F00C69DC3 /* CollectionTableViewCell.xib */; };
 		11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */; };
 		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
+		11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */; };
+		11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */; };
+		11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */; };
+		11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCE4237C2B6600EA1932 /* LoginBodyTableViewCell.swift */; };
+		11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3DCE5237C2B6600EA1932 /* LoginBodyTableViewCell.xib */; };
+		11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCEC237C397F00EA1932 /* ScanViewController.swift */; };
+		11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */; };
 		11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */; };
 		223B22B7CC103DC515F8D878 /* Pods_ChowTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */; };
 /* End PBXBuildFile section */
@@ -185,6 +192,13 @@
 		11C65D4823797A2F00C69DC3 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11F3DCE4237C2B6600EA1932 /* LoginBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBodyTableViewCell.swift; sourceTree = "<group>"; };
+		11F3DCE5237C2B6600EA1932 /* LoginBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginBodyTableViewCell.xib; sourceTree = "<group>"; };
+		11F3DCEC237C397F00EA1932 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+extension.swift"; sourceTree = "<group>"; };
 		11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsDetailViewController.swift; sourceTree = "<group>"; };
 		74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.debug.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.release.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
@@ -336,6 +350,7 @@
 		11C5084A236866AA003400D0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				11F3DCD9237C248000EA1932 /* Login */,
 				11C5081B23685FEA003400D0 /* ViewController.swift */,
 				11C5084C23686733003400D0 /* SpecialsViewController.swift */,
 				110344922379AF900072688F /* ChoiceMenu */,
@@ -398,6 +413,7 @@
 				11C5087C23687EE4003400D0 /* String+extension.swift */,
 				11C5087D23687EE4003400D0 /* CustomTextField.swift */,
 				11C5087E23687EE4003400D0 /* UITextFIield+extension.swift */,
+				11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +441,19 @@
 				11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		11F3DCD9237C248000EA1932 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */,
+				11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */,
+				11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */,
+				11F3DCE4237C2B6600EA1932 /* LoginBodyTableViewCell.swift */,
+				11F3DCE5237C2B6600EA1932 /* LoginBodyTableViewCell.xib */,
+				11F3DCEC237C397F00EA1932 /* ScanViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BC4C49811C05E7359611D5A0 /* Pods */ = {
@@ -568,6 +597,7 @@
 				11C5087F23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				11C5082423685FEC003400D0 /* Assets.xcassets in Resources */,
 				11C5088D23687EE4003400D0 /* OFL.txt in Resources */,
+				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
 				11C5089323687EE4003400D0 /* Nunito-LightItalic.ttf in Resources */,
 				11C5088A23687EE4003400D0 /* Nunito-ExtraLight.ttf in Resources */,
 				11C5088323687EE4003400D0 /* Overpass-Regular.ttf in Resources */,
@@ -578,6 +608,7 @@
 				110344972379AFB40072688F /* ChoiceMenuTableViewCell.xib in Resources */,
 				11C5088423687EE4003400D0 /* Nunito-Light.ttf in Resources */,
 				11C5088923687EE4003400D0 /* Nunito-Black.ttf in Resources */,
+				11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */,
 				1103449B2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.xib in Resources */,
 				11C5089223687EE4003400D0 /* overpass-semibold.otf in Resources */,
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
@@ -657,8 +688,10 @@
 				11C5089723687EE4003400D0 /* UILabel+extension.swift in Sources */,
 				11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */,
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
+				11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */,
 				11C5089823687EE4003400D0 /* UIButton+extension.swift in Sources */,
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
+				11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
@@ -679,6 +712,9 @@
 				1103449A2379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift in Sources */,
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
+				11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */,
+				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
+				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
