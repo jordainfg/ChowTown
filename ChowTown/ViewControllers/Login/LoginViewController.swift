@@ -55,9 +55,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
        }
     //MARK: - MyCustomCellDelegator Methods
 
-    func callSegueFromCell(myData : String) {
+    func callSegueFromCell(segueIdentifier : String) {
       //try not to send self, just to avoid retain cycles(depends on how you handle the code on the next controller)
-        self.performSegue(withIdentifier: "toScanView", sender: nil )
+        self.performSegue(withIdentifier: segueIdentifier, sender: nil )
 
     }
     
@@ -85,7 +85,7 @@ extension LoginViewController : UITableViewDataSource , UITableViewDelegate{
             return cell
         case .body:
             let cell = tableView.dequeueReusableCell(withIdentifier: LoginBodyTableViewCell.reuseIdentifier()) as! LoginBodyTableViewCell
-            cell.postCodeTextFIeld.delegate = self
+           
              cell.delegate = self
             return cell
         case .footer:
@@ -100,7 +100,7 @@ extension LoginViewController : UITableViewDataSource , UITableViewDelegate{
         switch type {
             
         case .header:
-            return tableView.frame.size.height  / 3
+            return tableView.frame.size.height  / 4
         case .body:
             return tableView.frame.size.height  / 3
         case .footer:

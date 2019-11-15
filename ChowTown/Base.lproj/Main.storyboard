@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Food-->
+        <!--Scan-->
         <scene sceneID="UJK-SS-CDV">
             <objects>
                 <viewController id="lTK-Oc-c11" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ATA-An-9lj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food" image="icons8-restaurant-filled-31" id="d2v-0y-2kl"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="qrcode" catalog="system" id="d2v-0y-2kl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDF-Wf-TUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +224,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-TY-spI">
-                                <rect key="frame" x="134" y="826" width="147" height="36"/>
+                                <rect key="frame" x="133.5" y="826" width="147" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-zx-tdJ">
                                         <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
@@ -268,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s" translatesAutoresizingMaskIntoConstraints="NO" id="4dm-l3-YYc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="4dm-l3-YYc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-Tz-Rs7">
@@ -280,16 +280,16 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-EF-wJk">
-                                <rect key="frame" x="133.5" y="826" width="147" height="36"/>
+                                <rect key="frame" x="134" y="820" width="146.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl7-J0-xg6">
-                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <rect key="frame" x="25.5" y="0.0" width="95.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6K-RH-sbn">
-                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -316,6 +316,7 @@
                     <connections>
                         <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
                         <segue destination="JQC-7o-9D2" kind="show" identifier="toScanView" id="luz-0y-2TV"/>
+                        <segue destination="nKH-y5-QHz" kind="showDetail" identifier="toSearch" id="eUn-M6-UVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnd-Wz-oWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -437,11 +438,11 @@
             </objects>
             <point key="canvasLocation" x="3713.04347826087" y="-623.4375"/>
         </scene>
-        <!--Drinks-->
+        <!--Menu-->
         <scene sceneID="w9I-Oa-JLu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7UO-a4-gVp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drinks" image="DrinkBarItem-50" id="Ov1-3F-acC"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="Ov1-3F-acC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HD3-vU-8Lz">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -475,14 +476,77 @@
             </objects>
             <point key="canvasLocation" x="-365.21739130434787" y="136.60714285714286"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="icj-17-Iwj">
+            <objects>
+                <viewController id="nKH-y5-QHz" customClass="SearchViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nzn-Z0-hVb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
+                                <rect key="frame" x="0.0" y="122" width="414" height="720"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nKH-y5-QHz" id="Aa7-fG-eGM"/>
+                                    <outlet property="delegate" destination="nKH-y5-QHz" id="pB7-dh-e0k"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-5e-56g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Search" id="83X-RB-QTO">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="H3c-r3-sVH"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
+                                <rect key="frame" x="20" y="61" width="374" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nKH-y5-QHz" id="Nhd-le-IOn"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="0SR-sY-nny"/>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="7xV-fG-vm9"/>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="84F-W6-T4S"/>
+                            <constraint firstItem="jYq-wj-d8u" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" constant="20" id="EHI-32-Bvr"/>
+                            <constraint firstItem="Hsc-2s-9X1" firstAttribute="trailing" secondItem="jYq-wj-d8u" secondAttribute="trailing" constant="20" id="Gv3-mf-Jts"/>
+                            <constraint firstAttribute="bottom" secondItem="AcJ-Jo-mow" secondAttribute="bottom" id="LUF-aU-5M8"/>
+                            <constraint firstItem="AcJ-Jo-mow" firstAttribute="top" secondItem="jYq-wj-d8u" secondAttribute="bottom" constant="5" id="Mxf-BI-X9p"/>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="OfX-v0-CQq"/>
+                            <constraint firstItem="AcJ-Jo-mow" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="XRu-iY-vrh"/>
+                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="BJF-5e-56g" secondAttribute="bottom" constant="5" id="Zoz-ne-Pij"/>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="gRI-No-dSl"/>
+                            <constraint firstItem="AcJ-Jo-mow" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="sdd-Lo-8AS"/>
+                            <constraint firstItem="BJF-5e-56g" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="tHD-xa-FuN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="icD-pA-DIk"/>
+                    <connections>
+                        <outlet property="navBar" destination="BJF-5e-56g" id="j06-0k-k93"/>
+                        <outlet property="searchBar" destination="jYq-wj-d8u" id="opA-dV-38h"/>
+                        <outlet property="tableView" destination="AcJ-Jo-mow" id="mZa-dz-KLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCr-s4-8KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="883"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="DrinkBarItem-50" width="25" height="25"/>
+        <image name="BackGroundChowTown" width="4480" height="6720"/>
+        <image name="Reservation-50" width="25" height="25"/>
         <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="iCclover" width="24" height="24"/>
         <image name="icFire" width="24" height="24"/>
-        <image name="icons8-restaurant-filled-31" width="31" height="31"/>
-        <image name="s" width="972" height="1114"/>
+        <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
 </document>

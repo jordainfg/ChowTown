@@ -9,14 +9,14 @@
 import UIKit
 
 protocol MyCustomCellDelegator {
-    func callSegueFromCell(myData : String)
+    func callSegueFromCell(segueIdentifier : String)
 }
 
 class LoginBodyTableViewCell: UITableViewCell{
     
     @IBOutlet weak var postCodeTextFIeld: UITextField!
     
-      var delegate:MyCustomCellDelegator!
+    var delegate:MyCustomCellDelegator!
     
     
     override func awakeFromNib() {
@@ -41,14 +41,22 @@ class LoginBodyTableViewCell: UITableViewCell{
     
     @IBAction func scanButtonPressed(_ sender: Any) {
         
-        var mydata = "Anydata you want to send to the next controller"
-                  if(self.delegate != nil){ //Just to be safe.
-                    self.delegate.callSegueFromCell(myData: "")
-                  }
+        
+        if(self.delegate != nil){ //Just to be safe.
+            self.delegate.callSegueFromCell(segueIdentifier: "toScanView")
+        }
     }
     
-   @IBAction func textFieldShouldReturn(_ sender: Any) {
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        
+        
+        if(self.delegate != nil){ //Just to be safe.
+            self.delegate.callSegueFromCell(segueIdentifier: "toSearch")
+        }
+    }
     
+    @IBAction func textFieldShouldReturn(_ sender: Any) {
+        
     }
     
     

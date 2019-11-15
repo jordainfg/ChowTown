@@ -24,6 +24,11 @@ enum mealDetailTableViewDataType {
     
 }
 
+enum SearchTableViewDataType {
+    case favorite(Establishment)
+    case establishment(Establishment)
+}
+
 
 public class ViewModel{
     
@@ -52,6 +57,23 @@ public class ViewModel{
          
          return types
      }
+    
+    // Search & Favorites
+    var favoritesIsShowing = false
+    var establishments : [Establishment] = [Establishment(name: "bpo", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "d", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "d", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "rrv", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: "")]
+    var searchTableViewcellTypes: [[SearchTableViewDataType]] {
+        
+        let favorites = [Establishment(name: "bpo", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: "")]
+        let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
+        let establishmentsDataTypes = establishments.map { SearchTableViewDataType.establishment($0) }
+        var types: [[SearchTableViewDataType]] = [favoritesDataTypes,establishmentsDataTypes]
+        
+        if favoritesIsShowing {
+            types.append(establishmentsDataTypes)
+        }
+            
+           return types
+        }
     
     
     
