@@ -1,5 +1,5 @@
 //
-//  Choice.swift
+//  SubMenu.swift
 //  ChowTown
 //
 //  Created by Jordain Gijsbertha on 12/11/2019.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct Choice{
+public struct Menu{
     
     var title : String
     var detail: String

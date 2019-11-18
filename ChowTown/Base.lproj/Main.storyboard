@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfR-Wv-f0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PuI-ev-v0e">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,91 +27,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDF-Wf-TUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2862" y="831"/>
-        </scene>
-        <!--Specials-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpecialsViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-g4-2FA">
-                                <rect key="frame" x="0.0" y="723" width="414" height="90"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-nv-1an">
-                                        <rect key="frame" x="18" y="10" width="377" height="60"/>
-                                        <string key="text">Here are the latest restaurant deals at Chili's, Outback Steakhouse, Red Lobster, Chili's, Bob Evans, Pei Wei and more. 2019 Halloween Restaurant Deals. </string>
-                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cEq-nv-1an" secondAttribute="trailing" constant="19" id="Gzx-zf-weT"/>
-                                    <constraint firstAttribute="bottom" secondItem="cEq-nv-1an" secondAttribute="bottom" constant="20" id="Nqe-SQ-5oH"/>
-                                    <constraint firstAttribute="height" constant="90" id="PS0-oA-4zQ"/>
-                                    <constraint firstItem="cEq-nv-1an" firstAttribute="leading" secondItem="G4n-g4-2FA" secondAttribute="leading" constant="18" id="pDR-aY-ugx"/>
-                                    <constraint firstItem="cEq-nv-1an" firstAttribute="top" secondItem="G4n-g4-2FA" secondAttribute="top" constant="10" id="yRL-SK-K99"/>
-                                </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-lL-dn0">
-                                <rect key="frame" x="0.0" y="20" width="414" height="703"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MMn-sj-ysP">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="bla"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zSA-40-bxN"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sBg-WT-geY"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="8wY-lL-dn0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="830-Ur-X2O"/>
-                            <constraint firstItem="8wY-lL-dn0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9AO-C5-Qay"/>
-                            <constraint firstItem="G4n-g4-2FA" firstAttribute="top" secondItem="8wY-lL-dn0" secondAttribute="bottom" id="GMI-Ie-nok"/>
-                            <constraint firstItem="8wY-lL-dn0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="bSn-hD-SPR"/>
-                            <constraint firstItem="G4n-g4-2FA" firstAttribute="trailing" secondItem="8wY-lL-dn0" secondAttribute="trailing" id="iTQ-EV-O1G"/>
-                            <constraint firstItem="G4n-g4-2FA" firstAttribute="leading" secondItem="8wY-lL-dn0" secondAttribute="leading" id="qXb-Lc-Alc"/>
-                            <constraint firstItem="G4n-g4-2FA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wOl-w6-OHD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Specials" largeTitleDisplayMode="always" id="zKC-Hn-8S1">
-                        <barButtonItem key="leftBarButtonItem" title="November 8" id="xx3-cD-HKm">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="iCclover" id="Kln-zC-mWb">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem systemItem="search" id="hCq-Tx-NUS">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="collectionView" destination="8wY-lL-dn0" id="xOM-At-vwp"/>
-                        <segue destination="dEX-qv-diC" kind="presentation" identifier="bla" id="1lD-Av-Y0m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3772.4637681159425" y="136.60714285714286"/>
         </scene>
         <!--Specials Detail View Controller-->
         <scene sceneID="KZT-YP-NmX">
@@ -260,6 +175,45 @@
             </objects>
             <point key="canvasLocation" x="1344.9275362318842" y="136.60714285714286"/>
         </scene>
+        <!--Rewards-->
+        <scene sceneID="wHO-WK-Zu4">
+            <objects>
+                <viewController id="yI1-RF-gsj" customClass="RewardsViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpz-El-Puf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-wV-vB7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yI1-RF-gsj" id="8wc-ot-o51"/>
+                                    <outlet property="delegate" destination="yI1-RF-gsj" id="8TM-lb-n3N"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p3g-wV-vB7" firstAttribute="leading" secondItem="hxr-K0-TV3" secondAttribute="leading" id="I11-ZX-H1f"/>
+                            <constraint firstItem="p3g-wV-vB7" firstAttribute="trailing" secondItem="hxr-K0-TV3" secondAttribute="trailing" id="IDi-ue-RUI"/>
+                            <constraint firstItem="p3g-wV-vB7" firstAttribute="top" secondItem="hxr-K0-TV3" secondAttribute="top" id="WoM-bE-L51"/>
+                            <constraint firstAttribute="bottom" secondItem="p3g-wV-vB7" secondAttribute="bottom" id="eO0-2F-TdB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hxr-K0-TV3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rewards" largeTitleDisplayMode="always" id="PIA-4g-3Y5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="Dyb-Ru-IEd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="p3g-wV-vB7" id="RK4-aj-GAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew4-IL-vZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.9275362318842" y="-534.375"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="cxI-Jc-hcn">
             <objects>
@@ -335,35 +289,14 @@
                         <color key="selectedImageTintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="y8n-wB-3Xh" kind="relationship" relationship="viewControllers" id="RwU-jX-1zh"/>
                         <segue destination="7UO-a4-gVp" kind="relationship" relationship="viewControllers" id="Gxh-YR-q2E"/>
                         <segue destination="lTK-Oc-c11" kind="relationship" relationship="viewControllers" id="y0k-md-vOI"/>
+                        <segue destination="l3i-tu-IRL" kind="relationship" relationship="viewControllers" id="FkQ-6t-9hj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmY-Zh-SFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034.7826086956522" y="136.60714285714286"/>
-        </scene>
-        <!--Specials-->
-        <scene sceneID="2mc-4N-BWr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y8n-wB-3Xh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Specials" image="icFire" id="Geb-Nh-a5S">
-                        <color key="badgeColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="QGS-Qj-wKA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hwr-zd-DAN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ql-Wk-Y2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2862.3188405797105" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2145" y="137"/>
         </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
@@ -399,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4486" y="-623"/>
+            <point key="canvasLocation" x="5395.652173913044" y="-623.4375"/>
         </scene>
         <!--Menu-->
         <scene sceneID="aZf-nM-iYb">
@@ -436,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-gl-EEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3713.04347826087" y="-623.4375"/>
+            <point key="canvasLocation" x="4623.188405797102" y="-623.4375"/>
         </scene>
         <!--Menu-->
         <scene sceneID="w9I-Oa-JLu">
@@ -455,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WB1-SP-X7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860.8695652173915" y="-623.4375"/>
+            <point key="canvasLocation" x="3771.0144927536235" y="-623.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="23K-Fn-f08">
@@ -539,14 +472,40 @@
             </objects>
             <point key="canvasLocation" x="538" y="883"/>
         </scene>
+        <!--Rewards-->
+        <scene sceneID="zMX-TD-cyg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l3i-tu-IRL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rewards" image="heart" catalog="system" id="Guq-85-H9y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="vVQ-uP-7Im">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yI1-RF-gsj" kind="relationship" relationship="rootViewController" id="pfv-7K-ptW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mch-MI-mfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534.78260869565224" y="-534.375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
         <image name="Reservation-50" width="25" height="25"/>
         <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="iCclover" width="24" height="24"/>
-        <image name="icFire" width="24" height="24"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
 </document>

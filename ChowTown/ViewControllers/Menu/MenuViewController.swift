@@ -32,7 +32,7 @@ class MenuViewController: UIViewController {
     }
     
     func setupTableView() {
-        tableView.register(UINib(nibName: CollectionTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: CollectionTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: MealCollectionTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MealCollectionTableViewCell.reuseIdentifier())
           tableView.register(UINib(nibName: MenuHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MenuHeaderTableViewCell.reuseIdentifier())
         tableView.showsHorizontalScrollIndicator = false
     }
@@ -64,13 +64,13 @@ extension MenuViewController : UITableViewDataSource , UITableViewDelegate{
         switch type {
             
         case .Featured:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.reuseIdentifier()) as! CollectionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MealCollectionTableViewCell.reuseIdentifier()) as! MealCollectionTableViewCell
             return cell
         case .Popular:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.reuseIdentifier()) as! CollectionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MealCollectionTableViewCell.reuseIdentifier()) as! MealCollectionTableViewCell
             return cell
         case .Other:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.reuseIdentifier()) as! CollectionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MealCollectionTableViewCell.reuseIdentifier()) as! MealCollectionTableViewCell
             return cell
         }
     }

@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
     func setUpTableView(){
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
           tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: HeaderForEstablismentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForEstablismentTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         
     }
     
@@ -95,7 +95,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
             switch section {
             case 1:
-                    let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForEstablismentTableViewCellID") as! HeaderForEstablismentTableViewCell
+                    let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForEstablismentTableViewCellID") as! HeaderForTableViewSection
                     return headerCell.contentView
          
     

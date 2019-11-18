@@ -9,7 +9,7 @@
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
-class CollectionTableViewCell: UITableViewCell {
+class MealCollectionTableViewCell: UITableViewCell {
     var delegate: MSPeekCollectionViewDelegateImplementation!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
@@ -40,12 +40,12 @@ class CollectionTableViewCell: UITableViewCell {
     
     // Reuser identifier
     class func reuseIdentifier() -> String {
-        return "CollectionTableViewCellID"
+        return "MealCollectionTableViewCell"
     }
     
     // Nib name
     class func nibName() -> String {
-        return "CollectionTableViewCell"
+        return "MealCollectionTableViewCell"
     }
     
     
@@ -56,7 +56,7 @@ class CollectionTableViewCell: UITableViewCell {
     }
     
 }
-extension CollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MealCollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     

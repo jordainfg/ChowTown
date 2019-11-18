@@ -77,6 +77,15 @@ extension UIColor {
     @nonobjc class var dark: UIColor {
         return UIColor(red: 41.0 / 255.0, green: 52.0 / 255.0, blue: 67.0 / 255.0, alpha: 1.0)
     }
+    
+
+        static var random: UIColor {
+            return UIColor(red: .random(in: 0...1),
+                           green: .random(in: 0...1),
+                           blue: .random(in: 0...1),
+                           alpha: 1.0)
+        }
+    
 
     
 }

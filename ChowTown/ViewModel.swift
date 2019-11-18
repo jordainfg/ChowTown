@@ -9,8 +9,9 @@
 import Foundation
 
 enum ChoiceMenuTableViewDataType {
-    case Choice(Choice)
-    case Header(String)
+    case MenuSpecials(String)
+    case MenuFood([Menu])
+    case MenuDrinks([Menu])
     //case Drinks
 }
 
@@ -29,19 +30,21 @@ enum SearchTableViewDataType {
     case establishment(Establishment)
 }
 
+enum RewardsTableViewDataType {
+    case header
+    case reward
+}
 
 public class ViewModel{
     
   
     // ChoiceMenuViewController
-    var choiceMenu : [Choice] = [Choice(title: "Lunch", detail: "bla"), Choice(title: "Brunch", detail: "bla"), Choice(title: "Dinner", detail: "bla")]
-    
+    var choiceMenu : [Menu] = [Menu(title: "Lunch", detail: "bla")]
     
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
+  
         
-        let choices = choiceMenu.map { ChoiceMenuTableViewDataType.Choice($0) }
-        
-        let types: [[ChoiceMenuTableViewDataType]] = [[.Header("")],choices]
+        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuSpecials("")],[.MenuFood([])] ,[.MenuDrinks([])]]
         
         return types
     }
@@ -76,6 +79,14 @@ public class ViewModel{
         }
     
     
+    //Rewards
     
-    
+    var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
+         
+        
+            
+           let types: [[RewardsTableViewDataType]] = [[.header]]
+           
+           return types
+       }
 }

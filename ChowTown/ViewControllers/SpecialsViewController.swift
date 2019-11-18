@@ -27,6 +27,7 @@ class SpecialsViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
            UIApplication.shared.statusBarStyle = .darkContent
        }
