@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuSpecialsTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedSpecial = 0
     let flowLayout = ZoomAndSnapFlowLayout()
@@ -20,31 +20,32 @@ class MenuSpecialsTableViewCell: UITableViewCell {
     }
     
     // Reuser identifier
-           class func reuseIdentifier() -> String {
-               return "MenuSpecialsTableViewCellID"
-           }
-           
-           // Nib name
-           class func nibName() -> String {
-               return "MenuSpecialsTableViewCell"
-           }
-    func setupCollectionView(){
-        collectionView.dataSource = self
-             collectionView.delegate = self
-             collectionView.register(UINib.init(nibName: "SpecialCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SpecialCollectionViewCellID")
-             guard let collectionView = collectionView else { fatalError() }
-             //collectionView.decelerationRate = .fast // uncomment if necessary
-             
-             collectionView.collectionViewLayout = flowLayout
-             collectionView.contentInsetAdjustmentBehavior = .always
-             // hide the scroll indicator
-             collectionView.showsHorizontalScrollIndicator = false
-             collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
+    class func reuseIdentifier() -> String {
+        return "MenuSpecialsTableViewCellID"
     }
-
+    
+    // Nib name
+    class func nibName() -> String {
+        return "MenuSpecialsTableViewCell"
+    }
+    func setupCollectionView(){
+        guard let collectionView = collectionView else { fatalError() }
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib.init(nibName: "SpecialCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SpecialCollectionViewCellID")
+        
+        collectionView.decelerationRate = .fast // uncomment if necessary
+        
+        collectionView.collectionViewLayout = flowLayout
+        collectionView.contentInsetAdjustmentBehavior = .always
+        // hide the scroll indicator
+        collectionView.showsHorizontalScrollIndicator = false
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -77,6 +78,16 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSpecial = indexPath.row
         //performSegue(withIdentifier: "bla", sender: nil)
+    }
+  
+    //makes sure the first cell is centerd
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let cellWidth : CGFloat = collectionView.frame.size.width / 1.8
+
+        let numberOfCells = floor(self.frame.size.width / cellWidth)
+        let edgeInsets = (self.frame.size.width - (numberOfCells * cellWidth)) / (numberOfCells + 1)
+
+    return UIEdgeInsets(top: 15, left: edgeInsets, bottom: 0, right: edgeInsets)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

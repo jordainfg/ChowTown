@@ -9,6 +9,7 @@
 import Foundation
 
 enum ChoiceMenuTableViewDataType {
+    case MenuHeader(String)
     case MenuSpecials(String)
     case MenuFood([Menu])
     case MenuDrinks([Menu])

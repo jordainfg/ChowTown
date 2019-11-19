@@ -24,6 +24,8 @@
 		1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */; };
 		1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB2E237EE64500CB1CD9 /* HeaderForTableViewSection.swift */; };
 		1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB2F237EE64500CB1CD9 /* HeaderForTableViewSection.xib */; };
+		1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */; };
+		1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */; };
 		1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */; };
 		1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */; };
 		1162FE7E2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */; };
@@ -146,6 +148,8 @@
 		1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EstablishmentTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB2E237EE64500CB1CD9 /* HeaderForTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForTableViewSection.swift; sourceTree = "<group>"; };
 		1117BB2F237EE64500CB1CD9 /* HeaderForTableViewSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForTableViewSection.xib; sourceTree = "<group>"; };
+		1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSpecialsTableViewCell.swift; sourceTree = "<group>"; };
@@ -284,8 +288,6 @@
 				110344952379AFB40072688F /* ChoiceMenuTableViewCell.xib */,
 				110344982379B64A0072688F /* ChoiceMenuHeaderTableViewCell.swift */,
 				110344992379B64A0072688F /* ChoiceMenuHeaderTableViewCell.xib */,
-				1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */,
-				1162FE7D2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -328,6 +330,10 @@
 		1162FE892382ED1700943CEE /* Sub Menu */ = {
 			isa = PBXGroup;
 			children = (
+				1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */,
+				1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */,
+				1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */,
+				1162FE7D2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib */,
 				1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */,
 				1162FE852382EC0F00943CEE /* SubMenuTableViewCell.xib */,
 				1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */,
@@ -719,6 +725,7 @@
 				1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */,
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
+				1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +842,7 @@
 				11A90E992382BA9900388093 /* RewardsViewController.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
+				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,

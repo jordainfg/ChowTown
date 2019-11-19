@@ -139,16 +139,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-TY-spI">
-                                <rect key="frame" x="133.5" y="826" width="147" height="36"/>
+                                <rect key="frame" x="134" y="820" width="146.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-zx-tdJ">
-                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <rect key="frame" x="25.5" y="0.0" width="95.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-w9-Rhh">
-                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -289,7 +289,7 @@
                         <color key="selectedImageTintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7UO-a4-gVp" kind="relationship" relationship="viewControllers" id="Gxh-YR-q2E"/>
+                        <segue destination="ISZ-aB-xfc" kind="relationship" relationship="viewControllers" id="01e-L4-LJ7"/>
                         <segue destination="lTK-Oc-c11" kind="relationship" relationship="viewControllers" id="y0k-md-vOI"/>
                         <segue destination="l3i-tu-IRL" kind="relationship" relationship="viewControllers" id="FkQ-6t-9hj"/>
                     </connections>
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5395.652173913044" y="-623.4375"/>
+            <point key="canvasLocation" x="6305.7971014492759" y="-623.4375"/>
         </scene>
         <!--Menu-->
         <scene sceneID="aZf-nM-iYb">
@@ -342,7 +342,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -361,7 +361,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="lJj-uh-xV2"/>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="lJj-uh-xV2">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
+                            <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xvf-oo-sDc" id="BGq-BU-3Pg"/>
                         <segue destination="Sa0-yr-Tmp" kind="show" identifier="toMenu" id="pSN-i7-CGg"/>
@@ -369,26 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-gl-EEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623.188405797102" y="-623.4375"/>
-        </scene>
-        <!--Menu-->
-        <scene sceneID="w9I-Oa-JLu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7UO-a4-gVp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="Ov1-3F-acC"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HD3-vU-8Lz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ulw-qS-t2C" kind="relationship" relationship="rootViewController" id="me4-yn-eZE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WB1-SP-X7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3771.0144927536235" y="-623.4375"/>
+            <point key="canvasLocation" x="5533.3333333333339" y="-623.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="23K-Fn-f08">
@@ -499,6 +484,25 @@
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="-534.375"/>
         </scene>
+        <!--Menu-->
+        <scene sceneID="GrU-TC-9U4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ISZ-aB-xfc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="v6S-Mi-sgE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VXO-aM-KaQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ulw-qS-t2C" kind="relationship" relationship="rootViewController" id="7H9-J3-4Ob"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFR-sK-QEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4623.188405797102" y="-623.4375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
@@ -506,6 +510,7 @@
         <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="icChangeLocation" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
 </document>

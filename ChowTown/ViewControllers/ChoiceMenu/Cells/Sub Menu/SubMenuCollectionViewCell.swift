@@ -10,6 +10,7 @@ import UIKit
 
 class SubMenuCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var subMenuName: UILabel!
     @IBOutlet weak var cardView: DesignableView!
     @IBOutlet weak var cardImage: UIImageView!
     override func awakeFromNib() {

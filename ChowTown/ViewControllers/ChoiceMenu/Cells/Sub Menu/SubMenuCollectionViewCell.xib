@@ -17,30 +17,30 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsF-5Z-n2y" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                        <rect key="frame" x="5" y="5" width="186" height="214"/>
+                        <rect key="frame" x="1" y="5" width="194" height="214"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Hl-aI-4W1">
-                                <rect key="frame" x="49.5" y="58.5" width="87" height="97"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Hl-aI-4W1">
+                                <rect key="frame" x="57" y="50" width="80" height="114.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group91" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-gR-GVF">
-                                        <rect key="frame" x="18.5" y="0.0" width="50" height="50"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMLunch" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-gR-GVF">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.95496326679999999" green="0.74928206210000003" blue="0.74117022749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="9oH-gq-RSD"/>
-                                            <constraint firstAttribute="height" constant="50" id="pHl-5C-ouQ"/>
+                                            <constraint firstAttribute="width" constant="80" id="9oH-gq-RSD"/>
+                                            <constraint firstAttribute="height" constant="80" id="pHl-5C-ouQ"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="BREAKFAST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqa-oA-ovR">
-                                        <rect key="frame" x="7" y="59" width="73" height="14.5"/>
+                                        <rect key="frame" x="3.5" y="84" width="73" height="14.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.27451187370000002" green="0.2745060325" blue="0.27450999619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 11:00 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5R-N5-geM">
-                                        <rect key="frame" x="0.0" y="82.5" width="87" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="3" y="102.5" width="74" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -54,7 +54,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="11"/>
+                                <real key="value" value="14"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -62,8 +62,8 @@
             </view>
             <constraints>
                 <constraint firstItem="lsF-5Z-n2y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ouo-WI-EOo"/>
-                <constraint firstItem="lsF-5Z-n2y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Qrt-t9-pDl"/>
-                <constraint firstAttribute="trailing" secondItem="lsF-5Z-n2y" secondAttribute="trailing" constant="5" id="flk-P6-0Y6"/>
+                <constraint firstItem="lsF-5Z-n2y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="Qrt-t9-pDl"/>
+                <constraint firstAttribute="trailing" secondItem="lsF-5Z-n2y" secondAttribute="trailing" constant="1" id="flk-P6-0Y6"/>
                 <constraint firstAttribute="bottom" secondItem="lsF-5Z-n2y" secondAttribute="bottom" constant="5" id="l5N-gB-7MU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -71,11 +71,12 @@
             <connections>
                 <outlet property="cardImage" destination="hiv-gR-GVF" id="AzM-Qk-IDR"/>
                 <outlet property="cardView" destination="lsF-5Z-n2y" id="IMx-kg-1bO"/>
+                <outlet property="subMenuName" destination="vqa-oA-ovR" id="BXr-mi-EmC"/>
             </connections>
             <point key="canvasLocation" x="243.47826086956525" y="202.90178571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Group91" width="107" height="78"/>
+        <image name="IMLunch" width="214.5" height="200"/>
     </resources>
 </document>
