@@ -72,7 +72,9 @@ extension SpecialsViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.coverImageView.hero.id = "specialHeroID\(indexPath.row)"
         cell.specialName.hero.id = "specialNameHeroID\(indexPath.row)"
         cell.specialDetail.hero.id = "specialDetailHeroID\(indexPath.row)"
+        cell.infoView.hero.id = "specialHeaderViewHeroID\(indexPath.row)"
         cell.cornerRadius = 15
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

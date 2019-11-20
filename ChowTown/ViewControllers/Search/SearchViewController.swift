@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     
     var filterdEstablishments : [Establishment]?
     
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navBar: UINavigationBar!
@@ -26,14 +26,14 @@ class SearchViewController: UIViewController {
         filterdEstablishments =  viewModel.establishments
         setUpTableView()
         self.navigationController?.view.backgroundColor = UIColor.clear
-
+        
         navBar.setValue(true, forKey: "hidesShadow")
         // Do any additional setup after loading the view.
     }
     
     func setUpTableView(){
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
-          tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         
     }
@@ -48,12 +48,12 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
+        
         switch section {
             
         case 0:
-           return viewModel.searchTableViewcellTypes[section].count
-             
+            return viewModel.searchTableViewcellTypes[section].count
+            
         case 1:
             
             return filterdEstablishments!.count
@@ -74,7 +74,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             return cell
         case .establishment(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
-           
+            
             return cell
             
         }
@@ -90,31 +90,31 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             return 100
         }
     }
-        
-        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-            switch section {
-            case 1:
-                    let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForEstablismentTableViewCellID") as! HeaderForTableViewSection
-                    return headerCell.contentView
-         
     
-            default:
-                return nil
-            }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        switch section {
+        case 1:
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
+            return headerCell.contentView
+            
+            
+        default:
+            return nil
         }
+    }
     
-        func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-          
-         switch section {
-                   case 1:
-                        
-                           return 40
-                
-           
-                   default:
-                       return 0
-                   }
+    func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        switch section {
+        case 1:
+            
+            return 40
+            
+            
+        default:
+            return 0
+        }
     }
     
     func showEstablishments(_ show: Bool) {
@@ -152,14 +152,14 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
         
-//        guard let term = searchBar.text , term.trim().isEmpty == false else {
-//
-//            //Notification "White spaces are not permitted"
-//            return
-        }
-        
-        //Filter function
-     //   self.filterFunction(searchText: term)
+        //        guard let term = searchBar.text , term.trim().isEmpty == false else {
+        //
+        //            //Notification "White spaces are not permitted"
+        //            return
+    }
+    
+    //Filter function
+    //   self.filterFunction(searchText: term)
     
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
@@ -170,7 +170,7 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.resignFirstResponder()
         
         //Filter function
-      //  self.filterFunction(searchText: searchBar.text)
+        //  self.filterFunction(searchText: searchBar.text)
     }
 }
 

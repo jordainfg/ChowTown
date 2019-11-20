@@ -10,6 +10,7 @@ import UIKit
 
 class MealHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var specialHeaderView: UIView!
     @IBOutlet weak var specialName: UILabel!
     @IBOutlet weak var specialSubTitle: UILabel!
     

@@ -10,43 +10,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubMenuCollectionViewCellID" id="gTV-IL-0wX" customClass="SubMenuCollectionViewCell" customModule="ChowTown" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="196" height="224"/>
+            <rect key="frame" x="0.0" y="0.0" width="134" height="167"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="196" height="224"/>
+                <rect key="frame" x="0.0" y="0.0" width="134" height="167"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsF-5Z-n2y" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                        <rect key="frame" x="1" y="5" width="194" height="214"/>
+                        <rect key="frame" x="1" y="5" width="132" height="157"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Hl-aI-4W1">
-                                <rect key="frame" x="57" y="50" width="80" height="114.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7Hl-aI-4W1">
+                                <rect key="frame" x="29" y="38.5" width="74" height="80.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMLunch" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-gR-GVF">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLunch" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-gR-GVF">
+                                        <rect key="frame" x="17" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.95496326679999999" green="0.74928206210000003" blue="0.74117022749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="9oH-gq-RSD"/>
-                                            <constraint firstAttribute="height" constant="80" id="pHl-5C-ouQ"/>
+                                            <constraint firstAttribute="width" constant="40" id="9oH-gq-RSD"/>
+                                            <constraint firstAttribute="height" constant="40" id="pHl-5C-ouQ"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="BREAKFAST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqa-oA-ovR">
-                                        <rect key="frame" x="3.5" y="84" width="73" height="14.5"/>
+                                        <rect key="frame" x="0.5" y="47" width="73" height="14.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" red="0.27451187370000002" green="0.2745060325" blue="0.27450999619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 11:00 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5R-N5-geM">
-                                        <rect key="frame" x="3" y="102.5" width="74" height="12"/>
+                                        <rect key="frame" x="0.0" y="68.5" width="74" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95496326679999999" green="0.74928206210000003" blue="0.74117022749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.74901960784313726" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Hl-aI-4W1" firstAttribute="centerX" secondItem="lsF-5Z-n2y" secondAttribute="centerX" id="Wjs-ZJ-W13"/>
@@ -67,16 +67,16 @@
                 <constraint firstAttribute="bottom" secondItem="lsF-5Z-n2y" secondAttribute="bottom" constant="5" id="l5N-gB-7MU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="196" height="224"/>
+            <size key="customSize" width="134" height="167"/>
             <connections>
                 <outlet property="cardImage" destination="hiv-gR-GVF" id="AzM-Qk-IDR"/>
                 <outlet property="cardView" destination="lsF-5Z-n2y" id="IMx-kg-1bO"/>
                 <outlet property="subMenuName" destination="vqa-oA-ovR" id="BXr-mi-EmC"/>
             </connections>
-            <point key="canvasLocation" x="243.47826086956525" y="202.90178571428569"/>
+            <point key="canvasLocation" x="198.55072463768118" y="183.81696428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="IMLunch" width="214.5" height="200"/>
+        <image name="icLunch" width="24" height="24"/>
     </resources>
 </document>

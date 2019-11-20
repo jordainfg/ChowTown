@@ -29,6 +29,7 @@ class SpecialsDetailViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
+        
     }
     
     func setUpView(){
@@ -43,9 +44,10 @@ class SpecialsDetailViewController: UIViewController {
         updateHeaderView()
         
         let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
-        button.setBackgroundImage(UIImage(systemName: "arrow.left.circle.fill"), for: .normal)
+        button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.hero.id = "specialHeroID\(specialHeroID)"
         self.view.addSubview(button)
     }
     func setupTableView() {
@@ -113,7 +115,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
-            
+            cell.specialHeaderView.hero.id = "specialHeaderViewHeroID\(specialHeroID)"
             cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
             cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
             cell.indentationLevel = 2;

@@ -55,7 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
        }
     //MARK: - MyCustomCellDelegator Methods
 
-    func callSegueFromCell(segueIdentifier : String) {
+    func callSegueFromCell(segueIdentifier : String, index : Int) {
       //try not to send self, just to avoid retain cycles(depends on how you handle the code on the next controller)
         self.performSegue(withIdentifier: segueIdentifier, sender: nil )
 

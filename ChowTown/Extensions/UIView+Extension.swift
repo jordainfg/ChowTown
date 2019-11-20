@@ -120,6 +120,17 @@ extension UIView {
 
           layer.insertSublayer(gradientLayer, at: 0)
       }
+     func addBlurEffect()
+      {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+          let blurEffectView = UIVisualEffectView(effect: blurEffect)
+          blurEffectView.frame = self.bounds
+
+          blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+          self.insertSubview(blurEffectView, at: 0)
+          
+      }
+    
 }
 
 extension UIAlertController {

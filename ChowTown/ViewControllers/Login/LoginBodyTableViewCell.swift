@@ -9,7 +9,8 @@
 import UIKit
 
 protocol MyCustomCellDelegator {
-    func callSegueFromCell(segueIdentifier : String)
+    func callSegueFromCell(segueIdentifier : String, index : Int)
+    
 }
 
 class LoginBodyTableViewCell: UITableViewCell{
@@ -43,7 +44,7 @@ class LoginBodyTableViewCell: UITableViewCell{
         
         
         if(self.delegate != nil){ //Just to be safe.
-            self.delegate.callSegueFromCell(segueIdentifier: "toScanView")
+            self.delegate.callSegueFromCell(segueIdentifier: "toScanView", index: 0)
         }
     }
     
@@ -51,7 +52,7 @@ class LoginBodyTableViewCell: UITableViewCell{
         
         
         if(self.delegate != nil){ //Just to be safe.
-            self.delegate.callSegueFromCell(segueIdentifier: "toSearch")
+            self.delegate.callSegueFromCell(segueIdentifier: "toSearch", index: 0)
         }
     }
     

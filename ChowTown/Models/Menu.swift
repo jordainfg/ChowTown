@@ -13,6 +13,8 @@ public struct Menu{
     
     var title : String
     var detail: String
+    var color : String
+    var iCon : String
    
     
     

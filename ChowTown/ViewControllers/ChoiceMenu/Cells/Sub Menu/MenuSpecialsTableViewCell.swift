@@ -13,6 +13,9 @@ class MenuSpecialsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedSpecial = 0
     let flowLayout = ZoomAndSnapFlowLayout()
+    
+    var delegate:MyCustomCellDelegator!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -43,20 +46,12 @@ class MenuSpecialsTableViewCell: UITableViewCell {
         
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    
     
     
 }
 
 extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    
-    
-    
     
     //2
     func collectionView(_ collectionView: UICollectionView,
@@ -70,13 +65,16 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpecialCollectionViewCellID", for: indexPath) as! SpecialCollectionViewCell
         cell.backgroundColor = UIColor.clear
         cell.coverImageView.hero.id = "specialHeroID\(indexPath.row)"
+        cell.infoView.hero.id = "specialHeroID\(indexPath.row)"
         cell.specialName.hero.id = "specialNameHeroID\(indexPath.row)"
         cell.specialDetail.hero.id = "specialDetailHeroID\(indexPath.row)"
         cell.cornerRadius = 15
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedSpecial = indexPath.row
+       // selectedSpecial = indexPath.ro
+        self.delegate.callSegueFromCell(segueIdentifier: "toMeal", index: indexPath.row)
+        
         //performSegue(withIdentifier: "bla", sender: nil)
     }
   

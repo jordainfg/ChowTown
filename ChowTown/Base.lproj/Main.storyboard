@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDF-Wf-TUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="831"/>
+            <point key="canvasLocation" x="2145" y="854"/>
         </scene>
         <!--Specials Detail View Controller-->
         <scene sceneID="KZT-YP-NmX">
@@ -43,7 +43,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -80,6 +80,11 @@
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" id="lhl-FL-zTZ"/>
                                         <constraint firstAttribute="trailing" secondItem="HOo-FD-PnB" secondAttribute="trailing" id="mhu-6U-qCw"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="P7Z-am-2xx"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -111,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivy-eF-CrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4539.130434782609" y="136.60714285714286"/>
+            <point key="canvasLocation" x="5416" y="137"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="0r1-gd-gmB">
@@ -301,14 +306,14 @@
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
             <objects>
-                <viewController id="Sa0-yr-Tmp" customClass="MenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Sa0-yr-Tmp" customClass="SubMenuMealsAndDrinksViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -318,32 +323,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dcL-ch-zaX" firstAttribute="top" secondItem="ze7-Ya-FeV" secondAttribute="top" id="2rY-iz-JQ3"/>
-                            <constraint firstItem="dcL-ch-zaX" firstAttribute="bottom" secondItem="ioa-LB-ZYz" secondAttribute="bottom" id="8O3-rY-cIF"/>
-                            <constraint firstItem="dcL-ch-zaX" firstAttribute="leading" secondItem="ioa-LB-ZYz" secondAttribute="leading" id="j35-Wh-Ipa"/>
-                            <constraint firstItem="dcL-ch-zaX" firstAttribute="centerX" secondItem="ze7-Ya-FeV" secondAttribute="centerX" id="s0u-uk-UVe"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="leading" secondItem="ioa-LB-ZYz" secondAttribute="leading" id="0lb-Ob-KE9"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="top" secondItem="ze7-Ya-FeV" secondAttribute="top" id="94d-hL-FsU"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="bottom" secondItem="ioa-LB-ZYz" secondAttribute="bottom" constant="34" id="Jaq-vq-LWs"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="trailing" secondItem="ioa-LB-ZYz" secondAttribute="trailing" id="Tjb-18-i7W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-LB-ZYz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="always" id="GW7-f2-x55"/>
+                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="never" id="GW7-f2-x55"/>
                     <connections>
-                        <outlet property="tableView" destination="dcL-ch-zaX" id="ZvY-Rd-w8b"/>
+                        <outlet property="tableView" destination="dcL-ch-zaX" id="gqF-Oe-wOv"/>
+                        <segue destination="dEX-qv-diC" kind="showDetail" identifier="toMeal" id="JS9-e9-O0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6305.7971014492759" y="-623.4375"/>
+            <point key="canvasLocation" x="4608.695652173913" y="136.60714285714286"/>
         </scene>
         <!--Menu-->
         <scene sceneID="aZf-nM-iYb">
             <objects>
                 <viewController id="ulw-qS-t2C" customClass="ChoiceMenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -361,19 +367,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="lJj-uh-xV2">
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="lJj-uh-xV2">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
                             <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="nKH-y5-QHz" kind="showDetail" id="4Rv-9I-YlO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="oW4-GT-QsD">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="xvf-oo-sDc" id="BGq-BU-3Pg"/>
-                        <segue destination="Sa0-yr-Tmp" kind="show" identifier="toMenu" id="pSN-i7-CGg"/>
+                        <segue destination="Sa0-yr-Tmp" kind="show" identifier="toSubMenuMealsAndDrinks" id="pSN-i7-CGg"/>
+                        <segue destination="dEX-qv-diC" kind="presentation" identifier="toMeal" id="z51-tV-LkX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-gl-EEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5533.3333333333339" y="-623.4375"/>
+            <point key="canvasLocation" x="3806" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="23K-Fn-f08">
@@ -490,8 +506,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ISZ-aB-xfc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="v6S-Mi-sgE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VXO-aM-KaQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="VXO-aM-KaQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -501,16 +517,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFR-sK-QEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4623.188405797102" y="-623.4375"/>
+            <point key="canvasLocation" x="3006" y="137"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
         <image name="Reservation-50" width="25" height="25"/>
-        <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Rv-9I-YlO"/>
+        <segue reference="z51-tV-LkX"/>
+    </inferredMetricsTieBreakers>
 </document>
