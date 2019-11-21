@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +18,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteEstablishmentCollectionViewCellID" id="gTV-IL-0wX" customClass="FavoriteEstablishmentCollectionViewCell" customModule="ChowTown" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="319" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="405" height="131"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="131"/>
+                <rect key="frame" x="0.0" y="0.0" width="405" height="131"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEd-0y-zWT" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="299" height="111"/>
+                        <rect key="frame" x="10" y="10" width="385" height="111"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="oyM-14-Bxy">
-                                <rect key="frame" x="20" y="8" width="259" height="95"/>
+                                <rect key="frame" x="20" y="8" width="345" height="95"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Tp9-IB-s6u">
                                         <rect key="frame" x="0.0" y="7.5" width="80" height="80"/>
@@ -43,16 +43,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="heP-H6-unz">
-                                        <rect key="frame" x="98" y="13.5" width="161" height="68.5"/>
+                                        <rect key="frame" x="98" y="13.5" width="194" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-PN-EYc">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Zy-AaO">
-                                                <rect key="frame" x="0.0" y="23.5" width="161" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="194" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -61,7 +61,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDy-NA-Czh">
-                                                <rect key="frame" x="0.0" y="48" width="94" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="48" width="113.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -76,6 +76,17 @@
                                             <constraint firstItem="vDy-NA-Czh" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" multiplier="0.584795" id="pvW-pe-tcD"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-62-oK4">
+                                        <rect key="frame" x="310" y="30" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="dlN-mh-aVP"/>
+                                            <constraint firstAttribute="height" constant="35" id="h4M-b6-zpx"/>
+                                        </constraints>
+                                        <state key="normal" image="star" catalog="system"/>
+                                        <connections>
+                                            <action selector="favoriteButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OIt-PC-JaM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -121,19 +132,20 @@
                 <constraint firstItem="SEd-0y-zWT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="sLY-ZZ-top"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="319" height="131"/>
+            <size key="customSize" width="405" height="131"/>
             <connections>
                 <outlet property="establishmentAddress" destination="adO-Zy-AaO" id="Fxu-Nd-qfv"/>
                 <outlet property="establishmentName" destination="YxS-PN-EYc" id="u3G-pV-Hrl"/>
                 <outlet property="establishmentPhone" destination="vDy-NA-Czh" id="dzg-Ms-Rzs"/>
                 <outlet property="image" destination="Tp9-IB-s6u" id="2uK-rO-4Yf"/>
             </connections>
-            <point key="canvasLocation" x="315.21739130434787" y="177.79017857142856"/>
+            <point key="canvasLocation" x="377.536231884058" y="177.79017857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>
         <image name="phone.circle" catalog="system" width="64" height="60"/>
+        <image name="star" catalog="system" width="64" height="58"/>
     </resources>
 </document>

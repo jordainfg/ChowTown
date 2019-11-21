@@ -33,18 +33,18 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <rect key="frame" x="0.0" y="-88" width="414" height="388"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="15"/>
@@ -77,7 +77,7 @@
                                         <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" id="6jb-Ry-gVQ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="trailing" secondItem="P7Z-am-2xx" secondAttribute="trailing" constant="20" id="BaR-uK-cDA"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="leading" secondItem="Wj2-c2-nmv" secondAttribute="leading" id="Mbe-gg-bxJ"/>
-                                        <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" id="lhl-FL-zTZ"/>
+                                        <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" constant="-88" id="lhl-FL-zTZ"/>
                                         <constraint firstAttribute="trailing" secondItem="HOo-FD-PnB" secondAttribute="trailing" id="mhu-6U-qCw"/>
                                     </constraints>
                                     <variation key="default">
@@ -105,7 +105,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cv9-wQ-IsW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7zA-t5-CH7"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="7zA-t5-CH7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="zgf-Lo-VRT"/>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -116,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivy-eF-CrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5416" y="137"/>
+            <point key="canvasLocation" x="5415.9420289855079" y="136.60714285714286"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="0r1-gd-gmB">
@@ -311,9 +313,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -330,10 +331,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-LB-ZYz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="never" id="GW7-f2-x55"/>
+                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="never" id="GW7-f2-x55">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="4g8-KG-6uc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dcL-ch-zaX" id="gqF-Oe-wOv"/>
-                        <segue destination="dEX-qv-diC" kind="showDetail" identifier="toMeal" id="JS9-e9-O0z"/>
+                        <segue destination="dEX-qv-diC" kind="show" identifier="toMeal" id="JS9-e9-O0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -343,7 +346,7 @@
         <!--Menu-->
         <scene sceneID="aZf-nM-iYb">
             <objects>
-                <viewController id="ulw-qS-t2C" customClass="ChoiceMenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu" id="ulw-qS-t2C" customClass="ChoiceMenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,6 +512,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="VXO-aM-KaQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -531,6 +535,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Rv-9I-YlO"/>
-        <segue reference="z51-tV-LkX"/>
+        <segue reference="JS9-e9-O0z"/>
     </inferredMetricsTieBreakers>
 </document>

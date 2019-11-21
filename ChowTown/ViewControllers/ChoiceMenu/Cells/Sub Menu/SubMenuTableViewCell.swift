@@ -66,9 +66,9 @@ extension SubMenuTableViewCell: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubMenuCollectionViewCellID", for: indexPath) as! SubMenuCollectionViewCell
         cell.cardImage.image = UIImage(named: Menus[indexPath.row].iCon)
-        cell.cardImage.backgroundColor = UIColor.clear 
-        cell.cardImage.tintColor = tint
-        cell.cardView.backgroundColor = UIColor.hexStringToUIColor(hex: Menus[indexPath.row].color)
+        //cell.cardImage.backgroundColor = UIColor.clear
+        cell.cardImage.tintColor = UIColor.hexStringToUIColor(hex: Menus[indexPath.row].color)
+       // cell.cardView.backgroundColor = UIColor.hexStringToUIColor(hex: Menus[indexPath.row].color)
         cell.backgroundColor = UIColor.clear
         cell.subMenuName.text = Menus[indexPath.row].title
         

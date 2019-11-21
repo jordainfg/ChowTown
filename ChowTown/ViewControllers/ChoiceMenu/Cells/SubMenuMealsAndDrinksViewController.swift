@@ -16,11 +16,18 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+         self.navigationController?.navigationBar.shadowImage = nil
+          self.navigationController?.navigationBar.isTranslucent = true
+          self.navigationController?.view.backgroundColor = UIColor.white
     }
     
     func setupTableView() {
         tableView.register(UINib(nibName: SubMenuMealsAndDrinksTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: SubMenuMealsAndDrinksHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksHeaderTableViewCell.reuseIdentifier())
         //        tableView.register(UINib(nibName: MeetingInfoDatePickerTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MeetingInfoDatePickerTableViewCell.reuseIdentifier())
         //        tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
     }
@@ -67,10 +74,13 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
             
             
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksHeaderTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksHeaderTableViewCell
+             cell.selectionStyle = .none
+             cell.isUserInteractionEnabled = false
             return cell
         case .meal:
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
+            cell.selectionStyle = .none
             return cell
         case .drink:
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
@@ -90,7 +100,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         switch type {
     
         case .header:
-        return 90
+        return 400
         case .meal:
              return 90
         case .drink:

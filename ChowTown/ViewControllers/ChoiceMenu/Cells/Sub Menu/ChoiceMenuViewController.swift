@@ -18,19 +18,28 @@ class ChoiceMenuViewController: UIViewController,MyCustomCellDelegator {
     
     let viewModel = ViewModel()
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-//setupUI()
+        //setupUI()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+      self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.white
+        
     }
     
     
- 
+    
     func setupTableView() {
         tableView.register(UINib(nibName: MealCollectionTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MealCollectionTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: ChoiceMenuHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChoiceMenuHeaderTableViewCell.reuseIdentifier())
+        //        tableView.register(UINib(nibName: ChoiceMenuHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChoiceMenuHeaderTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: MenuSpecialsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MenuSpecialsTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         tableView.register(UINib(nibName: SubMenuTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuTableViewCell.reuseIdentifier())

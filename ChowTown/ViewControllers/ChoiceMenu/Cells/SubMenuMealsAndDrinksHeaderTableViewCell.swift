@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChoiceMenuHeaderTableViewCell: UITableViewCell {
+class SubMenuMealsAndDrinksHeaderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +22,12 @@ class ChoiceMenuHeaderTableViewCell: UITableViewCell {
     }
     // Reuser identifier
            class func reuseIdentifier() -> String {
-               return "ChoiceMenuHeaderTableViewCellID"
+               return "SubMenuMealsAndDrinksHeaderTableViewCellID"
            }
            
            // Nib name
            class func nibName() -> String {
-               return "ChoiceMenuHeaderTableViewCell"
+               return "SubMenuMealsAndDrinksHeaderTableViewCell"
            }
     
 }

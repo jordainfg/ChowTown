@@ -31,4 +31,27 @@ class EstablishmentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        
+        UIView.animate(withDuration: 2.0,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.20),
+                       initialSpringVelocity: CGFloat(6.0),
+                       options: UIView.AnimationOptions.allowUserInteraction,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+                        //check current value
+                        if (sender.imageView?.image == UIImage(systemName: "star.fill")) {
+                            //set default
+                            sender.setImage(UIImage(systemName: "star"), for: .normal)
+                        } else{
+                            // set like
+                            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                        }
+        },
+                       completion: { Void in()  }
+        )
+
+    }
 }

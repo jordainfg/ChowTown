@@ -15,32 +15,56 @@ class FavoriteEstablishmentCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var establishmentAddress: UIButton!
     
-   
+    
     @IBOutlet weak var establishmentPhone: UIButton!
     
     
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       
-      //  image.makeRounded()
+        
+        //  image.makeRounded()
     }
     
     // Reuser identifier
-           class func reuseIdentifier() -> String {
-               return "FavoriteEstablishmentCollectionViewCellID"
-           }
-           
-           // Nib name
-           class func nibName() -> String {
-               return "FavoriteEstablishmentCollectionViewCell"
-           }
+    class func reuseIdentifier() -> String {
+        return "FavoriteEstablishmentCollectionViewCellID"
+    }
+    
+    // Nib name
+    class func nibName() -> String {
+        return "FavoriteEstablishmentCollectionViewCell"
+    }
     
     func configure(with establishment: Establishment?){
         establishmentName.text = establishment?.name
         establishmentAddress.setTitle(establishment?.address, for: .normal)
         establishmentPhone.setTitle("20203093", for: .normal)
     }
-
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        
+        UIView.animate(withDuration: 2.0,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.20),
+                       initialSpringVelocity: CGFloat(6.0),
+                       options: UIView.AnimationOptions.allowUserInteraction,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+                        //check current value
+                        if (sender.imageView?.image == UIImage(systemName: "star")) {
+                            //set default
+                            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                        } else{
+                            // set like
+                            sender.setImage(UIImage(systemName: "star"), for: .normal)
+                        }
+        },
+                       completion: { Void in()  }
+        )
+    }
+    
+    
 }

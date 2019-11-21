@@ -12,13 +12,15 @@ import Hero
 
 
 class SpecialsDetailViewController: UIViewController {
-  
+    
     let viewModel = ViewModel()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     var headerView: UIView!
     var specialHeroID = 0
     var kTableHeaderHeight:CGFloat = 300.0
+    
+    var isPopOver = false
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.hero.id = "specialHeroID\(specialHeroID)"
@@ -28,6 +30,9 @@ class SpecialsDetailViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         UIApplication.shared.statusBarStyle = .lightContent
         
     }
@@ -43,18 +48,25 @@ class SpecialsDetailViewController: UIViewController {
         tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
         updateHeaderView()
         
-        let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
-        button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-        button.tintColor = .white
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.hero.id = "specialHeroID\(specialHeroID)"
-        self.view.addSubview(button)
+        //  for ios 13
+        
+        
+        
+        if isPopOver{
+            let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
+            button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+            button.tintColor = .white
+            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            button.hero.id = "specialHeroID\(specialHeroID)"
+            self.view.addSubview(button)
+        }
+        
     }
     func setupTableView() {
         tableView.register(UINib(nibName: MealHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MealHeaderTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: NutritionInformationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: NutritionInformationTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: IconsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: IconsTableViewCell.reuseIdentifier())
-               tableView.register(UINib(nibName: AddOnTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AddOnTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: AddOnTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AddOnTableViewCell.reuseIdentifier())
     }
     
     func updateHeaderView() {
@@ -126,21 +138,21 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             
             return cell
         case let .aboutIconSet(name):
-        let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-        cell.iconSetName.text = name
-        cell.iCons = [23,20,21,22]
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
+            cell.iconSetName.text = name
+            cell.iCons = [23,20,21,22]
+            return cell
             
         case let .alergenIconSet(name):
-             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-                   cell.iconSetName.text = name
-                   cell.iCons = [1,2,3,4,5,6,7,8,9]
-                   return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
+            cell.iconSetName.text = name
+            cell.iCons = [1,2,3,4,5,6,7,8,9]
+            return cell
         case .addOns(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: AddOnTableViewCell.reuseIdentifier()) as! AddOnTableViewCell
-                       
-               
-                       return cell
+            
+            
+            return cell
         }
         
     }
@@ -169,7 +181,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
     // set the height of the row based on the chosen cell
     
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
+        let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
         
         switch type {
             
@@ -179,15 +191,15 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             return 100
             
         case .nutritionInfo:
-          
+            
             
             return 220
         case .alergenIconSet:
-          return  100
+            return  100
         case .aboutIconSet(_):
             return 100
         case .addOns(_):
-           return 40
+            return 40
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

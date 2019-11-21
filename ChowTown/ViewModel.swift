@@ -49,14 +49,13 @@ public class ViewModel{
     var drinkMenus : [Menu] = [Menu(title: "Hot", detail: "All day", color: "#ED8554", iCon: "icHotBevrage"),Menu(title: "Juice", detail: "All day", color: "#7339AB", iCon: "icJuices"),Menu(title: "Smoothie", detail: "All day", color: "#F14666", iCon: "icSmoothie"),Menu(title: "Sodas", detail: "All day", color: "#FFC872", iCon: "icCola"),Menu(title: "Wine", detail: "All day", color: "#725A7A", iCon: "icWine")]
     
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
-  
-        
+
         let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials("")],[.MenuFood(foodMenus)] ,[.MenuDrinks(drinkMenus)]]
         
         return types
     }
     
-    //Meal Detial
+    //Meal Detail
     var addons : [AddOn] = [AddOn(name: "Advocado", price: 12 , iconNumber: 0), AddOn(name: "Advocado", price: 12, iconNumber: 0),AddOn(name: "Advocado", price: 12, iconNumber: 0)]
            
     var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
@@ -100,7 +99,7 @@ public class ViewModel{
     
      var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
     
-        let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.meal,.meal,.meal,.meal,.meal,.meal,.meal,.meal]]
+        let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],[.meal,.meal,.meal,.meal,.meal,.meal,.meal,.meal]]
               
               return types
        }
