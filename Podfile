@@ -12,6 +12,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage'
   # Pods for Nutshell
 
 end

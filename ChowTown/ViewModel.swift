@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Firebase
 
 enum ChoiceMenuTableViewDataType {
     case MenuHeader(String)
-    case MenuSpecials(String)
+    case MenuSpecials([Meal])
     case MenuFood([Menu])
     case MenuDrinks([Menu])
     //case Drinks
@@ -36,36 +37,44 @@ enum RewardsTableViewDataType {
 
 enum SubMenuMealsAndDrinksTableViewDataType {
     case header
-    case meal
+    case meal(Meal)
     case drink
 }
 
 public class ViewModel{
     
-  
+    // MARK: - Firebase
+    
+    let db = Firestore.firestore()
+    let storage = Storage.storage()
+    
+    var meals : [Meal] = []
+    
+    var menus : [Menu] = []
+    
+    // MARK: - Views
     // ChoiceMenuViewController
-    var foodMenus : [Menu] = [Menu(title: "Breakfast", detail: "From 10:00 am", color: "#F4BFBD", iCon: "icBreakfast"),Menu(title: "Lunch", detail: "From 1:00 pm", color: "#C0E5F0", iCon: "icLunch"),Menu(title: "Dinner", detail: "From 6:00 pm", color: "#F4D5B8", iCon: "icDinner")]
-    
-    var drinkMenus : [Menu] = [Menu(title: "Hot", detail: "All day", color: "#ED8554", iCon: "icHotBevrage"),Menu(title: "Juice", detail: "All day", color: "#7339AB", iCon: "icJuices"),Menu(title: "Smoothie", detail: "All day", color: "#F14666", iCon: "icSmoothie"),Menu(title: "Sodas", detail: "All day", color: "#FFC872", iCon: "icCola"),Menu(title: "Wine", detail: "All day", color: "#725A7A", iCon: "icWine")]
-    
+   
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
-
-        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials("")],[.MenuFood(foodMenus)] ,[.MenuDrinks(drinkMenus)]]
+        
+       // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
+        let specials = meals.filter {$0.isPopular == true}
+        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(specials)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
         return types
     }
     
     //Meal Detail
     var addons : [AddOn] = [AddOn(name: "Advocado", price: 12 , iconNumber: 0), AddOn(name: "Advocado", price: 12, iconNumber: 0),AddOn(name: "Advocado", price: 12, iconNumber: 0)]
-           
+    
     var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
-       
+        
         let AddOns = addons.map { mealDetailTableViewDataType.addOns($0) }
-          
-         let types: [[mealDetailTableViewDataType]] = [[.header,.aboutIconSet("About"),.alergenIconSet("Alergens"),.nutritionInfo],AddOns]
-         
-         return types
-     }
+        
+        let types: [[mealDetailTableViewDataType]] = [[.header,.aboutIconSet("About"),.alergenIconSet("Alergens"),.nutritionInfo],AddOns]
+        
+        return types
+    }
     
     // Search & Favorites
     var favoritesIsShowing = false
@@ -80,28 +89,130 @@ public class ViewModel{
         if favoritesIsShowing {
             types.append(establishmentsDataTypes)
         }
-            
-           return types
-        }
+        
+        return types
+    }
     
     
     //Rewards
     
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
- 
-           let types: [[RewardsTableViewDataType]] = [[.header]]
-           
-           return types
+        
+        let types: [[RewardsTableViewDataType]] = [[.header]]
+        
+        return types
     }
     
     
     // SubMenuMealsAndDrinks
     
-     var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
+    var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
+       let mealsForMenu =  meals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
+        let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
+        
+        return types
+    }
     
-        let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],[.meal,.meal,.meal,.meal,.meal,.meal,.meal,.meal]]
-              
-              return types
-       }
+    
+    
+    
+    
+    
+    
+    // MARK: - CR MEALS
+    func addMeal(reff : DocumentReference){
+        // Add a new document with a generated ID
+//        var ref: DocumentReference? = nil
+        reff.collection("Meals").addDocument(data:[
+            "companyID" : "2",
+            "name": "Noosh",
+            "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
+            "price" : 10,
+            "about": [1,2,3,5,6,7],
+            "allergens": [1,2,3,4],
+            "protein": "",
+            "fat": "",
+            "carbs": "",
+            "additions": [],
+            "isPopular": true,
+            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(reff.documentID)")
+            }
+        }
+    
+    }
+    
+    func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
+        db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        
+                        self.meals.append(Meal(dictionary: document.data())! )
+                        
+                        
+                    }
+                    completion()
+                    print("Boom, \(self.meals)")
+                }
+        }
+    }
+    
+     // MARK: - CR Menus
+        func addMenu(){
+            // Add a new document with a generated ID
+           // var ref: DocumentReference? = nil
+            let ref = db.collection("Menus").document()
+
+            ref.setData( [
+                "menuID" : ref.documentID,
+                "companyID" : "2",
+                "title": "Hot",
+                "detail": "From 10:00 am",
+                "iCon" : "icHotBevrage",
+                "imageRef": "",
+                "startTime": "",
+                "color": "#FFC872",
+                "isMeal" : false
+
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref.documentID)")
+                    self.addMeal(reff: ref)
+                }
+            }
+ 
+        }
+        
+        func getMenus(completion: @escaping () -> Void){
+            db.collection("Menus").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            
+                            self.menus.append(Menu(dictionary: document.data())! )
+                            
+                            
+                        }
+                        completion()
+                        print("Boom, \(self.menus)")
+                    }
+            }
+        }
+    
+    
+    
+    
     
 }
+
+
+

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */; };
 		1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1103448D2379973E0072688F /* MenuHeaderTableViewCell.xib */; };
-		110344912379AE930072688F /* ChoiceMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344902379AE930072688F /* ChoiceMenuViewController.swift */; };
+		110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344902379AE930072688F /* HomePageMenuViewController.swift */; };
 		1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */; };
 		1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */; };
 		1117BB1A237EBE8600CB1CD9 /* Establishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Establishment.swift */; };
@@ -103,6 +103,7 @@
 		11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */; };
 		11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */; };
 		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
+		11D35C392386A7CE00CC7534 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D35C382386A7CE00CC7534 /* Meal.swift */; };
 		11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */; };
 		11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */; };
 		11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */; };
@@ -134,7 +135,7 @@
 /* Begin PBXFileReference section */
 		1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1103448D2379973E0072688F /* MenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		110344902379AE930072688F /* ChoiceMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceMenuViewController.swift; sourceTree = "<group>"; };
+		110344902379AE930072688F /* HomePageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageMenuViewController.swift; sourceTree = "<group>"; };
 		110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuMealsAndDrinksHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB19237EBE8600CB1CD9 /* Establishment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Establishment.swift; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 		11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		11D35C382386A7CE00CC7534 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -273,27 +275,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		110344922379AF900072688F /* ChoiceMenu */ = {
-			isa = PBXGroup;
-			children = (
-				110344932379AFA00072688F /* Cells */,
-			);
-			path = ChoiceMenu;
-			sourceTree = "<group>";
-		};
-		110344932379AFA00072688F /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				1162FE892382ED1700943CEE /* Sub Menu */,
-				115694BE23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift */,
-				115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */,
-				115694BB2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib */,
-				110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */,
-				110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		1117BB1B237EC31000CB1CD9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,8 +294,8 @@
 		1162FE7B2382DF1400943CEE /* NotUsed */ = {
 			isa = PBXGroup;
 			children = (
-				1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */,
-				1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */,
+				11C5084B236866B1003400D0 /* Cells */,
+				11C65D4C23797E1C00C69DC3 /* CollectionViewCells */,
 				11C5084C23686733003400D0 /* SpecialsViewController.swift */,
 				11C65D452379771300C69DC3 /* MenuViewController.swift */,
 			);
@@ -332,20 +313,17 @@
 			path = Meals;
 			sourceTree = "<group>";
 		};
-		1162FE892382ED1700943CEE /* Sub Menu */ = {
+		1162FE892382ED1700943CEE /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				110344902379AE930072688F /* ChoiceMenuViewController.swift */,
-				11C5085223686ECF003400D0 /* SpecialCollectionViewCell.swift */,
-				11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */,
-				1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */,
-				1162FE7D2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib */,
-				1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */,
-				1162FE852382EC0F00943CEE /* SubMenuTableViewCell.xib */,
-				1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */,
-				1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */,
+				110344902379AE930072688F /* HomePageMenuViewController.swift */,
+				11F617882389740A0096D883 /* MenusSpecialViews */,
+				11F617892389742B0096D883 /* MenuSubMenus */,
+				11F61787238973780096D883 /* SubMenuMealsAndDrinksView */,
+				11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */,
+				11C262FD237AC89300E74394 /* Meal Detail */,
 			);
-			path = "Sub Menu";
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		1191F5B0236C49B400649C79 /* Designables */ = {
@@ -376,6 +354,8 @@
 				1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */,
 				11C26308237ADC7300E74394 /* IconsTableViewCell.swift */,
 				11C262FF237AC8E700E74394 /* IconsTableViewCell.xib */,
+				11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */,
+				11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */,
 				11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */,
 				11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */,
 			);
@@ -388,6 +368,7 @@
 				11C262F3237ABD2200E74394 /* Menu.swift */,
 				11C2630D237AF24900E74394 /* AddOn.swift */,
 				1117BB19237EBE8600CB1CD9 /* Establishment.swift */,
+				11D35C382386A7CE00CC7534 /* Meal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,10 +442,8 @@
 				11A90E972382BA7B00388093 /* Rewards */,
 				1117BB1B237EC31000CB1CD9 /* Search */,
 				11F3DCD9237C248000EA1932 /* Login */,
-				110344922379AF900072688F /* ChoiceMenu */,
+				1162FE892382ED1700943CEE /* Menu */,
 				1162FE7B2382DF1400943CEE /* NotUsed */,
-				11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */,
-				11C5084B236866B1003400D0 /* Cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -472,7 +451,6 @@
 		11C5084B236866B1003400D0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				11C65D4C23797E1C00C69DC3 /* CollectionViewCells */,
 				11C65D4B23797DFB00C69DC3 /* TableViewCells */,
 			);
 			path = Cells;
@@ -530,7 +508,6 @@
 			isa = PBXGroup;
 			children = (
 				1162FE802382EB0C00943CEE /* Meals */,
-				11C262FD237AC89300E74394 /* Meal Detail */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -540,8 +517,6 @@
 			children = (
 				11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */,
 				11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */,
-				11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */,
-				11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -557,6 +532,42 @@
 				11F3DCEC237C397F00EA1932 /* ScanViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		11F61787238973780096D883 /* SubMenuMealsAndDrinksView */ = {
+			isa = PBXGroup;
+			children = (
+				115694BE23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift */,
+				1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */,
+				1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */,
+				115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */,
+				115694BB2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib */,
+				110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */,
+				110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */,
+			);
+			path = SubMenuMealsAndDrinksView;
+			sourceTree = "<group>";
+		};
+		11F617882389740A0096D883 /* MenusSpecialViews */ = {
+			isa = PBXGroup;
+			children = (
+				11C5085223686ECF003400D0 /* SpecialCollectionViewCell.swift */,
+				11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */,
+				1162FE7C2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift */,
+				1162FE7D2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib */,
+			);
+			path = MenusSpecialViews;
+			sourceTree = "<group>";
+		};
+		11F617892389742B0096D883 /* MenuSubMenus */ = {
+			isa = PBXGroup;
+			children = (
+				1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */,
+				1162FE852382EC0F00943CEE /* SubMenuTableViewCell.xib */,
+				1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */,
+				1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */,
+			);
+			path = MenuSubMenus;
 			sourceTree = "<group>";
 		};
 		BC4C49811C05E7359611D5A0 /* Pods */ = {
@@ -817,7 +828,7 @@
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
 				1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */,
 				11C5089A23687EE4003400D0 /* DrawingView.swift in Sources */,
-				110344912379AE930072688F /* ChoiceMenuViewController.swift in Sources */,
+				110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */,
 				11C5089923687EE4003400D0 /* UIView+Extension.swift in Sources */,
 				11C262F4237ABD2200E74394 /* Menu.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
@@ -839,6 +850,7 @@
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB22237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
+				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
