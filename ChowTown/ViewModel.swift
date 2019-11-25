@@ -78,10 +78,10 @@ public class ViewModel{
     
     // Search & Favorites
     var favoritesIsShowing = false
-    var establishments : [Restaurant] = []
+    var establishments : [Restaurant] = [Restaurant(restID: "", name: "NB", about: "sj,sfm", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC873", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: ""),Restaurant(restID: "ssss", name: "", about: "s,nmfs", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC972", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: ""),Restaurant(restID: "", name: "sss", about: "sfmnsf,sf", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC875",imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
-        let favorites = [Restaurant(restID: "", name: "", about: "", address: "", emailAddress: "", hours: "", phone: 0, imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
+        let favorites = [Restaurant(restID: "", name: "", about: "", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC972", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
         let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
         let establishmentsDataTypes = establishments.map { SearchTableViewDataType.establishment($0) }
         var types: [[SearchTableViewDataType]] = [favoritesDataTypes,establishmentsDataTypes]

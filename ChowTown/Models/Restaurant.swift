@@ -18,6 +18,7 @@ public struct Restaurant{
     var emailAddress: String
     var hours: String
     var phone : Int
+    var color : String
     var imageRefrence : String
     var facebookURL : String
     var instagramURL : String

@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDF-Wf-TUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="854"/>
+            <point key="canvasLocation" x="3055.072463768116" y="853.79464285714278"/>
         </scene>
         <!--Specials Detail View Controller-->
         <scene sceneID="KZT-YP-NmX">
@@ -281,7 +281,7 @@
                     <connections>
                         <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
                         <segue destination="JQC-7o-9D2" kind="show" identifier="toScanView" id="luz-0y-2TV"/>
-                        <segue destination="nKH-y5-QHz" kind="showDetail" identifier="toSearch" id="eUn-M6-UVW"/>
+                        <segue destination="8qQ-2R-qkK" kind="showDetail" identifier="toSearch" id="eUn-M6-UVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnd-Wz-oWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -378,7 +378,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
                             <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="nKH-y5-QHz" kind="showDetail" id="4Rv-9I-YlO"/>
+                                <segue destination="8qQ-2R-qkK" kind="showDetail" id="4Rv-9I-YlO"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="oW4-GT-QsD">
@@ -480,7 +480,7 @@
                                     <outlet property="delegate" destination="WA2-C4-63L" id="GnV-WB-wLs"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-Mc-mgm" customClass="DesignableButton" customModule="AdminVisitorsRegistration" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-Mc-mgm" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
                                 <rect key="frame" x="20" y="809" width="374" height="51"/>
                                 <color key="backgroundColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
@@ -512,7 +512,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhk-6d-IAa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fPS-Ly-odg"/>
+                    <navigationItem key="navigationItem" id="fPS-Ly-odg">
+                        <barButtonItem key="backBarButtonItem" title="Search" id="Yfb-0s-X1s"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="wle-tg-JsJ" id="qCa-AU-djn"/>
                         <outlet property="tableView" destination="bDD-6n-yyk" id="I3W-2n-07i"/>
@@ -520,35 +522,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0F-sP-USI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.9275362318842" y="882.58928571428567"/>
+            <point key="canvasLocation" x="2255.072463768116" y="882.58928571428567"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="icj-17-Iwj">
             <objects>
                 <viewController id="nKH-y5-QHz" customClass="SearchViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nzn-Z0-hVb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="122" width="414" height="720"/>
+                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nKH-y5-QHz" id="Aa7-fG-eGM"/>
                                     <outlet property="delegate" destination="nKH-y5-QHz" id="pB7-dh-e0k"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-5e-56g">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Search" id="83X-RB-QTO">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="H3c-r3-sVH"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="61" width="374" height="56"/>
+                                <rect key="frame" x="20" y="93" width="374" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -558,25 +551,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="0SR-sY-nny"/>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="7xV-fG-vm9"/>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="84F-W6-T4S"/>
+                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" constant="5" id="8t2-1i-Gjh"/>
                             <constraint firstItem="jYq-wj-d8u" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" constant="20" id="EHI-32-Bvr"/>
                             <constraint firstItem="Hsc-2s-9X1" firstAttribute="trailing" secondItem="jYq-wj-d8u" secondAttribute="trailing" constant="20" id="Gv3-mf-Jts"/>
                             <constraint firstAttribute="bottom" secondItem="AcJ-Jo-mow" secondAttribute="bottom" id="LUF-aU-5M8"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="top" secondItem="jYq-wj-d8u" secondAttribute="bottom" constant="5" id="Mxf-BI-X9p"/>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="OfX-v0-CQq"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="XRu-iY-vrh"/>
-                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="BJF-5e-56g" secondAttribute="bottom" constant="5" id="Zoz-ne-Pij"/>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="gRI-No-dSl"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="sdd-Lo-8AS"/>
-                            <constraint firstItem="BJF-5e-56g" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="tHD-xa-FuN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="icD-pA-DIk"/>
+                    <navigationItem key="navigationItem" title="Search" id="icD-pA-DIk">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ojX-Yd-h4U"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="navBar" destination="BJF-5e-56g" id="j06-0k-k93"/>
                         <outlet property="searchBar" destination="jYq-wj-d8u" id="opA-dV-38h"/>
                         <outlet property="tableView" destination="AcJ-Jo-mow" id="mZa-dz-KLz"/>
                         <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="Gvu-n7-VaL"/>
@@ -584,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCr-s4-8KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="883"/>
+            <point key="canvasLocation" x="1447.8260869565217" y="882.58928571428567"/>
         </scene>
         <!--Rewards-->
         <scene sceneID="zMX-TD-cyg">
@@ -633,6 +621,24 @@
             </objects>
             <point key="canvasLocation" x="3006" y="137"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cJS-Ka-6iT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8qQ-2R-qkK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cTW-nP-eIg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nKH-y5-QHz" kind="relationship" relationship="rootViewController" id="R5i-1y-vUY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIu-NQ-icY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537.68115942028987" y="882.58928571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
@@ -645,8 +651,9 @@
         <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Rv-9I-YlO"/>
-        <segue reference="moR-fd-9Rm"/>
+        <segue reference="eUn-M6-UVW"/>
+        <segue reference="Gvu-n7-VaL"/>
         <segue reference="JS9-e9-O0z"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

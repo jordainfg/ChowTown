@@ -70,6 +70,7 @@ extension FavoriteEstablishmentTableViewCell: UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteEstablishmentCollectionViewCellID", for: indexPath) as! FavoriteEstablishmentCollectionViewCell
        cell.backgroundColor = UIColor.white
+        
         cell.configure(with: favorites?[indexPath.row])
       
         return cell

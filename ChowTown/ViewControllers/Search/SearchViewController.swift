@@ -25,13 +25,25 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         filterdEstablishments =  viewModel.establishments
         setUpTableView()
-        self.navigationController?.view.backgroundColor = UIColor.clear
+      //  self.navigationController?.view.backgroundColor = UIColor.clear
         
-        navBar.setValue(true, forKey: "hidesShadow")
+        //navBar.setValue(true, forKey: "hidesShadow")
         // Do any additional setup after loading the view.
     }
-    
+ 
     func setUpTableView(){
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+           navBarAppearance.backgroundColor = UIColor.clear
+           navBarAppearance.shadowImage = UIImage()
+           navBarAppearance.shadowColor = UIColor.clear
+            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+          
+        }
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
@@ -68,16 +80,29 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-        case .favorite(_):
+        case let .favorite(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier()) as! FavoriteEstablishmentTableViewCell
             cell.favorites = viewModel.establishments
+           
             return cell
-        case .establishment(_):
+        case let .establishment(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
+            cell.configure(restaurant: Restaurant)
             
             return cell
             
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
+              
+              switch type {
+                  
+              case .favorite(_):
+                 performSegue(withIdentifier: "toRestaurant", sender: nil)
+              case .establishment(_):
+                  performSegue(withIdentifier: "toRestaurant", sender: nil)
+              }
     }
     // set the height of the row based on the chosen cell
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -104,29 +129,22 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         }
     }
     
+    
+    
+    
+    
     func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         switch section {
         case 1:
-            
             return 40
-            
-            
+
         default:
             return 0
         }
+        
     }
-    
-    func showEstablishments(_ show: Bool) {
-        let indexPath = IndexPath(row: 1, section: 1)
-        tableView.beginUpdates()
-        if show {
-            tableView.insertRows(at: [indexPath], with: .fade)
-        } else {
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-        tableView.endUpdates()
-    }
+
     
 }
 extension SearchViewController: UISearchBarDelegate

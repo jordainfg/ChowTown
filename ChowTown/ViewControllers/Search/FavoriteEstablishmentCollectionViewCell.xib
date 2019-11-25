@@ -46,7 +46,7 @@
                                         <rect key="frame" x="98" y="13.5" width="194" height="68.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-PN-EYc">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -61,19 +61,19 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDy-NA-Czh">
-                                                <rect key="frame" x="0.0" y="48" width="113.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="48" width="194" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="06384822214" image="phone.circle" catalog="system">
+                                                <state key="normal" title="06384822214" image="info.circle" catalog="system">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="YxS-PN-EYc" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" multiplier="0.488304" id="FN2-OK-lV3"/>
+                                            <constraint firstItem="YxS-PN-EYc" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" id="FN2-OK-lV3"/>
                                             <constraint firstItem="adO-Zy-AaO" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" id="fQG-ZL-th1"/>
-                                            <constraint firstItem="vDy-NA-Czh" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" multiplier="0.584795" id="pvW-pe-tcD"/>
+                                            <constraint firstItem="vDy-NA-Czh" firstAttribute="width" secondItem="heP-H6-unz" secondAttribute="width" id="pvW-pe-tcD"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-62-oK4">
@@ -134,18 +134,18 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="405" height="131"/>
             <connections>
-                <outlet property="establishmentAddress" destination="adO-Zy-AaO" id="Fxu-Nd-qfv"/>
-                <outlet property="establishmentName" destination="YxS-PN-EYc" id="u3G-pV-Hrl"/>
-                <outlet property="establishmentPhone" destination="vDy-NA-Czh" id="dzg-Ms-Rzs"/>
+                <outlet property="about" destination="vDy-NA-Czh" id="dzg-Ms-Rzs"/>
+                <outlet property="address" destination="adO-Zy-AaO" id="Fxu-Nd-qfv"/>
                 <outlet property="image" destination="Tp9-IB-s6u" id="2uK-rO-4Yf"/>
+                <outlet property="name" destination="YxS-PN-EYc" id="u3G-pV-Hrl"/>
             </connections>
             <point key="canvasLocation" x="377.536231884058" y="177.79017857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash" width="4000" height="6000"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>
-        <image name="phone.circle" catalog="system" width="64" height="60"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>
 </document>

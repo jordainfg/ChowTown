@@ -122,6 +122,12 @@
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="about" destination="FAr-xF-X13" id="OVQ-p2-PWb"/>
+                <outlet property="address" destination="gHM-uh-WEJ" id="KeV-mO-jQC"/>
+                <outlet property="icon" destination="21P-kQ-ebF" id="x8I-Hf-eie"/>
+                <outlet property="name" destination="RUH-f5-IAn" id="05P-nX-PGm"/>
+            </connections>
             <point key="canvasLocation" x="186.95652173913044" y="125.22321428571428"/>
         </tableViewCell>
     </objects>

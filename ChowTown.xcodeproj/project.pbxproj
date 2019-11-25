@@ -15,7 +15,6 @@
 		1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Restaurant.swift */; };
 		1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */; };
 		1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */; };
-		1117BB22237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB20237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift */; };
 		1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB21237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib */; };
 		1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB24237ED5CC00CB1CD9 /* SearchViewController.swift */; };
 		1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB2A237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift */; };
@@ -58,6 +57,7 @@
 		116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */; };
 		116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A2238BE063002FB784 /* RestaurantViewController.swift */; };
 		116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */; };
+		1188DEDF238BFF1200397186 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188DEDE238BFF1100397186 /* FavoriteEstablishmentCollectionViewCell.swift */; };
 		1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */; };
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
@@ -146,7 +146,6 @@
 		1117BB19237EBE8600CB1CD9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentTableViewCell.swift; sourceTree = "<group>"; };
 		1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteEstablishmentTableViewCell.xib; sourceTree = "<group>"; };
-		1117BB20237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		1117BB21237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteEstablishmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		1117BB24237ED5CC00CB1CD9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1117BB2A237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantAboutTableViewCell.xib; sourceTree = "<group>"; };
 		116F75A2238BE063002FB784 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAboutTableViewCell.swift; sourceTree = "<group>"; };
+		1188DEDE238BFF1100397186 /* FavoriteEstablishmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInformationTableViewCell.swift; sourceTree = "<group>"; };
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 				1117BB24237ED5CC00CB1CD9 /* SearchViewController.swift */,
 				1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */,
 				1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */,
-				1117BB20237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift */,
+				1188DEDE238BFF1100397186 /* FavoriteEstablishmentCollectionViewCell.swift */,
 				1117BB21237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib */,
 				1117BB2A237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift */,
 				1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */,
@@ -850,6 +850,7 @@
 				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
 				11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
+				1188DEDF238BFF1200397186 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */,
 				11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */,
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
 				1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */,
@@ -874,7 +875,6 @@
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
 				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
-				1117BB22237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
 				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
 				11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */,

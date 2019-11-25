@@ -9,26 +9,37 @@
 import UIKit
 
 class EstablishmentTableViewCell: UITableViewCell {
-
     
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var about: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     // Reuser identifier
-           class func reuseIdentifier() -> String {
-               return "EstablishmentTableViewCellID"
-           }
-           
-           // Nib name
-           class func nibName() -> String {
-               return "EstablishmentTableViewCell"
-           }
+    class func reuseIdentifier() -> String {
+        return "EstablishmentTableViewCellID"
+    }
+    
+    // Nib name
+    class func nibName() -> String {
+        return "EstablishmentTableViewCell"
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+    }
+    
+    func configure(restaurant: Restaurant){
+        name.text = restaurant.name
+        address.text = restaurant.address
+        about.text = restaurant.about
+        icon.tintColor = UIColor.hexStringToUIColor(hex: restaurant.color)
+        icon.image = UIImage(systemName: "\(restaurant.name.first?.lowercased() ?? "z").circle.fill")
     }
     
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
@@ -52,6 +63,6 @@ class EstablishmentTableViewCell: UITableViewCell {
         },
                        completion: { Void in()  }
         )
-
+        
     }
 }
