@@ -27,7 +27,7 @@ enum mealDetailTableViewDataType {
 
 enum SearchTableViewDataType {
     case favorite(Restaurant)
-    case establishment(Restaurant)
+    case restaurant(Restaurant)
 }
 
 enum RewardsTableViewDataType {
@@ -48,9 +48,10 @@ public class ViewModel{
     let db = Firestore.firestore()
     let storage = Storage.storage()
     
+    var restaurants : [Restaurant] = []
+    var menus : [Menu] = []
     var meals : [Meal] = []
     
-    var menus : [Menu] = []
     
     // MARK: - Views
     // ChoiceMenuViewController
@@ -78,16 +79,15 @@ public class ViewModel{
     
     // Search & Favorites
     var favoritesIsShowing = false
-    var establishments : [Restaurant] = [Restaurant(restID: "", name: "NB", about: "sj,sfm", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC873", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: ""),Restaurant(restID: "ssss", name: "", about: "s,nmfs", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC972", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: ""),Restaurant(restID: "", name: "sss", about: "sfmnsf,sf", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC875",imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
-        let favorites = [Restaurant(restID: "", name: "", about: "", address: "", emailAddress: "", hours: "", phone: 0, color: "#FFC972", imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
-        let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
-        let establishmentsDataTypes = establishments.map { SearchTableViewDataType.establishment($0) }
-        var types: [[SearchTableViewDataType]] = [favoritesDataTypes,establishmentsDataTypes]
+        //let favorites = []
+       // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
+        let restaurantDataTypes = restaurants.map { SearchTableViewDataType.restaurant($0) }
+        var types: [[SearchTableViewDataType]] = [restaurantDataTypes]
         
         if favoritesIsShowing {
-            types.append(establishmentsDataTypes)
+            types.append(restaurantDataTypes)
         }
         
         return types
@@ -113,94 +113,7 @@ public class ViewModel{
         return types
     }
     
-    // MARK: - CR MEALS
-    func addMeal(reff : DocumentReference){
-        // Add a new document with a generated ID
-    //        var ref: DocumentReference? = nil
-        reff.collection("Meals").addDocument(data:[
-            "companyID" : "2",
-            "name": "Noosh",
-            "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
-            "price" : 10,
-            "about": [1,2,3,5,6,7],
-            "allergens": [1,2,3,4],
-            "protein": "",
-            "fat": "",
-            "carbs": "",
-            "additions": [],
-            "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(reff.documentID)")
-            }
-        }
-    
-    }
-    
-    func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
-        db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        
-                        self.meals.append(Meal(dictionary: document.data())! )
-                        
-                        
-                    }
-                    completion()
-                    print("Boom, \(self.meals)")
-                }
-        }
-    }
-    
-     // MARK: - CR Menus
-        func addMenu(){
-            // Add a new document with a generated ID
-           // var ref: DocumentReference? = nil
-            let ref = db.collection("Menus").document()
-
-            ref.setData( [
-                "menuID" : ref.documentID,
-                "companyID" : "2",
-                "title": "Hot",
-                "detail": "From 10:00 am",
-                "iCon" : "icHotBevrage",
-                "imageRef": "",
-                "startTime": "",
-                "color": "#FFC872",
-                "isMeal" : false
-
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref.documentID)")
-                    self.addMeal(reff: ref)
-                }
-            }
- 
-        }
-        
-        func getMenus(completion: @escaping () -> Void){
-            db.collection("Menus").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            
-                            self.menus.append(Menu(dictionary: document.data())! )
-                            
-                            
-                        }
-                        completion()
-                        print("Boom, \(self.menus)")
-                    }
-            }
-        }
+   
     
     
     

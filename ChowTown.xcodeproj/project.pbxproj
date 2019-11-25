@@ -58,6 +58,7 @@
 		116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A2238BE063002FB784 /* RestaurantViewController.swift */; };
 		116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */; };
 		1188DEDF238BFF1200397186 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188DEDE238BFF1100397186 /* FavoriteEstablishmentCollectionViewCell.swift */; };
+		1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188DEE0238C037F00397186 /* ViewModel+CRUDExt.swift */; };
 		1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */; };
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
@@ -169,6 +170,7 @@
 		116F75A2238BE063002FB784 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAboutTableViewCell.swift; sourceTree = "<group>"; };
 		1188DEDE238BFF1100397186 /* FavoriteEstablishmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		1188DEE0238C037F00397186 /* ViewModel+CRUDExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+CRUDExt.swift"; sourceTree = "<group>"; };
 		1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInformationTableViewCell.swift; sourceTree = "<group>"; };
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			children = (
 				11C5081723685FEA003400D0 /* AppDelegate.swift */,
 				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
+				1188DEE0238C037F00397186 /* ViewModel+CRUDExt.swift */,
 				11C262F9237AC53600E74394 /* FirebaseService.swift */,
 				11C2630A237AF17C00E74394 /* Models */,
 				1191F5B0236C49B400649C79 /* Designables */,
@@ -887,6 +890,7 @@
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
+				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */,

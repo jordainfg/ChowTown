@@ -23,8 +23,11 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var restaurant : Restaurant?
+    
     var tableViewcellTypes: [[RestaurantDataType]] {
-        let types: [[RestaurantDataType]] = [[.header("Anne&MAX", "Sandwiches - Panini - Biologishe Koffie & Thee - Salades - Speltmuesli. Anne&Max de freshfood&coffeecafe. Elke dag ontbijt, koffie, lunch, high tea en borrel. Gratis WiFi. Van ontbijt tot borrel. Vers & Gezonde producten."),.address("Kerkplein 4, 2513 AZ Den Haag"),.hours("11:00-13:00"),.phone("0638482215"),.emailAddress("email@email"),.website("Gijsbertha.com"),]]
+        let types: [[RestaurantDataType]] = [[.header(restaurant?.name ?? "No info",restaurant?.about ?? "No info"),.address(restaurant?.address ?? "No info"),.hours(restaurant?.hours ?? "No info"),.phone(restaurant?.phone ?? "No info"),.emailAddress(restaurant?.emailAddress ?? "No info"),.website(restaurant?.websiteURL ?? "No info")]]
         
         return types
     }
@@ -41,31 +44,42 @@ class RestaurantViewController: UIViewController {
     
     func setUpView(){
         tableView.rowHeight = UITableView.automaticDimension
-               headerView = tableView.tableHeaderView
-               tableView.tableHeaderView = nil
-               tableView.addSubview(headerView)
-               tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
-               tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
-               updateHeaderView()
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
+        updateHeaderView()
     }
     func updateHeaderView() {
-           
-           var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
-           if tableView.contentOffset.y < -kTableHeaderHeight {
-               headerRect.origin.y = tableView.contentOffset.y
-               headerRect.size.height = -tableView.contentOffset.y
-           }
-           
-           headerView.frame = headerRect
-       }
+        
+        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
+        if tableView.contentOffset.y < -kTableHeaderHeight {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y
+        }
+        
+        headerView.frame = headerRect
+    }
     
     func setupTableView() {
         
         tableView.register(UINib(nibName: RestaurantAboutTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RestaurantAboutTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: iconWithLabelTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: iconWithLabelTableViewCell.reuseIdentifier())
-        //        tableView.register(UINib(nibName: MeetingInfoDatePickerTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MeetingInfoDatePickerTableViewCell.reuseIdentifier())
-        //        tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
+        
     }
+    
+    // MARK: - Segues
+    
+    @IBAction func menuButtonPressed(_ sender: Any) {
+        if restaurant != nil {
+            UserDefaults.standard.set(restaurant?.restID, forKey: "selectedRestaurant")
+            performSegue(withIdentifier: "toMenu", sender: nil)
+        }
+        
+        
+    }
+    
     
 }
 extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate{
@@ -145,12 +159,12 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-           updateHeaderView()
-       }
+        updateHeaderView()
+    }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-          return UITableView.automaticDimension
-      }
-      
+        return UITableView.automaticDimension
+    }
+    
     //
     
     

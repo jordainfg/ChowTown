@@ -16,6 +16,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     var selectedSpecial = 0
     var selectedMenu : Menu?
     
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,12 +24,16 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     // MARK: - ViewDidLoad, Apear, Desapear
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setupTableView()
         // viewModel.addMeal()
-        viewModel.addMenu()
-        viewModel.getMenus {
-            self.tableView.reloadData()
+        //  viewModel.addRestaurant()
+        if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
+            viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
+                self.tableView.reloadData()
+            }
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

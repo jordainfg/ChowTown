@@ -11,12 +11,12 @@ import UIKit
 class FavoriteEstablishmentCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var establishmentName: UILabel!
+    @IBOutlet weak var name: UILabel!
     
-    @IBOutlet weak var establishmentAddress: UIButton!
+    @IBOutlet weak var address: UIButton!
     
-    
-    @IBOutlet weak var establishmentPhone: UIButton!
+
+    @IBOutlet weak var about: UIButton!
     
     
     
@@ -38,9 +38,9 @@ class FavoriteEstablishmentCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with establishment: Restaurant?){
-        establishmentName.text = establishment?.name
-        establishmentAddress.setTitle(establishment?.address, for: .normal)
-        establishmentPhone.setTitle("20203093", for: .normal)
+        name.text = establishment?.name
+        address.setTitle(establishment?.address, for: .normal)
+        about.setTitle(establishment?.about, for: .normal)
     }
     
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {

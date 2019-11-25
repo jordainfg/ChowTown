@@ -17,7 +17,7 @@ public struct Restaurant{
     var address: String
     var emailAddress: String
     var hours: String
-    var phone : Int
+    var phone : String
     var color : String
     var imageRefrence : String
     var facebookURL : String
@@ -28,11 +28,23 @@ public struct Restaurant{
     
     
     
-//    init?(dictionary: [String: Any]) {
-//        guard let title = dictionary["title"] as? String else { return nil }
-//        self.title = title
-//        self.detail = dictionary["detail"] as! String
-//
-//    }
+    init?(dictionary: [String: Any]) {
+        guard let restID = dictionary["restID"] as? String else { return nil }
+        self.restID = restID
+        self.name = dictionary["name"] as! String
+        self.about = dictionary["about"] as! String
+        self.address = dictionary["address"] as! String
+        self.emailAddress = dictionary["emailAddress"] as! String
+        self.hours = dictionary["hours"] as! String
+        self.phone = dictionary["phone"] as! String
+        self.color = dictionary["color"] as! String
+        self.imageRefrence = dictionary["imageRefrence"] as! String
+        self.facebookURL = dictionary["facebookURL"] as! String
+        self.instagramURL = dictionary["instagramURL"] as! String
+        self.logoURL = dictionary["logoURL"] as! String
+        self.websiteURL = dictionary["websiteURL"] as! String
+        
+
+    }
         
 }

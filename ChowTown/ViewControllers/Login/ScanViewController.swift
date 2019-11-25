@@ -12,6 +12,7 @@ import AVFoundation
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var headerTextStackView: UIStackView!
     @IBOutlet weak var footerTextStackView: UIStackView!
     override func viewDidLoad() {
@@ -25,20 +26,15 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
                                     radius: 45)
        
         self.view.addSubview(overlay)
+         self.view.bringSubviewToFront(cancelButton)
          self.view.bringSubviewToFront(headerTextStackView)
         self.view.bringSubviewToFront(footerTextStackView)
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+ 
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func createOverlay(frame: CGRect,
                        xOffset: CGFloat,

@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     
     var filterdEstablishments : [Restaurant]?
     
+    var selectedRestaurant : Restaurant?
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,31 +24,44 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filterdEstablishments =  viewModel.establishments
+        filterdEstablishments =  viewModel.restaurants
         setUpTableView()
-      //  self.navigationController?.view.backgroundColor = UIColor.clear
+        viewModel.getRestaurants {
+            self.tableView.reloadData()
+        }
+        //  self.navigationController?.view.backgroundColor = UIColor.clear
         
         //navBar.setValue(true, forKey: "hidesShadow")
         // Do any additional setup after loading the view.
     }
- 
+    
     func setUpTableView(){
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-           navBarAppearance.backgroundColor = UIColor.clear
-           navBarAppearance.shadowImage = UIImage()
-           navBarAppearance.shadowColor = UIColor.clear
+            navBarAppearance.backgroundColor = UIColor.clear
+            navBarAppearance.shadowImage = UIImage()
+            navBarAppearance.shadowColor = UIColor.clear
             self.navigationController?.navigationBar.standardAppearance = navBarAppearance
             self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-          
+            
         }
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         
+    }
+    // MARK: - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        switch segue.identifier {
+        case "toRestaurant":
+            let secondVC = segue.destination as! RestaurantViewController
+            secondVC.restaurant = selectedRestaurant
+        default:
+            return
+        }
     }
     
     
@@ -82,10 +96,10 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             
         case let .favorite(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier()) as! FavoriteEstablishmentTableViewCell
-            cell.favorites = viewModel.establishments
-           
+            cell.favorites = viewModel.restaurants
+            
             return cell
-        case let .establishment(Restaurant):
+        case let .restaurant(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
             cell.configure(restaurant: Restaurant)
             
@@ -95,14 +109,21 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
-              
-              switch type {
-                  
-              case .favorite(_):
-                 performSegue(withIdentifier: "toRestaurant", sender: nil)
-              case .establishment(_):
-                  performSegue(withIdentifier: "toRestaurant", sender: nil)
-              }
+        
+        switch type {
+            
+        case .favorite(_):
+            tableView.deselectRow(at: indexPath, animated: true)
+        case let .restaurant(restaurant):
+            selectedRestaurant = viewModel.restaurants.filter({ $0.restID == restaurant.restID }).first
+            if selectedRestaurant != nil{
+                performSegue(withIdentifier: "toRestaurant", sender: nil)
+                tableView.deselectRow(at: indexPath, animated: true)
+            } else {
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+            
+        }
     }
     // set the height of the row based on the chosen cell
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,7 +132,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             
         case .favorite(_):
             return 170
-        case .establishment(_):
+        case .restaurant(_):
             return 100
         }
     }
@@ -138,13 +159,13 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         switch section {
         case 1:
             return 40
-
+            
         default:
             return 0
         }
         
     }
-
+    
     
 }
 extension SearchViewController: UISearchBarDelegate
@@ -159,8 +180,8 @@ extension SearchViewController: UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
     {
         //Filter function
-        filterdEstablishments =  viewModel.establishments
-        filterdEstablishments = filterdEstablishments?.filter {$0.name == "bpo"}
+        filterdEstablishments =  viewModel.restaurants
+        filterdEstablishments = filterdEstablishments?.filter {$0.name == searchText}
         tableView.reloadData()
     }
     
