@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     let viewModel = ViewModel()
     
-    var filterdEstablishments : [Establishment]?
+    var filterdEstablishments : [Restaurant]?
     
     
     

@@ -12,7 +12,7 @@
 		110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344902379AE930072688F /* HomePageMenuViewController.swift */; };
 		1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */; };
 		1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */; };
-		1117BB1A237EBE8600CB1CD9 /* Establishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Establishment.swift */; };
+		1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Restaurant.swift */; };
 		1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */; };
 		1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */; };
 		1117BB22237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB20237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift */; };
@@ -35,10 +35,35 @@
 		1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */; };
 		1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */; };
 		1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */; };
+		116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */; };
+		116F758E238BDABB002FB784 /* overpass-semibold-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085E23687EE4003400D0 /* overpass-semibold-italic.otf */; };
+		116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085F23687EE4003400D0 /* Nunito-ExtraBold.ttf */; };
+		116F7590238BDABB002FB784 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086023687EE4003400D0 /* Nunito-ExtraLightItalic.ttf */; };
+		116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086123687EE4003400D0 /* Overpass-Regular.ttf */; };
+		116F7592238BDABB002FB784 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086223687EE4003400D0 /* Nunito-Light.ttf */; };
+		116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086323687EE4003400D0 /* Nunito-Regular.ttf */; };
+		116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086423687EE4003400D0 /* Nunito-SemiBold.ttf */; };
+		116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086523687EE4003400D0 /* Nunito-Bold.ttf */; };
+		116F7596238BDABB002FB784 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086623687EE4003400D0 /* Nunito-BoldItalic.ttf */; };
+		116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086723687EE4003400D0 /* Nunito-Black.ttf */; };
+		116F7598238BDABB002FB784 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086823687EE4003400D0 /* Nunito-ExtraLight.ttf */; };
+		116F7599238BDABB002FB784 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086923687EE4003400D0 /* Nunito-SemiBoldItalic.ttf */; };
+		116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086A23687EE4003400D0 /* Nunito-BlackItalic.ttf */; };
+		116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086C23687EE4003400D0 /* Overpass-Black.ttf */; };
+		116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086D23687EE4003400D0 /* Overpass-SemiBold.ttf */; };
+		116F759D238BDABB002FB784 /* Overpass-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086E23687EE4003400D0 /* Overpass-Bold.ttf */; };
+		116F759E238BDABB002FB784 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086F23687EE4003400D0 /* Nunito-Italic.ttf */; };
+		116F759F238BDABB002FB784 /* overpass-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5087023687EE4003400D0 /* overpass-semibold.otf */; };
+		116F75A0238BDABB002FB784 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5087123687EE4003400D0 /* Nunito-LightItalic.ttf */; };
+		116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */; };
+		116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A2238BE063002FB784 /* RestaurantViewController.swift */; };
+		116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */; };
 		1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */; };
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
+		11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */; };
+		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
 		11A90E992382BA9900388093 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E982382BA9900388093 /* RewardsViewController.swift */; };
 		11A90EA02382C32F00388093 /* RewardsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */; };
 		11A90EA12382C32F00388093 /* RewardsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */; };
@@ -65,27 +90,7 @@
 		11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5084C23686733003400D0 /* SpecialsViewController.swift */; };
 		11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5085223686ECF003400D0 /* SpecialCollectionViewCell.swift */; };
 		11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */; };
-		11C5087F23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */; };
-		11C5088023687EE4003400D0 /* overpass-semibold-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085E23687EE4003400D0 /* overpass-semibold-italic.otf */; };
-		11C5088123687EE4003400D0 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085F23687EE4003400D0 /* Nunito-ExtraBold.ttf */; };
-		11C5088223687EE4003400D0 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086023687EE4003400D0 /* Nunito-ExtraLightItalic.ttf */; };
-		11C5088323687EE4003400D0 /* Overpass-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086123687EE4003400D0 /* Overpass-Regular.ttf */; };
-		11C5088423687EE4003400D0 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086223687EE4003400D0 /* Nunito-Light.ttf */; };
-		11C5088523687EE4003400D0 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086323687EE4003400D0 /* Nunito-Regular.ttf */; };
-		11C5088623687EE4003400D0 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086423687EE4003400D0 /* Nunito-SemiBold.ttf */; };
-		11C5088723687EE4003400D0 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086523687EE4003400D0 /* Nunito-Bold.ttf */; };
-		11C5088823687EE4003400D0 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086623687EE4003400D0 /* Nunito-BoldItalic.ttf */; };
-		11C5088923687EE4003400D0 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086723687EE4003400D0 /* Nunito-Black.ttf */; };
-		11C5088A23687EE4003400D0 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086823687EE4003400D0 /* Nunito-ExtraLight.ttf */; };
-		11C5088B23687EE4003400D0 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086923687EE4003400D0 /* Nunito-SemiBoldItalic.ttf */; };
-		11C5088C23687EE4003400D0 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086A23687EE4003400D0 /* Nunito-BlackItalic.ttf */; };
 		11C5088D23687EE4003400D0 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086B23687EE4003400D0 /* OFL.txt */; };
-		11C5088E23687EE4003400D0 /* Overpass-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086C23687EE4003400D0 /* Overpass-Black.ttf */; };
-		11C5088F23687EE4003400D0 /* Overpass-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086D23687EE4003400D0 /* Overpass-SemiBold.ttf */; };
-		11C5089023687EE4003400D0 /* Overpass-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086E23687EE4003400D0 /* Overpass-Bold.ttf */; };
-		11C5089123687EE4003400D0 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086F23687EE4003400D0 /* Nunito-Italic.ttf */; };
-		11C5089223687EE4003400D0 /* overpass-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5087023687EE4003400D0 /* overpass-semibold.otf */; };
-		11C5089323687EE4003400D0 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5087123687EE4003400D0 /* Nunito-LightItalic.ttf */; };
 		11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087323687EE4003400D0 /* UIImageView+extension.swift */; };
 		11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087423687EE4003400D0 /* UIColor+extension.swift */; };
 		11C5089623687EE4003400D0 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087523687EE4003400D0 /* Date+extension.swift */; };
@@ -138,7 +143,7 @@
 		110344902379AE930072688F /* HomePageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageMenuViewController.swift; sourceTree = "<group>"; };
 		110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuMealsAndDrinksHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		1117BB19237EBE8600CB1CD9 /* Establishment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Establishment.swift; sourceTree = "<group>"; };
+		1117BB19237EBE8600CB1CD9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentTableViewCell.swift; sourceTree = "<group>"; };
 		1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteEstablishmentTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB20237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -161,10 +166,15 @@
 		1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubMenuTableViewCell.swift; sourceTree = "<group>"; };
 		1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantAboutTableViewCell.xib; sourceTree = "<group>"; };
+		116F75A2238BE063002FB784 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAboutTableViewCell.swift; sourceTree = "<group>"; };
 		1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInformationTableViewCell.swift; sourceTree = "<group>"; };
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
 		1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iconWithLabelTableViewCell.swift; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.swift"; sourceTree = "<absolute>"; };
+		11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iconWithLabelTableViewCell.xib; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.xib"; sourceTree = "<absolute>"; };
 		11A90E982382BA9900388093 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 				1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */,
 				1117BB2E237EE64500CB1CD9 /* HeaderForTableViewSection.swift */,
 				1117BB2F237EE64500CB1CD9 /* HeaderForTableViewSection.xib */,
+				116F75A7238BE07A002FB784 /* Restaurant */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -324,6 +335,18 @@
 				11C262FD237AC89300E74394 /* Meal Detail */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		116F75A7238BE07A002FB784 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				116F75A2238BE063002FB784 /* RestaurantViewController.swift */,
+				116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */,
+				116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */,
+				11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */,
+				11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 		1191F5B0236C49B400649C79 /* Designables */ = {
@@ -367,7 +390,7 @@
 			children = (
 				11C262F3237ABD2200E74394 /* Menu.swift */,
 				11C2630D237AF24900E74394 /* AddOn.swift */,
-				1117BB19237EBE8600CB1CD9 /* Establishment.swift */,
+				1117BB19237EBE8600CB1CD9 /* Restaurant.swift */,
 				11D35C382386A7CE00CC7534 /* Meal.swift */,
 			);
 			path = Models;
@@ -693,53 +716,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */,
+				116F758E238BDABB002FB784 /* overpass-semibold-italic.otf in Resources */,
+				116F759E238BDABB002FB784 /* Nunito-Italic.ttf in Resources */,
 				1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */,
+				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
 				11A90EA12382C32F00388093 /* RewardsHeaderTableViewCell.xib in Resources */,
-				11C5088B23687EE4003400D0 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
 				1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */,
-				11C5088C23687EE4003400D0 /* Nunito-BlackItalic.ttf in Resources */,
-				11C5089123687EE4003400D0 /* Nunito-Italic.ttf in Resources */,
-				11C5088623687EE4003400D0 /* Nunito-SemiBold.ttf in Resources */,
 				1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */,
-				11C5088523687EE4003400D0 /* Nunito-Regular.ttf in Resources */,
-				11C5088823687EE4003400D0 /* Nunito-BoldItalic.ttf in Resources */,
 				1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */,
 				11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */,
 				11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */,
-				11C5088F23687EE4003400D0 /* Overpass-SemiBold.ttf in Resources */,
+				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
 				11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */,
-				11C5088723687EE4003400D0 /* Nunito-Bold.ttf in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
-				11C5088E23687EE4003400D0 /* Overpass-Black.ttf in Resources */,
-				11C5087F23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf in Resources */,
+				116F7598238BDABB002FB784 /* Nunito-ExtraLight.ttf in Resources */,
 				11C5082423685FEC003400D0 /* Assets.xcassets in Resources */,
 				11C5088D23687EE4003400D0 /* OFL.txt in Resources */,
+				116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */,
 				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
-				11C5089323687EE4003400D0 /* Nunito-LightItalic.ttf in Resources */,
-				11C5088A23687EE4003400D0 /* Nunito-ExtraLight.ttf in Resources */,
 				1162FE872382EC0F00943CEE /* SubMenuTableViewCell.xib in Resources */,
-				11C5088323687EE4003400D0 /* Overpass-Regular.ttf in Resources */,
-				11C5088223687EE4003400D0 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */,
+				116F759F238BDABB002FB784 /* overpass-semibold.otf in Resources */,
 				1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */,
 				11C26312237AF3E100E74394 /* AddOnTableViewCell.xib in Resources */,
-				11C5088423687EE4003400D0 /* Nunito-Light.ttf in Resources */,
-				11C5088923687EE4003400D0 /* Nunito-Black.ttf in Resources */,
 				11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */,
+				116F75A0238BDABB002FB784 /* Nunito-LightItalic.ttf in Resources */,
 				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
+				116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */,
+				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
+				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
-				11C5089223687EE4003400D0 /* overpass-semibold.otf in Resources */,
+				116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */,
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
-				11C5088023687EE4003400D0 /* overpass-semibold-italic.otf in Resources */,
-				11C5089023687EE4003400D0 /* Overpass-Bold.ttf in Resources */,
+				116F7599238BDABB002FB784 /* Nunito-SemiBoldItalic.ttf in Resources */,
+				116F7590238BDABB002FB784 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11C26305237AC9E600E74394 /* iconCollectionViewCell.xib in Resources */,
-				11C5088123687EE4003400D0 /* Nunito-ExtraBold.ttf in Resources */,
+				116F7592238BDABB002FB784 /* Nunito-Light.ttf in Resources */,
 				1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */,
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
+				11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */,
+				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
+				116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
+				116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */,
 				1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */,
+				116F759D238BDABB002FB784 /* Overpass-Bold.ttf in Resources */,
+				116F7596238BDABB002FB784 /* Nunito-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +832,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */,
+				116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */,
 				11C5089D23687EE4003400D0 /* String+extension.swift in Sources */,
 				11A90EA02382C32F00388093 /* RewardsHeaderTableViewCell.swift in Sources */,
 				11C5089723687EE4003400D0 /* UILabel+extension.swift in Sources */,
@@ -846,11 +872,12 @@
 				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */,
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
-				1117BB1A237EBE8600CB1CD9 /* Establishment.swift in Sources */,
+				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB22237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
 				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
+				11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
@@ -862,6 +889,7 @@
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,
+				116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

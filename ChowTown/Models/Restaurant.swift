@@ -9,13 +9,22 @@
 import Foundation
 
 
-public struct Establishment{
+public struct Restaurant{
     
+    var restID : String
     var name : String
+    var about: String
     var address: String
+    var emailAddress: String
     var hours: String
     var phone : Int
     var imageRefrence : String
+    var facebookURL : String
+    var instagramURL : String
+    var logoURL : String
+    var websiteURL : String
+    
+    
     
     
 //    init?(dictionary: [String: Any]) {

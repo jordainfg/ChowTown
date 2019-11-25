@@ -37,7 +37,7 @@ class FavoriteEstablishmentCollectionViewCell: UICollectionViewCell {
         return "FavoriteEstablishmentCollectionViewCell"
     }
     
-    func configure(with establishment: Establishment?){
+    func configure(with establishment: Restaurant?){
         establishmentName.text = establishment?.name
         establishmentAddress.setTitle(establishment?.address, for: .normal)
         establishmentPhone.setTitle("20203093", for: .normal)

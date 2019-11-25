@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PuI-ev-v0e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfR-Wv-f0m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
         <array key="Nunito-SemiBold.ttf">
             <string>Nunito-SemiBold</string>
         </array>
@@ -16,7 +20,7 @@
             <objects>
                 <viewController id="lTK-Oc-c11" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D9m-9S-N1a">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ATA-An-9lj"/>
@@ -32,18 +36,18 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="507"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
-                                            <rect key="frame" x="0.0" y="-88" width="600" height="388"/>
+                                            <rect key="frame" x="0.0" y="-88" width="414" height="388"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="15"/>
@@ -124,11 +128,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="JQC-7o-9D2" customClass="ScanViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnF-nD-9X9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-Gs-QIc">
-                                <rect key="frame" x="184" y="64" width="232.5" height="64.5"/>
+                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXm-DQ-IOO">
                                         <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
@@ -145,16 +149,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-TY-spI">
-                                <rect key="frame" x="226.5" y="530" width="147" height="36"/>
+                                <rect key="frame" x="134" y="820" width="146.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-zx-tdJ">
-                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <rect key="frame" x="25.5" y="0.0" width="95.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-w9-Rhh">
-                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -175,6 +179,7 @@
                     <connections>
                         <outlet property="footerTextStackView" destination="2OI-TY-spI" id="l9x-Dm-EoW"/>
                         <outlet property="headerTextStackView" destination="vVI-Gs-QIc" id="Ftf-et-IEe"/>
+                        <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="moR-fd-9Rm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDk-XP-1iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,12 +190,12 @@
         <scene sceneID="wHO-WK-Zu4">
             <objects>
                 <viewController id="yI1-RF-gsj" customClass="RewardsViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="zpz-El-Puf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="zpz-El-Puf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-wV-vB7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yI1-RF-gsj" id="8wc-ot-o51"/>
@@ -225,14 +230,14 @@
             <objects>
                 <viewController id="WlX-1U-w1y" customClass="LoginViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cve-hv-8gl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="4dm-l3-YYc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-Tz-Rs7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WlX-1U-w1y" id="waY-6x-oCS"/>
@@ -240,16 +245,16 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-EF-wJk">
-                                <rect key="frame" x="226.5" y="530" width="147" height="36"/>
+                                <rect key="frame" x="134" y="820" width="146.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl7-J0-xg6">
-                                        <rect key="frame" x="27.5" y="0.0" width="92.5" height="16.5"/>
+                                        <rect key="frame" x="25.5" y="0.0" width="95.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6K-RH-sbn">
-                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -308,12 +313,12 @@
         <scene sceneID="bfv-EX-eu4">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="Sa0-yr-Tmp" customClass="SubMenuMealsAndDrinksViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="ze7-Ya-FeV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="590"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -346,12 +351,12 @@
         <scene sceneID="aZf-nM-iYb">
             <objects>
                 <viewController title="Menu" id="ulw-qS-t2C" customClass="HomePageMenuViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="7xS-A4-SoV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="507"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -412,16 +417,121 @@
             </objects>
             <point key="canvasLocation" x="-365.21739130434787" y="136.60714285714286"/>
         </scene>
+        <!--Restaurant View Controller-->
+        <scene sceneID="BuM-TG-LLV">
+            <objects>
+                <viewController id="WA2-C4-63L" customClass="RestaurantViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5o-4N-up8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-6n-yyk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="kPX-QG-fzo" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="wle-tg-JsJ">
+                                            <rect key="frame" x="0.0" y="-88" width="414" height="388"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-NI-oB6" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
+                                            <rect key="frame" x="326" y="60" width="68" height="25"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="68" id="WkS-Mw-tTo"/>
+                                                <constraint firstAttribute="height" constant="25" id="rpr-Yh-YkE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                            <state key="normal" title="10" image="eurosign.circle.fill" catalog="system">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="wle-tg-JsJ" firstAttribute="leading" secondItem="kPX-QG-fzo" secondAttribute="leading" id="23M-fB-ZMH"/>
+                                        <constraint firstItem="wle-tg-JsJ" firstAttribute="trailing" secondItem="dUb-NI-oB6" secondAttribute="trailing" constant="20" id="GSd-k0-faD"/>
+                                        <constraint firstItem="wle-tg-JsJ" firstAttribute="top" secondItem="kPX-QG-fzo" secondAttribute="top" constant="-88" id="XAw-vb-Vy9"/>
+                                        <constraint firstAttribute="trailing" secondItem="wle-tg-JsJ" secondAttribute="trailing" id="jpi-do-ORv"/>
+                                        <constraint firstItem="dUb-NI-oB6" firstAttribute="top" secondItem="wle-tg-JsJ" secondAttribute="top" constant="60" id="pRj-vo-4ov"/>
+                                        <constraint firstAttribute="bottom" secondItem="wle-tg-JsJ" secondAttribute="bottom" id="zXm-4b-rdV"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="dUb-NI-oB6"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="WA2-C4-63L" id="SOm-lA-kSQ"/>
+                                    <outlet property="delegate" destination="WA2-C4-63L" id="GnV-WB-wLs"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-Mc-mgm" customClass="DesignableButton" customModule="AdminVisitorsRegistration" customModuleProvider="target">
+                                <rect key="frame" x="20" y="809" width="374" height="51"/>
+                                <color key="backgroundColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="m7o-Ep-ozF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Menu" image="icMenu">
+                                    <color key="titleColor" white="1" alpha="0.9198148545" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bDD-6n-yyk" firstAttribute="leading" secondItem="Jhk-6d-IAa" secondAttribute="leading" id="1od-bp-KNd"/>
+                            <constraint firstItem="Jhk-6d-IAa" firstAttribute="trailing" secondItem="ldL-Mc-mgm" secondAttribute="trailing" constant="20" id="5bh-Ad-j1o"/>
+                            <constraint firstAttribute="bottom" secondItem="bDD-6n-yyk" secondAttribute="bottom" id="8Uv-CN-5Kr"/>
+                            <constraint firstItem="ldL-Mc-mgm" firstAttribute="leading" secondItem="Jhk-6d-IAa" secondAttribute="leading" constant="20" id="IGZ-oU-ded"/>
+                            <constraint firstItem="Jhk-6d-IAa" firstAttribute="bottom" secondItem="ldL-Mc-mgm" secondAttribute="bottom" constant="2" id="Jr8-lS-6UL"/>
+                            <constraint firstItem="bDD-6n-yyk" firstAttribute="trailing" secondItem="Jhk-6d-IAa" secondAttribute="trailing" id="jzB-OB-PqL"/>
+                            <constraint firstItem="bDD-6n-yyk" firstAttribute="top" secondItem="Jhk-6d-IAa" secondAttribute="top" constant="-88" id="nix-G9-w1i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jhk-6d-IAa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fPS-Ly-odg"/>
+                    <connections>
+                        <outlet property="imageView" destination="wle-tg-JsJ" id="qCa-AU-djn"/>
+                        <outlet property="tableView" destination="bDD-6n-yyk" id="I3W-2n-07i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0F-sP-USI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344.9275362318842" y="882.58928571428567"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="icj-17-Iwj">
             <objects>
                 <viewController id="nKH-y5-QHz" customClass="SearchViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nzn-Z0-hVb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="122" width="600" height="458"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="720"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nKH-y5-QHz" id="Aa7-fG-eGM"/>
@@ -429,7 +539,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-5e-56g">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Search" id="83X-RB-QTO">
@@ -438,7 +548,7 @@
                                 </items>
                             </navigationBar>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="61" width="560" height="56"/>
+                                <rect key="frame" x="20" y="61" width="374" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -469,6 +579,7 @@
                         <outlet property="navBar" destination="BJF-5e-56g" id="j06-0k-k93"/>
                         <outlet property="searchBar" destination="jYq-wj-d8u" id="opA-dV-38h"/>
                         <outlet property="tableView" destination="AcJ-Jo-mow" id="mZa-dz-KLz"/>
+                        <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="Gvu-n7-VaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCr-s4-8KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -530,10 +641,12 @@
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="icChangeLocation" width="24" height="24"/>
+        <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Rv-9I-YlO"/>
+        <segue reference="moR-fd-9Rm"/>
         <segue reference="JS9-e9-O0z"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -26,8 +26,8 @@ enum mealDetailTableViewDataType {
 }
 
 enum SearchTableViewDataType {
-    case favorite(Establishment)
-    case establishment(Establishment)
+    case favorite(Restaurant)
+    case establishment(Restaurant)
 }
 
 enum RewardsTableViewDataType {
@@ -78,10 +78,10 @@ public class ViewModel{
     
     // Search & Favorites
     var favoritesIsShowing = false
-    var establishments : [Establishment] = [Establishment(name: "bpo", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "d", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "d", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: ""),Establishment(name: "rrv", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: "")]
+    var establishments : [Restaurant] = []
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
-        let favorites = [Establishment(name: "bpo", address: "ss", hours: "ss", phone: 0638482214, imageRefrence: "")]
+        let favorites = [Restaurant(restID: "", name: "", about: "", address: "", emailAddress: "", hours: "", phone: 0, imageRefrence: "", facebookURL: "", instagramURL: "", logoURL: "", websiteURL: "")]
         let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
         let establishmentsDataTypes = establishments.map { SearchTableViewDataType.establishment($0) }
         var types: [[SearchTableViewDataType]] = [favoritesDataTypes,establishmentsDataTypes]
@@ -113,16 +113,10 @@ public class ViewModel{
         return types
     }
     
-    
-    
-    
-    
-    
-    
     // MARK: - CR MEALS
     func addMeal(reff : DocumentReference){
         // Add a new document with a generated ID
-//        var ref: DocumentReference? = nil
+    //        var ref: DocumentReference? = nil
         reff.collection("Meals").addDocument(data:[
             "companyID" : "2",
             "name": "Noosh",

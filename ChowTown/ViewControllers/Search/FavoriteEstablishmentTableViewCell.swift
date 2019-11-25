@@ -15,7 +15,7 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     var delegate: MSPeekCollectionViewDelegateImplementation!
     
-    var favorites : [Establishment]? = nil
+    var favorites : [Restaurant]? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
