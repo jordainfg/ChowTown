@@ -18,7 +18,9 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.getMealsForMenu(selectedMenu: menu!, completion: tableView.reloadData)
+        viewModel.getMealsForMenu(selectedMenu: menu!){
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -71,6 +73,10 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         case  let .meal(meal):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
             cell.selectionStyle = .none
+              let httpsReference =  viewModel.storage.reference(forURL: meal.imageRef)
+            cell.configure(meal: meal, httpReference : httpsReference)
+          
+            
             return cell
             
         case .drink:
@@ -92,7 +98,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         case .header:
             return 400
         case .meal:
-            return 90
+            return 80
         case .drink:
             return 40
         }

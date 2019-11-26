@@ -11,10 +11,10 @@ import Firebase
 
 extension ViewModel{
     // MARK: - CR MEALS
-    func addMeal(reff : DocumentReference){
+    func addMeal(refRestaurant : DocumentReference, refMenu :DocumentReference){
         // Add a new document with a generated ID
-        //        var ref: DocumentReference? = nil
-        reff.collection("Meals").addDocument(data:[
+       let refMeal = db.collection("Restaurant/\(refRestaurant.documentID)/Menu/\(refMenu.documentID)/Meals").document()
+        refMeal.setData([
             "companyID" : "2",
             "name": "Noosh",
             "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
@@ -26,19 +26,23 @@ extension ViewModel{
             "carbs": "",
             "additions": [],
             "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
+            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/62233383_1258387187653075_7668131207500067044_n.jpg",
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(reff.documentID)")
+                print("Meal added with ID: \(refMeal.documentID)")
             }
         }
         
     }
     
     func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
-        db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
+       // selectedMenu : Menu,
+         //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
+        db.collection("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -58,37 +62,24 @@ extension ViewModel{
     func addMenu(reff: DocumentReference){
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
-        
-        reff.collection("Menu").addDocument(data:[
-            "menuID" : reff.documentID,
+        let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
+        refMenu.setData([
+            "menuID" : refMenu.documentID,
             "companyID" : "2",
             "title": "Hot",
             "detail": "From 10:00 am",
-            "iCon" : "icHotBevrage",
+            "iCon" : "icSmoothie",
             "imageRef": "",
             "startTime": "",
             "color": "#FFC872",
-            "isMeal" : false
+            "isMeal" : false,
             
-        ]).collection("Meals").addDocument(data:[
-            "companyID" : "2",
-            "name": "Noosh",
-            "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
-            "price" : 10,
-            "about": [1,2,3,5,6,7],
-            "allergens": [1,2,3,4],
-            "protein": "",
-            "fat": "",
-            "carbs": "",
-            "additions": [],
-            "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(reff.documentID)")
-                //self.addMeal(reff: )
+                print("Menu added with ID: \(refMenu.documentID)")
+                self.addMeal(refRestaurant: reff, refMenu: refMenu)
             }
         }
         
@@ -155,7 +146,7 @@ extension ViewModel{
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref.documentID)")
+                print("Restaurant added with ID: \(ref.documentID)")
                 self.addMenu(reff: ref)
             }
         }

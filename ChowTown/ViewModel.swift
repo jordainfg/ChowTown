@@ -59,8 +59,8 @@ public class ViewModel{
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
         
        // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
-        let specials = meals.filter {$0.isPopular == true}
-        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(specials)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
+      //  let specials = meals.filter {$0.isPopular == true}
+        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(meals)],[.MenuFood(menus.filter {$0.isMeal == false})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
         return types
     }

@@ -17,18 +17,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubMenuMealsAndDrinksTableViewCellID" rowHeight="97" id="KGk-i7-Jjw" customClass="SubMenuMealsAndDrinksTableViewCell" customModule="ChowTown" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubMenuMealsAndDrinksTableViewCellID" rowHeight="97" id="KGk-i7-Jjw" customClass="SubMenuMealsAndDrinksTableViewCell" customModule="ChowTown" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="384" height="97"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="97"/>
+                <rect key="frame" x="0.0" y="0.0" width="353" height="97"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RW4-KC-0zM" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                        <rect key="frame" x="10" y="5" width="354" height="92"/>
+                        <rect key="frame" x="10" y="0.0" width="323" height="97"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-07-ubj">
-                                <rect key="frame" x="10" y="16" width="339" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-07-ubj">
+                                <rect key="frame" x="10" y="18.5" width="308" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-2A-lwa">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -42,25 +42,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-5A-8Y9">
-                                        <rect key="frame" x="80" y="6" width="259" height="48.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-5A-8Y9">
+                                        <rect key="frame" x="75" y="5" width="233" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRUIT&amp;GRANEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-vF-P5B">
-                                                <rect key="frame" x="0.0" y="0.0" width="130.5" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="233" height="18"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Griekse yoghurt, Anne&amp;Max granola en vers fruit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0a-no-nMD">
-                                                <rect key="frame" x="0.0" y="20.5" width="217" height="28"/>
+                                                <rect key="frame" x="0.0" y="17" width="233" height="33"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="X0a-no-nMD" firstAttribute="width" secondItem="OfV-5A-8Y9" secondAttribute="width" multiplier="0.837121" id="kng-YQ-qrK"/>
-                                            <constraint firstItem="Drf-vF-P5B" firstAttribute="width" secondItem="OfV-5A-8Y9" secondAttribute="width" multiplier="0.503788" id="mZo-ZQ-La3"/>
+                                            <constraint firstItem="X0a-no-nMD" firstAttribute="width" secondItem="OfV-5A-8Y9" secondAttribute="width" id="kng-YQ-qrK"/>
+                                            <constraint firstItem="Drf-vF-P5B" firstAttribute="width" secondItem="OfV-5A-8Y9" secondAttribute="width" id="mZo-ZQ-La3"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -80,7 +80,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="RW4-KC-0zM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FnL-Jk-zbL"/>
+                    <constraint firstItem="RW4-KC-0zM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FnL-Jk-zbL"/>
                     <constraint firstAttribute="trailing" secondItem="RW4-KC-0zM" secondAttribute="trailing" constant="20" id="RNc-75-xuA"/>
                     <constraint firstItem="RW4-KC-0zM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qFF-5b-koN"/>
                     <constraint firstAttribute="bottom" secondItem="RW4-KC-0zM" secondAttribute="bottom" id="spo-Wj-qJq"/>
@@ -88,6 +88,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="about" destination="X0a-no-nMD" id="ws1-IY-8r3"/>
+                <outlet property="mealImageView" destination="AXI-2A-lwa" id="VQM-55-xoO"/>
+                <outlet property="name" destination="Drf-vF-P5B" id="ID8-eI-5Fm"/>
+            </connections>
             <point key="canvasLocation" x="184.05797101449278" y="164.39732142857142"/>
         </tableViewCell>
     </objects>

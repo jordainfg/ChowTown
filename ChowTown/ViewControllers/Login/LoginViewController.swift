@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     
     
     @IBOutlet weak var tableView: UITableView!
-    
+    let viewModel = ViewModel()
     var tableViewcellTypes: [[loginDataType]] {
         
         let types: [[loginDataType]] = [[.header,.body]]
@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+    //    viewModel.addRestaurant()
         setupTableView()
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)

@@ -26,8 +26,10 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         super.viewDidLoad()
        
         setupTableView()
-        // viewModel.addMeal()
-        //  viewModel.addRestaurant()
+         //viewModel.addRestaurant()
+//        viewModel.getMealsForMenu()  {
+//            self.tableView.reloadData()
+//        }
         if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
             viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
                 self.tableView.reloadData()
