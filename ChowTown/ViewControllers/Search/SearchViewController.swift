@@ -44,10 +44,11 @@ class SearchViewController: UIViewController {
             navBarAppearance.backgroundColor = UIColor.clear
             navBarAppearance.shadowImage = UIImage()
             navBarAppearance.shadowColor = UIColor.clear
-            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
-            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+            navBar.standardAppearance = navBarAppearance
+            navBar.scrollEdgeAppearance = navBarAppearance
             
         }
+        self.tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
@@ -64,6 +65,10 @@ class SearchViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
 }

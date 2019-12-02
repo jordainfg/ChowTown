@@ -34,8 +34,55 @@ extension ViewModel{
                 print("Meal added with ID: \(refMeal.documentID)")
             }
         }
-        
     }
+    
+    func addPopularMeal(){
+           // Add a new document with a generated ID
+          let refMeal = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").document()
+           refMeal.setData([
+               "companyID" : "2",
+               "name": "Burger Fri",
+               "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
+               "price" : 10,
+               "about": [1,2,3,5,6,7],
+               "allergens": [1,2,3,4],
+               "protein": "",
+               "fat": "",
+               "carbs": "",
+               "additions": [],
+               "isPopular": true,
+               "imageRef": "gs://chow-town-bc783.appspot.com/Meals/59676987_1279174738915340_72254628707224865_n.jpg",
+           ]) { err in
+               if let err = err {
+                   print("Error adding document: \(err)")
+               } else {
+                   print("Meal added with ID: \(refMeal.documentID)")
+               }
+           }
+       }
+    
+    func getPopularMeals( completion: @escaping () -> Void){
+       // selectedMenu : Menu,
+         //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        //print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
+        db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    
+                    self.Popularmeals.append(Meal(dictionary: document.data())! )
+                    
+                    
+                }
+                completion()
+                print("Boom, \(self.meals)")
+            }
+        }
+    }
+
+    
     
     func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
        // selectedMenu : Menu,

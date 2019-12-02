@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,13 +25,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGI-2x-lmH" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                        <rect key="frame" x="20" y="19" width="386" height="76.5"/>
+                        <rect key="frame" x="20" y="21" width="386" height="72.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-7y-qyS">
-                                <rect key="frame" x="15" y="10" width="356" height="56.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-7y-qyS">
+                                <rect key="frame" x="0.0" y="10" width="371" height="52.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="21P-kQ-ebF">
-                                        <rect key="frame" x="0.0" y="3.5" width="50" height="49"/>
+                                        <rect key="frame" x="0.0" y="1.5" width="50" height="49"/>
                                         <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="I4a-xP-T2Y"/>
@@ -44,8 +43,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2Rt-t6-LRC">
-                                        <rect key="frame" x="58" y="0.0" width="255" height="56.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2Rt-t6-LRC">
+                                        <rect key="frame" x="60" y="0.0" width="266" height="52.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUH-f5-IAn">
                                                 <rect key="frame" x="0.0" y="0.0" width="83.5" height="19.5"/>
@@ -54,13 +53,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amsterdamse Veerkade 57-A, 2512 AH Den Haag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-uh-WEJ">
-                                                <rect key="frame" x="0.0" y="21.5" width="255" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="19.5" width="266" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06384822214" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAr-xF-X13">
-                                                <rect key="frame" x="0.0" y="40" width="79.5" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="36" width="79.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -68,7 +67,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFy-00-s9G">
-                                        <rect key="frame" x="321" y="10.5" width="35" height="35"/>
+                                        <rect key="frame" x="336" y="8.5" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="k3X-7V-jsE"/>
                                             <constraint firstAttribute="height" constant="35" id="sQ2-GT-nAq"/>
@@ -81,10 +80,10 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8C9-7y-qyS" firstAttribute="top" secondItem="lGI-2x-lmH" secondAttribute="top" constant="10" id="Gva-AQ-BAr"/>
-                            <constraint firstItem="8C9-7y-qyS" firstAttribute="leading" secondItem="lGI-2x-lmH" secondAttribute="leading" constant="15" id="Obx-ci-psJ"/>
+                            <constraint firstItem="8C9-7y-qyS" firstAttribute="leading" secondItem="lGI-2x-lmH" secondAttribute="leading" id="Obx-ci-psJ"/>
                             <constraint firstAttribute="trailing" secondItem="8C9-7y-qyS" secondAttribute="trailing" constant="15" id="erc-kF-5h3"/>
                             <constraint firstAttribute="bottom" secondItem="8C9-7y-qyS" secondAttribute="bottom" constant="10" id="wuQ-gN-cDN"/>
                         </constraints>

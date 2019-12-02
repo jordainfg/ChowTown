@@ -36,11 +36,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -331,11 +331,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="Sa0-yr-Tmp" customClass="SubMenuMealsAndDrinksViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -352,7 +352,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-LB-ZYz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="never" id="GW7-f2-x55">
+                    <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="always" id="GW7-f2-x55">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="4g8-KG-6uc"/>
                     </navigationItem>
                     <connections>
@@ -420,9 +420,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-6n-yyk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-6n-yyk">
                                 <rect key="frame" x="0.0" y="-44" width="414" height="940"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="kPX-QG-fzo" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -477,7 +478,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-Mc-mgm" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
                                 <rect key="frame" x="20" y="809" width="374" height="51"/>
-                                <color key="backgroundColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.76470588235294112" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="m7o-Ep-ozF"/>
@@ -531,31 +532,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="110" width="414" height="786"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
+                                <rect key="frame" x="0.0" y="149" width="414" height="747"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nKH-y5-QHz" id="Aa7-fG-eGM"/>
                                     <outlet property="delegate" destination="nKH-y5-QHz" id="pB7-dh-e0k"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="49" width="374" height="56"/>
+                                <rect key="frame" x="20" y="93" width="374" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="nKH-y5-QHz" id="Nhd-le-IOn"/>
                                 </connections>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-wz-lln">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Search" id="Tb2-0f-OQ7">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5EQ-Gf-zis">
+                                            <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="nKH-y5-QHz" id="qER-3T-muQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" constant="5" id="8t2-1i-Gjh"/>
+                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="IZ2-wz-lln" secondAttribute="bottom" constant="5" id="8t2-1i-Gjh"/>
+                            <constraint firstItem="IZ2-wz-lln" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="B9n-IN-ele"/>
                             <constraint firstItem="jYq-wj-d8u" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" constant="20" id="EHI-32-Bvr"/>
                             <constraint firstItem="Hsc-2s-9X1" firstAttribute="trailing" secondItem="jYq-wj-d8u" secondAttribute="trailing" constant="20" id="Gv3-mf-Jts"/>
                             <constraint firstAttribute="bottom" secondItem="AcJ-Jo-mow" secondAttribute="bottom" id="LUF-aU-5M8"/>
-                            <constraint firstItem="AcJ-Jo-mow" firstAttribute="top" secondItem="jYq-wj-d8u" secondAttribute="bottom" constant="5" id="Mxf-BI-X9p"/>
+                            <constraint firstItem="AcJ-Jo-mow" firstAttribute="top" secondItem="jYq-wj-d8u" secondAttribute="bottom" id="Mxf-BI-X9p"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="XRu-iY-vrh"/>
+                            <constraint firstItem="IZ2-wz-lln" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="c5U-OU-EZm"/>
+                            <constraint firstItem="IZ2-wz-lln" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="e2h-6m-jNi"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="sdd-Lo-8AS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
@@ -564,6 +582,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ojX-Yd-h4U"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBar" destination="IZ2-wz-lln" id="UjM-tf-bl5"/>
                         <outlet property="searchBar" destination="jYq-wj-d8u" id="opA-dV-38h"/>
                         <outlet property="tableView" destination="AcJ-Jo-mow" id="mZa-dz-KLz"/>
                         <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="Gvu-n7-VaL"/>
@@ -571,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCr-s4-8KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="137"/>
+            <point key="canvasLocation" x="2511.594202898551" y="136.60714285714286"/>
         </scene>
         <!--Rewards-->
         <scene sceneID="zMX-TD-cyg">
@@ -606,8 +625,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ISZ-aB-xfc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="v6S-Mi-sgE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="VXO-aM-KaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="VXO-aM-KaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
@@ -633,8 +652,8 @@
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="moR-fd-9Rm"/>
-        <segue reference="z51-tV-LkX"/>
+        <segue reference="Gvu-n7-VaL"/>
+        <segue reference="JS9-e9-O0z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

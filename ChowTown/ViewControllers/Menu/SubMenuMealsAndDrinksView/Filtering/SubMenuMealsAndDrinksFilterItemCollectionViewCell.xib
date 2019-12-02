@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Overpass-Bold.ttf">
+            <string>Overpass-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubMenuMealsAndDrinksFilterItemCollectionViewCellID" id="gTV-IL-0wX" customClass="SubMenuMealsAndDrinksFilterItemCollectionViewCell" customModule="ChowTown" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="141" height="105"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze7-bD-hoX">
+                        <rect key="frame" x="7" y="0.0" width="127" height="105"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rqS-KG-qBd">
+                                <rect key="frame" x="0.0" y="40" width="127" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gluten - free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-m0-UYC">
+                                        <rect key="frame" x="19" y="0.0" width="89.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="du9-36-396" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
+                                        <rect key="frame" x="19" y="21" width="89.5" height="4"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="B1E-jj-YRk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="FkP-4b-6Qy"/>
+                                    <constraint firstItem="NpO-m0-UYC" firstAttribute="width" secondItem="du9-36-396" secondAttribute="width" id="ZcN-Uf-c2a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rqS-KG-qBd" secondAttribute="trailing" id="6Pi-nE-4xa"/>
+                            <constraint firstItem="rqS-KG-qBd" firstAttribute="leading" secondItem="Ze7-bD-hoX" secondAttribute="leading" id="GQ5-0p-Npd"/>
+                            <constraint firstItem="rqS-KG-qBd" firstAttribute="centerY" secondItem="Ze7-bD-hoX" secondAttribute="centerY" id="L6y-sb-bJH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ze7-bD-hoX" secondAttribute="bottom" id="0wQ-cz-VcI"/>
+                <constraint firstItem="Ze7-bD-hoX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="6ZJ-D6-5J1"/>
+                <constraint firstItem="Ze7-bD-hoX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QmJ-Wp-KUT"/>
+                <constraint firstAttribute="trailing" secondItem="Ze7-bD-hoX" secondAttribute="trailing" constant="7" id="fAY-Gi-WEc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="141" height="105"/>
+            <connections>
+                <outlet property="designableView" destination="Ze7-bD-hoX" id="xwg-IC-rQ4"/>
+                <outlet property="isActiveIndicator" destination="du9-36-396" id="TNt-hw-J7i"/>
+                <outlet property="label" destination="NpO-m0-UYC" id="4t6-f4-Mfk"/>
+                <outlet property="stackView" destination="rqS-KG-qBd" id="yyY-kL-F42"/>
+            </connections>
+            <point key="canvasLocation" x="58.695652173913047" y="86.049107142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

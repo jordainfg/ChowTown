@@ -51,7 +51,7 @@ public class ViewModel{
     var restaurants : [Restaurant] = []
     var menus : [Menu] = []
     var meals : [Meal] = []
-    
+    var Popularmeals : [Meal] = []
     
     // MARK: - Views
     // ChoiceMenuViewController
@@ -60,7 +60,7 @@ public class ViewModel{
         
        // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
       //  let specials = meals.filter {$0.isPopular == true}
-        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(meals)],[.MenuFood(menus.filter {$0.isMeal == false})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
+        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == false})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
         return types
     }

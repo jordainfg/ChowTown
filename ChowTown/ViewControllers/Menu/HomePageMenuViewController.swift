@@ -26,6 +26,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         super.viewDidLoad()
        
         setupTableView()
+        viewModel.addPopularMeal()
          //viewModel.addRestaurant()
 //        viewModel.getMealsForMenu()  {
 //            self.tableView.reloadData()
@@ -33,6 +34,9 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
             viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
                 self.tableView.reloadData()
+            }
+            viewModel.getPopularMeals{
+                 self.tableView.reloadData()
             }
         }
         
@@ -69,7 +73,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         case "toMeal":
             let secondVC = segue.destination as! SpecialsDetailViewController
             secondVC.specialHeroID = selectedSpecial
-            secondVC.meal = viewModel.meals[selectedSpecial]
+            secondVC.meal = viewModel.Popularmeals[selectedSpecial]
             secondVC.isPopOver = true
         case "toSubMenuMealsAndDrinks":
             let secondVC = segue.destination as! SubMenuMealsAndDrinksViewController

@@ -13,8 +13,8 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let viewModel = ViewModel()
-    
     var menu : Menu? = nil
+    var selectedMeal : Meal?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -33,7 +33,7 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     
     func setupTableView() {
         tableView.register(UINib(nibName: SubMenuMealsAndDrinksTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: SubMenuMealsAndDrinksHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksHeaderTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: SubMenuMealsAndDrinksFilteringTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksFilteringTableViewCell.reuseIdentifier())
     }
     
     // MARK: - Segue methods
@@ -42,6 +42,7 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         case "toMeal":
             let secondVC = segue.destination as! SpecialsDetailViewController
             secondVC.isPopOver = false
+            secondVC.meal = selectedMeal
         default:
             return
         }
@@ -65,17 +66,18 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         switch type {
             
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksHeaderTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksFilteringTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksFilteringTableViewCell
             cell.selectionStyle = .none
-            cell.isUserInteractionEnabled = false
+          //  cell.isUserInteractionEnabled = false
+            cell.delegate = self
             return cell
             
         case  let .meal(meal):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
             cell.selectionStyle = .none
-              let httpsReference =  viewModel.storage.reference(forURL: meal.imageRef)
+            let httpsReference =  viewModel.storage.reference(forURL: meal.imageRef)
             cell.configure(meal: meal, httpReference : httpsReference)
-          
+            
             
             return cell
             
@@ -87,8 +89,22 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "toMeal", sender: nil)
+        let type = viewModel.SubMenuMealsAndDrinksTableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+        case .header:
+          tableView.deselectRow(at: indexPath, animated: true)
+        case let .meal(meal):
+            selectedMeal = meal
+            tableView.deselectRow(at: indexPath, animated: true)
+            if selectedMeal != nil{
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "toMeal", sender: nil)
+            }
+        case .drink:
+             tableView.deselectRow(at: indexPath, animated: true)
+     
+        }
+        
         
     }
     // set the height of the row based on the chosen cell
@@ -96,7 +112,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         let type = viewModel.SubMenuMealsAndDrinksTableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
         case .header:
-            return 400
+            return 70
         case .meal:
             return 80
         case .drink:
@@ -104,6 +120,17 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         }
     }
     
+    
+    
+}
+
+
+extension SubMenuMealsAndDrinksViewController : filteringDelegate{
+    func didSelectFilterOptions() {
+//        let indexPath = IndexPath(row: 0, section:  0)
+//
+//        tableView.reloadRows(at: [indexPath], with: .fade)
+    }
     
     
 }

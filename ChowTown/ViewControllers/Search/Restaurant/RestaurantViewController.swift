@@ -23,7 +23,7 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
-    
+    let viewModel = ViewModel()
     var restaurant : Restaurant?
     
     var tableViewcellTypes: [[RestaurantDataType]] {
@@ -50,6 +50,17 @@ class RestaurantViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
         updateHeaderView()
+         
+        // Dismiss view button
+        let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
+        button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        button.tintColor = UIColor.black
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(button)
+        
+        //add header image
+        let httpsReference =   viewModel.storage.reference(forURL: restaurant?.imageRefrence ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
+         imageView.sd_setImage(with: httpsReference)
     }
     func updateHeaderView() {
         
@@ -66,7 +77,10 @@ class RestaurantViewController: UIViewController {
         
         tableView.register(UINib(nibName: RestaurantAboutTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RestaurantAboutTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: iconWithLabelTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: iconWithLabelTableViewCell.reuseIdentifier())
-        
+        self.tableView.tableFooterView = UIView()
+    }
+    @objc func buttonAction(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Segues
@@ -135,10 +149,32 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = tableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+            
+        case .header:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .address:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .emailAddress:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .hours:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .phone:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .website:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .social:
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+        }
+    }
     // set the height of the row based on the chosen cell
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let type = tableViewcellTypes[indexPath.section][indexPath.row]
-        let heightForIcons = CGFloat(50)
+        let heightForIcons = CGFloat(55)
         switch type {
             
         case .header:
