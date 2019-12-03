@@ -28,13 +28,13 @@
                                 <rect key="frame" x="0.0" y="40" width="127" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gluten - free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-m0-UYC">
-                                        <rect key="frame" x="19" y="0.0" width="89.5" height="21"/>
+                                        <rect key="frame" x="17.5" y="0.0" width="92" height="21"/>
                                         <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="du9-36-396" customClass="DesignableView" customModule="ChowTown" customModuleProvider="target">
-                                        <rect key="frame" x="19" y="21" width="89.5" height="4"/>
+                                        <rect key="frame" x="17" y="21" width="93" height="4"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="B1E-jj-YRk"/>
@@ -48,7 +48,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="FkP-4b-6Qy"/>
-                                    <constraint firstItem="NpO-m0-UYC" firstAttribute="width" secondItem="du9-36-396" secondAttribute="width" id="ZcN-Uf-c2a"/>
+                                    <constraint firstItem="NpO-m0-UYC" firstAttribute="width" secondItem="du9-36-396" secondAttribute="width" multiplier="0.99" id="ZcN-Uf-c2a"/>
                                 </constraints>
                             </stackView>
                         </subviews>

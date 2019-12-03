@@ -74,6 +74,7 @@ class SpecialsDetailViewController: UIViewController {
         tableView.register(UINib(nibName: NutritionInformationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: NutritionInformationTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: IconsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: IconsTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: AddOnTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AddOnTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: HeaderForSectionTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForSectionTableViewCell.reuseIdentifier())
     }
     
     func updateHeaderView() {
@@ -131,15 +132,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         
         switch type {
             
-            
-        case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
-            cell.specialHeaderView.hero.id = "specialHeaderViewHeroID\(specialHeroID)"
-            cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
-            cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
-            cell.configure(meal: meal!)
-            cell.indentationLevel = 2;
-            return cell
+        
             
         case .nutritionInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: NutritionInformationTableViewCell.reuseIdentifier()) as! NutritionInformationTableViewCell
@@ -147,13 +140,13 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             return cell
         case let .aboutIconSet(name):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-            cell.iconSetName.text = name
+            
             cell.iCons = meal?.about as! [Int]
             return cell
             
         case let .alergenIconSet(name):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-            cell.iconSetName.text = name
+            
             cell.iCons = meal?.allergens as! [Int]
             return cell
         case .addOns(_):
@@ -192,20 +185,12 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
         
         switch type {
-            
-            
-        case .header:
-            
-            return 150
-            
         case .nutritionInfo:
-            
-            
-            return 220
-        case .alergenIconSet:
-            return  100
-        case .aboutIconSet(_):
             return 100
+        case .alergenIconSet:
+            return  60
+        case .aboutIconSet(_):
+            return 60
         case .addOns(_):
             return 40
         }
@@ -213,41 +198,54 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 1:
-            return "Additions"
-        default:
-            break
-        }
-        return ""
-    }
+    
     
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    //    
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //      //  let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCellIdentifier") as! HeaderForTableViewCell
-    //        switch section {
-    //       
-    //        default:
-    //            
-    //        }
-    //    }
     
-    //    func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    ////        switch section {
-    //////        case 0:
-    //////            return 44
-    //////        case 1:
-    //////            return 1
-    //////        default:
-    //////            return 0
-    ////        }
-    //    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForSectionTableViewCellID") as! HeaderForSectionTableViewCell
+        switch section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
+                      cell.specialHeaderView.hero.id = "specialHeaderViewHeroID\(specialHeroID)"
+                      cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
+                      cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
+                      cell.configure(meal: meal!)
+                      cell.indentationLevel = 2;
+                      return cell
+        case 1:
+            headerCell.label.text = "NUTRITION INFORMATION"
+            return headerCell
+        case 2:
+            headerCell.label.text = "About"
+            return headerCell
+        case 3:
+            headerCell.label.text = "Alergens"
+            return headerCell
+        case 4:
+            headerCell.label.text = "Addons"
+            return headerCell
+        default:
+            
+             return headerCell
+            
+        }
+    }
+    
+//    func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        switch section {
+//        case 0:
+//            return 130
+//        case 1:
+//            return 40
+//        default:
+//            return 40
+//        }
+//    }
     
     
     

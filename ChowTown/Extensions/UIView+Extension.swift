@@ -24,7 +24,7 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
-
+    
     @IBInspectable
     var cornerRadius: CGFloat {
         get {
@@ -34,7 +34,7 @@ extension UIView {
             layer.cornerRadius = newValue
         }
     }
-
+    
     @IBInspectable
     var borderWidth: CGFloat {
         get {
@@ -44,7 +44,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-
+    
     @IBInspectable
     var borderColor: UIColor? {
         get {
@@ -61,7 +61,7 @@ extension UIView {
             }
         }
     }
-
+    
     @IBInspectable
     var shadowRadius: CGFloat {
         get {
@@ -71,7 +71,7 @@ extension UIView {
             layer.shadowRadius = newValue
         }
     }
-
+    
     @IBInspectable
     var shadowOpacity: Float {
         get {
@@ -81,7 +81,7 @@ extension UIView {
             layer.shadowOpacity = newValue
         }
     }
-
+    
     @IBInspectable
     var shadowOffset: CGSize {
         get {
@@ -91,7 +91,7 @@ extension UIView {
             layer.shadowOffset = newValue
         }
     }
-
+    
     @IBInspectable
     var shadowColor: UIColor? {
         get {
@@ -108,28 +108,55 @@ extension UIView {
             }
         }
     }
-
-   func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
-          
-          let gradientLayer = CAGradientLayer()
-          gradientLayer.frame = bounds
-          gradientLayer.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
-          gradientLayer.locations = [0, 0.1, 0.9, 1]
-         // gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
-              // gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
-
-          layer.insertSublayer(gradientLayer, at: 0)
-      }
-     func addBlurEffect()
-      {
+    
+    func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+        gradientLayer.locations = [0, 0.1, 0.9, 1]
+        // gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
+        // gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    func addBlurEffect()
+    {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
-          let blurEffectView = UIVisualEffectView(effect: blurEffect)
-          blurEffectView.frame = self.bounds
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.insertSubview(blurEffectView, at: 0)
+        
+    }
 
-          blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
-          self.insertSubview(blurEffectView, at: 0)
-          
-      }
+    func showLoadingIndicatorForImage() {
+       
+       // let activityIndicator = MaterialLoadingIndicator(radius: 14, color: UIColor.softBlue)
+           let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.style = .medium
+        activityIndicator.color = UIColor.black
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        activityIndicator.center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.tag = 20
+        self.addSubview(activityIndicator)
+       // backgroundView?.addSubview(activityIndicator)
+        activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
+        activityIndicator.startAnimating()
+    }
+    
+    func hideLoadingIndicatorForImage(){
+        if let viewWithTag = self.viewWithTag(20) {
+            viewWithTag.removeFromSuperview()
+            
+        
+    }
+    }
+    
+    
     
 }
 
@@ -137,7 +164,7 @@ extension UIAlertController {
     private struct ActivityIndicatorData {
         static var activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     }
-
+    
     func addActivityIndicator() {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: 40, height: 40)
@@ -146,7 +173,7 @@ extension UIAlertController {
         vc.view.addSubview(ActivityIndicatorData.activityIndicator)
         setValue(vc, forKey: "contentViewController")
     }
-
+    
     func dismissActivityIndicator() {
         ActivityIndicatorData.activityIndicator.stopAnimating()
         dismiss(animated: false)

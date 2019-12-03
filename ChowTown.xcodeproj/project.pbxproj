@@ -13,6 +13,8 @@
 		1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */; };
 		1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */; };
 		110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F129E239546D200E80E4D /* ButtonBarSegementedControl.swift */; };
+		110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F12A0239554E200E80E4D /* HeaderForSectionTableViewCell.swift */; };
+		110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110F12A1239554E200E80E4D /* HeaderForSectionTableViewCell.xib */; };
 		1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Restaurant.swift */; };
 		1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */; };
 		1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */; };
@@ -150,6 +152,8 @@
 		110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuMealsAndDrinksHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		110F129E239546D200E80E4D /* ButtonBarSegementedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarSegementedControl.swift; sourceTree = "<group>"; };
+		110F12A0239554E200E80E4D /* HeaderForSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForSectionTableViewCell.swift; sourceTree = "<group>"; };
+		110F12A1239554E200E80E4D /* HeaderForSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForSectionTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB19237EBE8600CB1CD9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		1117BB1C237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEstablishmentTableViewCell.swift; sourceTree = "<group>"; };
 		1117BB1D237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteEstablishmentTableViewCell.xib; sourceTree = "<group>"; };
@@ -405,6 +409,8 @@
 				11C26303237AC9E600E74394 /* iconCollectionViewCell.xib */,
 				11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */,
 				11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */,
+				110F12A0239554E200E80E4D /* HeaderForSectionTableViewCell.swift */,
+				110F12A1239554E200E80E4D /* HeaderForSectionTableViewCell.xib */,
 			);
 			path = "Meal Detail";
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				116F7592238BDABB002FB784 /* Nunito-Light.ttf in Resources */,
 				1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */,
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
+				110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */,
 				11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
@@ -913,6 +920,7 @@
 				11A90E992382BA9900388093 /* RewardsViewController.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
 				115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */,
+				110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */,
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,

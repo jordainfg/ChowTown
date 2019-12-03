@@ -13,7 +13,7 @@ public struct Meal{
     var name: String
     var detail : String
     var price : Int
-    var about : Array<Any>
+    var about : Array<Int>
     var allergens: Array<Any>
     var protein : String
     var fat : String
@@ -28,7 +28,7 @@ public struct Meal{
             self.name = dictionary["name"] as! String
              self.detail = dictionary["detail"] as! String
              self.price = dictionary["price"] as! Int
-             self.about = dictionary["about"] as! Array<Any>
+             self.about = dictionary["about"] as! Array<Int>
              self.allergens = dictionary["allergens"] as! Array<Any>
              self.protein = dictionary["protein"] as! String
              self.fat = dictionary["fat"] as! String

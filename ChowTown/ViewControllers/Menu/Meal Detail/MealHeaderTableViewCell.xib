@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
         <array key="Nunito-SemiBold.ttf">
             <string>Nunito-SemiBold</string>
         </array>
@@ -21,33 +24,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="430" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-Vm-AlU">
-                        <rect key="frame" x="20" y="7.5" width="380" height="105"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-Vm-AlU">
+                        <rect key="frame" x="20" y="5" width="380" height="110"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzu-Dp-tee">
-                                <rect key="frame" x="0.0" y="0.0" width="208" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="SPECIAL OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzu-Dp-tee">
+                                <rect key="frame" x="0.0" y="0.0" width="208" height="36.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This delicous recipte comes from our kitchen served with a side of onions and garlic. Add some onios" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Tq-9bS">
-                                <rect key="frame" x="0.0" y="33.5" width="374.5" height="38.5"/>
-                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This delicous recipte comes from our kitchen served with a side of onions and garlic. Add some onios" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Tq-9bS">
+                                <rect key="frame" x="0.0" y="41.5" width="368.5" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJY-SJ-QwI" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="68" height="25"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJY-SJ-QwI" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="57" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="60d-Rz-xj1"/>
-                                    <constraint firstAttribute="width" constant="68" id="cyO-Jd-38w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                <state key="normal" title="10" image="link" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="10.00" image="eurosign.circle" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -59,7 +61,8 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bYV-Vm-AlU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ASZ-fP-Cng"/>
+                    <constraint firstAttribute="bottom" secondItem="bYV-Vm-AlU" secondAttribute="bottom" constant="5" id="7c2-QB-e7L"/>
+                    <constraint firstItem="bYV-Vm-AlU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="W3R-cG-rFd"/>
                     <constraint firstItem="bYV-Vm-AlU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cTR-vL-1ws"/>
                     <constraint firstAttribute="trailing" secondItem="bYV-Vm-AlU" secondAttribute="trailing" constant="30" id="yqf-VW-BOu"/>
                 </constraints>
@@ -74,6 +77,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="link" catalog="system" width="64" height="58"/>
+        <image name="eurosign.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

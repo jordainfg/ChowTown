@@ -9,7 +9,7 @@
 import UIKit
 
 protocol filteringDelegate: class {
-    func didSelectFilterOptions()
+    func didSelectFilterOption(optionNumber : Int)
 }
 class SubMenuMealsAndDrinksFilteringTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -54,6 +54,25 @@ class SubMenuMealsAndDrinksFilteringTableViewCell: UITableViewCell {
         return "SubMenuMealsAndDrinksFilteringTableViewCell"
     }
     
+    func checkSelectedFilterOtions(optionNumber : Int) -> Int{
+        
+        switch optionNumber {
+        case 0:
+        return 0
+        case 1:
+        return 22
+        case 2:
+        return 21
+        case 3:
+        return 6
+        case 4:
+        return 20
+        default:
+        return 0
+        }
+        
+    }
+    
 }
 
 extension SubMenuMealsAndDrinksFilteringTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -81,7 +100,7 @@ extension SubMenuMealsAndDrinksFilteringTableViewCell: UICollectionViewDataSourc
         let cell = collectionView.cellForItem(at: indexPath) as? SubMenuMealsAndDrinksFilterItemCollectionViewCell
         deselectAllItems()
         cell?.configure(isActive: true)
-        delegate?.didSelectFilterOptions()
+        delegate?.didSelectFilterOption(optionNumber: checkSelectedFilterOtions(optionNumber: indexPath.row))
     }
     
     

@@ -104,7 +104,7 @@ public extension UITableView {
        // let activityIndicator = MaterialLoadingIndicator(radius: 14, color: UIColor.softBlue)
            let activityIndicator = UIActivityIndicatorView()
         activityIndicator.style = .medium
-        activityIndicator.color = UIColor.white
+        activityIndicator.color = UIColor.black
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         activityIndicator.center = CGPoint(x: backgroundView!.frame.width / 2, y: backgroundView!.frame.height / 2)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false

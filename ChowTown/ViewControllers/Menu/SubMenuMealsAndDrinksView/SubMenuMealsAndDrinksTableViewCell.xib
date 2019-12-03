@@ -30,7 +30,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-07-ubj">
                                 <rect key="frame" x="10" y="18.5" width="308" height="60"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-2A-lwa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-2A-lwa">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="HmP-Sb-Grg"/>
@@ -96,7 +96,4 @@
             <point key="canvasLocation" x="184.05797101449278" y="164.39732142857142"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="s" width="972" height="1114"/>
-    </resources>
 </document>

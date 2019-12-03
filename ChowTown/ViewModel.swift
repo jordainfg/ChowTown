@@ -18,7 +18,6 @@ enum ChoiceMenuTableViewDataType {
 }
 
 enum mealDetailTableViewDataType {
-    case header
     case nutritionInfo
     case aboutIconSet(String)
     case alergenIconSet(String)
@@ -51,6 +50,7 @@ public class ViewModel{
     var restaurants : [Restaurant] = []
     var menus : [Menu] = []
     var meals : [Meal] = []
+    var filterdMeals : [Meal] = []
     var Popularmeals : [Meal] = []
     
     // MARK: - Views
@@ -72,7 +72,7 @@ public class ViewModel{
         
         let AddOns = addons.map { mealDetailTableViewDataType.addOns($0) }
         
-        let types: [[mealDetailTableViewDataType]] = [[.header,.aboutIconSet("About"),.alergenIconSet("Alergens"),.nutritionInfo],AddOns]
+        let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
         
         return types
     }
@@ -107,7 +107,7 @@ public class ViewModel{
     // SubMenuMealsAndDrinks
     
     var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
-       let mealsForMenu =  meals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
+       let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
         let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
         
         return types

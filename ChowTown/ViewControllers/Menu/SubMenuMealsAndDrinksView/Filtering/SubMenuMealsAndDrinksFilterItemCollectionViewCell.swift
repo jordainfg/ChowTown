@@ -36,15 +36,15 @@ class SubMenuMealsAndDrinksFilterItemCollectionViewCell: UICollectionViewCell {
         
         if isActive{
             
-            UIView.transition(with: self.label, duration: 0.8, options: .transitionCrossDissolve, animations:
+            UIView.transition(with: self.label, duration: 0.7, options: .transitionCrossDissolve, animations:
                 { self.label.textColor = UIColor.systemIndigo
             }, completion: nil)
-                UIView.animate(withDuration: 0.8, animations: {
+                UIView.animate(withDuration: 0.7, animations: {
                 self.isActiveIndicator.backgroundColor = UIColor.systemIndigo
             })
         } else{
             UIView.animate(withDuration: 0.2, animations: {
-                self.isActiveIndicator.backgroundColor = UIColor.paleGrey
+                self.isActiveIndicator.backgroundColor = UIColor.clear
                 self.label.textColor = UIColor.paleGrey
             })
             

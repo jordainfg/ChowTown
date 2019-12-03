@@ -15,12 +15,23 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     let viewModel = ViewModel()
     var menu : Menu? = nil
     var selectedMeal : Meal?
+    
+    var filterMeals : [Meal] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        tableView.showLoadingIndicator()
         viewModel.getMealsForMenu(selectedMenu: menu!){
-            self.tableView.reloadData()
+            self.viewModel.filterdMeals = self.viewModel.meals
+            self.tableView.hideLoadingIndicator()
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
         }
+        
         
     }
     
@@ -68,7 +79,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksFilteringTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksFilteringTableViewCell
             cell.selectionStyle = .none
-          //  cell.isUserInteractionEnabled = false
+            //  cell.isUserInteractionEnabled = false
             cell.delegate = self
             return cell
             
@@ -76,7 +87,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
             cell.selectionStyle = .none
             let httpsReference =  viewModel.storage.reference(forURL: meal.imageRef)
-            cell.configure(meal: meal, httpReference : httpsReference)
+            cell.configure(meal: meal, httpReference : meal.imageRef)
             
             
             return cell
@@ -92,7 +103,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         let type = viewModel.SubMenuMealsAndDrinksTableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
         case .header:
-          tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         case let .meal(meal):
             selectedMeal = meal
             tableView.deselectRow(at: indexPath, animated: true)
@@ -101,8 +112,8 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
                 performSegue(withIdentifier: "toMeal", sender: nil)
             }
         case .drink:
-             tableView.deselectRow(at: indexPath, animated: true)
-     
+            tableView.deselectRow(at: indexPath, animated: true)
+            
         }
         
         
@@ -126,11 +137,21 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
 
 
 extension SubMenuMealsAndDrinksViewController : filteringDelegate{
-    func didSelectFilterOptions() {
-//        let indexPath = IndexPath(row: 0, section:  0)
-//
-//        tableView.reloadRows(at: [indexPath], with: .fade)
+    func didSelectFilterOption(optionNumber: Int) {
+        
+        if optionNumber == 0 {
+            viewModel.filterdMeals = self.viewModel.meals
+        } else {
+            viewModel.filterdMeals = self.viewModel.meals
+            viewModel.filterdMeals = self.viewModel.meals.filter {$0.about.contains(where: { $0 == optionNumber })  }
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+        }
+        
     }
+    
     
     
 }
