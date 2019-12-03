@@ -84,7 +84,7 @@ public class ViewModel{
         //let favorites = []
        // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
         let restaurantDataTypes = restaurants.map { SearchTableViewDataType.restaurant($0) }
-        var types: [[SearchTableViewDataType]] = [restaurantDataTypes]
+        var types: [[SearchTableViewDataType]] = [[],restaurantDataTypes]
         
         if favoritesIsShowing {
             types.append(restaurantDataTypes)

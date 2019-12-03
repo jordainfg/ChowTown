@@ -96,7 +96,6 @@ extension IconsTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     //3
     func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "iconCollectionViewCellID", for: indexPath) as! iconCollectionViewCell
-        cell.backgroundColor = UIColor.clear
         cell.iConNumber = iCons[indexPath.row]
         cell.updateIcons()
         cell.cornerRadius = 15

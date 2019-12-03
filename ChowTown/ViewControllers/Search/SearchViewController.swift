@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         filterdEstablishments =  viewModel.restaurants
         setUpTableView()
         viewModel.getRestaurants {
+            self.filterdEstablishments =  self.viewModel.restaurants
             self.tableView.reloadData()
         }
         //  self.navigationController?.view.backgroundColor = UIColor.clear
@@ -131,16 +132,16 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         }
     }
     // set the height of the row based on the chosen cell
-    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
-        switch type {
-            
-        case .favorite(_):
-            return 170
-        case .restaurant(_):
-            return 100
-        }
-    }
+//    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
+//        switch type {
+//            
+//        case .favorite(_):
+//            return 170
+//        case .restaurant(_):
+//            return 100
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -185,9 +186,15 @@ extension SearchViewController: UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
     {
         //Filter function
-        filterdEstablishments =  viewModel.restaurants
-        filterdEstablishments = filterdEstablishments?.filter {$0.name == searchText}
-        tableView.reloadData()
+        if searchText.isEmpty{
+            filterdEstablishments =  viewModel.restaurants
+           tableView.reloadData()
+        } else{
+            filterdEstablishments =  viewModel.restaurants
+            filterdEstablishments = filterdEstablishments?.filter { $0.name.range(of: searchText) != nil}
+            tableView.reloadData()
+        }
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
@@ -212,7 +219,8 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
-        
+        filterdEstablishments =  viewModel.restaurants
+        tableView.reloadData()
         //Filter function
         //  self.filterFunction(searchText: searchBar.text)
     }

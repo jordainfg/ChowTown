@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,21 +37,22 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="ChowTown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="DarkModeBlack"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="ChowTown" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
-                                            <rect key="frame" x="0.0" y="-88" width="414" height="368"/>
+                                            <rect key="frame" x="0.0" y="-88" width="414" height="403"/>
+                                            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
+                                                    <real key="value" value="18"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
@@ -74,10 +76,10 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="DarkModeBlack"/>
                                     <constraints>
                                         <constraint firstItem="P7Z-am-2xx" firstAttribute="top" secondItem="HOo-FD-PnB" secondAttribute="top" constant="60" id="1cf-pu-j3f"/>
-                                        <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" constant="20" id="6jb-Ry-gVQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" constant="-15" id="6jb-Ry-gVQ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="trailing" secondItem="P7Z-am-2xx" secondAttribute="trailing" constant="20" id="BaR-uK-cDA"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="leading" secondItem="Wj2-c2-nmv" secondAttribute="leading" id="Mbe-gg-bxJ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" constant="-88" id="lhl-FL-zTZ"/>
@@ -91,6 +93,9 @@
                                 </view>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="dEX-qv-diC" id="1CG-mX-1PZ"/>
@@ -98,10 +103,10 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="DarkModeBlack"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="lia-Z7-CMX" firstAttribute="bottom" secondItem="cv9-wQ-IsW" secondAttribute="bottom" id="9nA-7T-T0B"/>
+                            <constraint firstItem="lia-Z7-CMX" firstAttribute="bottom" secondItem="cv9-wQ-IsW" secondAttribute="bottom" constant="34" id="9nA-7T-T0B"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="top" secondItem="tZ2-IN-jB2" secondAttribute="top" id="Dyx-gI-GJ0"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="leading" secondItem="cv9-wQ-IsW" secondAttribute="leading" id="ENa-c1-sIm"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="trailing" secondItem="cv9-wQ-IsW" secondAttribute="trailing" id="VTP-gA-oIx"/>
@@ -121,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivy-eF-CrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7452" y="137"/>
+            <point key="canvasLocation" x="7450.7246376811599" y="136.60714285714286"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="0r1-gd-gmB">
@@ -372,9 +377,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ulw-qS-t2C" id="T6S-NF-7Em"/>
@@ -534,7 +539,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
                                 <rect key="frame" x="0.0" y="149" width="414" height="747"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nKH-y5-QHz" id="Aa7-fG-eGM"/>
@@ -543,7 +548,7 @@
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
                                 <rect key="frame" x="20" y="93" width="374" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="DarkModeBlack"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="nKH-y5-QHz" id="Nhd-le-IOn"/>
@@ -563,7 +568,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="DarkModeBlack"/>
                         <constraints>
                             <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="IZ2-wz-lln" secondAttribute="bottom" constant="5" id="8t2-1i-Gjh"/>
                             <constraint firstItem="IZ2-wz-lln" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="B9n-IN-ele"/>
@@ -650,10 +655,13 @@
         <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
+        <namedColor name="DarkModeBlack">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Gvu-n7-VaL"/>
-        <segue reference="JS9-e9-O0z"/>
+        <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -141,6 +141,10 @@ extension SubMenuMealsAndDrinksViewController : filteringDelegate{
         
         if optionNumber == 0 {
             viewModel.filterdMeals = self.viewModel.meals
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
         } else {
             viewModel.filterdMeals = self.viewModel.meals
             viewModel.filterdMeals = self.viewModel.meals.filter {$0.about.contains(where: { $0 == optionNumber })  }

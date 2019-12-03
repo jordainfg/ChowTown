@@ -142,12 +142,13 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         case .MenuDrinks(_):
             return 180
         case .MenuHeader(_):
-            return 90
+            return 120
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
+        
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             headerCell.sectionName.text = "Popular Eatries"
