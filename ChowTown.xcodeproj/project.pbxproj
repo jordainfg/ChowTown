@@ -72,6 +72,14 @@
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
 		11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */; };
 		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
+		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
+		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
+		11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */; };
+		11A4EBD62397B5C300D26756 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD52397B5C300D26756 /* LoginTextField.swift */; };
+		11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */; };
+		11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */; };
+		11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */; };
+		11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */; };
 		11A90E992382BA9900388093 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E982382BA9900388093 /* RewardsViewController.swift */; };
 		11A90EA02382C32F00388093 /* RewardsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */; };
 		11A90EA12382C32F00388093 /* RewardsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */; };
@@ -191,6 +199,14 @@
 		1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iconWithLabelTableViewCell.swift; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.swift"; sourceTree = "<absolute>"; };
 		11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iconWithLabelTableViewCell.xib; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.xib"; sourceTree = "<absolute>"; };
+		11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
+		11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textFieldTableViewCell.xib; sourceTree = "<group>"; };
+		11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldTableViewCell.swift; sourceTree = "<group>"; };
+		11A4EBD52397B5C300D26756 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCollectionViewCell.swift; sourceTree = "<group>"; };
+		11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCollectionViewCell.xib; sourceTree = "<group>"; };
+		11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		11A90E982382BA9900388093 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -348,7 +364,6 @@
 				11F617882389740A0096D883 /* MenusSpecialViews */,
 				11F617892389742B0096D883 /* MenuSubMenus */,
 				11F61787238973780096D883 /* SubMenuMealsAndDrinksView */,
-				11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */,
 				11C262FD237AC89300E74394 /* Meal Detail */,
 			);
 			path = Menu;
@@ -386,6 +401,20 @@
 			path = Designables;
 			sourceTree = "<group>";
 		};
+		11A4EBCE2397AC4A00D26756 /* Reservations */ = {
+			isa = PBXGroup;
+			children = (
+				11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */,
+				11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */,
+				11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */,
+				11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */,
+				11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */,
+				11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */,
+				11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */,
+			);
+			path = Reservations;
+			sourceTree = "<group>";
+		};
 		11A90E972382BA7B00388093 /* Rewards */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +428,7 @@
 		11C262FD237AC89300E74394 /* Meal Detail */ = {
 			isa = PBXGroup;
 			children = (
+				11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */,
 				1162121A236AFD2200546EC1 /* MealHeaderTableViewCell.swift */,
 				1162121B236AFD2200546EC1 /* MealHeaderTableViewCell.xib */,
 				1191F5AC236C47F800649C79 /* NutritionInformationTableViewCell.swift */,
@@ -497,6 +527,7 @@
 				1117BB1B237EC31000CB1CD9 /* Search */,
 				11F3DCD9237C248000EA1932 /* Login */,
 				1162FE892382ED1700943CEE /* Menu */,
+				11A4EBCE2397AC4A00D26756 /* Reservations */,
 				1162FE7B2382DF1400943CEE /* NotUsed */,
 			);
 			path = ViewControllers;
@@ -513,6 +544,7 @@
 		11C5085C23687EE4003400D0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				11A4EBD52397B5C300D26756 /* LoginTextField.swift */,
 				11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */,
 				11C5085E23687EE4003400D0 /* overpass-semibold-italic.otf */,
 				11C5085F23687EE4003400D0 /* Nunito-ExtraBold.ttf */,
@@ -748,12 +780,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */,
 				116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */,
 				116F758E238BDABB002FB784 /* overpass-semibold-italic.otf in Resources */,
 				116F759E238BDABB002FB784 /* Nunito-Italic.ttf in Resources */,
 				1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */,
 				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
 				11A90EA12382C32F00388093 /* RewardsHeaderTableViewCell.xib in Resources */,
+				11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */,
 				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
 				1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */,
 				1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */,
@@ -764,6 +798,7 @@
 				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
 				11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
+				11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */,
 				116F7598238BDABB002FB784 /* Nunito-ExtraLight.ttf in Resources */,
 				11C5082423685FEC003400D0 /* Assets.xcassets in Resources */,
 				11C5088D23687EE4003400D0 /* OFL.txt in Resources */,
@@ -897,18 +932,23 @@
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
+				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
 				1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */,
+				11A4EBD62397B5C300D26756 /* LoginTextField.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
 				1162FE7E2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift in Sources */,
 				1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */,
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
+				11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
+				11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */,
 				11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */,
 				1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */,
 				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
 				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */,
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
+				11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */,
 				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,

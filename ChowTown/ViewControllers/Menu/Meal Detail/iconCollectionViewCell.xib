@@ -16,20 +16,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iconCollectionViewCellID" id="gTV-IL-0wX" customClass="iconCollectionViewCell" customModule="ChowTown" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-2E-blx">
-                        <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1cd-XN-1WZ">
-                                <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="67" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCola" translatesAutoresizingMaskIntoConstraints="NO" id="WMX-oZ-5jL">
-                                        <rect key="frame" x="36.5" y="0.0" width="20" height="20"/>
+                                        <rect key="frame" x="23.5" y="0.0" width="20" height="20"/>
                                         <color key="tintColor" name="DarkModeOrange"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="9f2-ok-c8K"/>
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegiterian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-2v-KGq">
-                                        <rect key="frame" x="20" y="20" width="53" height="40"/>
+                                        <rect key="frame" x="7" y="20" width="53" height="40"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,12 +62,13 @@
                 <constraint firstItem="C7m-2E-blx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rbr-t1-vQL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="93" height="60"/>
+            <size key="customSize" width="67" height="60"/>
             <connections>
                 <outlet property="alergenName" destination="oJN-2v-KGq" id="tik-ci-me7"/>
                 <outlet property="iCon" destination="WMX-oZ-5jL" id="VCY-wK-KxM"/>
+                <outlet property="view" destination="C7m-2E-blx" id="f4s-NA-Lnw"/>
             </connections>
-            <point key="canvasLocation" x="129.71014492753625" y="147.32142857142856"/>
+            <point key="canvasLocation" x="110.86956521739131" y="146.65178571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

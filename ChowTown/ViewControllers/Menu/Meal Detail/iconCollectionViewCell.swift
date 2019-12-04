@@ -12,13 +12,14 @@ class iconCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var iCon: UIImageView!
     @IBOutlet weak var alergenName: UILabel!
-    
+    @IBOutlet weak var view: UIView!
     var iConNumber = 1
     var setNumber = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         updateIcons()
         // Initialization code
+        
     }
     
     func updateIcons(){
@@ -71,6 +72,10 @@ class iconCollectionViewCell: UICollectionViewCell {
             alergenName.text = "Milk"
         }
     }
+    
+  
+    
+    
     
     
     // Reuser identifier

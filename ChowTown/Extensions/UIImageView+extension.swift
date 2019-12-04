@@ -25,7 +25,7 @@ public extension UIImageView {
     
  
 
-        func makeRounded() {
+        func makeImageRounded() {
 
             self.layer.borderWidth = 1
             self.layer.masksToBounds = false

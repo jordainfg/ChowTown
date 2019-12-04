@@ -96,6 +96,7 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
 
         let numberOfCells = floor(self.frame.size.width / cellWidth)
         let edgeInsets = (self.frame.size.width - (numberOfCells * cellWidth)) / (numberOfCells + 1)
+    
 
     return UIEdgeInsets(top: 15, left: edgeInsets, bottom: 0, right: edgeInsets)
     }

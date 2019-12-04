@@ -34,7 +34,7 @@ class IconsTableViewCell: UITableViewCell {
         // delegate = MSPeekCollectionViewDelegateImplementation(cellSpacing: 10)
 //        delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
 //        collectionView.configureForPeekingDelegate()
-//        collectionView.delegate = delegate
+       collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "iconCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "iconCollectionViewCellID")
         guard let collectionView = collectionView else { fatalError() }
         //collectionView.decelerationRate = .fast // uncomment if necessary
@@ -102,9 +102,9 @@ extension IconsTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
+   
     }
+   
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 60  , height: 50  )
