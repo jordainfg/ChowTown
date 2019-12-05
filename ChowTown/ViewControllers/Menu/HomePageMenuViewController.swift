@@ -24,29 +24,79 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     // MARK: - ViewDidLoad, Apear, Desapear
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         setupTableView()
-        viewModel.addPopularMeal()
-         //viewModel.addRestaurant()
-//        viewModel.getMealsForMenu()  {
-//            self.tableView.reloadData()
-//        }
+        //viewModel.addPopularMeal()
+        //viewModel.addRestaurant()
+        //        viewModel.getMealsForMenu()  {
+        //            self.tableView.reloadData()
+        //        }
         if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
             viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
-                self.tableView.reloadData()
+                UIView.transition(with: self.tableView,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: { self.tableView.reloadData() })
+                
+                
             }
             viewModel.getPopularMeals{
-                 self.tableView.reloadData()
+                UIView.transition(with: self.tableView,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: { self.tableView.reloadData() })
             }
         }
+        setupView()
         
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        
+    }
+    
+    func setupView(){
+        let backButton = UIBarButtonItem()
+        backButton.title = "" //in your case it will be empty or you can put the title of your choice
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        let backImage = UIImage(systemName: "chevron.left.circle.fill")
+        backButton.tintColor = UIColor.label
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    @IBAction func changeLocationButtonPressed(_ sender: Any) {
+        // 1
+        let optionMenu = UIAlertController(title: nil, message: "Would you like add a new menu?", preferredStyle: .actionSheet)
+        
+        // 2
+        let action = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
+            
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alert: UIAlertAction!) in
+            optionMenu.dismiss(animated: true, completion: nil)
+        })
+        // 4
+        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
+        
+        optionMenu.addAction(action)
+        optionMenu.addAction(cancelAction)
+        
+        
+        // 5
+        self.present(optionMenu, animated: true, completion: nil)
         
     }
     
@@ -148,7 +198,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
-        
+            
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             headerCell.sectionName.text = "Popular Eatries"

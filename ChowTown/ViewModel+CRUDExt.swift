@@ -11,13 +11,15 @@ import Firebase
 
 extension ViewModel{
     // MARK: - CR MEALS
-    func addMeal(refRestaurant : DocumentReference, refMenu :DocumentReference){
+    func addMeal(refRestaurant : DocumentReference?, refMenu :DocumentReference?){
         // Add a new document with a generated ID
-       let refMeal = db.collection("Restaurant/\(refRestaurant.documentID)/Menu/\(refMenu.documentID)/Meals").document()
+        
+     //  let refMeal = db.collection("Restaurant/\(refRestaurant.documentID)/Menu/\(refMenu.documentID)/Meals").document()
+        let refMeal = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/Menu/Bwv6ujfH8P9eDcx0X4xb/Meals").document()
         refMeal.setData([
             "companyID" : "2",
-            "name": "Noosh",
-            "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
+            "name": "Noosh Bowl",
+            "detail": "Geweld in appelsap, met wortel, noten en vers fruit",
             "price" : 10,
             "about": [1,2,3,5,6,7],
             "allergens": [1,2,3,4],
@@ -26,7 +28,7 @@ extension ViewModel{
             "carbs": "",
             "additions": [],
             "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/62233383_1258387187653075_7668131207500067044_n.jpg",
+            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -41,8 +43,8 @@ extension ViewModel{
           let refMeal = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").document()
            refMeal.setData([
                "companyID" : "2",
-               "name": "Burger Fri",
-               "detail": "Griekse yoghurt, Anne&Max granola en vers fruit",
+               "name": "Acai bowl",
+               "detail": "Choose from Berries, pears, apples, grapes, citrus. winter: grapefruit, oranges, kiwi,",
                "price" : 10,
                "about": [1,2,3,5,6,7],
                "allergens": [1,2,3,4],
@@ -51,7 +53,7 @@ extension ViewModel{
                "carbs": "",
                "additions": [],
                "isPopular": true,
-               "imageRef": "gs://chow-town-bc783.appspot.com/Meals/59676987_1279174738915340_72254628707224865_n.jpg",
+               "imageRef": "gs://chow-town-bc783.appspot.com/Meals/placeholder7.jpg",
            ]) { err in
                if let err = err {
                    print("Error adding document: \(err)")
@@ -106,19 +108,20 @@ extension ViewModel{
     }
     
     // MARK: - CR Menus
-    func addMenu(reff: DocumentReference){
+    func addMenu(reff: DocumentReference?){
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
-        let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
+       //  let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
+        let refMenu = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/Menu").document()
         refMenu.setData([
             "menuID" : refMenu.documentID,
             "companyID" : "2",
-            "title": "Hot",
+            "title": "Lunch",
             "detail": "From 10:00 am",
-            "iCon" : "icSmoothie",
+            "iCon" : "icDinner",
             "imageRef": "",
             "startTime": "",
-            "color": "#FFC872",
+            "color": "#A72D89",
             "isMeal" : false,
             
         ]) { err in

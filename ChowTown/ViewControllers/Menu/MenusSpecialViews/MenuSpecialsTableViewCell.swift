@@ -74,11 +74,11 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpecialCollectionViewCellID", for: indexPath) as! SpecialCollectionViewCell
         cell.backgroundColor = UIColor.clear
         cell.configure(meal: meals[indexPath.row])
-        //HERO
-        cell.coverImageView.hero.id = "specialHeroID\(indexPath.row)"
-        cell.infoView.hero.id = "specialHeroID\(indexPath.row)"
-        cell.specialName.hero.id = "specialNameHeroID\(indexPath.row)"
-        cell.specialDetail.hero.id = "specialDetailHeroID\(indexPath.row)"
+//        //HERO
+//        cell.coverImageView.hero.id = "specialHeroID\(indexPath.row)"
+//        cell.infoView.hero.id = "specialHeroID\(indexPath.row)"
+//        cell.specialName.hero.id = "specialNameHeroID\(indexPath.row)"
+//        cell.specialDetail.hero.id = "specialDetailHeroID\(indexPath.row)"
         cell.cornerRadius = 15
         
         return cell

@@ -9,14 +9,14 @@
 import UIKit
 
 enum reservationsDataType {
-    case textField
-    case datePicker
+    case reservationType
+  
     
     
 }
-class ReservationsViewController: UIViewController {
+class ReservationsViewController: UIViewController , MyCustomCellDelegator {
     var tableViewcellTypes: [[reservationsDataType]] {
-        let types: [[reservationsDataType]] = [[.textField]]
+        let types: [[reservationsDataType]] = [[.reservationType]]
         
         return types
     }
@@ -24,13 +24,41 @@ class ReservationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
     }
+    override func viewWillAppear(_ animated: Bool) {
+           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+          // self.navigationController?.navigationBar.shadowImage = UIImage()
+           self.navigationController?.navigationBar.isTranslucent = true
+          
+           self.navigationController?.navigationBar.tintColor = UIColor.black
+        
+           
+       }
+    
+   override var preferredStatusBarStyle: UIStatusBarStyle {
+       return .darkContent
+   }
     
     func setupTableView() {
         tableView.register(UINib(nibName: textFieldTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: textFieldTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: ReservationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ReservationTableViewCell.reuseIdentifier())
         tableView.rowHeight = UITableView.automaticDimension
     }
+    
+    // MARK: - Segue methods
+       func callSegueFromCell(segueIdentifier: String, index : Int, selected : Any) {
+         
+           self.performSegue(withIdentifier: segueIdentifier, sender: nil )
+       }
+       
+       override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+           switch segue.identifier {
+        //
+           default:
+               return
+           }
+       }
     
 }
 
@@ -56,13 +84,11 @@ extension ReservationsViewController : UITableViewDataSource , UITableViewDelega
         
         switch type {
             
-        case .textField:
+        case .reservationType:
             let cell = tableView.dequeueReusableCell(withIdentifier: ReservationTableViewCell.reuseIdentifier()) as! ReservationTableViewCell
-        
+        cell.delegate = self
             return cell
-        case .datePicker:
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReservationTableViewCell.reuseIdentifier()) as! textFieldTableViewCell
-            
+       
             return cell
             
         }

@@ -67,7 +67,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-WZ-AUT" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-WZ-AUT" customClass="DesignableButton" customModule="ChowTown" customModuleProvider="target">
                         <rect key="frame" x="20" y="344" width="245" height="41"/>
                         <color key="backgroundColor" name="DarkModeBlack"/>
                         <constraints>

@@ -28,7 +28,12 @@ class SearchViewController: UIViewController {
         setUpTableView()
         viewModel.getRestaurants {
             self.filterdEstablishments =  self.viewModel.restaurants
-            self.tableView.reloadData()
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
+            
         }
         //  self.navigationController?.view.backgroundColor = UIColor.clear
         
@@ -132,16 +137,16 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         }
     }
     // set the height of the row based on the chosen cell
-//    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
-//        switch type {
-//            
-//        case .favorite(_):
-//            return 170
-//        case .restaurant(_):
-//            return 100
-//        }
-//    }
+    //    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
+    //        switch type {
+    //
+    //        case .favorite(_):
+    //            return 170
+    //        case .restaurant(_):
+    //            return 100
+    //        }
+    //    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -188,11 +193,21 @@ extension SearchViewController: UISearchBarDelegate
         //Filter function
         if searchText.isEmpty{
             filterdEstablishments =  viewModel.restaurants
-           tableView.reloadData()
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
+            
         } else{
             filterdEstablishments =  viewModel.restaurants
             filterdEstablishments = filterdEstablishments?.filter { $0.name.range(of: searchText) != nil}
-            tableView.reloadData()
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
+            
         }
         
     }
@@ -220,7 +235,12 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.text = String()
         searchBar.resignFirstResponder()
         filterdEstablishments =  viewModel.restaurants
-        tableView.reloadData()
+        UIView.transition(with: self.tableView,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: { self.tableView.reloadData() })
+        
+        
         //Filter function
         //  self.filterFunction(searchText: searchBar.text)
     }

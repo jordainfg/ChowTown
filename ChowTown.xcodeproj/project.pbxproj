@@ -24,6 +24,12 @@
 		1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */; };
 		1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB2E237EE64500CB1CD9 /* HeaderForTableViewSection.swift */; };
 		1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1117BB2F237EE64500CB1CD9 /* HeaderForTableViewSection.xib */; };
+		11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11248270239916C400946402 /* DateTimePickerTableViewCell.swift */; };
+		11248273239916C400946402 /* DateTimePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11248271239916C400946402 /* DateTimePickerTableViewCell.xib */; };
+		11248278239919B000946402 /* DataPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11248276239919B000946402 /* DataPickerTableViewCell.swift */; };
+		11248279239919B000946402 /* DataPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11248277239919B000946402 /* DataPickerTableViewCell.xib */; };
+		1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */; };
+		1124827D2399272C00946402 /* MakeReservationButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */; };
 		1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */; };
 		1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */; };
 		115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */; };
@@ -80,6 +86,7 @@
 		11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */; };
 		11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */; };
 		11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */; };
+		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
 		11A90E992382BA9900388093 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E982382BA9900388093 /* RewardsViewController.swift */; };
 		11A90EA02382C32F00388093 /* RewardsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */; };
 		11A90EA12382C32F00388093 /* RewardsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */; };
@@ -171,6 +178,12 @@
 		1117BB2B237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EstablishmentTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB2E237EE64500CB1CD9 /* HeaderForTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForTableViewSection.swift; sourceTree = "<group>"; };
 		1117BB2F237EE64500CB1CD9 /* HeaderForTableViewSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForTableViewSection.xib; sourceTree = "<group>"; };
+		11248270239916C400946402 /* DateTimePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePickerTableViewCell.swift; sourceTree = "<group>"; };
+		11248271239916C400946402 /* DateTimePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimePickerTableViewCell.xib; sourceTree = "<group>"; };
+		11248276239919B000946402 /* DataPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPickerTableViewCell.swift; sourceTree = "<group>"; };
+		11248277239919B000946402 /* DataPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataPickerTableViewCell.xib; sourceTree = "<group>"; };
+		1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReservationButtonTableViewCell.swift; sourceTree = "<group>"; };
+		1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeReservationButtonTableViewCell.xib; sourceTree = "<group>"; };
 		1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksTableViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +220,7 @@
 		11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCollectionViewCell.xib; sourceTree = "<group>"; };
 		11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
+		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
 		11A90E982382BA9900388093 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		11A90E9E2382C32F00388093 /* RewardsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11A90E9F2382C32F00388093 /* RewardsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -334,6 +348,22 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		112482752399193000946402 /* Reservation Details */ = {
+			isa = PBXGroup;
+			children = (
+				11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */,
+				11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */,
+				11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */,
+				11248270239916C400946402 /* DateTimePickerTableViewCell.swift */,
+				11248271239916C400946402 /* DateTimePickerTableViewCell.xib */,
+				11248276239919B000946402 /* DataPickerTableViewCell.swift */,
+				11248277239919B000946402 /* DataPickerTableViewCell.xib */,
+				1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */,
+				1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */,
+			);
+			path = "Reservation Details";
+			sourceTree = "<group>";
+		};
 		1162FE7B2382DF1400943CEE /* NotUsed */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,13 +434,12 @@
 		11A4EBCE2397AC4A00D26756 /* Reservations */ = {
 			isa = PBXGroup;
 			children = (
-				11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */,
-				11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */,
 				11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */,
 				11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */,
 				11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */,
 				11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */,
 				11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */,
+				112482752399193000946402 /* Reservation Details */,
 			);
 			path = Reservations;
 			sourceTree = "<group>";
@@ -798,7 +827,9 @@
 				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
 				11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
+				11248273239916C400946402 /* DateTimePickerTableViewCell.xib in Resources */,
 				11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */,
+				1124827D2399272C00946402 /* MakeReservationButtonTableViewCell.xib in Resources */,
 				116F7598238BDABB002FB784 /* Nunito-ExtraLight.ttf in Resources */,
 				11C5082423685FEC003400D0 /* Assets.xcassets in Resources */,
 				11C5088D23687EE4003400D0 /* OFL.txt in Resources */,
@@ -822,6 +853,7 @@
 				116F7590238BDABB002FB784 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11C26305237AC9E600E74394 /* iconCollectionViewCell.xib in Resources */,
 				1180BBA32394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.xib in Resources */,
+				11248279239919B000946402 /* DataPickerTableViewCell.xib in Resources */,
 				116F7592238BDABB002FB784 /* Nunito-Light.ttf in Resources */,
 				1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */,
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
@@ -912,6 +944,7 @@
 				11C5089823687EE4003400D0 /* UIButton+extension.swift in Sources */,
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
 				11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */,
+				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
@@ -933,6 +966,7 @@
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
+				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,
 				1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */,
 				11A4EBD62397B5C300D26756 /* LoginTextField.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
@@ -942,6 +976,7 @@
 				11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
 				11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */,
+				11248278239919B000946402 /* DataPickerTableViewCell.swift in Sources */,
 				11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */,
 				1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */,
 				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
@@ -964,6 +999,7 @@
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
+				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,

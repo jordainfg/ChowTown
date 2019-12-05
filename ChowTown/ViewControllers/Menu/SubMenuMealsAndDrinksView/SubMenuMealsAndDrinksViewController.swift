@@ -40,6 +40,13 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.white
+         self.navigationController?.navigationBar.tintColor = UIColor.black
+        
+              
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
     
     func setupTableView() {

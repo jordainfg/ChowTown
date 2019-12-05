@@ -26,7 +26,7 @@ class SpecialsDetailViewController: UIViewController {
     var isPopOver = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.hero.id = "specialHeroID\(specialHeroID)"
+       // imageView.hero.id = "specialHeroID\(specialHeroID)"
         
         //needs optimizing
         httpsReference =   viewModel.storage.reference(forURL: meal!.imageRef)
@@ -40,8 +40,12 @@ class SpecialsDetailViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        UIApplication.shared.statusBarStyle = .lightContent
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func setUpView(){
@@ -59,14 +63,14 @@ class SpecialsDetailViewController: UIViewController {
         
         
         
-        if isPopOver{
-            let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
-            button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-            button.tintColor = .white
-            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-            button.hero.id = "specialHeroID\(specialHeroID)"
-            self.view.addSubview(button)
-        }
+//        if isPopOver{
+//            let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
+//            button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+//            button.tintColor = .white
+//            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//            button.hero.id = "specialHeroID\(specialHeroID)"
+//            self.view.addSubview(button)
+//        }
         
     }
     func setupTableView() {

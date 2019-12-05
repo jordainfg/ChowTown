@@ -35,7 +35,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)
                registerForKeyboardWillHideNotification(tableView)
+       // viewModel.addMeal(refRestaurant: nil, refMenu: nil)
+      //r  viewModel.addMenu(reff: nil)
      
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func setUpView(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

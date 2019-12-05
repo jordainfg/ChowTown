@@ -5,7 +5,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Can i use your camera?</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

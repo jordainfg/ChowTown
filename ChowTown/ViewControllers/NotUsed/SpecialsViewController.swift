@@ -28,9 +28,9 @@ class SpecialsViewController: UIViewController {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-           UIApplication.shared.statusBarStyle = .darkContent
-       }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
     
     // MARK: - Prepare for Segues
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {

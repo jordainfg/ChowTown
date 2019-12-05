@@ -76,10 +76,8 @@ extension ReservationTableViewCell: UICollectionViewDataSource, UICollectionView
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // selectedSpecial = indexPath.ro
-        self.delegate.callSegueFromCell(segueIdentifier: "toMeal", index: indexPath.row, selected: "")
-        
-        //performSegue(withIdentifier: "bla", sender: nil)
+      self.delegate.callSegueFromCell(segueIdentifier: "toReservationDetails", index: indexPath.row, selected: "")
+             
     }
   
     //makes sure the first cell is centerd
