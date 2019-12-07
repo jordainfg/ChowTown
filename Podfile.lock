@@ -289,7 +289,6 @@ PODS:
   - SDWebImage (5.3.3):
     - SDWebImage/Core (= 5.3.3)
   - SDWebImage/Core (5.3.3)
-  - SkyFloatingLabelTextField (3.7.0)
 
 DEPENDENCIES:
   - CocoaTextField (~> 1.0.0)
@@ -301,7 +300,6 @@ DEPENDENCIES:
   - FirebaseUI/Storage
   - Hero
   - MSPeekCollectionViewDelegateImplementation
-  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
   trunk:
@@ -331,7 +329,6 @@ SPEC REPOS:
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - SDWebImage
-    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -360,8 +357,7 @@ SPEC CHECKSUMS:
   MSPeekCollectionViewDelegateImplementation: 3091e9512b3cd03facdea3c02e57673a4a06246a
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SDWebImage: 51ab1ce3ebd20dec6665ae8ba25c928da323db41
-  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
 
-PODFILE CHECKSUM: cda3f7098de0aa835d37be11bf7f144cf35b8f39
+PODFILE CHECKSUM: 89174a393ac9b13290e591d059cda27c04f44bc0
 
 COCOAPODS: 1.8.4

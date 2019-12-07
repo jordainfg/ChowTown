@@ -14,7 +14,6 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'FirebaseUI/Storage'
-pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'CocoaTextField', '~> 1.0.0'
   # Pods for Nutshell
 

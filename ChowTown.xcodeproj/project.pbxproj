@@ -81,7 +81,6 @@
 		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
 		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
 		11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */; };
-		11A4EBD62397B5C300D26756 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD52397B5C300D26756 /* LoginTextField.swift */; };
 		11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */; };
 		11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */; };
 		11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */; };
@@ -215,7 +214,6 @@
 		11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textFieldTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldTableViewCell.swift; sourceTree = "<group>"; };
-		11A4EBD52397B5C300D26756 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		11A4EBDB2397C5E300D26756 /* ReservationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCollectionViewCell.swift; sourceTree = "<group>"; };
 		11A4EBDC2397C5E300D26756 /* ReservationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCollectionViewCell.xib; sourceTree = "<group>"; };
 		11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
@@ -573,7 +571,6 @@
 		11C5085C23687EE4003400D0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				11A4EBD52397B5C300D26756 /* LoginTextField.swift */,
 				11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */,
 				11C5085E23687EE4003400D0 /* overpass-semibold-italic.otf */,
 				11C5085F23687EE4003400D0 /* Nunito-ExtraBold.ttf */,
@@ -968,7 +965,6 @@
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,
 				1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */,
-				11A4EBD62397B5C300D26756 /* LoginTextField.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
 				1162FE7E2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift in Sources */,
 				1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */,

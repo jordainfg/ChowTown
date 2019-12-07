@@ -152,6 +152,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: MenuSpecialsTableViewCell.reuseIdentifier()) as! MenuSpecialsTableViewCell
             cell.delegate = self
             cell.meals = meals
+            cell.selectionStyle = .none
             cell.collectionView.reloadData()
             return cell
             
@@ -171,13 +172,25 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             
         case .MenuHeader(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuHeaderTableViewCell.reuseIdentifier()) as! SubMenuHeaderTableViewCell
+
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "toMenu", sender: nil)
+        let type = viewModel.choiceMenuTableViewCellTypes[indexPath.section][indexPath.row]
+               switch type {
+              
+               case .MenuFood(_):
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "toMenu", sender: nil)
+               case .MenuDrinks(_):
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "toMenu", sender: nil)
+              default:
+                return
+        }
+        
         
     }
     
