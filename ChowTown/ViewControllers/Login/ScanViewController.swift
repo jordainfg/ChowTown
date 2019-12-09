@@ -86,7 +86,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     func startQRScanner() {
         
-        guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .front) else {
+        guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back) else {
             return
         }
         

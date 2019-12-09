@@ -66,6 +66,7 @@
 		116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */; };
 		116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A2238BE063002FB784 /* RestaurantViewController.swift */; };
 		116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */; };
+		1178120C239E7F9F00EFD552 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */; };
 		1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180BB9C2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift */; };
 		1180BB9F2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1180BB9D2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib */; };
 		1180BBA22394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180BBA02394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.swift */; };
@@ -76,7 +77,6 @@
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
-		11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */; };
 		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
 		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
 		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
@@ -234,7 +234,7 @@
 		11C2630D237AF24900E74394 /* AddOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOn.swift; sourceTree = "<group>"; };
 		11C2630F237AF3E100E74394 /* AddOnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnTableViewCell.swift; sourceTree = "<group>"; };
 		11C26310237AF3E100E74394 /* AddOnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOnTableViewCell.xib; sourceTree = "<group>"; };
-		11C5081423685FEA003400D0 /* ChowTown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChowTown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C5081423685FEA003400D0 /* Berry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5081723685FEA003400D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C5081923685FEA003400D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		11C5081E23685FEA003400D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -498,7 +498,7 @@
 		11C5081523685FEA003400D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11C5081423685FEA003400D0 /* ChowTown.app */,
+				11C5081423685FEA003400D0 /* Berry.app */,
 				11C5082D23685FEC003400D0 /* ChowTownTests.xctest */,
 				11C5083823685FEC003400D0 /* ChowTownUITests.xctest */,
 			);
@@ -719,7 +719,7 @@
 			);
 			name = ChowTown;
 			productName = ChowTown;
-			productReference = 11C5081423685FEA003400D0 /* ChowTown.app */;
+			productReference = 11C5081423685FEA003400D0 /* Berry.app */;
 			productType = "com.apple.product-type.application";
 		};
 		11C5082C23685FEC003400D0 /* ChowTownTests */ = {
@@ -984,7 +984,6 @@
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
 				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
-				11984CEE238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
@@ -993,6 +992,7 @@
 				115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */,
 				110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */,
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,
+				1178120C239E7F9F00EFD552 /* iconWithLabelTableViewCell.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
@@ -1183,7 +1183,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gijsbertha.ChowTown;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Berry;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1202,7 +1202,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Gijsbertha.ChowTown;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Berry;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

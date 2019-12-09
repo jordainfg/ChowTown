@@ -71,7 +71,7 @@ extension SubMenuTableViewCell: UICollectionViewDataSource, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubMenuCollectionViewCellID", for: indexPath) as! SubMenuCollectionViewCell
         cell.cardImage.image = UIImage(named: menus[indexPath.row].iCon)
         //cell.cardImage.backgroundColor = UIColor.clear
-        cell.cardImage.tintColor = UIColor.hexStringToUIColor(hex: menus[indexPath.row].color)
+        //cell.cardImage.tintColor = UIColor.hexStringToUIColor(hex: menus[indexPath.row].color)
        // cell.cardView.backgroundColor = UIColor.hexStringToUIColor(hex: Menus[indexPath.row].color)
         cell.backgroundColor = UIColor.clear
         cell.subMenuName.text = menus[indexPath.row].title
@@ -84,7 +84,7 @@ extension SubMenuTableViewCell: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 3.5  , height: collectionView.frame.size.height  - 10
+        return CGSize(width: collectionView.frame.size.width / 3.5  , height: collectionView.frame.size.height 
             
         )
     }

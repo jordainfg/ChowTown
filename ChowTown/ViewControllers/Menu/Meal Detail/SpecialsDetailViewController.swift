@@ -21,7 +21,7 @@ class SpecialsDetailViewController: UIViewController {
     var headerView: UIView!
     var specialHeroID = 0
     var kTableHeaderHeight:CGFloat = 300.0
-    let placeholderImage = UIImage(named: "icLunch")
+    let placeholderImage = UIImage(named: "")
     var httpsReference :  StorageReference?
     var isPopOver = false
     override func viewDidLoad() {

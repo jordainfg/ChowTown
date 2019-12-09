@@ -199,11 +199,11 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         let type = viewModel.choiceMenuTableViewCellTypes[indexPath.section][indexPath.row]
         switch type {
         case .MenuFood:
-            return 180
+            return 150
         case .MenuSpecials:
             return 330
         case .MenuDrinks(_):
-            return 180
+            return 150
         case .MenuHeader(_):
             return 120
         }
