@@ -12,7 +12,7 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     var menu : Menu? = nil
     var selectedMeal : Meal?
     
@@ -20,6 +20,7 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = menu?.title
         setupTableView()
         tableView.showLoadingIndicator()
         viewModel.getMealsForMenu(selectedMenu: menu!){
@@ -61,6 +62,7 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
             let secondVC = segue.destination as! SpecialsDetailViewController
             secondVC.isPopOver = false
             secondVC.meal = selectedMeal
+            secondVC.viewModel = self.viewModel
         default:
             return
         }

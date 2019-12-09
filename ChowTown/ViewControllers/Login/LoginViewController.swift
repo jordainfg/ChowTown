@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     
     @IBOutlet weak var tableView: UITableView!
     let viewModel = ViewModel()
+    
+    
     var tableViewcellTypes: [[loginDataType]] {
         
         let types: [[loginDataType]] = [[.header,.body]]
@@ -67,6 +69,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         self.performSegue(withIdentifier: segueIdentifier, sender: nil )
 
     }
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+           switch segue.identifier {
+           case "toSearch":
+               let secondVC = segue.destination as! SearchViewController
+               secondVC.viewModel = self.viewModel
+           default:
+               return
+           }
+       }
     
   
     

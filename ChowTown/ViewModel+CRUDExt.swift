@@ -64,7 +64,7 @@ extension ViewModel{
        }
     
     func getPopularMeals( completion: @escaping () -> Void){
-       // selectedMenu : Menu,
+        self.Popularmeals.removeAll()
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         //print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
@@ -89,6 +89,7 @@ extension ViewModel{
     func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
        // selectedMenu : Menu,
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
+        self.meals.removeAll()
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
         db.collection("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
@@ -96,7 +97,7 @@ extension ViewModel{
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    
+                   
                     self.meals.append(Meal(dictionary: document.data())! )
                     
                     
@@ -137,6 +138,7 @@ extension ViewModel{
     
     
     func getMenus(forRestaurant: String , completion: @escaping () -> Void){
+        self.menus.removeAll()
            db.collection("Restaurant/\(forRestaurant)/Menu").getDocuments() { (querySnapshot, err) in
                if let err = err {
                    print("Error getting documents: \(err)")
@@ -157,6 +159,7 @@ extension ViewModel{
     
     
     func getRestaurants(completion: @escaping () -> Void){
+        self.restaurants.removeAll()
         db.collection("Restaurant").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")

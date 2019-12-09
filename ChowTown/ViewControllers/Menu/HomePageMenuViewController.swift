@@ -12,7 +12,7 @@ import UIKit
 class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     
     // MARK: - Variables
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     var selectedSpecial = 0
     var selectedMenu : Menu?
     
@@ -125,9 +125,11 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
             secondVC.specialHeroID = selectedSpecial
             secondVC.meal = viewModel.Popularmeals[selectedSpecial]
             secondVC.isPopOver = true
+            secondVC.viewModel = self.viewModel
         case "toSubMenuMealsAndDrinks":
             let secondVC = segue.destination as! SubMenuMealsAndDrinksViewController
             secondVC.menu = selectedMenu
+            secondVC.viewModel = self.viewModel
         default:
             return
         }

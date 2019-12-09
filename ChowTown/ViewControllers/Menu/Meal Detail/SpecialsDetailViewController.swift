@@ -13,7 +13,7 @@ import FirebaseUI
 
 class SpecialsDetailViewController: UIViewController {
     
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     var meal : Meal?
     
     @IBOutlet weak var tableView: UITableView!

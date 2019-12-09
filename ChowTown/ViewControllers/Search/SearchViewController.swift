@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     
     var filterdEstablishments : [Restaurant]?
     
@@ -66,6 +66,7 @@ class SearchViewController: UIViewController {
         case "toRestaurant":
             let secondVC = segue.destination as! RestaurantViewController
             secondVC.restaurant = selectedRestaurant
+            secondVC.viewModel = self.viewModel
         default:
             return
         }

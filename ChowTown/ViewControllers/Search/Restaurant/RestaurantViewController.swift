@@ -23,7 +23,7 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     var restaurant : Restaurant?
     
     var tableViewcellTypes: [[RestaurantDataType]] {
@@ -93,6 +93,8 @@ class RestaurantViewController: UIViewController {
         
         
     }
+    
+   
     
     
 }
