@@ -26,15 +26,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         filterdEstablishments =  viewModel.restaurants
         setUpTableView()
-        viewModel.getRestaurants {
-            self.filterdEstablishments =  self.viewModel.restaurants
-            UIView.transition(with: self.tableView,
-                              duration: 0.5,
-                              options: .transitionCrossDissolve,
-                              animations: { self.tableView.reloadData() })
-            
-            
-        }
+       
         //  self.navigationController?.view.backgroundColor = UIColor.clear
         
         //navBar.setValue(true, forKey: "hidesShadow")

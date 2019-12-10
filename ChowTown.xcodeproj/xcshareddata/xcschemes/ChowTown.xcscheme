@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11C5081323685FEA003400D0"
-               BuildableName = "ChowTown.app"
+               BuildableName = "Berry.app"
                BlueprintName = "ChowTown"
                ReferencedContainer = "container:ChowTown.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11C5081323685FEA003400D0"
-            BuildableName = "ChowTown.app"
+            BuildableName = "Berry.app"
             BlueprintName = "ChowTown"
             ReferencedContainer = "container:ChowTown.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11C5081323685FEA003400D0"
-            BuildableName = "ChowTown.app"
+            BuildableName = "Berry.app"
             BlueprintName = "ChowTown"
             ReferencedContainer = "container:ChowTown.xcodeproj">
          </BuildableReference>

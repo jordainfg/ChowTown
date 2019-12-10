@@ -39,6 +39,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
                registerForKeyboardWillHideNotification(tableView)
        // viewModel.addMeal(refRestaurant: nil, refMenu: nil)
       //r  viewModel.addMenu(reff: nil)
+        viewModel.getRestaurants {
+           
+               }
      
     }
     

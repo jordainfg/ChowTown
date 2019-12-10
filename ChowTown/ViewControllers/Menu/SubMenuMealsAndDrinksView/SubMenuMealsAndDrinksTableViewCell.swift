@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseUI
+
 class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
@@ -39,18 +40,26 @@ class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     func configure(meal: Meal, httpReference : String){
         name.text = meal.name
         about.text = meal.detail
-        mealImageView.sd_setImage(with: URL(string: httpReference)) { (image, error, cache, urls) in
-            if (error != nil)  {
-                // Failed to load image
-                self.mealImageView.showLoadingIndicatorForImage()
-               // self.mealImageView.image = UIImage(named: "IMLunch")
-            } else {
-                // Successful in loading image
-                self.mealImageView.hideLoadingIndicatorForImage()
-                self.mealImageView.image = image
-            }
-        }
         
+         setImage(httpReference: httpReference)
+         
+        
+    }
+    
+    func setImage(httpReference : String)  {
+    
+       mealImageView.sd_setImage(with: URL(string: httpReference)) { (image, error, cache, urls) in
+                   if (error != nil)  {
+                       // Failed to load image
+                       self.mealImageView.showLoadingIndicatorForImage()
+                      // self.mealImageView.image = UIImage(named: "IMLunch")
+                    
+                   } else {
+                       // Successful in loading image
+                       self.mealImageView.hideLoadingIndicatorForImage()
+                       self.mealImageView.image = image
+                   }
+               }
     }
     
 }
