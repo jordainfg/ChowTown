@@ -30,8 +30,9 @@ enum SearchTableViewDataType {
 }
 
 enum RewardsTableViewDataType {
+    case rewardCard
     case header
-    case reward
+    case rewardPoints
 }
 
 enum SubMenuMealsAndDrinksTableViewDataType {
@@ -39,6 +40,8 @@ enum SubMenuMealsAndDrinksTableViewDataType {
     case meal(Meal)
     case drink
 }
+
+
 
 public class ViewModel{
     
@@ -98,7 +101,7 @@ public class ViewModel{
     
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
         
-        let types: [[RewardsTableViewDataType]] = [[.header]]
+        let types: [[RewardsTableViewDataType]] = [[.rewardCard,.header,.rewardPoints]]
         
         return types
     }
@@ -112,6 +115,8 @@ public class ViewModel{
         
         return types
     }
+    
+    // REWARDS
     
    
     

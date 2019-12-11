@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlX-1U-w1y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7LW-fw-8pr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -120,14 +121,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="Berry" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGroundChowTown" translatesAutoresizingMaskIntoConstraints="NO" id="HOo-FD-PnB">
-                                            <rect key="frame" x="0.0" y="-88" width="414" height="403"/>
+                                            <rect key="frame" x="0.0" y="-88" width="414" height="388"/>
                                             <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -158,7 +159,7 @@
                                     <color key="backgroundColor" name="DarkModeBlack"/>
                                     <constraints>
                                         <constraint firstItem="P7Z-am-2xx" firstAttribute="top" secondItem="HOo-FD-PnB" secondAttribute="top" constant="60" id="1cf-pu-j3f"/>
-                                        <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" constant="-15" id="6jb-Ry-gVQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" id="6jb-Ry-gVQ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="trailing" secondItem="P7Z-am-2xx" secondAttribute="trailing" constant="20" id="BaR-uK-cDA"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="leading" secondItem="Wj2-c2-nmv" secondAttribute="leading" id="Mbe-gg-bxJ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" constant="-88" id="lhl-FL-zTZ"/>
@@ -173,7 +174,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="18"/>
+                                        <real key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -185,7 +186,7 @@
                         <color key="backgroundColor" name="DarkModeBlack"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="lia-Z7-CMX" firstAttribute="bottom" secondItem="cv9-wQ-IsW" secondAttribute="bottom" constant="34" id="9nA-7T-T0B"/>
+                            <constraint firstItem="lia-Z7-CMX" firstAttribute="bottom" secondItem="cv9-wQ-IsW" secondAttribute="bottom" id="9nA-7T-T0B"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="top" secondItem="tZ2-IN-jB2" secondAttribute="top" id="Dyx-gI-GJ0"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="leading" secondItem="cv9-wQ-IsW" secondAttribute="leading" id="ENa-c1-sIm"/>
                             <constraint firstItem="lia-Z7-CMX" firstAttribute="trailing" secondItem="cv9-wQ-IsW" secondAttribute="trailing" id="VTP-gA-oIx"/>
@@ -286,45 +287,6 @@
             </objects>
             <point key="canvasLocation" x="2410" y="-609"/>
         </scene>
-        <!--Rewards-->
-        <scene sceneID="wHO-WK-Zu4">
-            <objects>
-                <viewController id="yI1-RF-gsj" customClass="RewardsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zpz-El-Puf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-wV-vB7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="yI1-RF-gsj" id="8wc-ot-o51"/>
-                                    <outlet property="delegate" destination="yI1-RF-gsj" id="8TM-lb-n3N"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="p3g-wV-vB7" firstAttribute="leading" secondItem="hxr-K0-TV3" secondAttribute="leading" id="I11-ZX-H1f"/>
-                            <constraint firstItem="p3g-wV-vB7" firstAttribute="trailing" secondItem="hxr-K0-TV3" secondAttribute="trailing" id="IDi-ue-RUI"/>
-                            <constraint firstItem="p3g-wV-vB7" firstAttribute="top" secondItem="hxr-K0-TV3" secondAttribute="top" id="WoM-bE-L51"/>
-                            <constraint firstAttribute="bottom" secondItem="p3g-wV-vB7" secondAttribute="bottom" id="eO0-2F-TdB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hxr-K0-TV3"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Rewards" largeTitleDisplayMode="always" id="PIA-4g-3Y5">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="Dyb-Ru-IEd">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="p3g-wV-vB7" id="RK4-aj-GAK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ew4-IL-vZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5090" y="945"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="cxI-Jc-hcn">
             <objects>
@@ -402,12 +364,63 @@
                     </tabBar>
                     <connections>
                         <segue destination="ISZ-aB-xfc" kind="relationship" relationship="viewControllers" id="01e-L4-LJ7"/>
-                        <segue destination="l3i-tu-IRL" kind="relationship" relationship="viewControllers" id="FkQ-6t-9hj"/>
+                        <segue destination="7LW-fw-8pr" kind="relationship" relationship="viewControllers" id="j8G-CJ-sRp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmY-Zh-SFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4181" y="137"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="P36-HM-iLS">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="7LW-fw-8pr" customClass="RewardsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GuX-4I-bKv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MUy-pg-4o3">
+                                <rect key="frame" x="0.0" y="20" width="414" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0RD-oO-VBS">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SHE-Oh-7V5">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0b2-lc-UUr">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7LW-fw-8pr" id="4wc-1i-c6k"/>
+                                    <outlet property="delegate" destination="7LW-fw-8pr" id="3x3-Wi-6wn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MUy-pg-4o3" firstAttribute="leading" secondItem="X8e-8n-o9Q" secondAttribute="leading" id="88Z-x2-CV7"/>
+                            <constraint firstAttribute="bottom" secondItem="MUy-pg-4o3" secondAttribute="bottom" constant="20" symbolic="YES" id="fWN-es-oIu"/>
+                            <constraint firstItem="MUy-pg-4o3" firstAttribute="top" secondItem="GuX-4I-bKv" secondAttribute="top" constant="20" symbolic="YES" id="qlc-5R-gXi"/>
+                            <constraint firstItem="MUy-pg-4o3" firstAttribute="trailing" secondItem="X8e-8n-o9Q" secondAttribute="trailing" id="v1k-7X-8eq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8e-8n-o9Q"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gfj-ar-Bku"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MUy-pg-4o3" id="olC-Bu-eeK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcz-Dm-MfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4192.753623188406" y="838.39285714285711"/>
         </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
@@ -686,33 +699,6 @@
             </objects>
             <point key="canvasLocation" x="2511.594202898551" y="136.60714285714286"/>
         </scene>
-        <!--Rewards-->
-        <scene sceneID="zMX-TD-cyg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l3i-tu-IRL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rewards" image="heart" catalog="system" id="Guq-85-H9y"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="vVQ-uP-7Im">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="barTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yI1-RF-gsj" kind="relationship" relationship="rootViewController" id="pfv-7K-ptW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mch-MI-mfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4180" y="945"/>
-        </scene>
         <!--Menu-->
         <scene sceneID="GrU-TC-9U4">
             <objects>
@@ -741,7 +727,6 @@
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
@@ -752,7 +737,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Gvu-n7-VaL"/>
-        <segue reference="z51-tV-LkX"/>
+        <segue reference="JS9-e9-O0z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
