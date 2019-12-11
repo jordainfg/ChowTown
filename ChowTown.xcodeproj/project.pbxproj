@@ -30,6 +30,9 @@
 		11248279239919B000946402 /* DataPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11248277239919B000946402 /* DataPickerTableViewCell.xib */; };
 		1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */; };
 		1124827D2399272C00946402 /* MakeReservationButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */; };
+		114F091E23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F091C23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift */; };
+		114F091F23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114F091D23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib */; };
+		114F092123A14D30001B86C7 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F092023A14D30001B86C7 /* Reward.swift */; };
 		1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */; };
 		1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */; };
 		115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */; };
@@ -187,6 +190,9 @@
 		11248277239919B000946402 /* DataPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataPickerTableViewCell.xib; sourceTree = "<group>"; };
 		1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReservationButtonTableViewCell.swift; sourceTree = "<group>"; };
 		1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeReservationButtonTableViewCell.xib; sourceTree = "<group>"; };
+		114F091C23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPrizeTableViewCell.swift; sourceTree = "<group>"; };
+		114F091D23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardPrizeTableViewCell.xib; sourceTree = "<group>"; };
+		114F092023A14D30001B86C7 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		1152EC3B238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1152EC3C238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksTableViewCell.swift; sourceTree = "<group>"; };
@@ -460,6 +466,8 @@
 				1164B6F923A1345000972B46 /* RewardsHeaderTableViewCell.xib */,
 				1164B6FC23A1350300972B46 /* RewardPointsTableViewCell.swift */,
 				1164B6FD23A1350300972B46 /* RewardPointsTableViewCell.xib */,
+				114F091C23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift */,
+				114F091D23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib */,
 			);
 			path = Rewards;
 			sourceTree = "<group>";
@@ -491,6 +499,7 @@
 				11C2630D237AF24900E74394 /* AddOn.swift */,
 				1117BB19237EBE8600CB1CD9 /* Restaurant.swift */,
 				11D35C382386A7CE00CC7534 /* Meal.swift */,
+				114F092023A14D30001B86C7 /* Reward.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -844,6 +853,7 @@
 				116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */,
 				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
 				1162FE872382EC0F00943CEE /* SubMenuTableViewCell.xib in Resources */,
+				114F091F23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib in Resources */,
 				1164B6FB23A1345000972B46 /* RewardsHeaderTableViewCell.xib in Resources */,
 				11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */,
 				116F759F238BDABB002FB784 /* overpass-semibold.otf in Resources */,
@@ -976,6 +986,7 @@
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
+				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,
@@ -992,6 +1003,7 @@
 				1164B6FA23A1345000972B46 /* RewardsHeaderTableViewCell.swift in Sources */,
 				1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */,
 				11E5375B23A005BA0022CE2F /* RewardsViewController.swift in Sources */,
+				114F091E23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift in Sources */,
 				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
 				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */,

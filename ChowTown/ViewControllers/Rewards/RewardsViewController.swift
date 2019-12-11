@@ -33,9 +33,9 @@ class RewardsViewController: UIViewController {
         
         updateHeaderView()
         
-        tableView.register(UINib(nibName: RewardCardTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardCardTableViewCell.reuseIdentifier())
+   tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         tableView.register(UINib(nibName: RewardsHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsHeaderTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: RewardPointsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardPointsTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: RewardPrizeTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardPrizeTableViewCell.reuseIdentifier())
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
@@ -76,13 +76,9 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsHeaderTableViewCell.reuseIdentifier()) as! RewardsHeaderTableViewCell
             return cell
-        case .rewardPoints:
-            let cell = tableView.dequeueReusableCell(withIdentifier: RewardPointsTableViewCell.reuseIdentifier()) as! RewardPointsTableViewCell
-            return cell
-            
-        case .rewardCard:
-            let cell = tableView.dequeueReusableCell(withIdentifier: RewardCardTableViewCell.reuseIdentifier()) as! RewardCardTableViewCell
-            return cell
+        case .reward(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
+                     return cell
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -91,6 +87,28 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch section {
+        
+        case 1:
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
+            headerCell.sectionName.text = "Badges add up to Rewards"
+             headerCell.sectionName.textColor = UIColor.black
+            headerCell.sectionName.font.withSize(18)
+            return headerCell.contentView
+      
+        default:
+            return nil
+        }
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 1:
+            return 45
+        default:
+            return 0
+        }
+        
+    }
     
 }
