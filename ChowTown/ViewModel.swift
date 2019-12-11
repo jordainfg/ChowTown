@@ -101,7 +101,7 @@ public class ViewModel{
     
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
         
-        let types: [[RewardsTableViewDataType]] = [[.rewardCard,.header,.rewardPoints]]
+        let types: [[RewardsTableViewDataType]] = [[.header]]
         
         return types
     }

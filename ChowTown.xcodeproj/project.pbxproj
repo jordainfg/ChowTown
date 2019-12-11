@@ -43,10 +43,12 @@
 		1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */; };
 		1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */; };
 		1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */; };
-		1164B6EE23A1164700972B46 /* RewardsHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164B6EC23A1164700972B46 /* RewardsHeaderCollectionViewCell.swift */; };
-		1164B6EF23A1164700972B46 /* RewardsHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1164B6ED23A1164700972B46 /* RewardsHeaderCollectionViewCell.xib */; };
-		1164B6F223A1246A00972B46 /* RewardCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164B6F023A1246A00972B46 /* RewardCardCollectionViewCell.swift */; };
-		1164B6F323A1246A00972B46 /* RewardCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1164B6F123A1246A00972B46 /* RewardCardCollectionViewCell.xib */; };
+		1164B6F623A132AF00972B46 /* RewardCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164B6F423A132AF00972B46 /* RewardCardTableViewCell.swift */; };
+		1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1164B6F523A132AF00972B46 /* RewardCardTableViewCell.xib */; };
+		1164B6FA23A1345000972B46 /* RewardsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164B6F823A1345000972B46 /* RewardsHeaderTableViewCell.swift */; };
+		1164B6FB23A1345000972B46 /* RewardsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1164B6F923A1345000972B46 /* RewardsHeaderTableViewCell.xib */; };
+		1164B6FE23A1350300972B46 /* RewardPointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164B6FC23A1350300972B46 /* RewardPointsTableViewCell.swift */; };
+		1164B6FF23A1350300972B46 /* RewardPointsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1164B6FD23A1350300972B46 /* RewardPointsTableViewCell.xib */; };
 		116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */; };
 		116F758E238BDABB002FB784 /* overpass-semibold-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085E23687EE4003400D0 /* overpass-semibold-italic.otf */; };
 		116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085F23687EE4003400D0 /* Nunito-ExtraBold.ttf */; };
@@ -133,8 +135,6 @@
 		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
 		11D35C392386A7CE00CC7534 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D35C382386A7CE00CC7534 /* Meal.swift */; };
 		11E5375B23A005BA0022CE2F /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5375A23A005BA0022CE2F /* RewardsViewController.swift */; };
-		11E5375E23A006B60022CE2F /* PointsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5375C23A006B60022CE2F /* PointsCollectionViewCell.swift */; };
-		11E5375F23A006B60022CE2F /* PointsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E5375D23A006B60022CE2F /* PointsCollectionViewCell.xib */; };
 		11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */; };
 		11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */; };
 		11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */; };
@@ -200,10 +200,12 @@
 		1162FE862382EC0F00943CEE /* SubMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubMenuTableViewCell.swift; sourceTree = "<group>"; };
 		1162FE8A2382ED4B00943CEE /* SubMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		1162FE8B2382ED4B00943CEE /* SubMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuCollectionViewCell.xib; sourceTree = "<group>"; };
-		1164B6EC23A1164700972B46 /* RewardsHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
-		1164B6ED23A1164700972B46 /* RewardsHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
-		1164B6F023A1246A00972B46 /* RewardCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		1164B6F123A1246A00972B46 /* RewardCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		1164B6F423A132AF00972B46 /* RewardCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCardTableViewCell.swift; sourceTree = "<group>"; };
+		1164B6F523A132AF00972B46 /* RewardCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardCardTableViewCell.xib; sourceTree = "<group>"; };
+		1164B6F823A1345000972B46 /* RewardsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1164B6F923A1345000972B46 /* RewardsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		1164B6FC23A1350300972B46 /* RewardPointsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPointsTableViewCell.swift; sourceTree = "<group>"; };
+		1164B6FD23A1350300972B46 /* RewardPointsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardPointsTableViewCell.xib; sourceTree = "<group>"; };
 		116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantAboutTableViewCell.xib; sourceTree = "<group>"; };
 		116F75A2238BE063002FB784 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAboutTableViewCell.swift; sourceTree = "<group>"; };
@@ -296,8 +298,6 @@
 		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		11D35C382386A7CE00CC7534 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		11E5375A23A005BA0022CE2F /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
-		11E5375C23A006B60022CE2F /* PointsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCollectionViewCell.swift; sourceTree = "<group>"; };
-		11E5375D23A006B60022CE2F /* PointsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCollectionViewCell.xib; sourceTree = "<group>"; };
 		11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -454,12 +454,12 @@
 			isa = PBXGroup;
 			children = (
 				11E5375A23A005BA0022CE2F /* RewardsViewController.swift */,
-				1164B6F023A1246A00972B46 /* RewardCardCollectionViewCell.swift */,
-				1164B6F123A1246A00972B46 /* RewardCardCollectionViewCell.xib */,
-				1164B6EC23A1164700972B46 /* RewardsHeaderCollectionViewCell.swift */,
-				1164B6ED23A1164700972B46 /* RewardsHeaderCollectionViewCell.xib */,
-				11E5375C23A006B60022CE2F /* PointsCollectionViewCell.swift */,
-				11E5375D23A006B60022CE2F /* PointsCollectionViewCell.xib */,
+				1164B6F423A132AF00972B46 /* RewardCardTableViewCell.swift */,
+				1164B6F523A132AF00972B46 /* RewardCardTableViewCell.xib */,
+				1164B6F823A1345000972B46 /* RewardsHeaderTableViewCell.swift */,
+				1164B6F923A1345000972B46 /* RewardsHeaderTableViewCell.xib */,
+				1164B6FC23A1350300972B46 /* RewardPointsTableViewCell.swift */,
+				1164B6FD23A1350300972B46 /* RewardPointsTableViewCell.xib */,
 			);
 			path = Rewards;
 			sourceTree = "<group>";
@@ -824,7 +824,6 @@
 				116F759E238BDABB002FB784 /* Nunito-Italic.ttf in Resources */,
 				1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */,
 				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
-				1164B6EF23A1164700972B46 /* RewardsHeaderCollectionViewCell.xib in Resources */,
 				11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */,
 				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
 				1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */,
@@ -845,6 +844,7 @@
 				116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */,
 				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
 				1162FE872382EC0F00943CEE /* SubMenuTableViewCell.xib in Resources */,
+				1164B6FB23A1345000972B46 /* RewardsHeaderTableViewCell.xib in Resources */,
 				11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */,
 				116F759F238BDABB002FB784 /* overpass-semibold.otf in Resources */,
 				1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */,
@@ -854,6 +854,7 @@
 				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
 				116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */,
 				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
+				1164B6FF23A1350300972B46 /* RewardPointsTableViewCell.xib in Resources */,
 				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
 				116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */,
@@ -868,15 +869,14 @@
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
 				110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */,
 				11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */,
+				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
 				116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
-				1164B6F323A1246A00972B46 /* RewardCardCollectionViewCell.xib in Resources */,
 				116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */,
 				1152EC3E238425CC00CCA098 /* SubMenuHeaderTableViewCell.xib in Resources */,
 				116F759D238BDABB002FB784 /* Overpass-Bold.ttf in Resources */,
-				11E5375F23A006B60022CE2F /* PointsCollectionViewCell.xib in Resources */,
 				116F7596238BDABB002FB784 /* Nunito-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -960,7 +960,6 @@
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
 				11C65D4923797A2F00C69DC3 /* MealCollectionTableViewCell.swift in Sources */,
-				11E5375E23A006B60022CE2F /* PointsCollectionViewCell.swift in Sources */,
 				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
 				11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
@@ -968,10 +967,12 @@
 				11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */,
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
 				1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */,
+				1164B6FE23A1350300972B46 /* RewardPointsTableViewCell.swift in Sources */,
 				11C5089A23687EE4003400D0 /* DrawingView.swift in Sources */,
 				110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */,
 				11C5089923687EE4003400D0 /* UIView+Extension.swift in Sources */,
 				11C262F4237ABD2200E74394 /* Menu.swift in Sources */,
+				1164B6F623A132AF00972B46 /* RewardCardTableViewCell.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
@@ -985,17 +986,16 @@
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
-				1164B6EE23A1164700972B46 /* RewardsHeaderCollectionViewCell.swift in Sources */,
 				11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */,
 				11248278239919B000946402 /* DataPickerTableViewCell.swift in Sources */,
 				11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */,
+				1164B6FA23A1345000972B46 /* RewardsHeaderTableViewCell.swift in Sources */,
 				1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */,
 				11E5375B23A005BA0022CE2F /* RewardsViewController.swift in Sources */,
 				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
 				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */,
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
-				1164B6F223A1246A00972B46 /* RewardCardCollectionViewCell.swift in Sources */,
 				11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */,
 				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
