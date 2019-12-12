@@ -149,6 +149,9 @@
 		11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */; };
 		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
 		11D35C392386A7CE00CC7534 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D35C382386A7CE00CC7534 /* Meal.swift */; };
+		11DB44F823A2652A009B4095 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB44F723A2652A009B4095 /* SettingsViewController.swift */; };
+		11DB44FB23A2664A009B4095 /* SettingOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */; };
+		11DB44FC23A2664A009B4095 /* SettingOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11DB44FA23A2664A009B4095 /* SettingOptionTableViewCell.xib */; };
 		11E5375B23A005BA0022CE2F /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5375A23A005BA0022CE2F /* RewardsViewController.swift */; };
 		11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */; };
 		11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */; };
@@ -327,6 +330,9 @@
 		11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		11D35C382386A7CE00CC7534 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		11DB44F723A2652A009B4095 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptionTableViewCell.swift; sourceTree = "<group>"; };
+		11DB44FA23A2664A009B4095 /* SettingOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingOptionTableViewCell.xib; sourceTree = "<group>"; };
 		11E5375A23A005BA0022CE2F /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		11F3DCDE237C24ED00EA1932 /* LoginHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -620,6 +626,7 @@
 				11A4EBCE2397AC4A00D26756 /* Reservations */,
 				11A90E972382BA7B00388093 /* Rewards */,
 				11B8DF2523A23B5900D7FFFC /* Authentication */,
+				11DB44F623A264EA009B4095 /* Settings */,
 				1162FE7B2382DF1400943CEE /* NotUsed */,
 			);
 			path = ViewControllers;
@@ -696,6 +703,16 @@
 				11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		11DB44F623A264EA009B4095 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				11DB44F723A2652A009B4095 /* SettingsViewController.swift */,
+				11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */,
+				11DB44FA23A2664A009B4095 /* SettingOptionTableViewCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		11F3DCD9237C248000EA1932 /* SplashPage */ = {
@@ -882,6 +899,7 @@
 				1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */,
 				1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */,
 				1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */,
+				11DB44FC23A2664A009B4095 /* SettingOptionTableViewCell.xib in Resources */,
 				1180BB9F2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib in Resources */,
 				11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */,
 				11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */,
@@ -1006,6 +1024,7 @@
 				11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */,
 				116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */,
 				11C5089D23687EE4003400D0 /* String+extension.swift in Sources */,
+				11DB44FB23A2664A009B4095 /* SettingOptionTableViewCell.swift in Sources */,
 				11C5089723687EE4003400D0 /* UILabel+extension.swift in Sources */,
 				11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */,
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
@@ -1065,6 +1084,7 @@
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
 				11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */,
 				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
+				11DB44F823A2652A009B4095 /* SettingsViewController.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
 				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
