@@ -1,15 +1,16 @@
 //
-//  FirebaseService.swift
-//  Nutshell
+//  AuthenticationService.swift
+//  ChowTown
 //
-//  Created by Jordain Gijsbertha on 10/15/19.
-//  Copyright © 2019 Jordain  Gijsbertha. All rights reserved.
+//  Created by Jordain Gijsbertha on 12/12/2019.
+//  Copyright © 2019 Jordain Gijsbertha. All rights reserved.
 //
 
 import Foundation
+
 import Firebase
-class FirebaseService {
-    static let shared = FirebaseService()
+class AuthenticationService {
+    static let shared = AuthenticationService()
     
     var db : Firestore?
     
@@ -26,25 +27,24 @@ class FirebaseService {
         
     }
     
-    //Creates a user in the database and authentication Pane
     func createUser(withEmail: String, password: String , completionHandler: @escaping (Result<User, CoreError>) -> Void){
         Auth.auth().createUser(withEmail: withEmail, password: password) { (authResult, error) in
             if let authResult = authResult{
                 // Add a new document with a your own ids
                 self.userData? = authResult.user
                 self.db?.collection("Users").document(authResult.user.uid).setData([
+                    "userID": "\(authResult.user.uid)",
                     "name": "test",
                     "email": "\(authResult.user.email!)",
                     "rewardPoints": 20,
-                     "favoriteRestaurants": [""]
+                     "rewardPoints": [""]
                 ])
                 completionHandler(.success(authResult.user))
             }
             else if error != nil{
-                print(error)
                 completionHandler(.failure(.unAuthenticated))
             }
-            
+           
         }
         
     }
@@ -64,6 +64,10 @@ class FirebaseService {
                 completionHandler(.failure(.unAuthenticated))
             }
         }
+        
+    }
+    
+    func getAuthenticatedUserData(){
         
     }
     

@@ -33,6 +33,7 @@ enum RewardsTableViewDataType {
     
     case header
     case reward(Reward)
+    case login
 }
 
 enum SubMenuMealsAndDrinksTableViewDataType {
@@ -56,6 +57,7 @@ public class ViewModel{
     var filterdMeals : [Meal] = []
     var Popularmeals : [Meal] = []
     
+    var isLoggedIn : Bool = true
     // MARK: - Views
     // ChoiceMenuViewController
    
@@ -101,10 +103,15 @@ public class ViewModel{
     var rewards : [Reward] = [Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),]
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
          let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
-        let types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
-        
+        var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
+        if isLoggedIn{
+           types = [[.header],rewardsTypes]
+        } else{
+          types =   [[.login]]
+        }
         return types
     }
+    
     
     
     // SubMenuMealsAndDrinks

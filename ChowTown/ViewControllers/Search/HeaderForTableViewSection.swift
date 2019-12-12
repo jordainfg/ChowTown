@@ -11,6 +11,7 @@ import UIKit
 class HeaderForTableViewSection: UITableViewCell {
 
     @IBOutlet weak var sectionName: UILabel!
+    @IBOutlet weak var centerConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

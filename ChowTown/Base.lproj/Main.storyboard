@@ -37,11 +37,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="CwO-Kv-Fug" customClass="ReservationsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THX-J5-Nw0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-RJ-cgl">
-                                <rect key="frame" x="0.0" y="60.5" width="414" height="725.5"/>
+                                <rect key="frame" x="0.0" y="60.5" width="414" height="673.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CwO-Kv-Fug" id="Eku-5q-Puj"/>
@@ -81,11 +81,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="RlT-QF-hhs" customClass="ReservationDetailsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgm-Ac-WKC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-FW-r78">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RlT-QF-hhs" id="4Fr-h1-gjc"/>
@@ -370,7 +370,7 @@
             </objects>
             <point key="canvasLocation" x="4181" y="137"/>
         </scene>
-        <!--Rewards-->
+        <!--Berry® Rewards-->
         <scene sceneID="P36-HM-iLS">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="7LW-fw-8pr" customClass="RewardsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
@@ -418,9 +418,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8e-8n-o9Q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Rewards" largeTitleDisplayMode="never" id="P3x-PQ-aqr">
+                    <navigationItem key="navigationItem" title="Berry® Rewards" largeTitleDisplayMode="never" id="P3x-PQ-aqr">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="G9K-OW-0sG">
                             <color key="tintColor" name="DarkModeOrange"/>
+                            <connections>
+                                <action selector="testButtonPressed:" destination="7LW-fw-8pr" id="MpW-mV-SOo"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -475,11 +478,11 @@
             <objects>
                 <viewController title="Menu" modalPresentationStyle="fullScreen" id="ulw-qS-t2C" customClass="HomePageMenuViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="696.5"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -497,7 +500,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="lJj-uh-xV2">
+                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="lJj-uh-xV2">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -732,7 +735,6 @@
         <!--Item-->
         <scene sceneID="rib-xy-zTJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DdK-8Y-l2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gVJ-Q4-JLt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gfj-ar-Bku"/>
                     <toolbarItems/>
@@ -745,6 +747,7 @@
                         <segue destination="7LW-fw-8pr" kind="relationship" relationship="rootViewController" id="Ng8-S8-qG0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdK-8Y-l2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4179.7101449275369" y="870.53571428571422"/>
         </scene>

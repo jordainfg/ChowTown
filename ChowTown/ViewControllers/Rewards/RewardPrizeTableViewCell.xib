@@ -11,6 +11,9 @@
         <array key="Nunito-SemiBold.ttf">
             <string>Nunito-SemiBold</string>
         </array>
+        <array key="overpass-semibold.otf">
+            <string>Overpass-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -28,21 +31,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WOI-oS-b8N">
                                 <rect key="frame" x="20" y="20" width="288" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W96-yB-soV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="200" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W96-yB-soV">
                                         <rect key="frame" x="0.0" y="23.5" width="31" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="RewardMedal" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-q5-bjJ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="RewardMedal" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-q5-bjJ">
                                         <rect key="frame" x="39" y="22.5" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="S0t-LS-TT5"/>
                                             <constraint firstAttribute="width" constant="25" id="nFu-mj-isz"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-hl-NPL">
-                                        <rect key="frame" x="72" y="10" width="1" height="50"/>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-hl-NPL">
+                                        <rect key="frame" x="72" y="0.0" width="1" height="70"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="Tne-i0-1mI"/>
@@ -53,20 +56,20 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Free coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-rH-qV5">
-                                        <rect key="frame" x="81" y="25.5" width="207" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafed drink, hot breakfast, sandwich or pancakes" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-rH-qV5">
+                                        <rect key="frame" x="81" y="20" width="207" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Overpass-SemiBold" family="Overpass" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eHV-hl-NPL" secondAttribute="bottom" constant="10" id="Z44-ei-BVK"/>
-                                    <constraint firstItem="eHV-hl-NPL" firstAttribute="top" secondItem="WOI-oS-b8N" secondAttribute="top" constant="10" id="h8D-I5-rDk"/>
+                                    <constraint firstAttribute="bottom" secondItem="eHV-hl-NPL" secondAttribute="bottom" id="Z44-ei-BVK"/>
+                                    <constraint firstItem="eHV-hl-NPL" firstAttribute="top" secondItem="WOI-oS-b8N" secondAttribute="top" id="h8D-I5-rDk"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WOI-oS-b8N" firstAttribute="leading" secondItem="V7B-C8-1wg" secondAttribute="leading" constant="20" id="0o3-PM-cZE"/>
                             <constraint firstAttribute="trailing" secondItem="WOI-oS-b8N" secondAttribute="trailing" constant="20" id="9Bt-Ll-yBx"/>

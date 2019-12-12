@@ -43,6 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
            
                }
      
+        FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

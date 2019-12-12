@@ -95,10 +95,14 @@
 		11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */; };
 		11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */; };
 		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
+		11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */; };
+		11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */; };
+		11B8DF2023A2253C00D7FFFC /* BerryUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */; };
+		11B8DF2223A2285600D7FFFC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
+		11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */; };
 		11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F1237ABC1E00E74394 /* ViewModel.swift */; };
 		11C262F4237ABD2200E74394 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F3237ABD2200E74394 /* Menu.swift */; };
 		11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C262F5237AC4D700E74394 /* GoogleService-Info.plist */; };
-		11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
 		11C262FC237AC56E00E74394 /* CoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262FB237AC56E00E74394 /* CoreError.swift */; };
 		11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C262FF237AC8E700E74394 /* IconsTableViewCell.xib */; };
 		11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C26302237AC9E600E74394 /* iconCollectionViewCell.swift */; };
@@ -235,6 +239,10 @@
 		11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
+		11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsLoginTableViewCell.swift; sourceTree = "<group>"; };
+		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
+		11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerryUser.swift; sourceTree = "<group>"; };
+		11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		11C262F1237ABC1E00E74394 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		11C262F3237ABD2200E74394 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		11C262F5237AC4D700E74394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -372,6 +380,8 @@
 				11248277239919B000946402 /* DataPickerTableViewCell.xib */,
 				1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */,
 				1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */,
+				11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */,
+				11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */,
 			);
 			path = "Reservation Details";
 			sourceTree = "<group>";
@@ -500,6 +510,7 @@
 				1117BB19237EBE8600CB1CD9 /* Restaurant.swift */,
 				11D35C382386A7CE00CC7534 /* Meal.swift */,
 				114F092023A14D30001B86C7 /* Reward.swift */,
+				11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -546,6 +557,7 @@
 				11C5082823685FEC003400D0 /* Info.plist */,
 				11C5082023685FEA003400D0 /* ChowTown.xcdatamodeld */,
 				11C262FB237AC56E00E74394 /* CoreError.swift */,
+				11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */,
 			);
 			path = ChowTown;
 			sourceTree = "<group>";
@@ -871,6 +883,7 @@
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
 				116F7599238BDABB002FB784 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				116F7590238BDABB002FB784 /* Nunito-ExtraLightItalic.ttf in Resources */,
+				11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */,
 				11C26305237AC9E600E74394 /* iconCollectionViewCell.xib in Resources */,
 				1180BBA32394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.xib in Resources */,
 				11248279239919B000946402 /* DataPickerTableViewCell.xib in Resources */,
@@ -962,6 +975,7 @@
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
 				11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */,
 				11C5089823687EE4003400D0 /* UIButton+extension.swift in Sources */,
+				11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */,
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
 				11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */,
 				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
@@ -970,11 +984,12 @@
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
 				11C65D4923797A2F00C69DC3 /* MealCollectionTableViewCell.swift in Sources */,
+				11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */,
 				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
 				11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */,
+				11B8DF2223A2285600D7FFFC /* FirebaseService.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
 				1188DEDF238BFF1200397186 /* FavoriteEstablishmentCollectionViewCell.swift in Sources */,
-				11C262FA237AC53600E74394 /* FirebaseService.swift in Sources */,
 				1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */,
 				1117BB1E237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.swift in Sources */,
 				1164B6FE23A1350300972B46 /* RewardPointsTableViewCell.swift in Sources */,
@@ -987,6 +1002,7 @@
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
+				11B8DF2023A2253C00D7FFFC /* BerryUser.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,

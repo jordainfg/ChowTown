@@ -39,7 +39,7 @@ class RewardsViewController: UIViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
-        //            tableView.register(UINib(nibName: MeetingInfoDatePickerTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MeetingInfoDatePickerTableViewCell.reuseIdentifier())
+                  tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
     }
     func updateHeaderView() {
@@ -53,6 +53,14 @@ class RewardsViewController: UIViewController {
         headerView.frame = headerRect
     }
     
+    @IBAction func testButtonPressed(_ sender: Any) {
+        viewModel.isLoggedIn = !viewModel.isLoggedIn
+        //Reloads the table view with animation for seamless transition
+        UIView.transition(with: self.tableView,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: { self.tableView.reloadData() })
+    }
     
     
 }
@@ -68,8 +76,6 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         return viewModel.rewardsTableViewcellTypes[section].count
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let type = viewModel.rewardsTableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
@@ -79,6 +85,9 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case .reward(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
                      return cell
+        case .login:
+            let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
+                               return cell
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
