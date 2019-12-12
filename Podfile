@@ -15,6 +15,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'FirebaseUI/Storage'
 pod 'CocoaTextField', '~> 1.0.0'
+pod 'KeychainSwift', '~> 18.0'
   # Pods for Nutshell
 
 end
