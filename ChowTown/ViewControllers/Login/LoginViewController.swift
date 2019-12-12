@@ -42,8 +42,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         viewModel.getRestaurants {
            
                }
-     
-        FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
+      FirebaseService.shared.loginUser(Email: "jordainf@gmail.com", password: "boombam1234"){_ in }
+        //FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

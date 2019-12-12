@@ -97,7 +97,7 @@
 		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
 		11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */; };
 		11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */; };
-		11B8DF2023A2253C00D7FFFC /* BerryUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */; };
+		11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */; };
 		11B8DF2223A2285600D7FFFC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
 		11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */; };
 		11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F1237ABC1E00E74394 /* ViewModel.swift */; };
@@ -241,7 +241,7 @@
 		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
 		11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsLoginTableViewCell.swift; sourceTree = "<group>"; };
 		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
-		11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerryUser.swift; sourceTree = "<group>"; };
+		11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		11C262F1237ABC1E00E74394 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		11C262F3237ABD2200E74394 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -510,7 +510,7 @@
 				1117BB19237EBE8600CB1CD9 /* Restaurant.swift */,
 				11D35C382386A7CE00CC7534 /* Meal.swift */,
 				114F092023A14D30001B86C7 /* Reward.swift */,
-				11B8DF1F23A2253C00D7FFFC /* BerryUser.swift */,
+				11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1002,7 +1002,7 @@
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
-				11B8DF2023A2253C00D7FFFC /* BerryUser.swift in Sources */,
+				11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,

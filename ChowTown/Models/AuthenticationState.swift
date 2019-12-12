@@ -9,12 +9,12 @@
 import Foundation
 
 
-public struct BerryUser{
+public struct AuthenticationState : Codable {
     
     
     var name: String
     var email: String
-    var rewardPoints: String
+    var rewardPoints: Int
     var favoriteRestaurants : [String]
     
     init?(dictionary: [String: Any]) {
@@ -22,7 +22,7 @@ public struct BerryUser{
         self.name = name
         self.email = dictionary["email"] as! String
         
-        self.rewardPoints = dictionary["rewardPoints"] as! String
+        self.rewardPoints = dictionary["rewardPoints"] as! Int
         self.favoriteRestaurants = dictionary["favoriteRestaurants"] as! Array<String>
         
     }

@@ -8,8 +8,25 @@
 
 import Foundation
 import Firebase
-class FirebaseService {
+import KeychainSwift
+
+enum appState {
+    case didFinishLaunchingWithOptions
+    case applicationDidEnterBackground
+    case applicationDidBecomeActive
+    case applicationWillTerminate
+    case applicationIsAuthenticatingWithGoogle
+}
+
+enum authenticationState {
+    case isLoggedIn
+    case isLoggedOut
+}
+
+class FirebaseService : NSObject {
     static let shared = FirebaseService()
+    
+    func start() {}
     
     var db : Firestore?
     
@@ -17,14 +34,47 @@ class FirebaseService {
     
     var userData : User?
     
+    let keychain = KeychainSwift()
+    let authenticationStateKeyChainKey = ""
     
     
+    var authState : authenticationState = .isLoggedOut
     
     func configure(){
         FirebaseApp.configure()
         db = Firestore.firestore()
         
     }
+    
+    public private(set) var authenticationState: AuthenticationState? {
+        set {
+            // save to the keychain
+            if let state = newValue, let archived = try? PropertyListEncoder().encode(state) {
+                keychain.set(archived, forKey: authenticationStateKeyChainKey)
+            } else {
+                keychain.delete(authenticationStateKeyChainKey)
+            }
+        }
+        
+        get {
+            if
+                let data = keychain.getData(authenticationStateKeyChainKey),
+                let state = try? PropertyListDecoder().decode(AuthenticationState.self, from: data) {
+                return state
+            }
+            return nil
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Creates a user in the database and authentication Pane
     func createUser(withEmail: String, password: String , completionHandler: @escaping (Result<User, CoreError>) -> Void){
@@ -36,7 +86,7 @@ class FirebaseService {
                     "name": "test",
                     "email": "\(authResult.user.email!)",
                     "rewardPoints": 20,
-                     "favoriteRestaurants": [""]
+                    "favoriteRestaurants": [""]
                 ])
                 completionHandler(.success(authResult.user))
             }
@@ -55,7 +105,11 @@ class FirebaseService {
             if let authResult = authResult{
                 Auth.auth().addStateDidChangeListener { (auth, user) in
                     if let user = user {
+                        
+                        self?.setAuthenticationState(uid: user.uid)
+                        
                         self?.userData = user
+                        
                         completionHandler(.success(authResult.user))
                     }
                 }
@@ -67,5 +121,33 @@ class FirebaseService {
         
     }
     
+    func setAuthenticationState(uid : String){
+        
+        
+       let docRef = db?.collection("Users").document(uid)
+
+        docRef?.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                if let data = document.data(){
+                    self.authenticationState = AuthenticationState(dictionary: data)
+                }
+            
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+        
+        
+        
+    }
     
+    func setAuthState(state : authenticationState){
+        self.authState = state
+    }
+    
+    func clearAllSessionData(){
+        authenticationState = nil
+    }
 }
