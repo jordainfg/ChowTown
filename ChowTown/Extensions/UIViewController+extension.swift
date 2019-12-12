@@ -10,7 +10,5 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    override open func awakeFromNib() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
+    
 }

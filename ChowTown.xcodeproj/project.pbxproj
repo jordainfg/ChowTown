@@ -86,6 +86,10 @@
 		1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */; };
 		1191F5B2236C49E400649C79 /* customProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B1236C49E400649C79 /* customProgressBar.swift */; };
 		1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */; };
+		1196871523A298DF00D2F831 /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196871323A298DF00D2F831 /* UserProfileTableViewCell.swift */; };
+		1196871623A298DF00D2F831 /* UserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */; };
+		1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */; };
+		1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */; };
 		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
 		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
 		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
@@ -148,6 +152,11 @@
 		11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */; };
 		11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */; };
 		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
+		11CDCC7223A284A400661D1A /* SettingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCC7023A284A400661D1A /* SettingHeaderTableViewCell.swift */; };
+		11CDCC7323A284A400661D1A /* SettingHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11CDCC7123A284A400661D1A /* SettingHeaderTableViewCell.xib */; };
+		11CDCC7723A28AAC00661D1A /* SelectedOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCC7623A28AAC00661D1A /* SelectedOptionViewController.swift */; };
+		11CDCC7C23A28C4F00661D1A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCC7A23A28C4F00661D1A /* SwitchTableViewCell.swift */; };
+		11CDCC7D23A28C4F00661D1A /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11CDCC7B23A28C4F00661D1A /* SwitchTableViewCell.xib */; };
 		11D35C392386A7CE00CC7534 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D35C382386A7CE00CC7534 /* Meal.swift */; };
 		11DB44F823A2652A009B4095 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB44F723A2652A009B4095 /* SettingsViewController.swift */; };
 		11DB44FB23A2664A009B4095 /* SettingOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */; };
@@ -240,6 +249,10 @@
 		1191F5AD236C47F800649C79 /* NutritionInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionInformationTableViewCell.xib; sourceTree = "<group>"; };
 		1191F5B1236C49E400649C79 /* customProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customProgressBar.swift; sourceTree = "<group>"; };
 		1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		1196871323A298DF00D2F831 /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
+		1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewCell.xib; sourceTree = "<group>"; };
+		1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
+		1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsButtonTableViewCell.xib; sourceTree = "<group>"; };
 		11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iconWithLabelTableViewCell.swift; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.swift"; sourceTree = "<absolute>"; };
 		11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iconWithLabelTableViewCell.xib; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.xib"; sourceTree = "<absolute>"; };
 		11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +342,12 @@
 		11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		11CDCC7023A284A400661D1A /* SettingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		11CDCC7123A284A400661D1A /* SettingHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		11CDCC7523A287A700661D1A /* Berry.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Berry.entitlements; sourceTree = "<group>"; };
+		11CDCC7623A28AAC00661D1A /* SelectedOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOptionViewController.swift; sourceTree = "<group>"; };
+		11CDCC7A23A28C4F00661D1A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		11CDCC7B23A28C4F00661D1A /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 		11D35C382386A7CE00CC7534 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		11DB44F723A2652A009B4095 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -577,6 +596,7 @@
 		11C5081623685FEA003400D0 /* ChowTown */ = {
 			isa = PBXGroup;
 			children = (
+				11CDCC7523A287A700661D1A /* Berry.entitlements */,
 				11C5081723685FEA003400D0 /* AppDelegate.swift */,
 				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
 				1188DEE0238C037F00397186 /* ViewModel+CRUDExt.swift */,
@@ -705,12 +725,37 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
-		11DB44F623A264EA009B4095 /* Settings */ = {
+		11CDCC7823A28ABF00661D1A /* Pane one */ = {
 			isa = PBXGroup;
 			children = (
 				11DB44F723A2652A009B4095 /* SettingsViewController.swift */,
 				11DB44F923A2664A009B4095 /* SettingOptionTableViewCell.swift */,
 				11DB44FA23A2664A009B4095 /* SettingOptionTableViewCell.xib */,
+				11CDCC7023A284A400661D1A /* SettingHeaderTableViewCell.swift */,
+				11CDCC7123A284A400661D1A /* SettingHeaderTableViewCell.xib */,
+			);
+			path = "Pane one";
+			sourceTree = "<group>";
+		};
+		11CDCC7923A28ACF00661D1A /* Pane two */ = {
+			isa = PBXGroup;
+			children = (
+				11CDCC7623A28AAC00661D1A /* SelectedOptionViewController.swift */,
+				11CDCC7A23A28C4F00661D1A /* SwitchTableViewCell.swift */,
+				11CDCC7B23A28C4F00661D1A /* SwitchTableViewCell.xib */,
+				1196871323A298DF00D2F831 /* UserProfileTableViewCell.swift */,
+				1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */,
+				1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */,
+				1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */,
+			);
+			path = "Pane two";
+			sourceTree = "<group>";
+		};
+		11DB44F623A264EA009B4095 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				11CDCC7823A28ABF00661D1A /* Pane one */,
+				11CDCC7923A28ACF00661D1A /* Pane two */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -893,6 +938,8 @@
 				116F758E238BDABB002FB784 /* overpass-semibold-italic.otf in Resources */,
 				116F759E238BDABB002FB784 /* Nunito-Italic.ttf in Resources */,
 				1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */,
+				11CDCC7D23A28C4F00661D1A /* SwitchTableViewCell.xib in Resources */,
+				1196871623A298DF00D2F831 /* UserProfileTableViewCell.xib in Resources */,
 				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
 				11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */,
 				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
@@ -915,6 +962,7 @@
 				116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */,
 				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
 				11B8DF3423A2432E00D7FFFC /* EmailLoginTableViewCell.xib in Resources */,
+				11CDCC7323A284A400661D1A /* SettingHeaderTableViewCell.xib in Resources */,
 				1162FE872382EC0F00943CEE /* SubMenuTableViewCell.xib in Resources */,
 				114F091F23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib in Resources */,
 				1164B6FB23A1345000972B46 /* RewardsHeaderTableViewCell.xib in Resources */,
@@ -933,6 +981,7 @@
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
 				116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */,
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
+				1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */,
 				116F7599238BDABB002FB784 /* Nunito-SemiBoldItalic.ttf in Resources */,
 				116F7590238BDABB002FB784 /* Nunito-ExtraLightItalic.ttf in Resources */,
 				11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */,
@@ -1038,6 +1087,7 @@
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
+				1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
 				11C65D4923797A2F00C69DC3 /* MealCollectionTableViewCell.swift in Sources */,
 				11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */,
@@ -1084,12 +1134,15 @@
 				11C262FC237AC56E00E74394 /* CoreError.swift in Sources */,
 				11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */,
 				1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */,
+				1196871523A298DF00D2F831 /* UserProfileTableViewCell.swift in Sources */,
 				11DB44F823A2652A009B4095 /* SettingsViewController.swift in Sources */,
 				11C26309237ADC7600E74394 /* IconsTableViewCell.swift in Sources */,
 				1117BB25237ED5CC00CB1CD9 /* SearchViewController.swift in Sources */,
 				11D35C392386A7CE00CC7534 /* Meal.swift in Sources */,
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
+				11CDCC7C23A28C4F00661D1A /* SwitchTableViewCell.swift in Sources */,
+				11CDCC7723A28AAC00661D1A /* SelectedOptionViewController.swift in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
 				115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */,
@@ -1097,6 +1150,7 @@
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,
 				1178120C239E7F9F00EFD552 /* iconWithLabelTableViewCell.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
+				11CDCC7223A284A400661D1A /* SettingHeaderTableViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SettingOptionTableViewCell.swift
+//  SwitchTableViewCell.swift
 //  ChowTown
 //
 //  Created by Jordain Gijsbertha on 12/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingOptionTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,15 +20,13 @@ class SettingOptionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
     // Reuser identifier
       class func reuseIdentifier() -> String {
-      return "SettingOptionTableViewCellID"
+      return "SwitchTableViewCellID"
       }
              
       // Nib name
       class func nibName() -> String {
-      return "SettingOptionTableViewCell"
+      return "SwitchTableViewCell"
       }
-    
 }

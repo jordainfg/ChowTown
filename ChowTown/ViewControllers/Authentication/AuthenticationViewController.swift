@@ -8,6 +8,7 @@
 
 import UIKit
 import SPStorkController
+import Firebase
 enum authenticationDataType {
     case header
     case loginOptions
@@ -16,9 +17,19 @@ enum authenticationDataType {
     case loginButon
     
 }
+
+protocol AuthenticationDelegate {
+    func didAuthenticateSuccessfully(isTrue : Bool)
+    
+    
+}
+
+
 class AuthenticationViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegate : AuthenticationDelegate?
     
     var email : String = ""
     var password : String = ""
@@ -110,7 +121,32 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
                case .loginButon:
                 tableView.deselectRow(at: indexPath, animated: true)
                if email.count > 0 && password.count > 0 {
-                 print("trying to login")
+                FirebaseService.shared.loginUser(Email: "jordainf@gmail.com", password: "boombam1234") { (result : Result<User, CoreError>) in
+                    switch result {
+                    case .success(_):
+                        let alert = UIAlertController(title: "Success", message: "", preferredStyle: UIAlertController.Style.alert)
+                        self.present(alert, animated: true)
+                        alert.addAction(UIAlertAction(title: "Okay",
+                                                      style: UIAlertAction.Style.default,
+                        handler: {(alert: UIAlertAction!) in
+                            self.delegate?.didAuthenticateSuccessfully(isTrue: true)
+                            self.navigationController?.popViewController(animated: true)
+                            
+                        }))
+                    case .failure(_):
+                        let alert = UIAlertController(title: "Invalid credentials", message: "", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                        self.present(alert, animated: true)
+                        alert.addAction(UIAlertAction(title: "Okay",
+                                                      style: UIAlertAction.Style.default,
+                        handler: {(alert: UIAlertAction!) in
+                              self.navigationController?.popViewController(animated: true)
+                            self.delegate?.didAuthenticateSuccessfully(isTrue: false)
+                            
+                        }))
+                        
+                    }
+                }
                }
                    
                }
