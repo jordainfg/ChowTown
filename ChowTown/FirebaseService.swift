@@ -115,6 +115,7 @@ class FirebaseService : NSObject {
                 }
             }
             else if error != nil{
+               
                 completionHandler(.failure(.unAuthenticated))
             }
         }
@@ -131,15 +132,15 @@ class FirebaseService : NSObject {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 if let data = document.data(){
                     self.authenticationState = AuthenticationState(dictionary: data)
+                    self.setAuthState(state: .isLoggedIn)
                 }
-            
                 print("Document data: \(dataDescription)")
             } else {
+                
+                 self.setAuthState(state: .isLoggedOut)
                 print("Document does not exist")
             }
         }
-        
-        
         
     }
     

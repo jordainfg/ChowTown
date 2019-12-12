@@ -290,6 +290,7 @@ PODS:
   - SDWebImage (5.3.3):
     - SDWebImage/Core (= 5.3.3)
   - SDWebImage/Core (5.3.3)
+  - SPStorkController (1.7.9)
 
 DEPENDENCIES:
   - CocoaTextField (~> 1.0.0)
@@ -302,6 +303,7 @@ DEPENDENCIES:
   - Hero
   - KeychainSwift (~> 18.0)
   - MSPeekCollectionViewDelegateImplementation
+  - SPStorkController
 
 SPEC REPOS:
   trunk:
@@ -332,6 +334,7 @@ SPEC REPOS:
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - SDWebImage
+    - SPStorkController
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -361,7 +364,8 @@ SPEC CHECKSUMS:
   MSPeekCollectionViewDelegateImplementation: 3091e9512b3cd03facdea3c02e57673a4a06246a
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SDWebImage: 51ab1ce3ebd20dec6665ae8ba25c928da323db41
+  SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
 
-PODFILE CHECKSUM: 6ca52522e1d568e005f859497807365580434524
+PODFILE CHECKSUM: b5113320b5ce543fdf25deb3a7d8fdeecb3a9fbd
 
 COCOAPODS: 1.8.4

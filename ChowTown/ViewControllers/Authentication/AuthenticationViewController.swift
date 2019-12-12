@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SPStorkController
 enum authenticationDataType {
     case header
     case loginOptions
@@ -32,6 +33,8 @@ class AuthenticationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+//        let controller = UIViewController()
+//        self.presentAsStork(controller)
         // Do any additional setup after loading the view.
     }
     

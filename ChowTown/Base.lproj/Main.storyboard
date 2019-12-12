@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gbu-GU-21H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlX-1U-w1y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -429,6 +429,7 @@
                     <connections>
                         <outlet property="imageView" destination="AJC-ku-bTD" id="3FD-oz-jCk"/>
                         <outlet property="tableView" destination="OZR-aB-jSS" id="GYz-SA-PO4"/>
+                        <segue destination="Gbu-GU-21H" kind="presentation" identifier="presentAuthentication" customClass="SPStorkSegue" customModule="SPStorkController" id="Qbn-Ya-zpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcz-Dm-MfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -440,11 +441,11 @@
             <objects>
                 <viewController id="Gbu-GU-21H" customClass="AuthenticationViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EVh-1X-ZIY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-v3-lGi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Gbu-GU-21H" id="lTi-0k-W12"/>
@@ -766,11 +767,11 @@
             </objects>
             <point key="canvasLocation" x="5042" y="137"/>
         </scene>
-        <!--Item-->
+        <!--Rewards-->
         <scene sceneID="rib-xy-zTJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gVJ-Q4-JLt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gfj-ar-Bku"/>
+                    <tabBarItem key="tabBarItem" title="Rewards" image="star.circle.fill" catalog="system" id="gfj-ar-Bku"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7zS-Or-gQm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -797,6 +798,7 @@
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
+        <image name="star.circle.fill" catalog="system" width="64" height="60"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

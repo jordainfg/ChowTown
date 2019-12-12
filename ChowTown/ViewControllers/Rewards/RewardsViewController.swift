@@ -23,7 +23,7 @@ class RewardsViewController: UIViewController {
         
     }
     func setupTableView() {
-       tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         headerView = tableView.tableHeaderView
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
@@ -33,13 +33,13 @@ class RewardsViewController: UIViewController {
         
         updateHeaderView()
         
-   tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
+        tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         tableView.register(UINib(nibName: RewardsHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsHeaderTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: RewardPrizeTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardPrizeTableViewCell.reuseIdentifier())
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
-                  tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
     }
     func updateHeaderView() {
@@ -84,28 +84,46 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
             return cell
         case .reward(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
-                     return cell
+            return cell
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
-                               return cell
+            return cell
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = viewModel.rewardsTableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+        case .header:
+            return
+        case .reward(_):
+            return
+        case .login:
+            performSegue(withIdentifier: "presentAuthentication", sender: nil)
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
     }
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let type = viewModel.rewardsTableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+            
+        case .login:
+            return 90
+        default:
+            return UITableView.automaticDimension
+        }
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
-        
+            
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             headerCell.sectionName.text = "Badges add up to Rewards"
-             headerCell.sectionName.textColor = UIColor.black
+            headerCell.sectionName.textColor = UIColor.black
             headerCell.sectionName.font.withSize(18)
             return headerCell.contentView
-      
+            
         default:
             return nil
         }
