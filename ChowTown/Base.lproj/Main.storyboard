@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlX-1U-w1y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gbu-GU-21H">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -435,6 +435,40 @@
             </objects>
             <point key="canvasLocation" x="5089.8550724637689" y="870.53571428571422"/>
         </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="Ybt-OG-5xk">
+            <objects>
+                <viewController id="Gbu-GU-21H" customClass="AuthenticationViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EVh-1X-ZIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-v3-lGi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gbu-GU-21H" id="lTi-0k-W12"/>
+                                    <outlet property="delegate" destination="Gbu-GU-21H" id="slu-4q-y2V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3WU-v3-lGi" secondAttribute="bottom" id="4Ls-MB-1Hh"/>
+                            <constraint firstItem="3WU-v3-lGi" firstAttribute="top" secondItem="EVh-1X-ZIY" secondAttribute="top" id="JHU-9L-gJ1"/>
+                            <constraint firstItem="3WU-v3-lGi" firstAttribute="leading" secondItem="aTZ-vx-3BE" secondAttribute="leading" id="Qli-0R-0UT"/>
+                            <constraint firstItem="3WU-v3-lGi" firstAttribute="trailing" secondItem="aTZ-vx-3BE" secondAttribute="trailing" id="oE4-nY-cVi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aTZ-vx-3BE"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="3WU-v3-lGi" id="5fh-KO-jQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjc-og-baV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5969.5652173913049" y="859.82142857142856"/>
+        </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
             <objects>
@@ -482,7 +516,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="696.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="705"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -772,8 +806,8 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gvu-n7-VaL"/>
-        <segue reference="JS9-e9-O0z"/>
+        <segue reference="moR-fd-9Rm"/>
+        <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -100,6 +100,14 @@
 		11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */; };
 		11B8DF2223A2285600D7FFFC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F9237AC53600E74394 /* FirebaseService.swift */; };
 		11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */; };
+		11B8DF2723A23CC900D7FFFC /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2623A23CC900D7FFFC /* AuthenticationViewController.swift */; };
+		11B8DF2A23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2823A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift */; };
+		11B8DF2B23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF2923A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib */; };
+		11B8DF2E23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF2C23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift */; };
+		11B8DF2F23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF2D23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib */; };
+		11B8DF3323A2432E00D7FFFC /* EmailLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF3123A2432E00D7FFFC /* EmailLoginTableViewCell.swift */; };
+		11B8DF3423A2432E00D7FFFC /* EmailLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF3223A2432E00D7FFFC /* EmailLoginTableViewCell.xib */; };
+		11B8DF3623A2472600D7FFFC /* LeftAlignedIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */; };
 		11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F1237ABC1E00E74394 /* ViewModel.swift */; };
 		11C262F4237ABD2200E74394 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C262F3237ABD2200E74394 /* Menu.swift */; };
 		11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11C262F5237AC4D700E74394 /* GoogleService-Info.plist */; };
@@ -243,6 +251,14 @@
 		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		11B8DF2323A2289900D7FFFC /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		11B8DF2623A23CC900D7FFFC /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		11B8DF2823A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForAuthenticationTableViewCell.swift; sourceTree = "<group>"; };
+		11B8DF2923A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForAuthenticationTableViewCell.xib; sourceTree = "<group>"; };
+		11B8DF2C23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		11B8DF2D23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginOptionsTableViewCell.xib; sourceTree = "<group>"; };
+		11B8DF3123A2432E00D7FFFC /* EmailLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginTableViewCell.swift; sourceTree = "<group>"; };
+		11B8DF3223A2432E00D7FFFC /* EmailLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailLoginTableViewCell.xib; sourceTree = "<group>"; };
+		11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedIconButton.swift; sourceTree = "<group>"; };
 		11C262F1237ABC1E00E74394 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		11C262F3237ABD2200E74394 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		11C262F5237AC4D700E74394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -380,8 +396,6 @@
 				11248277239919B000946402 /* DataPickerTableViewCell.xib */,
 				1124827A2399272C00946402 /* MakeReservationButtonTableViewCell.swift */,
 				1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */,
-				11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */,
-				11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */,
 			);
 			path = "Reservation Details";
 			sourceTree = "<group>";
@@ -449,6 +463,7 @@
 			children = (
 				1191F5B1236C49E400649C79 /* customProgressBar.swift */,
 				1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */,
+				11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -478,8 +493,24 @@
 				1164B6FD23A1350300972B46 /* RewardPointsTableViewCell.xib */,
 				114F091C23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift */,
 				114F091D23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib */,
+				11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */,
+				11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */,
 			);
 			path = Rewards;
+			sourceTree = "<group>";
+		};
+		11B8DF2523A23B5900D7FFFC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				11B8DF2623A23CC900D7FFFC /* AuthenticationViewController.swift */,
+				11B8DF2823A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift */,
+				11B8DF2923A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib */,
+				11B8DF2C23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift */,
+				11B8DF2D23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib */,
+				11B8DF3123A2432E00D7FFFC /* EmailLoginTableViewCell.swift */,
+				11B8DF3223A2432E00D7FFFC /* EmailLoginTableViewCell.xib */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		11C262FD237AC89300E74394 /* Meal Detail */ = {
@@ -583,11 +614,12 @@
 		11C5084A236866AA003400D0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				11F3DCD9237C248000EA1932 /* SplashPage */,
 				1117BB1B237EC31000CB1CD9 /* Search */,
-				11F3DCD9237C248000EA1932 /* Login */,
 				1162FE892382ED1700943CEE /* Menu */,
 				11A4EBCE2397AC4A00D26756 /* Reservations */,
 				11A90E972382BA7B00388093 /* Rewards */,
+				11B8DF2523A23B5900D7FFFC /* Authentication */,
 				1162FE7B2382DF1400943CEE /* NotUsed */,
 			);
 			path = ViewControllers;
@@ -666,7 +698,7 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
-		11F3DCD9237C248000EA1932 /* Login */ = {
+		11F3DCD9237C248000EA1932 /* SplashPage */ = {
 			isa = PBXGroup;
 			children = (
 				11F3DCE2237C26BF00EA1932 /* LoginViewController.swift */,
@@ -676,7 +708,7 @@
 				11F3DCE5237C2B6600EA1932 /* LoginBodyTableViewCell.xib */,
 				11F3DCEC237C397F00EA1932 /* ScanViewController.swift */,
 			);
-			path = Login;
+			path = SplashPage;
 			sourceTree = "<group>";
 		};
 		11F61787238973780096D883 /* SubMenuMealsAndDrinksView */ = {
@@ -864,6 +896,7 @@
 				11C5088D23687EE4003400D0 /* OFL.txt in Resources */,
 				116F7594238BDABB002FB784 /* Nunito-SemiBold.ttf in Resources */,
 				11F3DCE1237C24ED00EA1932 /* LoginHeaderTableViewCell.xib in Resources */,
+				11B8DF3423A2432E00D7FFFC /* EmailLoginTableViewCell.xib in Resources */,
 				1162FE872382EC0F00943CEE /* SubMenuTableViewCell.xib in Resources */,
 				114F091F23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib in Resources */,
 				1164B6FB23A1345000972B46 /* RewardsHeaderTableViewCell.xib in Resources */,
@@ -876,6 +909,7 @@
 				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
 				116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */,
 				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
+				11B8DF2B23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib in Resources */,
 				1164B6FF23A1350300972B46 /* RewardPointsTableViewCell.xib in Resources */,
 				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
@@ -892,6 +926,7 @@
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
 				110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */,
 				11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */,
+				11B8DF2F23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib in Resources */,
 				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
@@ -967,6 +1002,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B8DF2A23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift in Sources */,
 				11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */,
 				116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */,
 				11C5089D23687EE4003400D0 /* String+extension.swift in Sources */,
@@ -979,6 +1015,7 @@
 				11C5089B23687EE4003400D0 /* TableView+extension.swift in Sources */,
 				11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */,
 				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
+				11B8DF2723A23CC900D7FFFC /* AuthenticationViewController.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
@@ -1003,8 +1040,10 @@
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
 				11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */,
+				11B8DF3623A2472600D7FFFC /* LeftAlignedIconButton.swift in Sources */,
 				115694BF23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift in Sources */,
 				11A4EBDD2397C5E300D26756 /* ReservationCollectionViewCell.swift in Sources */,
+				11B8DF2E23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,
 				1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */,
 				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
@@ -1045,6 +1084,7 @@
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */,
+				11B8DF3323A2432E00D7FFFC /* EmailLoginTableViewCell.swift in Sources */,
 				1180BBA22394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1219,6 +1259,7 @@
 			baseConfigurationReference = 74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChowTown/Berry.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PTWF5822NK;
 				INFOPLIST_FILE = ChowTown/Info.plist;
@@ -1238,6 +1279,7 @@
 			baseConfigurationReference = 86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChowTown/Berry.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PTWF5822NK;
 				INFOPLIST_FILE = ChowTown/Info.plist;

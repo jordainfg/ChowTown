@@ -10,19 +10,25 @@ enum textFieldDataType{
     case name
     case email
     case phone
+    case password
     case allergens
     case other
 }
 
+protocol textFieldCellDelegate: class {
+    func didEditTextField(text: String, type : textFieldDataType)
+  
+}
 //import SkyFloatingLabelTextField
 import CocoaTextField
 import UIKit
 
 class textFieldTableViewCell: UITableViewCell {
     @IBOutlet var textField: CocoaTextField!
-    //weak var delegate: textFieldCellDelegate?
+    weak var delegate: textFieldCellDelegate?
     var textFieldType : textFieldDataType?
     var textFieldFontSize : Int = 14
+    var textFieldIsEmpty : Bool = true
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -95,7 +101,7 @@ class textFieldTableViewCell: UITableViewCell {
             self.textFieldType = textFieldDataType.name
         case .email:
             setUpUI(text: "Email", placeHoldertext: placeHoldertext)
-            self.textFieldType = textFieldDataType.name
+            self.textFieldType = textFieldDataType.email
             self.textField.tag = 1
         case .phone:
             setUpUI(text: "Phone", placeHoldertext: placeHoldertext)
@@ -109,6 +115,10 @@ class textFieldTableViewCell: UITableViewCell {
             self.textFieldType = textFieldType
             self.textField.tag = 2
             
+        case .password:
+            setUpUI(text: "Password", placeHoldertext: placeHoldertext)
+            self.textFieldType = textFieldType
+            self.textField.isSecureTextEntry = true
         }
     }
     
@@ -129,22 +139,12 @@ class textFieldTableViewCell: UITableViewCell {
         switch textFieldType! {
         case .name:
             checkIfEmpty()
-            guard textField.text?.isEmpty == false else {
-                
-                return
-            }
         case .phone:
             checkIfEmpty()
-            guard textField.text?.isEmpty == false else {
-                
-                return
-            }
+         
         case .email:
             checkIfEmpty()
-            guard textField.text?.isEmpty == false else {
-                
-                return
-            }
+            delegate?.didEditTextField(text: sender.text!, type: .email)
             if let text = textField.text {
                 if textField != nil {
                     if text.isEmpty {
@@ -167,6 +167,8 @@ class textFieldTableViewCell: UITableViewCell {
         //            }
         case .other:
             checkIfEmpty()
+        case .password:
+            checkIfEmpty()
         }
         
         
@@ -179,26 +181,21 @@ class textFieldTableViewCell: UITableViewCell {
     }
     
     @IBAction func textFieldEditingChanged(_ sender: CocoaTextField) {
-        
-        //        switch textFieldType! {
-        //        case .name:
-        //
-        //            //checkIfEmpty()
-        //            //    .delegate?.didEditTextField(text: sender.text!, type: .nameField(nil))
-        //        case .email:
-        //                checkIfEmpty()
-        //             // delegate?.didEditTextField(text: sender.text!, type: .emptyField(nil))
-        //        case .phone:
-        //            //checkIfEmpty()
-        //            //delegate?.didEditTextField(text: sender.text!, type: .numberField(nil))
-        //        case .allergens:
-        //            //checkIfEmpty()
-        //          //  delegate?.didEditTextField(text: sender.text!, type: .discriptionField(nil))
-        //        case .other:
-        //            return
-        //
-        //
-        //        }
+                switch textFieldType! {
+                case .name:
+                    delegate?.didEditTextField(text: sender.text!, type: .name)
+                case .email:
+                    delegate?.didEditTextField(text: sender.text!, type: .email)
+                case .phone:
+                    delegate?.didEditTextField(text: sender.text!, type: .phone)
+                case .password:
+                    delegate?.didEditTextField(text: sender.text!, type: .password)
+                case .allergens:
+                    delegate?.didEditTextField(text: sender.text!, type: .allergens)
+                case .other:
+                    delegate?.didEditTextField(text: sender.text!, type: .other)
+                
+        }
     }
     
     func checkIfEmpty(){
@@ -207,7 +204,7 @@ class textFieldTableViewCell: UITableViewCell {
                 if text.isEmpty {
                     textField.setError(errorString: "Please fill")
                 } else{
-                    
+
                 }
             }
         }

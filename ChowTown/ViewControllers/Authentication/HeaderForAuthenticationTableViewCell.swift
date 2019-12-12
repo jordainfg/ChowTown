@@ -1,5 +1,5 @@
 //
-//  RewardsLoginTableViewCell.swift
+//  HeaderForAuthenticationTableViewCell.swift
 //  ChowTown
 //
 //  Created by Jordain Gijsbertha on 12/12/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RewardsLoginTableViewCell: UITableViewCell {
+class HeaderForAuthenticationTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,15 +20,13 @@ class RewardsLoginTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
     // Reuser identifier
       class func reuseIdentifier() -> String {
-      return "RewardsLoginTableViewCellID"
+      return "HeaderForAuthenticationTableViewCellID"
       }
              
       // Nib name
       class func nibName() -> String {
-      return "RewardsLoginTableViewCell"
+      return "HeaderForAuthenticationTableViewCell"
       }
-    
 }
