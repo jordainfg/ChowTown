@@ -10,7 +10,7 @@ import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
 class MealCollectionTableViewCell: UITableViewCell {
-    var delegate: MSPeekCollectionViewDelegateImplementation!
+    var behavior: MSCollectionViewPeekingBehavior = MSCollectionViewPeekingBehavior(cellPeekWidth: 20)
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     override func awakeFromNib() {
@@ -20,11 +20,11 @@ class MealCollectionTableViewCell: UITableViewCell {
     }
     func setUpCollectionView(){
         collectionView.dataSource = self
-  
+  collectionView.configureForPeekingBehavior(behavior: behavior)
        // delegate = MSPeekCollectionViewDelegateImplementation(cellSpacing: 10)
-        delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
-        collectionView.configureForPeekingDelegate()
-        collectionView.delegate = delegate
+     
+        collectionView.configureForPeekingBehavior(behavior: behavior)
+        collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "FeaturedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCollectionViewCellID")
         guard let collectionView = collectionView else { fatalError() }
         //collectionView.decelerationRate = .fast // uncomment if necessary

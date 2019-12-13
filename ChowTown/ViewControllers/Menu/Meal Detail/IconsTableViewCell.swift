@@ -11,7 +11,7 @@ import MSPeekCollectionViewDelegateImplementation
 
 class IconsTableViewCell: UITableViewCell {
     
-    var delegate: MSPeekCollectionViewDelegateImplementation!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
     

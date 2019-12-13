@@ -13,7 +13,7 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
-    var delegate: MSPeekCollectionViewDelegateImplementation!
+    var behavior: MSCollectionViewPeekingBehavior = MSCollectionViewPeekingBehavior(cellPeekWidth: 30)
     
     var favorites : [Restaurant]? = nil
     
@@ -32,11 +32,11 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     func setUpCollectionView(){
         
-        delegate = MSPeekCollectionViewDelegateImplementation(cellSpacing: 0,cellPeekWidth: 30,numberOfItemsToShow: 1)
+        
        // delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
        // delegate = MSPeekCollectionViewDelegateImplementation(numberOfItemsToShow: 1)
         collectionView.configureForPeekingDelegate()
-        collectionView.delegate = delegate
+        collectionView.delegate = self
         collectionView.dataSource = self
           collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.register(UINib.init(nibName: "FavoriteEstablishmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavoriteEstablishmentCollectionViewCellID")

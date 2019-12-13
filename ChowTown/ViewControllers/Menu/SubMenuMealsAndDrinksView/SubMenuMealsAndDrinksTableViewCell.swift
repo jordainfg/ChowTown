@@ -18,7 +18,7 @@ class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        mealImageView.showLoadingIndicatorForImage()
+      
     }
     
     
@@ -37,29 +37,14 @@ class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(meal: Meal, httpReference : String){
+    func configure(meal: Meal, StorageRef : StorageReference){
         name.text = meal.name
         about.text = meal.detail
-        
-         setImage(httpReference: httpReference)
+        imageView?.sd_setImage(with: StorageRef, placeholderImage: UIImage(named: "icPeanut"))
+      
          
         
     }
     
-    func setImage(httpReference : String)  {
-    
-       mealImageView.sd_setImage(with: URL(string: httpReference)) { (image, error, cache, urls) in
-                   if (error != nil)  {
-                       // Failed to load image
-                       self.mealImageView.showLoadingIndicatorForImage()
-                      // self.mealImageView.image = UIImage(named: "IMLunch")
-                    
-                   } else {
-                       // Successful in loading image
-                       self.mealImageView.hideLoadingIndicatorForImage()
-                       self.mealImageView.image = image
-                   }
-               }
-    }
-    
+  
 }

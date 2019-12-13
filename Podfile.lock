@@ -281,15 +281,15 @@ PODS:
   - Hero (1.5.0)
   - KeychainSwift (18.0.0)
   - leveldb-library (1.22)
-  - MSPeekCollectionViewDelegateImplementation (2.0.0)
+  - MSPeekCollectionViewDelegateImplementation (3.0.2)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - SDWebImage (5.3.3):
-    - SDWebImage/Core (= 5.3.3)
-  - SDWebImage/Core (5.3.3)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
   - SPStorkController (1.7.9)
 
 DEPENDENCIES:
@@ -361,9 +361,9 @@ SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   KeychainSwift: c46e1438d121e47459fb304ac88c5e058a2a91ed
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  MSPeekCollectionViewDelegateImplementation: 3091e9512b3cd03facdea3c02e57673a4a06246a
+  MSPeekCollectionViewDelegateImplementation: 0e038d6d665a8721c3732b7c9872b39fca1bf285
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  SDWebImage: 51ab1ce3ebd20dec6665ae8ba25c928da323db41
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
   SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
 
 PODFILE CHECKSUM: b5113320b5ce543fdf25deb3a7d8fdeecb3a9fbd
