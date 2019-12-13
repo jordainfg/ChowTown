@@ -50,6 +50,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="name" destination="OFT-aJ-Ayk" id="c9d-BO-1ZQ"/>
+                <outlet property="toggle" destination="qO6-la-k8D" id="sOD-Wl-3yU"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </tableViewCell>

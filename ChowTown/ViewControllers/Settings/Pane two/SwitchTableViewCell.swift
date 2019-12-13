@@ -11,45 +11,54 @@ protocol appearanceSwitchDelegator {
     func AppearanceOptions(isDisplayed : Bool)
 }
 class SwitchTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var name: UILabel!
     
     var delegate : appearanceSwitchDelegator?
-    var switchIsActive : Bool = true
+    var AutoModeIsOn : Bool = UserDefaults.standard.bool(forKey: "AutoModeIsOn") //false
+    
+    @IBOutlet weak var toggle: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        toggle.setOn(AutoModeIsOn, animated: true)
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     // Reuser identifier
-      class func reuseIdentifier() -> String {
-      return "SwitchTableViewCellID"
-      }
-             
-      // Nib name
-      class func nibName() -> String {
-      return "SwitchTableViewCell"
-      }
+    class func reuseIdentifier() -> String {
+        return "SwitchTableViewCellID"
+    }
+    
+    // Nib name
+    class func nibName() -> String {
+        return "SwitchTableViewCell"
+    }
     
     @IBAction func switchAction(_ sender: Any) {
-        switchIsActive = !switchIsActive
+       
+        AutoModeIsOn = !AutoModeIsOn
+        UserDefaults.standard.set(AutoModeIsOn, forKey: "AutoModeIsOn")
         
-        if switchIsActive{
+        if AutoModeIsOn{
             UIApplication.shared.windows.forEach { window in
-                window.overrideUserInterfaceStyle = .unspecified
-            }
-            delegate?.AppearanceOptions(isDisplayed: false)
-        } else {
-            delegate?.AppearanceOptions(isDisplayed: true)
-            UIApplication.shared.windows.forEach { window in
-                          window.overrideUserInterfaceStyle = .light
-                      }
+                       window.overrideUserInterfaceStyle = .unspecified
+                   }
+                   delegate?.AppearanceOptions(isDisplayed: false)
+            
+        } else if !AutoModeIsOn {
+                 delegate?.AppearanceOptions(isDisplayed: true)
+                 UIApplication.shared.windows.forEach { window in
+                    window.overrideUserInterfaceStyle = .light
         }
+        }
+        
+        
         
     }
 }

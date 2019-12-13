@@ -31,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForAppreanceMode()
         setUpView()
     //    viewModel.addRestaurant()
         setupTableView()
@@ -42,8 +43,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         viewModel.getRestaurants {
            
                }
-      
+       
+        
         //FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
+    }
+    
+    func checkForAppreanceMode(){
+//      if UserDefaults.standard.bool(forKey: "AutoModeIsOn"){  //Always true on first install of app
+//        overrideUserInterfaceStyle = .unspecified
+//        }
+//        if  UserDefaults.standard.bool(forKey: "lightModeIsOn"){
+//            
+//            overrideUserInterfaceStyle = .light
+//        }
+//        else{
+//          overrideUserInterfaceStyle = .dark
+//        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

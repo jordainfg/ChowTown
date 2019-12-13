@@ -91,6 +91,10 @@
 		1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */; };
 		1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */; };
 		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
+		119B88B123A38026003312B1 /* SettingsTextBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B88AF23A38026003312B1 /* SettingsTextBoxTableViewCell.swift */; };
+		119B88B223A38026003312B1 /* SettingsTextBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */; };
+		119B88B523A384D3003312B1 /* SettingsInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */; };
+		119B88B623A384D3003312B1 /* SettingsInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119B88B423A384D3003312B1 /* SettingsInfoTableViewCell.xib */; };
 		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
 		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
 		11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */; };
@@ -255,6 +259,10 @@
 		1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsButtonTableViewCell.xib; sourceTree = "<group>"; };
 		11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iconWithLabelTableViewCell.swift; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.swift"; sourceTree = "<absolute>"; };
 		11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iconWithLabelTableViewCell.xib; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.xib"; sourceTree = "<absolute>"; };
+		119B88AF23A38026003312B1 /* SettingsTextBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextBoxTableViewCell.swift; sourceTree = "<group>"; };
+		119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextBoxTableViewCell.xib; sourceTree = "<group>"; };
+		119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInfoTableViewCell.swift; sourceTree = "<group>"; };
+		119B88B423A384D3003312B1 /* SettingsInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsInfoTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textFieldTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -747,6 +755,10 @@
 				1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */,
 				1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */,
 				1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */,
+				119B88AF23A38026003312B1 /* SettingsTextBoxTableViewCell.swift */,
+				119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */,
+				119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */,
+				119B88B423A384D3003312B1 /* SettingsInfoTableViewCell.xib */,
 			);
 			path = "Pane two";
 			sourceTree = "<group>";
@@ -940,6 +952,7 @@
 				1117BB2D237EE1C700CB1CD9 /* EstablishmentTableViewCell.xib in Resources */,
 				11CDCC7D23A28C4F00661D1A /* SwitchTableViewCell.xib in Resources */,
 				1196871623A298DF00D2F831 /* UserProfileTableViewCell.xib in Resources */,
+				119B88B223A38026003312B1 /* SettingsTextBoxTableViewCell.xib in Resources */,
 				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
 				11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */,
 				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
@@ -970,6 +983,7 @@
 				116F759F238BDABB002FB784 /* overpass-semibold.otf in Resources */,
 				1162121D236AFD2200546EC1 /* MealHeaderTableViewCell.xib in Resources */,
 				11C26312237AF3E100E74394 /* AddOnTableViewCell.xib in Resources */,
+				119B88B623A384D3003312B1 /* SettingsInfoTableViewCell.xib in Resources */,
 				11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */,
 				116F75A0238BDABB002FB784 /* Nunito-LightItalic.ttf in Resources */,
 				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
@@ -1128,6 +1142,7 @@
 				1117BB2C237EE1C700CB1CD9 /* EstablishmentTableViewCell.swift in Sources */,
 				11E5375B23A005BA0022CE2F /* RewardsViewController.swift in Sources */,
 				114F091E23A14A4A001B86C7 /* RewardPrizeTableViewCell.swift in Sources */,
+				119B88B123A38026003312B1 /* SettingsTextBoxTableViewCell.swift in Sources */,
 				11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */,
 				11F3DCE3237C26BF00EA1932 /* LoginViewController.swift in Sources */,
 				1117BB30237EE64500CB1CD9 /* HeaderForTableViewSection.swift in Sources */,
@@ -1142,6 +1157,7 @@
 				11C5081823685FEA003400D0 /* AppDelegate.swift in Sources */,
 				11C5082223685FEA003400D0 /* ChowTown.xcdatamodeld in Sources */,
 				11CDCC7C23A28C4F00661D1A /* SwitchTableViewCell.swift in Sources */,
+				119B88B523A384D3003312B1 /* SettingsInfoTableViewCell.swift in Sources */,
 				11CDCC7723A28AAC00661D1A /* SelectedOptionViewController.swift in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
