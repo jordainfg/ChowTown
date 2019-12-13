@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SPStorkController
 enum SettingOptionDataType {
     case profile(String)
     case appearance(String)
@@ -31,6 +31,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         // Do any additional setup after loading the view.
+       
     }
     
     
@@ -50,6 +51,9 @@ class SettingsViewController: UIViewController {
                   return
               }
           }
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SettingsViewController : UITableViewDataSource , UITableViewDelegate , UITextFieldDelegate{
@@ -108,14 +112,10 @@ extension SettingsViewController : UITableViewDataSource , UITableViewDelegate ,
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         switch section {
-        case 0:
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "SettingHeaderTableViewCellID") as! SettingHeaderTableViewCell
-            headerCell.sectionName.text = "Your info".uppercased()
-            headerCell.sectionName.textColor = UIColor.systemGray
-            return headerCell.contentView
+  
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "SettingHeaderTableViewCellID") as! SettingHeaderTableViewCell
-            headerCell.sectionName.text = "Date and time".uppercased()
+            headerCell.sectionName.text = "App".uppercased()
             headerCell.sectionName.textColor = UIColor.systemGray
             return headerCell.contentView
         case 2:
@@ -131,7 +131,7 @@ extension SettingsViewController : UITableViewDataSource , UITableViewDelegate ,
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return 30
+            return 40
         case 1:
             return 30
         case 2:
@@ -145,3 +145,4 @@ extension SettingsViewController : UITableViewDataSource , UITableViewDelegate ,
     
     
 }
+

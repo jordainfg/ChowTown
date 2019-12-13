@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ou9-Tn-HGU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlX-1U-w1y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -419,6 +419,12 @@
                         <viewLayoutGuide key="safeArea" id="X8e-8n-o9Q"/>
                     </view>
                     <navigationItem key="navigationItem" title="Berry® Rewards" largeTitleDisplayMode="never" id="P3x-PQ-aqr">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="j89-NO-Mm0">
+                            <connections>
+                                <action selector="settingsButtonPresesed:" destination="7LW-fw-8pr" id="imm-a1-Ayt"/>
+                                <segue destination="ou9-Tn-HGU" kind="presentation" id="4DR-v3-jms"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="G9K-OW-0sG">
                             <color key="tintColor" name="DarkModeOrange"/>
                             <connections>
@@ -441,11 +447,11 @@
             <objects>
                 <viewController id="Gbu-GU-21H" customClass="AuthenticationViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EVh-1X-ZIY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-v3-lGi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Gbu-GU-21H" id="lTi-0k-W12"/>
@@ -543,17 +549,12 @@
                                 <action selector="changeLocationButtonPressed:" destination="ulw-qS-t2C" id="NbS-XD-aSN"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="gear" catalog="system" id="oW4-GT-QsD">
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="calendar" catalog="system" id="Kqr-pJ-0dL">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="CwO-Kv-Fug" kind="show" id="IX6-Iq-BMh"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Kqr-pJ-0dL">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="CwO-Kv-Fug" kind="show" id="IX6-Iq-BMh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -773,11 +774,11 @@
             <objects>
                 <viewController id="WoS-MH-jiV" customClass="SettingsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBP-9j-9oi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lth-6v-S60">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -790,14 +791,19 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="lth-6v-S60" secondAttribute="bottom" id="E0w-vb-r8i"/>
                             <constraint firstItem="lth-6v-S60" firstAttribute="trailing" secondItem="UMO-oW-gBo" secondAttribute="trailing" id="bIO-tg-hfZ"/>
-                            <constraint firstItem="lth-6v-S60" firstAttribute="top" secondItem="LBP-9j-9oi" secondAttribute="top" id="ipU-rL-S4l"/>
+                            <constraint firstItem="lth-6v-S60" firstAttribute="top" secondItem="UMO-oW-gBo" secondAttribute="top" id="ipU-rL-S4l"/>
                             <constraint firstItem="lth-6v-S60" firstAttribute="leading" secondItem="UMO-oW-gBo" secondAttribute="leading" id="mha-g8-Qyp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UMO-oW-gBo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="7dv-fk-9NZ">
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="never" id="7dv-fk-9NZ">
                         <barButtonItem key="backBarButtonItem" title="Settings" id="0wL-Sc-gfR">
                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="xmark.circle.fill" catalog="system" id="Frs-Jm-kwt">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="WoS-MH-jiV" id="H3w-PM-IKO"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -814,11 +820,11 @@
             <objects>
                 <viewController id="No5-xt-vor" customClass="SelectedOptionViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3p-2n-hTt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-JS-yl7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="No5-xt-vor" id="1WF-l3-ylR"/>
@@ -831,7 +837,7 @@
                             <constraint firstAttribute="bottom" secondItem="MBM-JS-yl7" secondAttribute="bottom" id="3BT-k7-shs"/>
                             <constraint firstItem="MBM-JS-yl7" firstAttribute="leading" secondItem="8Z8-1z-Qro" secondAttribute="leading" id="7BC-a7-J8g"/>
                             <constraint firstItem="MBM-JS-yl7" firstAttribute="trailing" secondItem="8Z8-1z-Qro" secondAttribute="trailing" id="JtC-3r-56S"/>
-                            <constraint firstItem="MBM-JS-yl7" firstAttribute="top" secondItem="S3p-2n-hTt" secondAttribute="top" constant="44" id="kGY-8Z-8cc"/>
+                            <constraint firstItem="MBM-JS-yl7" firstAttribute="top" secondItem="8Z8-1z-Qro" secondAttribute="top" id="kGY-8Z-8cc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Z8-1z-Qro"/>
                     </view>
@@ -869,8 +875,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ou9-Tn-HGU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="osI-Ak-gnF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="osI-Ak-gnF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="DarkModeOrange"/>
                     </navigationBar>
@@ -891,12 +897,12 @@
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
         <image name="star.circle.fill" catalog="system" width="64" height="60"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -907,7 +913,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Gvu-n7-VaL"/>
         <segue reference="2iI-uh-cm7"/>
-        <segue reference="JS9-e9-O0z"/>
+        <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

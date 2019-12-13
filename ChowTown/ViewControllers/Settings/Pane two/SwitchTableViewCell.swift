@@ -7,9 +7,15 @@
 //
 
 import UIKit
-
+protocol appearanceSwitchDelegator {
+    func AppearanceOptions(isDisplayed : Bool)
+}
 class SwitchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var name: UILabel!
+    
+    var delegate : appearanceSwitchDelegator?
+    var switchIsActive : Bool = true
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,4 +35,21 @@ class SwitchTableViewCell: UITableViewCell {
       class func nibName() -> String {
       return "SwitchTableViewCell"
       }
+    
+    @IBAction func switchAction(_ sender: Any) {
+        switchIsActive = !switchIsActive
+        
+        if switchIsActive{
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .unspecified
+            }
+            delegate?.AppearanceOptions(isDisplayed: false)
+        } else {
+            delegate?.AppearanceOptions(isDisplayed: true)
+            UIApplication.shared.windows.forEach { window in
+                          window.overrideUserInterfaceStyle = .light
+                      }
+        }
+        
+    }
 }

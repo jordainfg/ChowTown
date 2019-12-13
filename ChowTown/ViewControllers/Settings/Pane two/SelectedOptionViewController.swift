@@ -13,10 +13,19 @@ enum buttonType{
     case normal
 }
 enum SettingDataType {
+    
+    //Profile headerID : 1
     case profile
-    case Switch
-    case button(String,buttonType)
     case LoginButton(String,buttonType)
+    case LogOutbutton(String,buttonType)
+    
+    //headerID : 2
+    case autoDarkModeSwitch(String)
+    case lightModeButton(String,buttonType)
+    case darkModeButton(String,buttonType)
+    
+    
+    
 }
 class SelectedOptionViewController: UIViewController {
     
@@ -25,32 +34,35 @@ class SelectedOptionViewController: UIViewController {
     
     var selectedSettings : SettingOptionDataType?
     
-    var tableViewcellTypes: [[SettingDataType]] = [[.profile],[.button("Edit", .normal),.button("Log out", .deadly)]]
-   
+    var tableViewcellTypes: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
+    
+    var header:[Int:String] = [1:"", 2:"", 3:""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSettingsForView(selectedSettings: selectedSettings!)
         setupTableView()
-       
+        
     }
-   
+    
     func configureSettingsForView(selectedSettings : SettingOptionDataType){
         switch selectedSettings{
         case let .profile(name):
             self.title = name
             if FirebaseService.shared.authState == .isLoggedIn{
-                let types: [[SettingDataType]] = [[.profile],[.button("Edit", .normal),.button("Log out", .deadly)]]
+                let types: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
                 tableViewcellTypes = types
             } else {
                 tableViewcellTypes = [[.LoginButton("Log in", .deadly)]]
             }
-           
+            
         case let .appearance(name):
-            let types: [[SettingDataType]] = [[.Switch]]
+            header[1] = "Light & dark mode".uppercased()
+            header[2] = "The selected appearance will be used. System appearance is ignored"
+            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automaticly")]]
             tableViewcellTypes = types
             self.title = name
-     
+            
         }
     }
     
@@ -64,14 +76,14 @@ class SelectedOptionViewController: UIViewController {
         //        tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
     }
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-                switch segue.identifier {
-                case "presentAuthentication":
-                    let secondVC = segue.destination as! AuthenticationViewController
-                    secondVC.delegate = self
-                default:
-                    return
-                }
-            }
+        switch segue.identifier {
+        case "presentAuthentication":
+            let secondVC = segue.destination as! AuthenticationViewController
+            secondVC.delegate = self
+        default:
+            return
+        }
+    }
 }
 
 
@@ -107,14 +119,16 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
             
         case .profile:
             let cell = tableView.dequeueReusableCell(withIdentifier: UserProfileTableViewCell.reuseIdentifier()) as! UserProfileTableViewCell
-//            cell.name.text = "Profile"
-//            cell.iCon.image = UIImage(systemName: "person.crop.circle.fill")
-//            cell.iCon.backgroundColor = UIColor.systemRed
+            //            cell.name.text = "Profile"
+            //            cell.iCon.image = UIImage(systemName: "person.crop.circle.fill")
+            //            cell.iCon.backgroundColor = UIColor.systemRed
             return cell
-        case .Switch:
+        case let .autoDarkModeSwitch(name):
             let cell = tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.reuseIdentifier()) as! SwitchTableViewCell
+            cell.name.text = name
+            cell.delegate = self
             return cell
-        case let .button(name, type):
+        case let .LogOutbutton(name, type):
             let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
             cell.configure(name: name, type: type)
             return cell
@@ -122,57 +136,91 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
             let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
             cell.configure(name: name, type: type)
             return cell
+            
+        case let .lightModeButton(name, type):
+            let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
+            cell.configure(name: name, type: type)
+            cell.accessoryType = .checkmark
+            return cell
+        case let .darkModeButton(name, type):
+            let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
+            cell.configure(name: name, type: type)
+            return cell
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          let type = tableViewcellTypes[indexPath.section][indexPath.row]
-              
-              switch type {
-                  
-              case .profile:
-                 tableView.deselectRow(at: indexPath, animated: true)
-              case .Switch:
-                tableView.deselectRow(at: indexPath, animated: true)
-              case .button:
-                print("selected")
-              case .LoginButton:
-                performSegue(withIdentifier: "presentAuthentication", sender: nil)
+        
+        let type = tableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+        case .profile:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .autoDarkModeSwitch:
+            tableView.deselectRow(at: indexPath, animated: true)
+        case .LogOutbutton:
+            print("selected")
+        case .LoginButton:
+            performSegue(withIdentifier: "presentAuthentication", sender: nil)
+        case .lightModeButton(_):
+            if let cell = tableView.cellForRow(at: indexPath) {
+                resetChecks()
+                // tableView.deselectRow(at: indexPath, animated: true)
+                cell.accessoryType = .checkmark
+                cell.selectionStyle = .none
+            }
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .light
+            }
+        case .darkModeButton(_):
+            if let cell = tableView.cellForRow(at: indexPath) {
+                resetChecks()
+                cell.accessoryType = .checkmark
+                cell.selectionStyle = .none
+            }
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .dark
+            }
+            
+            return
         }
+        
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+    
+    
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
-        switch section {
-        case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "SettingHeaderTableViewCellID") as! SettingHeaderTableViewCell
-            headerCell.sectionName.text = "profile settings".uppercased()
+            headerCell.sectionName.text = header[section]
             headerCell.sectionName.textColor = UIColor.systemGray
             return headerCell.contentView
-
-        case 3:
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "SettingHeaderTableViewCellID") as! SettingHeaderTableViewCell
-            headerCell.sectionName.text = "Amount of people".uppercased()
-            headerCell.sectionName.textColor = UIColor.systemGray
-            return headerCell.contentView
-        default:
-            return nil
-        }
+            
+       
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
-        case 1:
-            return 50
-        
-        case 3:
-            return 0
+        case 0:
+            return 10
         default:
-            return 0
+        return 40
         }
-        
     }
     
+    func resetChecks() {
+        for i in 0..<tableView.numberOfSections {
+            for j in 0..<tableView.numberOfRows(inSection: i) {
+                if let cell = tableView.cellForRow(at: IndexPath(row: j, section: i)) {
+                    cell.accessoryType = .none
+                }
+            }
+        }
+    }
     
     
 }
@@ -180,19 +228,44 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
 extension SelectedOptionViewController : AuthenticationDelegate{
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue{
-            let types: [[SettingDataType]] = [[.profile],[.button("Edit", .normal),.button("Log out", .deadly)]]
+            let types: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
             tableViewcellTypes = types
             UIView.transition(with: self.tableView,
-            duration: 0.5,
-            options: .transitionCrossDissolve,
-            animations: { self.tableView.reloadData() })
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
         } else{
             tableViewcellTypes = [[.LoginButton("Log in", .deadly)]]
             UIView.transition(with: self.tableView,
-             duration: 0.5,
-             options: .transitionCrossDissolve,
-             animations: { self.tableView.reloadData() })
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
         }
+    }
+    
+}
+
+extension SelectedOptionViewController : appearanceSwitchDelegator{
+   
+    
+    func AppearanceOptions(isDisplayed: Bool) {
+        if isDisplayed{
+            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automaticly")], [.lightModeButton("Always Light", .normal),.darkModeButton("Always Dark", .normal)]]
+              tableViewcellTypes = types
+              UIView.transition(with: self.tableView,
+                                           duration: 0.5,
+                                           options: .transitionCrossDissolve,
+                                           animations: { self.tableView.reloadData() })
+        }
+        else {
+            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automaticly")]]
+                     tableViewcellTypes = types
+                     UIView.transition(with: self.tableView,
+                                                  duration: 0.5,
+                                                  options: .transitionCrossDissolve,
+                                                  animations: { self.tableView.reloadData() })
+        }
+  
     }
     
     

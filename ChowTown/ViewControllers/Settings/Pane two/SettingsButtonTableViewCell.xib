@@ -22,13 +22,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1r-9j-QWE">
-                        <rect key="frame" x="121.5" y="12.5" width="77" height="19.5"/>
+                        <rect key="frame" x="20" y="12.5" width="280" height="19.5"/>
                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="d1r-9j-QWE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1A2-xe-lyh"/>
                     <constraint firstItem="d1r-9j-QWE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="izL-TE-mVQ"/>
                     <constraint firstItem="d1r-9j-QWE" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qTv-Zi-GB7"/>
                 </constraints>

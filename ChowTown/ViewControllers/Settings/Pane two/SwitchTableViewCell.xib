@@ -33,6 +33,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qO6-la-k8D">
                                 <rect key="frame" x="231" y="0.0" width="51" height="24"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="eYV-TB-EXd"/>
+                                </connections>
                             </switch>
                         </subviews>
                     </stackView>
@@ -45,6 +48,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="name" destination="OFT-aJ-Ayk" id="c9d-BO-1ZQ"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </tableViewCell>
     </objects>
