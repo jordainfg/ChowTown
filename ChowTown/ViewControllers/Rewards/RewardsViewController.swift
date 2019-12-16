@@ -88,6 +88,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
             cell.selectionStyle = .none
+        
             return cell
         }
     }

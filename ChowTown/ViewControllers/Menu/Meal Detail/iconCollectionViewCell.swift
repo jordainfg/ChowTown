@@ -25,6 +25,8 @@ class iconCollectionViewCell: UICollectionViewCell {
     func updateIcons(){
         
         switch iConNumber {
+            
+        // Allergens
         case 1:
             iCon.image = #imageLiteral(resourceName: "icFish")
             alergenName.text = "Fish"
@@ -52,20 +54,27 @@ class iconCollectionViewCell: UICollectionViewCell {
         case 9:
             iCon.image = #imageLiteral(resourceName: "icSesame")
             alergenName.text = "Sesame"
+          
             
+        // About Meal
         case 20:
             iCon.image = #imageLiteral(resourceName: "icHalal")
             alergenName.text = "Halal"
-            
         case 21:
             iCon.image = #imageLiteral(resourceName: "icVegeteriaan")
             alergenName.text = "Vega"
         case 22:
             iCon.image = #imageLiteral(resourceName: "icVegan")
             alergenName.text = "Vegan"
-         case 23:
-            iCon.image = #imageLiteral(resourceName: "icCalories")
-            alergenName.text = "200"
+        case 23:
+            iCon.image = #imageLiteral(resourceName: "icCrueltyFree")
+            alergenName.text = "Cruelty Free"
+        case 24:
+            iCon.image = #imageLiteral(resourceName: "icGMO")
+            alergenName.text = "GMO Free"
+        case 25:
+            iCon.image = #imageLiteral(resourceName: "icOgranic")
+            alergenName.text = "Organic"
             
         default:
             iCon.image = #imageLiteral(resourceName: "icMilk")
@@ -73,7 +82,7 @@ class iconCollectionViewCell: UICollectionViewCell {
         }
     }
     
-  
+    
     
     
     

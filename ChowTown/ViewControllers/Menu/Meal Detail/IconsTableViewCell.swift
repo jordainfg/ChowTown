@@ -99,6 +99,7 @@ extension IconsTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
         cell.iConNumber = iCons[indexPath.row]
         cell.updateIcons()
         cell.cornerRadius = 15
+        cell.isUserInteractionEnabled = false
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -107,7 +108,7 @@ extension IconsTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 60  , height: 50  )
+        return CGSize(width: 60  , height: 65)
     }
     
     

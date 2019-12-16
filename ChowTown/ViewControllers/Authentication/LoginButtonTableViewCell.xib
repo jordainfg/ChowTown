@@ -21,8 +21,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-0O-PbQ" customClass="DesignableButton" customModule="Berry" customModuleProvider="target">
-                        <rect key="frame" x="20" y="0.0" width="280" height="52"/>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-0O-PbQ" customClass="DesignableButton" customModule="Berry" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="280" height="52"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
                         <constraints>
@@ -42,7 +42,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="jbp-0O-PbQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2Jk-VY-6pu"/>
-                    <constraint firstItem="jbp-0O-PbQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="o88-4X-nFq"/>
+                    <constraint firstItem="jbp-0O-PbQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="o88-4X-nFq"/>
                     <constraint firstAttribute="trailing" secondItem="jbp-0O-PbQ" secondAttribute="trailing" constant="20" id="oj5-bZ-ghA"/>
                 </constraints>
             </tableViewCellContentView>

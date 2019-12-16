@@ -66,12 +66,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         backButton.tintColor = UIColor.label
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = nil
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationController?.navigationBar.backgroundColor = nil
+        
     }
     @IBAction func changeLocationButtonPressed(_ sender: Any) {
         // 1

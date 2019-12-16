@@ -37,11 +37,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="CwO-Kv-Fug" customClass="ReservationsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THX-J5-Nw0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-RJ-cgl">
-                                <rect key="frame" x="0.0" y="60.5" width="414" height="673.5"/>
+                                <rect key="frame" x="0.0" y="116.5" width="414" height="725.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CwO-Kv-Fug" id="Eku-5q-Puj"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S THE OCCASION ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-pP-ea4">
-                                <rect key="frame" x="86" y="30" width="242.5" height="23"/>
+                                <rect key="frame" x="86" y="86" width="242.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,11 +81,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="RlT-QF-hhs" customClass="ReservationDetailsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgm-Ac-WKC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-FW-r78">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RlT-QF-hhs" id="4Fr-h1-gjc"/>
@@ -116,11 +116,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="Berry" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -236,7 +236,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Present this card to collect your baddges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-TB-X60">
-                                                <rect key="frame" x="0.0" y="274" width="294" height="263"/>
+                                                <rect key="frame" x="0.0" y="274" width="295" height="263"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
                                                 <color key="textColor" name="WhiteToOrange"/>
                                                 <nil key="highlightedColor"/>
@@ -579,11 +579,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="Sa0-yr-Tmp" customClass="SubMenuMealsAndDrinksViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -617,11 +617,11 @@
             <objects>
                 <viewController title="Menu" modalPresentationStyle="fullScreen" id="ulw-qS-t2C" customClass="HomePageMenuViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="705"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -639,7 +639,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="lJj-uh-xV2">
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="lJj-uh-xV2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="34P-yc-n24"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
                             <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -647,7 +648,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Kqr-pJ-0dL">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="CwO-Kv-Fug" kind="show" id="IX6-Iq-BMh"/>
                             </connections>
@@ -852,8 +853,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ISZ-aB-xfc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="v6S-Mi-sgE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="VXO-aM-KaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VXO-aM-KaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
@@ -1020,7 +1021,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="moR-fd-9Rm"/>
         <segue reference="Qbn-Ya-zpw"/>
-        <segue reference="JS9-e9-O0z"/>
+        <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

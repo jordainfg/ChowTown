@@ -192,9 +192,9 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         case .nutritionInfo:
             return 100
         case .alergenIconSet:
-            return  60
+            return  70
         case .aboutIconSet(_):
-            return 60
+            return 70
         case .addOns(_):
             return 40
         }
