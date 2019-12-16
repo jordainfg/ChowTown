@@ -10,9 +10,18 @@ import UIKit
 
 class UserProfileTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var email: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if FirebaseService.shared.authState == .isLoggedIn{
+            userName.text = FirebaseService.shared.authenticationState?.name
+             email.text = FirebaseService.shared.authenticationState?.email
+        } else{
+           userName.text = "Error"
+            email.text = "Please log out"
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

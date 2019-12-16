@@ -105,6 +105,8 @@
 		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
 		11B4AE5523A7AE2E0089D7B3 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */; };
 		11B4AE5923A7B72A0089D7B3 /* LarkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */; };
+		11B4AE5C23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */; };
+		11B4AE5D23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */; };
 		11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */; };
 		11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */; };
 		11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */; };
@@ -275,6 +277,8 @@
 		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
 		11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LarkSeque.swift; sourceTree = "<group>"; };
+		11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonTableViewCell.swift; sourceTree = "<group>"; };
+		11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginButtonTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsLoginTableViewCell.swift; sourceTree = "<group>"; };
 		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -548,6 +552,8 @@
 				11B8DF2D23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib */,
 				11B8DF3123A2432E00D7FFFC /* EmailLoginTableViewCell.swift */,
 				11B8DF3223A2432E00D7FFFC /* EmailLoginTableViewCell.xib */,
+				11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */,
+				11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1017,6 +1023,7 @@
 				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
+				11B4AE5D23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib in Resources */,
 				116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
 				116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */,
@@ -1106,6 +1113,7 @@
 				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
 				11B8DF2723A23CC900D7FFFC /* AuthenticationViewController.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
+				11B4AE5C23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */,

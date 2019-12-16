@@ -42,6 +42,7 @@ class RewardsViewController: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
+       
     }
     func updateHeaderView() {
         
@@ -86,6 +87,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
             return cell
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
+            cell.selectionStyle = .none
             return cell
         }
     }
@@ -108,7 +110,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         switch type {
             
         case .login:
-            return 90
+            return UITableView.automaticDimension
         default:
             return UITableView.automaticDimension
         }

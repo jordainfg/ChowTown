@@ -13,7 +13,7 @@ class RewardsLoginTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        button.backgroundColor = UIColor.systemIndigo
+        
         button.isEnabled = false
     }
 
@@ -34,13 +34,5 @@ class RewardsLoginTableViewCell: UITableViewCell {
       }
     
     
-    func setState(isActive : Bool){
-        if isActive{
-            button.backgroundColor = UIColor.systemIndigo
-            button.isEnabled = true
-        } else{
-            button.backgroundColor = UIColor.lightGray
-             button.isEnabled = false
-        }
-    }
+    
 }

@@ -516,7 +516,7 @@
                     <connections>
                         <outlet property="imageView" destination="AJC-ku-bTD" id="3FD-oz-jCk"/>
                         <outlet property="tableView" destination="OZR-aB-jSS" id="GYz-SA-PO4"/>
-                        <segue destination="Gbu-GU-21H" kind="presentation" identifier="presentAuthentication" customClass="SPStorkSegue" customModule="SPStorkController" id="Qbn-Ya-zpw"/>
+                        <segue destination="Gbu-GU-21H" kind="presentation" identifier="presentAuthentication" id="Qbn-Ya-zpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcz-Dm-MfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,20 +532,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-v3-lGi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Gbu-GU-21H" id="lTi-0k-W12"/>
                                     <outlet property="delegate" destination="Gbu-GU-21H" id="slu-4q-y2V"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-FH-3O4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Login" id="9PA-ge-jIq">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark.circle.fill" catalog="system" id="bVE-OW-7He">
+                                            <color key="tintColor" name="BlackToOrange"/>
+                                            <connections>
+                                                <action selector="closeButtonPressed:" destination="Gbu-GU-21H" id="byp-70-eWt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3WU-v3-lGi" secondAttribute="bottom" id="4Ls-MB-1Hh"/>
-                            <constraint firstItem="3WU-v3-lGi" firstAttribute="top" secondItem="EVh-1X-ZIY" secondAttribute="top" id="JHU-9L-gJ1"/>
+                            <constraint firstItem="Utk-FH-3O4" firstAttribute="trailing" secondItem="aTZ-vx-3BE" secondAttribute="trailing" id="Dr5-gG-cfl"/>
+                            <constraint firstItem="3WU-v3-lGi" firstAttribute="top" secondItem="Utk-FH-3O4" secondAttribute="bottom" id="JHU-9L-gJ1"/>
+                            <constraint firstItem="Utk-FH-3O4" firstAttribute="leading" secondItem="aTZ-vx-3BE" secondAttribute="leading" id="Jir-bw-1iu"/>
                             <constraint firstItem="3WU-v3-lGi" firstAttribute="leading" secondItem="aTZ-vx-3BE" secondAttribute="leading" id="Qli-0R-0UT"/>
                             <constraint firstItem="3WU-v3-lGi" firstAttribute="trailing" secondItem="aTZ-vx-3BE" secondAttribute="trailing" id="oE4-nY-cVi"/>
+                            <constraint firstItem="Utk-FH-3O4" firstAttribute="top" secondItem="aTZ-vx-3BE" secondAttribute="top" id="zhx-mq-w6a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aTZ-vx-3BE"/>
                     </view>
@@ -556,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjc-og-baV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5971" y="871"/>
+            <point key="canvasLocation" x="5969.5652173913049" y="870.53571428571422"/>
         </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
@@ -985,6 +1001,9 @@
         <image name="star.circle.fill" catalog="system" width="64" height="60"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="BlackToOrange">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

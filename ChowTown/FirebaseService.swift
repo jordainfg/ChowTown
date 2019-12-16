@@ -150,5 +150,6 @@ class FirebaseService : NSObject {
     
     func clearAllSessionData(){
         authenticationState = nil
+        setAuthState(state: .isLoggedOut)
     }
 }

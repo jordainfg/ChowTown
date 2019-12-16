@@ -52,10 +52,13 @@ class AuthenticationViewController: UIViewController {
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: LoginOptionsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: LoginOptionsTableViewCell.reuseIdentifier())
-        tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: LoginButtonTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: LoginButtonTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: textFieldTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: textFieldTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForAuthenticationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForAuthenticationTableViewCell.reuseIdentifier())
         //        tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
+    }
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -101,7 +104,7 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
             return cell
             
         case .loginButon:
-            let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: LoginButtonTableViewCell.reuseIdentifier()) as! LoginButtonTableViewCell
             
             return cell
         }

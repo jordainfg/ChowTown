@@ -36,7 +36,7 @@ class SelectedOptionViewController: UIViewController {
     
     var selectedSettings : SettingOptionDataType?
     
-    var tableViewcellTypes: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
+    var tableViewcellTypes: [[SettingDataType]] = [[],[.profile],[.LogOutbutton("Log out", .deadly)]]
     
     var header:[Int:String] = [1:"", 2:"", 3:""]
     
@@ -54,9 +54,12 @@ class SelectedOptionViewController: UIViewController {
         case let .profile(name):
             self.title = name
             if FirebaseService.shared.authState == .isLoggedIn{
-                let types: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
+                header[1] = "Profile info".uppercased()
+                header[2] = "Options".uppercased()
+                let types: [[SettingDataType]] = [[],[.profile],[.LogOutbutton("Log out", .deadly)]]
                 tableViewcellTypes = types
             } else {
+                header[1] = "Options".uppercased()
                 tableViewcellTypes = [[],[.LoginButton("Log in", .deadly)]]
             }
             
@@ -182,7 +185,9 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
         case .autoDarkModeSwitch:
             tableView.deselectRow(at: indexPath, animated: true)
         case .LogOutbutton:
-            print("selected")
+            FirebaseService.shared.clearAllSessionData()
+            configureSettingsForView(selectedSettings: selectedSettings!)
+            tableView.reloadData()
         case .LoginButton:
             performSegue(withIdentifier: "presentAuthentication", sender: nil)
         case .lightModeButton(_):
@@ -258,13 +263,17 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
 extension SelectedOptionViewController : AuthenticationDelegate{
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue{
-            let types: [[SettingDataType]] = [[.profile],[.LogOutbutton("Edit", .normal),.LogOutbutton("Log out", .deadly)]]
+            header[1] = "Profile info".uppercased()
+            header[2] = "Options".uppercased()
+            let types: [[SettingDataType]] = [[],[.profile],[.LogOutbutton("Log out", .deadly)]]
             tableViewcellTypes = types
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
                               animations: { self.tableView.reloadData() })
         } else{
+
+            header[1] = "Options".uppercased()
             tableViewcellTypes = [[.LoginButton("Log in", .deadly)]]
             UIView.transition(with: self.tableView,
                               duration: 0.5,
