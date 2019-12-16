@@ -24,7 +24,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     // MARK: - ViewDidLoad, Apear, Desapear
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      //  viewModel.favoriteRestaurant()
         setupTableView()
         //viewModel.addPopularMeal()
         //viewModel.addRestaurant()

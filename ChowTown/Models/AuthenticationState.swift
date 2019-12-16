@@ -14,16 +14,15 @@ public struct AuthenticationState : Codable {
     
     var name: String
     var email: String
-    var rewardPoints: Int
-    var favoriteRestaurants : [String]
+    var user_ID: String
+    
     
     init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String else { return nil }
         self.name = name
         self.email = dictionary["email"] as! String
-        
-        self.rewardPoints = dictionary["rewardPoints"] as! Int
-        self.favoriteRestaurants = dictionary["favoriteRestaurants"] as! Array<String>
+        self.user_ID = dictionary["user_ID"] as! String
+   
         
     }
     

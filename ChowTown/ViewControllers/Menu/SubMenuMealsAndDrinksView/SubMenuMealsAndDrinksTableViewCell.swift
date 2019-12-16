@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseUI
-
+import SDWebImage
 class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
@@ -40,7 +40,7 @@ class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     func configure(meal: Meal, StorageRef : StorageReference){
         name.text = meal.name
         about.text = meal.detail
-        imageView?.sd_setImage(with: StorageRef, placeholderImage: UIImage(named: "icPeanut"))
+        mealImageView?.sd_setImage(with: StorageRef, placeholderImage: nil)
       
          
         

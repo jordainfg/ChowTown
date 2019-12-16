@@ -31,8 +31,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-07-ubj">
                                 <rect key="frame" x="10" y="18.5" width="308" height="60"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-2A-lwa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluebrryPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-2A-lwa">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="HmP-Sb-Grg"/>
                                             <constraint firstAttribute="width" constant="60" id="nox-wt-S0Y"/>
@@ -91,13 +92,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="about" destination="X0a-no-nMD" id="ws1-IY-8r3"/>
-                <outlet property="mealImageView" destination="AXI-2A-lwa" id="VQM-55-xoO"/>
+                <outlet property="mealImageView" destination="AXI-2A-lwa" id="9Yc-dY-OcU"/>
                 <outlet property="name" destination="Drf-vF-P5B" id="ID8-eI-5Fm"/>
             </connections>
             <point key="canvasLocation" x="184.05797101449278" y="164.39732142857142"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

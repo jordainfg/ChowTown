@@ -77,7 +77,7 @@ extension ViewModel{
                     self.Popularmeals.append(Meal(dictionary: document.data())! )
                     
                     
-                }
+                } 
                 completion()
                 print("Boom, \(self.meals)")
             }
@@ -204,6 +204,24 @@ extension ViewModel{
             }
         }
         
+    }
+    
+    func favoriteRestaurant(){
+        
+       // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+        let docRef = db.collection("Users").document("muzunI6MKLNck3msZU5dO0NeBNh1")
+
+             docRef.setData( [
+                   "user_ID" : "testing",
+                  
+               ]){ err in
+                   if let err = err {
+                       print("Error adding document: \(err)")
+                   } else {
+                       print("Edites")
+                      
+                   }
+               }
     }
     
     

@@ -104,10 +104,10 @@ public class ViewModel{
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
          let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
-        if isLoggedIn{
+        if FirebaseService.shared.authenticationState != nil {
            types = [[.header],rewardsTypes]
         } else{
-          types =   [[.login]]
+          types = [[.login]]
         }
         return types
     }

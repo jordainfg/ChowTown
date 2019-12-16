@@ -73,10 +73,10 @@ class textFieldTableViewCell: UITableViewCell {
     private func applyDarkStyle(to v: CocoaTextField) {
         v.keyboardType = .default
         v.autocapitalizationType = .none
-        v.tintColor = UIColor(named: "DarkModeOrange")
+        v.tintColor = UIColor(named: "BlackToOrange")
         v.textColor = UIColor.white
         v.inactiveHintColor = UIColor(red: 209/255, green: 211/255, blue: 212/255, alpha: 1)
-        v.activeHintColor = UIColor(named: "DarkModeOrange")!
+        v.activeHintColor = UIColor(named: "BlackToOrange")!
         v.focusedBackgroundColor = UIColor.hexStringToUIColor(hex: "#212121")
         v.defaultBackgroundColor = UIColor.black
         v.borderColor = UIColor.white

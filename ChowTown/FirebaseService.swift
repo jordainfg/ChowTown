@@ -85,8 +85,8 @@ class FirebaseService : NSObject {
                 self.db?.collection("Users").document(authResult.user.uid).setData([
                     "name": "test",
                     "email": "\(authResult.user.email!)",
-                    "rewardPoints": 20,
-                    "favoriteRestaurants": [""]
+                    "user_ID": "\(authResult.user.uid)",
+    
                 ])
                 completionHandler(.success(authResult.user))
             }

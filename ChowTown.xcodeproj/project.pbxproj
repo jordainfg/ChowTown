@@ -103,6 +103,8 @@
 		11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */; };
 		11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */; };
 		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
+		11B4AE5523A7AE2E0089D7B3 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */; };
+		11B4AE5923A7B72A0089D7B3 /* LarkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */; };
 		11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */; };
 		11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */; };
 		11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */; };
@@ -271,6 +273,8 @@
 		11A4EBDF2397C60000D26756 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		11A4EBE02397C60000D26756 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
+		11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LarkSeque.swift; sourceTree = "<group>"; };
 		11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsLoginTableViewCell.swift; sourceTree = "<group>"; };
 		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 				1191F5B1236C49E400649C79 /* customProgressBar.swift */,
 				1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */,
 				11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */,
+				11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				114F091D23A14A4A001B86C7 /* RewardPrizeTableViewCell.xib */,
 				11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */,
 				11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */,
+				11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */,
 			);
 			path = Rewards;
 			sourceTree = "<group>";
@@ -1089,6 +1095,7 @@
 				11C5089D23687EE4003400D0 /* String+extension.swift in Sources */,
 				11DB44FB23A2664A009B4095 /* SettingOptionTableViewCell.swift in Sources */,
 				11C5089723687EE4003400D0 /* UILabel+extension.swift in Sources */,
+				11B4AE5923A7B72A0089D7B3 /* LarkSeque.swift in Sources */,
 				11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */,
 				11C5089C23687EE4003400D0 /* UIViewController+extension.swift in Sources */,
 				11F3DCE0237C24ED00EA1932 /* LoginHeaderTableViewCell.swift in Sources */,
@@ -1135,6 +1142,7 @@
 				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
+				11B4AE5523A7AE2E0089D7B3 /* QRCodeViewController.swift in Sources */,
 				11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */,
 				11248278239919B000946402 /* DataPickerTableViewCell.swift in Sources */,
 				11F3DCED237C397F00EA1932 /* ScanViewController.swift in Sources */,

@@ -8,20 +8,21 @@
 
 import UIKit
 import SPStorkController
-
+import SPLarkController
 
 class RewardsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     var headerView: UIView!
-    var kTableHeaderHeight:CGFloat = 200.0
+    var kTableHeaderHeight:CGFloat = 170
     let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         
     }
+    
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         headerView = tableView.tableHeaderView
@@ -54,12 +55,8 @@ class RewardsViewController: UIViewController {
     }
     
     @IBAction func testButtonPressed(_ sender: Any) {
-        viewModel.isLoggedIn = !viewModel.isLoggedIn
-        //Reloads the table view with animation for seamless transition
-        UIView.transition(with: self.tableView,
-                          duration: 0.5,
-                          options: .transitionCrossDissolve,
-                          animations: { self.tableView.reloadData() })
+       
+        
     }
     
    

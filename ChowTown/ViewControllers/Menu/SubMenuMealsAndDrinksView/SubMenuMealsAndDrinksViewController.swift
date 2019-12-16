@@ -95,11 +95,8 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         case  let .meal(meal):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier()) as! SubMenuMealsAndDrinksTableViewCell
             cell.selectionStyle = .none
-            let storege = viewModel.storage.reference(forURL: meal.imageRef)
-            
-            cell.configure(meal: meal, StorageRef : storege)
-            
-            
+            let storageReference = viewModel.storage.reference(forURL: meal.imageRef)
+            cell.configure(meal: meal, StorageRef : storageReference)
             return cell
             
         case .drink:
