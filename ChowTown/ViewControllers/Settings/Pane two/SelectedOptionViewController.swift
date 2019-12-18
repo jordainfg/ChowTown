@@ -65,7 +65,7 @@ class SelectedOptionViewController: UIViewController {
             
         case let .appearance(name):
             header[1] = "Light & dark mode".uppercased()
-            header[2] = "The selected appearance will be used. System appearance is ignored"
+            header[2] = "The selected appearance will be used. System appearance will be ignored"
             AppearanceOptions(isDisplayed: !UserDefaults.standard.bool(forKey: "AutoModeIsOn"))
             self.title = name
             
@@ -289,7 +289,7 @@ extension SelectedOptionViewController : appearanceSwitchDelegator{
     
     func AppearanceOptions(isDisplayed: Bool) {
         if isDisplayed{
-            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automaticly")], [.lightModeButton("Always Light", .normal),.darkModeButton("Always Dark", .normal)]]
+            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automatically")], [.lightModeButton("Always Light", .normal),.darkModeButton("Always Dark", .normal)]]
                     tableViewcellTypes = types
                     UIView.transition(with: self.tableView,
                                       duration: 0.5,
@@ -297,7 +297,7 @@ extension SelectedOptionViewController : appearanceSwitchDelegator{
                                       animations: { self.tableView.reloadData() })
         }
         else {
-        let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automaticly")]]
+        let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automatically")]]
                    tableViewcellTypes = types
                    UIView.transition(with: self.tableView,
                                      duration: 0.5,

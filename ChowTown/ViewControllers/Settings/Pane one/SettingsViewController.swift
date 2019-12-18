@@ -27,7 +27,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     var selectedSetting : SettingOptionDataType?
     
     var tableViewcellTypes: [[SettingOptionDataType]] {
-        let types: [[SettingOptionDataType]] = [[.profile("Profile")],[.appearance("Appearance")],[.review("Write a review"),.contact("Contact the developer")],[.aboutApp("About App")]]
+        let types: [[SettingOptionDataType]] = [[.profile("Profile")],[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
         
         return types
     }

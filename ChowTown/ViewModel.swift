@@ -58,6 +58,9 @@ public class ViewModel{
     var Popularmeals : [Meal] = []
     
     var isLoggedIn : Bool = true
+    
+    var selectedRestaurant : Restaurant?
+    
     // MARK: - Views
     // ChoiceMenuViewController
    

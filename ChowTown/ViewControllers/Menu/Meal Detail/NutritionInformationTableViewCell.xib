@@ -18,27 +18,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NutritionInformationTableViewCellID" rowHeight="213" id="KGk-i7-Jjw" customClass="NutritionInformationTableViewCell" customModule="ChowTown" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NutritionInformationTableViewCellID" rowHeight="213" id="KGk-i7-Jjw" customClass="NutritionInformationTableViewCell" customModule="Berry" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="379" height="213"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="379" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DI3-FG-5IX">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DI3-FG-5IX">
                         <rect key="frame" x="30" y="74.5" width="329" height="64.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Serving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b0-3k-4Os">
-                                <rect key="frame" x="0.0" y="0.0" width="329" height="15.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Ws-LO-L9J">
-                                <rect key="frame" x="0.0" y="21.5" width="329" height="43"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Ws-LO-L9J">
+                                <rect key="frame" x="0.0" y="21.5" width="260.5" height="43"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="daO-rw-nt8">
-                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-oK-vyd">
                                                 <rect key="frame" x="0.0" y="0.0" width="51.5" height="16.5"/>
@@ -55,7 +55,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-uX-VZu">
-                                        <rect key="frame" x="87.5" y="0.0" width="67" height="43"/>
+                                        <rect key="frame" x="91.5" y="0.0" width="38" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-f1-z9K">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="16.5"/>
@@ -72,7 +72,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CuO-ht-Vfv">
-                                        <rect key="frame" x="174.5" y="0.0" width="67.5" height="43"/>
+                                        <rect key="frame" x="159.5" y="0.0" width="44.5" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib9-vc-uud">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="16.5"/>
@@ -89,7 +89,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Qzz-JX-pjJ">
-                                        <rect key="frame" x="262" y="0.0" width="67" height="43"/>
+                                        <rect key="frame" x="234" y="0.0" width="26.5" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIH-zG-aqU">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="16.5"/>
@@ -107,7 +107,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-2k-W2p" customClass="customProgressBar" customModule="ChowTown" customModuleProvider="target">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-2k-W2p" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84.5" width="339" height="6"/>
                                 <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -121,7 +121,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gsm-p7-M7N" customClass="customProgressBar" customModule="ChowTown" customModuleProvider="target">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gsm-p7-M7N" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="128.5" width="339" height="6"/>
                                 <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
@@ -132,7 +132,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="m6M-0Y-8go" customClass="customProgressBar" customModule="ChowTown" customModuleProvider="target">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="m6M-0Y-8go" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="174" width="339" height="6"/>
                                 <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
@@ -161,6 +161,12 @@
             </tableViewCellContentView>
             <color key="backgroundColor" name="DarkModeBlack"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="calories" destination="vhk-B2-mYX" id="Hed-h7-K36"/>
+                <outlet property="carbs" destination="fFa-fN-Cbd" id="1wq-ND-59V"/>
+                <outlet property="fat" destination="VUx-KN-zlc" id="MMR-RQ-UjB"/>
+                <outlet property="protein" destination="Hga-ov-PF9" id="wiC-Iu-oQ8"/>
+            </connections>
             <point key="canvasLocation" x="180.43478260869566" y="128.90625"/>
         </tableViewCell>
     </objects>

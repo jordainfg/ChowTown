@@ -11,7 +11,7 @@ import UIKit
 class iconCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var iCon: UIImageView!
-    @IBOutlet weak var alergenName: UILabel!
+    @IBOutlet weak var allergenName: UILabel!
     @IBOutlet weak var view: UIView!
     var iConNumber = 1
     var setNumber = 0
@@ -29,56 +29,59 @@ class iconCollectionViewCell: UICollectionViewCell {
         // Allergens
         case 1:
             iCon.image = #imageLiteral(resourceName: "icFish")
-            alergenName.text = "Fish"
+            allergenName.text = "Fish"
         case 2:
             iCon.image = #imageLiteral(resourceName: "iCSelfish")
-            alergenName.text = "Selfish"
+            allergenName.text = "Shellfish"
         case 3:
             iCon.image = #imageLiteral(resourceName: "icEggs")
-            alergenName.text = "Eggs"
+            allergenName.text = "Eggs"
         case 4:
             iCon.image = #imageLiteral(resourceName: "icMilk")
-            alergenName.text = "Milk"
+            allergenName.text = "Milk"
         case 5:
             iCon.image = #imageLiteral(resourceName: "icPeanut")
-            alergenName.text = "Peanut"
+            allergenName.text = "Peanuts"
         case 6:
             iCon.image = #imageLiteral(resourceName: "icWheat")
-            alergenName.text = "Gluten"
+            allergenName.text = "Gluten"
         case 7:
             iCon.image = #imageLiteral(resourceName: "icNut")
-            alergenName.text = "Nuts"
+            allergenName.text = "Nuts"
         case 8:
             iCon.image = #imageLiteral(resourceName: "icSoy")
-            alergenName.text = "Soy"
+            allergenName.text = "Soy"
         case 9:
             iCon.image = #imageLiteral(resourceName: "icSesame")
-            alergenName.text = "Sesame"
+            allergenName.text = "Sesame"
           
             
         // About Meal
         case 20:
             iCon.image = #imageLiteral(resourceName: "icHalal")
-            alergenName.text = "Halal"
+            allergenName.text = "Halal"
         case 21:
-            iCon.image = #imageLiteral(resourceName: "icVegeteriaan")
-            alergenName.text = "Vega"
+            iCon.image = #imageLiteral(resourceName: "icVegetarian")
+            allergenName.text = "Vega"
         case 22:
             iCon.image = #imageLiteral(resourceName: "icVegan")
-            alergenName.text = "Vegan"
+            allergenName.text = "Vegan"
         case 23:
             iCon.image = #imageLiteral(resourceName: "icCrueltyFree")
-            alergenName.text = "Cruelty Free"
+            allergenName.text = "Cruelty Free"
         case 24:
             iCon.image = #imageLiteral(resourceName: "icGMO")
-            alergenName.text = "GMO Free"
+            allergenName.text = "GMO Free"
         case 25:
-            iCon.image = #imageLiteral(resourceName: "icOgranic")
-            alergenName.text = "Organic"
+            iCon.image = #imageLiteral(resourceName: "icNoGluten")
+            allergenName.text = "Gluten Free"
+            case 26:
+            iCon.image = #imageLiteral(resourceName: "icOrganic")
+            allergenName.text = "Organic"
             
         default:
             iCon.image = #imageLiteral(resourceName: "icMilk")
-            alergenName.text = "Milk"
+            allergenName.text = "Milk"
         }
     }
     

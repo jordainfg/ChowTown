@@ -64,7 +64,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="67" height="60"/>
             <connections>
-                <outlet property="alergenName" destination="oJN-2v-KGq" id="tik-ci-me7"/>
+                <outlet property="allergenName" destination="oJN-2v-KGq" id="tik-ci-me7"/>
                 <outlet property="iCon" destination="WMX-oZ-5jL" id="VCY-wK-KxM"/>
                 <outlet property="view" destination="C7m-2E-blx" id="f4s-NA-Lnw"/>
             </connections>

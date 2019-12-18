@@ -41,9 +41,9 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.white
-         self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         
-              
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -74,10 +74,17 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
 extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableViewDelegate{
     
     func numberOfSections(in _: UITableView) -> Int {
+        
+        
         return viewModel.SubMenuMealsAndDrinksTableViewcellTypes.count
     }
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.filterdMeals.count == 0 {
+            self.tableView.setEmptyView(title: "No results", message: "We do not have any options for your choice")
+        } else {
+          self.tableView.restore()
+        }
         return viewModel.SubMenuMealsAndDrinksTableViewcellTypes[section].count
     }
     

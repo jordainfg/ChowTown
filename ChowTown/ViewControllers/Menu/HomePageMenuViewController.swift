@@ -71,7 +71,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     }
     @IBAction func changeLocationButtonPressed(_ sender: Any) {
         // 1
-        let optionMenu = UIAlertController(title: nil, message: "Would you like add a new menu?", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: nil, message: "Would you change the menu?", preferredStyle: .actionSheet)
         
         // 2
         let action = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
@@ -168,7 +168,10 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             
         case .MenuHeader(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuHeaderTableViewCell.reuseIdentifier()) as! SubMenuHeaderTableViewCell
-
+            let storageRefrence = viewModel.storage.reference(forURL: viewModel.selectedRestaurant?.logoURL ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
+            cell.logoImageView.sd_setImage(with: storageRefrence)
+                  
+//             imageView.sd_setImage(with: httpsReference)
             return cell
         }
     }
@@ -210,7 +213,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
-            headerCell.sectionName.text = "Popular Eatries"
+            headerCell.sectionName.text = "Popular"
             return headerCell.contentView
         case 2:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
@@ -228,7 +231,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     }
     
     func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
+        if section == 0 { return 20 } 
         return 40
     }
     

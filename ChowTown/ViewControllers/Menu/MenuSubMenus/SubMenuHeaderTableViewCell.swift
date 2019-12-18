@@ -10,6 +10,7 @@ import UIKit
 
 class SubMenuHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var logoImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

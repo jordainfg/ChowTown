@@ -131,32 +131,25 @@ class SpecialsDetailViewController: UIViewController {
 
 extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
-        
         switch type {
-            
-        
-            
         case .nutritionInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: NutritionInformationTableViewCell.reuseIdentifier()) as! NutritionInformationTableViewCell
-            
+            cell.calories.text = "\(meal?.calories ?? "") kcal"
+            cell.carbs.text = meal?.carbs
+            cell.fat.text = meal?.fat
+            cell.protein.text = meal?.protein
             return cell
-        case let .aboutIconSet(name):
+        case .aboutIconSet(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-            
             cell.iCons = meal?.about as! [Int]
             return cell
-            
-        case let .alergenIconSet(name):
+        case .alergenIconSet(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-            
             cell.iCons = meal?.allergens as! [Int]
             return cell
         case .addOns(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: AddOnTableViewCell.reuseIdentifier()) as! AddOnTableViewCell
-            
-            
             return cell
         }
         
@@ -187,7 +180,6 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
     
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let type = viewModel.mealDetailTableViewcellTypes[indexPath.section][indexPath.row]
-        
         switch type {
         case .nutritionInfo:
             return 100

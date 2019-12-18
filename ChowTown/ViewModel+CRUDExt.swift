@@ -159,13 +159,13 @@ extension ViewModel{
     
     
     func getRestaurants(completion: @escaping () -> Void){
-        self.restaurants.removeAll()
+       
         db.collection("Restaurant").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    
+                     self.restaurants.removeAll()
                     self.restaurants.append(Restaurant(dictionary: document.data())! )
                     
                     

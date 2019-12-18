@@ -14,7 +14,7 @@ protocol filteringDelegate: class {
 class SubMenuMealsAndDrinksFilteringTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var filteringOptions = ["All","Vegan", "Vegiterian", "Gluten-free" , "Halal"]
+    var filteringOptions = ["All","Vegan", "Vegetarian", "Gluten Free" , "Halal"]
     
     weak var delegate: filteringDelegate?
     
@@ -64,7 +64,7 @@ class SubMenuMealsAndDrinksFilteringTableViewCell: UITableViewCell {
         case 2:
         return 21
         case 3:
-        return 6
+        return 25
         case 4:
         return 20
         default:

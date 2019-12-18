@@ -52,9 +52,9 @@ class RestaurantViewController: UIViewController {
         updateHeaderView()
          
         // Dismiss view button
-        let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
+        let button = UIButton(frame: CGRect(x: 20, y: 55, width: 30, height: 30))
         button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-        button.tintColor = UIColor.black
+        button.tintColor = UIColor.white
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(button)
         
@@ -88,10 +88,25 @@ class RestaurantViewController: UIViewController {
     @IBAction func menuButtonPressed(_ sender: Any) {
         if restaurant != nil {
             UserDefaults.standard.set(restaurant?.restID, forKey: "selectedRestaurant")
+            viewModel.selectedRestaurant = restaurant
             performSegue(withIdentifier: "toMenu", sender: nil)
         }
         
         
+    }
+   
+    // passing data to tab bar viewcontroller and then to navigation controller and then to the final view controller
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+          if let barVC = segue.destination as? UITabBarController {
+              barVC.viewControllers?.forEach {
+                  if let vc = $0 as? UINavigationController {
+                    if let vcc = vc.viewControllers[0] as? HomePageMenuViewController {
+                        vcc.viewModel = self.viewModel
+                    }
+                      
+                  }
+              }
+          }
     }
     
    

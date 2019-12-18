@@ -10,6 +10,10 @@ import UIKit
 
 class NutritionInformationTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var calories: UILabel!
+    @IBOutlet weak var carbs: UILabel!
+    @IBOutlet weak var protein: UILabel!
+    @IBOutlet weak var fat: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -77,10 +77,10 @@ public extension UITableView {
         let messageLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "Overpass-Bold", size: 16)
+        titleLabel.textColor = UIColor(named: "BlackToOrange")!
+        titleLabel.font = UIFont(name: "Nunito-Bold", size: 16)
         messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: "Overpass-Regular", size: 15)
+        messageLabel.font = UIFont(name: "Nunito-SemiBold", size: 15)
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true

@@ -38,11 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)
                registerForKeyboardWillHideNotification(tableView)
-       // viewModel.addMeal(refRestaurant: nil, refMenu: nil)
-      //r  viewModel.addMenu(reff: nil)
-        viewModel.getRestaurants {
-           
-               }
+     
        
         
         //FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }

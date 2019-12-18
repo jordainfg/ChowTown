@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     var viewModel = ViewModel()
     
-    var filterdEstablishments : [Restaurant]?
+    var filterdEstablishments : [Restaurant] = []
     
     var selectedRestaurant : Restaurant?
     
@@ -24,9 +24,19 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filterdEstablishments =  viewModel.restaurants
+        
+        tableView.showLoadingIndicator()
+        viewModel.getRestaurants {
+            self.filterdEstablishments =  self.viewModel.restaurants
+            self.tableView.hideLoadingIndicator()
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+        }
+        
         setUpTableView()
-       
+        
         //  self.navigationController?.view.backgroundColor = UIColor.clear
         
         //navBar.setValue(true, forKey: "hidesShadow")
@@ -34,18 +44,18 @@ class SearchViewController: UIViewController {
     }
     
     func setUpTableView(){
-//        if #available(iOS 13.0, *) {
-//            let navBarAppearance = UINavigationBarAppearance()
-//            navBarAppearance.configureWithOpaqueBackground()
-//            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-//            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//            navBarAppearance.backgroundColor = UIColor.clear
-//            navBarAppearance.shadowImage = UIImage()
-//            navBarAppearance.shadowColor = UIColor.clear
-//            navBar.standardAppearance = navBarAppearance
-//            navBar.scrollEdgeAppearance = navBarAppearance
-//            
-//        }
+        //        if #available(iOS 13.0, *) {
+        //            let navBarAppearance = UINavigationBarAppearance()
+        //            navBarAppearance.configureWithOpaqueBackground()
+        //            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        //            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        //            navBarAppearance.backgroundColor = UIColor.clear
+        //            navBarAppearance.shadowImage = UIImage()
+        //            navBarAppearance.shadowColor = UIColor.clear
+        //            navBar.standardAppearance = navBarAppearance
+        //            navBar.scrollEdgeAppearance = navBarAppearance
+        //
+        //        }
         self.tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
@@ -62,6 +72,7 @@ class SearchViewController: UIViewController {
         default:
             return
         }
+        
     }
     
     
@@ -86,10 +97,10 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             
         case 1:
             
-            return filterdEstablishments!.count
+            return filterdEstablishments.count
             
         default:
-            return filterdEstablishments!.count
+            return filterdEstablishments.count
         }
     }
     
@@ -194,7 +205,7 @@ extension SearchViewController: UISearchBarDelegate
             
         } else{
             filterdEstablishments =  viewModel.restaurants
-            filterdEstablishments = filterdEstablishments?.filter { $0.name.range(of: searchText) != nil}
+            filterdEstablishments = filterdEstablishments.filter { $0.name.range(of: searchText) != nil}
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
