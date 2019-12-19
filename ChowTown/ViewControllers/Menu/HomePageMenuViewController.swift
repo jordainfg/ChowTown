@@ -55,9 +55,6 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         return .darkContent
     }
     
-    
-    
-    
     func setupView(){
         let backButton = UIBarButtonItem()
         backButton.title = "" //in your case it will be empty or you can put the title of your choice
@@ -67,8 +64,16 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationController?.navigationBar.backgroundColor = nil
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //sets nav bar to default appearance
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = nil
+    }
+    
     @IBAction func changeLocationButtonPressed(_ sender: Any) {
         // 1
         let optionMenu = UIAlertController(title: nil, message: "Would you change the menu?", preferredStyle: .actionSheet)

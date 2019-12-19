@@ -157,7 +157,7 @@ extension ViewModel{
     
     
     
-    
+    // MARK: - CR Restaurants
     func getRestaurants(completion: @escaping () -> Void){
        
         db.collection("Restaurant").getDocuments() { (querySnapshot, err) in
@@ -207,7 +207,6 @@ extension ViewModel{
     }
     
     func favoriteRestaurant(){
-        
        // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
         let docRef = db.collection("Users").document("muzunI6MKLNck3msZU5dO0NeBNh1")
 
@@ -224,5 +223,24 @@ extension ViewModel{
                }
     }
     
+    // MARK: - CR Rewards
+    func addRewardPoints(points : Int){
+        // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+               let docRef = db.collection("Users/muzunI6MKLNck3msZU5dO0NeBNh1/Rewards").document()
+
+                    docRef.setData( [
+                       "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
+                          "rewardPoints" : points,
+                         
+                      ]){ err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("rewards added with ID: \(docRef.documentID)")
+               
+            }
+        }
+        
+    }
     
 }

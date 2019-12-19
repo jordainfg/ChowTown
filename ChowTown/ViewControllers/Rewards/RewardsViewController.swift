@@ -20,7 +20,7 @@ class RewardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
+        viewModel.addRewardPoints(points: 30)
     }
     
     func setupTableView() {
@@ -56,7 +56,8 @@ class RewardsViewController: UIViewController {
     }
     
     @IBAction func testButtonPressed(_ sender: Any) {
-       
+        viewModel.addRewardPoints(points: 30)
+        
         
     }
     
