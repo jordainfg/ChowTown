@@ -20,14 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluebrryPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-QS-L9S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccn-7s-ERv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-kb-9dY">
+                                        <rect key="frame" x="156" y="395" width="102" height="106.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Pj9-kb-9dY" firstAttribute="centerX" secondItem="Ccn-7s-ERv" secondAttribute="centerX" id="4jP-zB-Db3"/>
+                                    <constraint firstItem="Pj9-kb-9dY" firstAttribute="centerY" secondItem="Ccn-7s-ERv" secondAttribute="centerY" id="VRi-bK-VKy"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bZW-ql-iOj">
                                 <rect key="frame" x="134" y="820" width="146.5" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chow Town™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWQ-UZ-rrZ">
-                                        <rect key="frame" x="25.5" y="0.0" width="95.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWQ-UZ-rrZ">
+                                        <rect key="frame" x="46" y="0.0" width="54" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -43,12 +53,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0o4-QS-L9S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="2De-f4-TSM"/>
                             <constraint firstItem="bZW-ql-iOj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="772-35-Q3O"/>
+                            <constraint firstItem="Ccn-7s-ERv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EdZ-gJ-mON"/>
                             <constraint firstItem="bZW-ql-iOj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MjT-PI-9Xe"/>
-                            <constraint firstItem="0o4-QS-L9S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tbh-VT-LVv"/>
-                            <constraint firstItem="0o4-QS-L9S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jk0-rT-xyb"/>
-                            <constraint firstAttribute="bottom" secondItem="0o4-QS-L9S" secondAttribute="bottom" id="tZA-pm-CMl"/>
+                            <constraint firstAttribute="bottom" secondItem="Ccn-7s-ERv" secondAttribute="bottom" id="c4Z-Ae-vKM"/>
+                            <constraint firstItem="Ccn-7s-ERv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eEB-CE-586"/>
+                            <constraint firstItem="Ccn-7s-ERv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kIg-f1-m4g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -59,6 +69,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
+        <image name="appLogo" width="102" height="106.5"/>
     </resources>
 </document>

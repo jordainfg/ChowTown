@@ -64,11 +64,11 @@ public class ViewModel{
     
     // MARK: - Views
     // ChoiceMenuViewController
-   
+    
     var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
         
-       // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
-      //  let specials = meals.filter {$0.isPopular == true}
+        // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
+        //  let specials = meals.filter {$0.isPopular == true}
         let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == false})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
         return types
@@ -79,11 +79,17 @@ public class ViewModel{
     
     var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
         
-        let AddOns = selectedMeal?.additions.map { mealDetailTableViewDataType.addOns($0) } ?? [.addOns("No addons for this meal")]
+        if let additions = selectedMeal?.additions{
+            let AddOns = additions.map { mealDetailTableViewDataType.addOns($0) }
+            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
+            return types
+        } else{
+            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")]]
+            
+            return types
+        }
         
-        let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
         
-        return types
     }
     
     // Search & Favorites
@@ -91,7 +97,7 @@ public class ViewModel{
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
         //let favorites = []
-       // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
+        // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
         let restaurantDataTypes = restaurants.map { SearchTableViewDataType.restaurant($0) }
         var types: [[SearchTableViewDataType]] = [[],restaurantDataTypes]
         
@@ -106,12 +112,13 @@ public class ViewModel{
     //Rewards
     var rewards : [Reward] = [Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),]
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
-         let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
+        let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
         if FirebaseService.shared.authState == .isLoggedIn {
-           types = [[.header],rewardsTypes]
+            types = [[.header],rewardsTypes]
+            
         } else {
-          types = [[.login]]
+            types = [[.login]]
         }
         return types
     }
@@ -121,7 +128,7 @@ public class ViewModel{
     // SubMenuMealsAndDrinks
     
     var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
-       let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
+        let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
         let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
         
         return types
@@ -129,7 +136,7 @@ public class ViewModel{
     
     // REWARDS
     
-   
+    
     
     
     

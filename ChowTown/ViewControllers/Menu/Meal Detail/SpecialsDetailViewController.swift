@@ -25,7 +25,7 @@ class SpecialsDetailViewController: UIViewController {
     var isPopOver = false
     override func viewDidLoad() {
         super.viewDidLoad()
-       // imageView.hero.id = "specialHeroID\(specialHeroID)"
+        // imageView.hero.id = "specialHeroID\(specialHeroID)"
         
         //needs optimizing
         httpsReference =   viewModel.storage.reference(forURL: meal!.imageRef)
@@ -62,14 +62,14 @@ class SpecialsDetailViewController: UIViewController {
         
         
         
-//        if isPopOver{
-//            let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
-//            button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-//            button.tintColor = .white
-//            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-//            button.hero.id = "specialHeroID\(specialHeroID)"
-//            self.view.addSubview(button)
-//        }
+        //        if isPopOver{
+        //            let button = UIButton(frame: CGRect(x: 20, y: 55, width: 35, height: 35))
+        //            button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        //            button.tintColor = .white
+        //            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //            button.hero.id = "specialHeroID\(specialHeroID)"
+        //            self.view.addSubview(button)
+        //        }
         
     }
     func setupTableView() {
@@ -92,40 +92,11 @@ class SpecialsDetailViewController: UIViewController {
     }
     
     
-    @objc func buttonAction(sender: UIPanGestureRecognizer) {
-        switch sender.state {
-        case .began:
-            hero.dismissViewController()
-            
-        case .changed:
-            let translation = sender.translation(in: nil)
-            let progress = translation.y / 2 / view.bounds.height
-            Hero.shared.update(progress)
-            //                   let currentPos = CGPoint(x:translation.x + imageView.center.x , y: translation.y + imageView.center.y)
-        //                   Hero.shared.apply(modifiers: [.position(currentPos)], to: imageView)
-        default:
-            Hero.shared.finish()
-        }
-    }
     
     
     
-    @IBAction func pressed(_ sender: UIPanGestureRecognizer) {
-        
-        switch sender.state {
-        case .began:
-            hero.dismissViewController()
-            
-        case .changed:
-            let translation = sender.translation(in: nil)
-            let progress = translation.y / 2 / view.bounds.height
-            Hero.shared.update(progress)
-            //                let currentPos = CGPoint(x:translation.x + imageView.center.x , y: translation.y + imageView.center.y)
-        //                Hero.shared.apply(modifiers: [.position(currentPos)], to: imageView)
-        default:
-            Hero.shared.finish()
-        }
-    }
+    
+    
 }
 
 extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDelegate{
@@ -207,12 +178,9 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         switch section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
-                      cell.specialHeaderView.hero.id = "specialHeaderViewHeroID\(specialHeroID)"
-                      cell.specialName.hero.id =  "specialNameHeroID\(specialHeroID)"
-                      cell.specialSubTitle.hero.id = "specialDetailHeroID\(specialHeroID)"
-                      cell.configure(meal: meal!)
-                      cell.indentationLevel = 2;
-                      return cell
+            cell.configure(meal: meal!)
+            cell.indentationLevel = 2;
+            return cell
         case 1:
             headerCell.label.text = "NUTRITION INFORMATION"
             return headerCell
@@ -224,29 +192,29 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             return headerCell
         case 4:
             if meal?.additions.count == 0 {
-              headerCell.label.text = ""
+                headerCell.label.text = ""
             } else{
-               headerCell.label.text = "Addons"
+                headerCell.label.text = "Addons"
             }
             
             return headerCell
         default:
             
-             return headerCell
+            return headerCell
             
         }
     }
     
-//    func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        switch section {
-//        case 0:
-//            return 130
-//        case 1:
-//            return 40
-//        default:
-//            return 40
-//        }
-//    }
+    //    func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    //        switch section {
+    //        case 0:
+    //            return 130
+    //        case 1:
+    //            return 40
+    //        default:
+    //            return 40
+    //        }
+    //    }
     
     
     

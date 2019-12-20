@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */; };
-		1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1103448D2379973E0072688F /* MenuHeaderTableViewCell.xib */; };
 		110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344902379AE930072688F /* HomePageMenuViewController.swift */; };
-		1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */; };
-		1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */; };
-		110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F129E239546D200E80E4D /* ButtonBarSegementedControl.swift */; };
 		110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F12A0239554E200E80E4D /* HeaderForSectionTableViewCell.swift */; };
 		110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110F12A1239554E200E80E4D /* HeaderForSectionTableViewCell.xib */; };
 		1117BB1A237EBE8600CB1CD9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117BB19237EBE8600CB1CD9 /* Restaurant.swift */; };
@@ -142,7 +137,6 @@
 		11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C5082523685FEC003400D0 /* LaunchScreen.storyboard */; };
 		11C5083223685FEC003400D0 /* ChowTownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5083123685FEC003400D0 /* ChowTownTests.swift */; };
 		11C5083D23685FEC003400D0 /* ChowTownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5083C23685FEC003400D0 /* ChowTownUITests.swift */; };
-		11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5084C23686733003400D0 /* SpecialsViewController.swift */; };
 		11C5085423686ECF003400D0 /* SpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5085223686ECF003400D0 /* SpecialCollectionViewCell.swift */; };
 		11C5085523686ECF003400D0 /* SpecialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */; };
 		11C5088D23687EE4003400D0 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11C5086B23687EE4003400D0 /* OFL.txt */; };
@@ -158,11 +152,6 @@
 		11C5089D23687EE4003400D0 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087C23687EE4003400D0 /* String+extension.swift */; };
 		11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087D23687EE4003400D0 /* CustomTextField.swift */; };
 		11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5087E23687EE4003400D0 /* UITextFIield+extension.swift */; };
-		11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D452379771300C69DC3 /* MenuViewController.swift */; };
-		11C65D4923797A2F00C69DC3 /* MealCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4723797A2F00C69DC3 /* MealCollectionTableViewCell.swift */; };
-		11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */; };
-		11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */; };
-		11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */; };
 		11CDCC7223A284A400661D1A /* SettingHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCC7023A284A400661D1A /* SettingHeaderTableViewCell.swift */; };
 		11CDCC7323A284A400661D1A /* SettingHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11CDCC7123A284A400661D1A /* SettingHeaderTableViewCell.xib */; };
 		11CDCC7723A28AAC00661D1A /* SelectedOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCC7623A28AAC00661D1A /* SelectedOptionViewController.swift */; };
@@ -202,12 +191,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		1103448D2379973E0072688F /* MenuHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		110344902379AE930072688F /* HomePageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageMenuViewController.swift; sourceTree = "<group>"; };
-		110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuMealsAndDrinksHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMenuMealsAndDrinksHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		110F129E239546D200E80E4D /* ButtonBarSegementedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarSegementedControl.swift; sourceTree = "<group>"; };
 		110F12A0239554E200E80E4D /* HeaderForSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForSectionTableViewCell.swift; sourceTree = "<group>"; };
 		110F12A1239554E200E80E4D /* HeaderForSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForSectionTableViewCell.xib; sourceTree = "<group>"; };
 		1117BB19237EBE8600CB1CD9 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -323,7 +307,6 @@
 		11C5083823685FEC003400D0 /* ChowTownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChowTownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5083C23685FEC003400D0 /* ChowTownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChowTownUITests.swift; sourceTree = "<group>"; };
 		11C5083E23685FEC003400D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11C5084C23686733003400D0 /* SpecialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsViewController.swift; sourceTree = "<group>"; };
 		11C5085223686ECF003400D0 /* SpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 		11C5085323686ECF003400D0 /* SpecialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialCollectionViewCell.xib; sourceTree = "<group>"; };
 		11C5085D23687EE4003400D0 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -359,11 +342,6 @@
 		11C5087C23687EE4003400D0 /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		11C5087D23687EE4003400D0 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		11C5087E23687EE4003400D0 /* UITextFIield+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFIield+extension.swift"; sourceTree = "<group>"; };
-		11C65D452379771300C69DC3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		11C65D4723797A2F00C69DC3 /* MealCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
-		11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		11CDCC7023A284A400661D1A /* SettingHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		11CDCC7123A284A400661D1A /* SettingHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		11CDCC7523A287A700661D1A /* Berry.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Berry.entitlements; sourceTree = "<group>"; };
@@ -445,29 +423,6 @@
 				1124827B2399272C00946402 /* MakeReservationButtonTableViewCell.xib */,
 			);
 			path = "Reservation Details";
-			sourceTree = "<group>";
-		};
-		1162FE7B2382DF1400943CEE /* NotUsed */ = {
-			isa = PBXGroup;
-			children = (
-				110F129E239546D200E80E4D /* ButtonBarSegementedControl.swift */,
-				11C5084B236866B1003400D0 /* Cells */,
-				11C65D4C23797E1C00C69DC3 /* CollectionViewCells */,
-				11C5084C23686733003400D0 /* SpecialsViewController.swift */,
-				11C65D452379771300C69DC3 /* MenuViewController.swift */,
-			);
-			path = NotUsed;
-			sourceTree = "<group>";
-		};
-		1162FE802382EB0C00943CEE /* Meals */ = {
-			isa = PBXGroup;
-			children = (
-				11C65D4723797A2F00C69DC3 /* MealCollectionTableViewCell.swift */,
-				11C65D4823797A2F00C69DC3 /* MealCollectionTableViewCell.xib */,
-				1103448C2379973E0072688F /* MenuHeaderTableViewCell.swift */,
-				1103448D2379973E0072688F /* MenuHeaderTableViewCell.xib */,
-			);
-			path = Meals;
 			sourceTree = "<group>";
 		};
 		1162FE892382ED1700943CEE /* Menu */ = {
@@ -684,17 +639,8 @@
 				11A90E972382BA7B00388093 /* Rewards */,
 				11B8DF2523A23B5900D7FFFC /* Authentication */,
 				11DB44F623A264EA009B4095 /* Settings */,
-				1162FE7B2382DF1400943CEE /* NotUsed */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		11C5084B236866B1003400D0 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				11C65D4B23797DFB00C69DC3 /* TableViewCells */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		11C5085C23687EE4003400D0 /* Fonts */ = {
@@ -743,23 +689,6 @@
 				11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		11C65D4B23797DFB00C69DC3 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				1162FE802382EB0C00943CEE /* Meals */,
-			);
-			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		11C65D4C23797E1C00C69DC3 /* CollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				11C65D4D23797E4600C69DC3 /* FeaturedCollectionViewCell.swift */,
-				11C65D4E23797E4600C69DC3 /* FeaturedCollectionViewCell.xib */,
-			);
-			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		11CDCC7823A28ABF00661D1A /* Pane one */ = {
@@ -819,8 +748,6 @@
 			children = (
 				115694BE23854A5300B0BD7F /* SubMenuMealsAndDrinksViewController.swift */,
 				1180BBA42394FFC8003227DD /* Filtering */,
-				110344982379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift */,
-				110344992379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib */,
 				115694BA2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift */,
 				115694BB2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib */,
 			);
@@ -984,16 +911,13 @@
 				119B88B223A38026003312B1 /* SettingsTextBoxTableViewCell.xib in Resources */,
 				116F7591238BDABB002FB784 /* Overpass-Regular.ttf in Resources */,
 				11A4EBDE2397C5E300D26756 /* ReservationCollectionViewCell.xib in Resources */,
-				1103448F2379973E0072688F /* MenuHeaderTableViewCell.xib in Resources */,
 				1117BB31237EE64500CB1CD9 /* HeaderForTableViewSection.xib in Resources */,
 				1117BB1F237EC34400CB1CD9 /* FavoriteEstablishmentTableViewCell.xib in Resources */,
 				1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */,
 				11DB44FC23A2664A009B4095 /* SettingOptionTableViewCell.xib in Resources */,
 				1180BB9F2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib in Resources */,
 				11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */,
-				11C65D4A23797A2F00C69DC3 /* MealCollectionTableViewCell.xib in Resources */,
 				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
-				11C65D5023797E4600C69DC3 /* FeaturedCollectionViewCell.xib in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
 				11248273239916C400946402 /* DateTimePickerTableViewCell.xib in Resources */,
 				11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */,
@@ -1016,7 +940,6 @@
 				11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */,
 				116F75A0238BDABB002FB784 /* Nunito-LightItalic.ttf in Resources */,
 				11A4E6FB23ACD28B00569CFE /* ButtonTableViewCell.xib in Resources */,
-				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
 				116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */,
 				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
 				11B8DF2B23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib in Resources */,
@@ -1130,14 +1053,11 @@
 				11F3DCE6237C2B6600EA1932 /* LoginBodyTableViewCell.swift in Sources */,
 				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
 				11B8DF2723A23CC900D7FFFC /* AuthenticationViewController.swift in Sources */,
-				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */,
 				1162121C236AFD2200546EC1 /* MealHeaderTableViewCell.swift in Sources */,
-				11C65D4923797A2F00C69DC3 /* MealCollectionTableViewCell.swift in Sources */,
 				11B8DF2423A2289900D7FFFC /* AuthenticationService.swift in Sources */,
-				11C5084D23686733003400D0 /* SpecialsViewController.swift in Sources */,
 				11C26311237AF3E100E74394 /* AddOnTableViewCell.swift in Sources */,
 				11B8DF2223A2285600D7FFFC /* FirebaseService.swift in Sources */,
 				11C5089E23687EE4003400D0 /* CustomTextField.swift in Sources */,
@@ -1153,7 +1073,6 @@
 				11A4E6F323ACC86900569CFE /* SignUpViewController.swift in Sources */,
 				1164B6F623A132AF00972B46 /* RewardCardTableViewCell.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
-				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
 				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
 				11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */,
@@ -1163,10 +1082,7 @@
 				11B8DF2E23A23FCC00D7FFFC /* LoginOptionsTableViewCell.swift in Sources */,
 				11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */,
 				1162FE8C2382ED4B00943CEE /* SubMenuCollectionViewCell.swift in Sources */,
-				11C65D4F23797E4600C69DC3 /* FeaturedCollectionViewCell.swift in Sources */,
 				1162FE7E2382DF5A00943CEE /* MenuSpecialsTableViewCell.swift in Sources */,
-				1103449A2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.swift in Sources */,
-				1103448E2379973E0072688F /* MenuHeaderTableViewCell.swift in Sources */,
 				11A4EBE12397C60000D26756 /* ReservationTableViewCell.swift in Sources */,
 				11C262F2237ABC1E00E74394 /* ViewModel.swift in Sources */,
 				11B4AE5523A7AE2E0089D7B3 /* QRCodeViewController.swift in Sources */,

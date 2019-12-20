@@ -107,49 +107,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="kGz-2k-W2p" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84.5" width="339" height="6"/>
-                                <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="O49-UZ-sZD"/>
-                                </constraints>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81J-Y7-lM3">
-                                <rect key="frame" x="0.0" y="100.5" width="339" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gsm-p7-M7N" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="128.5" width="339" height="6"/>
-                                <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGg-ab-YfK">
-                                <rect key="frame" x="0.0" y="144.5" width="339" height="19.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="m6M-0Y-8go" customClass="customProgressBar" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="174" width="339" height="6"/>
-                                <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </progressView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="kGz-2k-W2p" firstAttribute="height" secondItem="gsm-p7-M7N" secondAttribute="height" id="cnq-3M-3ah"/>
-                            <constraint firstItem="gsm-p7-M7N" firstAttribute="height" secondItem="m6M-0Y-8go" secondAttribute="height" id="wTT-mJ-3Xw"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="kGz-2k-W2p"/>
-                                <exclude reference="81J-Y7-lM3"/>
-                                <exclude reference="gsm-p7-M7N"/>
-                                <exclude reference="dGg-ab-YfK"/>
-                                <exclude reference="m6M-0Y-8go"/>
-                            </mask>
-                        </variation>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" name="DarkModeBlack"/>
