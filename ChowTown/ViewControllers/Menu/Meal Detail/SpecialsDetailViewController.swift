@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 import FirebaseUI
 
 
@@ -20,7 +19,7 @@ class SpecialsDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var headerView: UIView!
     var specialHeroID = 0
-    var kTableHeaderHeight:CGFloat = 300.0
+    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3
     let placeholderImage = UIImage(named: "")
     var httpsReference :  StorageReference?
     var isPopOver = false
@@ -142,14 +141,15 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             return cell
         case .aboutIconSet(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
-            cell.iCons = meal?.about as! [Int]
+            cell.iCons = meal?.about ?? []
             return cell
         case .alergenIconSet(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: IconsTableViewCell.reuseIdentifier()) as! IconsTableViewCell
             cell.iCons = meal?.allergens as! [Int]
             return cell
-        case .addOns(_):
+        case let .addOns(text):
             let cell = tableView.dequeueReusableCell(withIdentifier: AddOnTableViewCell.reuseIdentifier()) as! AddOnTableViewCell
+            cell.configure(text: text)
             return cell
         }
         
@@ -223,7 +223,12 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
             headerCell.label.text = "Alergens"
             return headerCell
         case 4:
-            headerCell.label.text = "Addons"
+            if meal?.additions.count == 0 {
+              headerCell.label.text = ""
+            } else{
+               headerCell.label.text = "Addons"
+            }
+            
             return headerCell
         default:
             

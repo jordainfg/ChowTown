@@ -95,6 +95,11 @@
 		119B88B223A38026003312B1 /* SettingsTextBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */; };
 		119B88B523A384D3003312B1 /* SettingsInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */; };
 		119B88B623A384D3003312B1 /* SettingsInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119B88B423A384D3003312B1 /* SettingsInfoTableViewCell.xib */; };
+		11A4E6F323ACC86900569CFE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4E6F223ACC86900569CFE /* SignUpViewController.swift */; };
+		11A4E6F623ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4E6F423ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift */; };
+		11A4E6F723ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4E6F523ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib */; };
+		11A4E6FA23ACD28B00569CFE /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4E6F823ACD28B00569CFE /* ButtonTableViewCell.swift */; };
+		11A4E6FB23ACD28B00569CFE /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4E6F923ACD28B00569CFE /* ButtonTableViewCell.xib */; };
 		11A4EBD02397AC7300D26756 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */; };
 		11A4EBD32397B0C200D26756 /* textFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */; };
 		11A4EBD42397B0C200D26756 /* textFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */; };
@@ -105,8 +110,6 @@
 		11A4EBE62397D38400D26756 /* ReservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */; };
 		11B4AE5523A7AE2E0089D7B3 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */; };
 		11B4AE5923A7B72A0089D7B3 /* LarkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */; };
-		11B4AE5C23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */; };
-		11B4AE5D23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */; };
 		11B8DF1B23A21EF000D7FFFC /* RewardsLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */; };
 		11B8DF1C23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */; };
 		11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */; };
@@ -267,6 +270,11 @@
 		119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextBoxTableViewCell.xib; sourceTree = "<group>"; };
 		119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInfoTableViewCell.swift; sourceTree = "<group>"; };
 		119B88B423A384D3003312B1 /* SettingsInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsInfoTableViewCell.xib; sourceTree = "<group>"; };
+		11A4E6F223ACC86900569CFE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		11A4E6F423ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFooterTableViewCell.swift; sourceTree = "<group>"; };
+		11A4E6F523ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationFooterTableViewCell.xib; sourceTree = "<group>"; };
+		11A4E6F823ACD28B00569CFE /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		11A4E6F923ACD28B00569CFE /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBCF2397AC7300D26756 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		11A4EBD12397B0C100D26756 /* textFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textFieldTableViewCell.xib; sourceTree = "<group>"; };
 		11A4EBD22397B0C200D26756 /* textFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -277,8 +285,6 @@
 		11A4EBE52397D38400D26756 /* ReservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailsViewController.swift; sourceTree = "<group>"; };
 		11B4AE5423A7AE2E0089D7B3 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LarkSeque.swift; sourceTree = "<group>"; };
-		11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonTableViewCell.swift; sourceTree = "<group>"; };
-		11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginButtonTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1923A21EF000D7FFFC /* RewardsLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsLoginTableViewCell.swift; sourceTree = "<group>"; };
 		11B8DF1A23A21EF000D7FFFC /* RewardsLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsLoginTableViewCell.xib; sourceTree = "<group>"; };
 		11B8DF1F23A2253C00D7FFFC /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -510,6 +516,14 @@
 			path = Designables;
 			sourceTree = "<group>";
 		};
+		11A4E6F123ACC84100569CFE /* Sign up */ = {
+			isa = PBXGroup;
+			children = (
+				11A4E6F223ACC86900569CFE /* SignUpViewController.swift */,
+			);
+			path = "Sign up";
+			sourceTree = "<group>";
+		};
 		11A4EBCE2397AC4A00D26756 /* Reservations */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +559,7 @@
 		11B8DF2523A23B5900D7FFFC /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				11A4E6F123ACC84100569CFE /* Sign up */,
 				11B8DF2623A23CC900D7FFFC /* AuthenticationViewController.swift */,
 				11B8DF2823A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.swift */,
 				11B8DF2923A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib */,
@@ -552,8 +567,10 @@
 				11B8DF2D23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib */,
 				11B8DF3123A2432E00D7FFFC /* EmailLoginTableViewCell.swift */,
 				11B8DF3223A2432E00D7FFFC /* EmailLoginTableViewCell.xib */,
-				11B4AE5A23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift */,
-				11B4AE5B23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib */,
+				11A4E6F423ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift */,
+				11A4E6F523ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib */,
+				11A4E6F823ACD28B00569CFE /* ButtonTableViewCell.swift */,
+				11A4E6F923ACD28B00569CFE /* ButtonTableViewCell.xib */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -998,6 +1015,7 @@
 				119B88B623A384D3003312B1 /* SettingsInfoTableViewCell.xib in Resources */,
 				11F3DCE7237C2B6600EA1932 /* LoginBodyTableViewCell.xib in Resources */,
 				116F75A0238BDABB002FB784 /* Nunito-LightItalic.ttf in Resources */,
+				11A4E6FB23ACD28B00569CFE /* ButtonTableViewCell.xib in Resources */,
 				1103449B2379B64A0072688F /* SubMenuMealsAndDrinksHeaderTableViewCell.xib in Resources */,
 				116F759B238BDABB002FB784 /* Overpass-Black.ttf in Resources */,
 				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
@@ -1005,6 +1023,7 @@
 				1164B6FF23A1350300972B46 /* RewardPointsTableViewCell.xib in Resources */,
 				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
+				11A4E6F723ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib in Resources */,
 				116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */,
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
 				1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */,
@@ -1023,7 +1042,6 @@
 				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
-				11B4AE5D23A7F01E0089D7B3 /* LoginButtonTableViewCell.xib in Resources */,
 				116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
 				116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */,
@@ -1113,7 +1131,6 @@
 				11248272239916C400946402 /* DateTimePickerTableViewCell.swift in Sources */,
 				11B8DF2723A23CC900D7FFFC /* AuthenticationViewController.swift in Sources */,
 				11C65D462379771300C69DC3 /* MenuViewController.swift in Sources */,
-				11B4AE5C23A7F01E0089D7B3 /* LoginButtonTableViewCell.swift in Sources */,
 				1162FE882382EC0F00943CEE /* SubMenuTableViewCell.swift in Sources */,
 				11C5089623687EE4003400D0 /* Date+extension.swift in Sources */,
 				1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */,
@@ -1130,8 +1147,10 @@
 				1164B6FE23A1350300972B46 /* RewardPointsTableViewCell.swift in Sources */,
 				11C5089A23687EE4003400D0 /* DrawingView.swift in Sources */,
 				110344912379AE930072688F /* HomePageMenuViewController.swift in Sources */,
+				11A4E6FA23ACD28B00569CFE /* ButtonTableViewCell.swift in Sources */,
 				11C5089923687EE4003400D0 /* UIView+Extension.swift in Sources */,
 				11C262F4237ABD2200E74394 /* Menu.swift in Sources */,
+				11A4E6F323ACC86900569CFE /* SignUpViewController.swift in Sources */,
 				1164B6F623A132AF00972B46 /* RewardCardTableViewCell.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
 				110F129F239546D200E80E4D /* ButtonBarSegementedControl.swift in Sources */,
@@ -1187,6 +1206,7 @@
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,
+				11A4E6F623ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift in Sources */,
 				11C5089523687EE4003400D0 /* UIColor+extension.swift in Sources */,
 				1191F5B4236C742C00649C79 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */,

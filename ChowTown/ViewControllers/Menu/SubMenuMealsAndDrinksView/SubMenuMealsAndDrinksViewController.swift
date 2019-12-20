@@ -120,6 +120,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
             tableView.deselectRow(at: indexPath, animated: true)
         case let .meal(meal):
             selectedMeal = meal
+            viewModel.selectedMeal = meal
             tableView.deselectRow(at: indexPath, animated: true)
             if selectedMeal != nil{
                 tableView.deselectRow(at: indexPath, animated: true)

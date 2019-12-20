@@ -10,9 +10,12 @@ import UIKit
 
 class AddOnTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var addName: UILabel!
+    @IBOutlet weak var addPrice: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,4 +33,12 @@ class AddOnTableViewCell: UITableViewCell {
                return "AddOnTableViewCell"
            }
     
+    func configure(text : String){
+        let fullName    = text
+        let fullNameArr = fullName.components(separatedBy: ",")
+
+        addName.text = "+ \(fullNameArr[0])"
+        addPrice.text = "\(fullNameArr[1])"
+        
+    }
 }

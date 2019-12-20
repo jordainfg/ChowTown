@@ -78,8 +78,8 @@ class textFieldTableViewCell: UITableViewCell {
         v.inactiveHintColor = UIColor(red: 209/255, green: 211/255, blue: 212/255, alpha: 1)
         v.activeHintColor = UIColor(named: "BlackToOrange")!
         v.focusedBackgroundColor = UIColor.hexStringToUIColor(hex: "#212121")
-        v.defaultBackgroundColor = UIColor.black
-        v.borderColor = UIColor.white
+        v.defaultBackgroundColor = UIColor.hexStringToUIColor(hex: "#424242")
+        v.borderColor = UIColor.clear
         v.errorColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 0.7)
         
         //

@@ -3,12 +3,11 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Overpass-SemiBold.ttf">
+        <array key="overpass-semibold.otf">
             <string>Overpass-SemiBold</string>
         </array>
     </customFonts>
@@ -24,7 +23,6 @@
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="260" verticalCompressionResistancePriority="760" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yp7-aP-Yel" customClass="CocoaTextField" customModule="CocoaTextField">
                         <rect key="frame" x="20" y="4.5" width="362" height="64"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Overpass-SemiBold" family="Overpass" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         <userDefinedRuntimeAttributes>
@@ -61,7 +59,6 @@
                         </connections>
                     </textField>
                 </subviews>
-                <color key="backgroundColor" name="DarkModeBlack"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Yp7-aP-Yel" secondAttribute="bottom" constant="4.5" id="P3j-Mj-eSC"/>
                     <constraint firstAttribute="trailing" secondItem="Yp7-aP-Yel" secondAttribute="trailing" constant="20" id="nsS-b5-5tb"/>
@@ -69,7 +66,6 @@
                     <constraint firstItem="Yp7-aP-Yel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4.5" id="xQ8-23-iTp"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" name="DarkModeBlack"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="textField" destination="Yp7-aP-Yel" id="4hi-Yt-0ql"/>
@@ -77,9 +73,4 @@
             <point key="canvasLocation" x="97.101449275362327" y="35.825892857142854"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="DarkModeBlack">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

@@ -44,6 +44,19 @@ class FirebaseService : NSObject {
         FirebaseApp.configure()
         db = Firestore.firestore()
         
+        if authState == .isLoggedOut {
+            Auth.auth().signInAnonymously() { (authResult, error) in
+                if authResult != nil{
+                    print("Signed in anonymously")
+                }
+                else if error != nil{
+                    print("Error singin in anonymously")
+                   
+                }
+            }
+        }
+        
+        
     }
     
     public private(set) var authenticationState: AuthenticationState? {
@@ -86,12 +99,12 @@ class FirebaseService : NSObject {
                     "name": "test",
                     "email": "\(authResult.user.email!)",
                     "user_ID": "\(authResult.user.uid)",
-    
+                    
                 ])
                 completionHandler(.success(authResult.user))
             }
             else if error != nil{
-                print(error)
+               // print(error)
                 completionHandler(.failure(.unAuthenticated))
             }
             
@@ -101,7 +114,7 @@ class FirebaseService : NSObject {
     
     func loginUser(Email: String, password: String, completionHandler: @escaping (Result<User, CoreError>) -> Void){
         Auth.auth().signIn(withEmail: Email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
+            guard self != nil else { return }
             if let authResult = authResult{
                 Auth.auth().addStateDidChangeListener { (auth, user) in
                     if let user = user {
@@ -115,7 +128,7 @@ class FirebaseService : NSObject {
                 }
             }
             else if error != nil{
-               
+                
                 completionHandler(.failure(.unAuthenticated))
             }
         }
@@ -125,8 +138,8 @@ class FirebaseService : NSObject {
     func setAuthenticationState(uid : String){
         
         
-       let docRef = db?.collection("Users").document(uid)
-
+        let docRef = db?.collection("Users").document(uid)
+        
         docRef?.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
@@ -137,7 +150,7 @@ class FirebaseService : NSObject {
                 print("Document data: \(dataDescription)")
             } else {
                 
-                 self.setAuthState(state: .isLoggedOut)
+                self.setAuthState(state: .isLoggedOut)
                 print("Document does not exist")
             }
         }
@@ -146,6 +159,14 @@ class FirebaseService : NSObject {
     
     func setAuthState(state : authenticationState){
         self.authState = state
+    }
+    
+    func checkAuthenticationState(){
+        if authenticationState == nil {
+            setAuthState(state: .isLoggedOut)
+        } else {
+            setAuthState(state: .isLoggedIn)
+        }
     }
     
     func clearAllSessionData(){

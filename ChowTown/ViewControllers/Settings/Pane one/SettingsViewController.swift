@@ -26,6 +26,8 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     var selectedSetting : SettingOptionDataType?
     
+    var delegate : AuthenticationDelegate?
+    
     var tableViewcellTypes: [[SettingOptionDataType]] {
         let types: [[SettingOptionDataType]] = [[.profile("Profile")],[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
         
@@ -52,6 +54,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         case "toSecondSettingPane":
             let secondVC = segue.destination as! SelectedOptionViewController
             secondVC.selectedSettings = selectedSetting
+            secondVC.delegate = self
         default:
             return
         }
@@ -194,3 +197,18 @@ extension SettingsViewController : UITableViewDataSource , UITableViewDelegate ,
     
 }
 
+extension SettingsViewController : AuthenticationDelegate{
+    func didCreateSuccessfully(isTrue: Bool) {
+        
+    }
+    
+    func didAuthenticateSuccessfully(isTrue: Bool) {
+        
+    }
+    
+    func didLogout() {
+        delegate?.didLogout()
+    }
+    
+    
+}

@@ -109,7 +109,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-        case let .favorite(Restaurant):
+        case  .favorite(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier()) as! FavoriteEstablishmentTableViewCell
             cell.favorites = viewModel.restaurants
             

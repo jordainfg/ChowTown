@@ -39,7 +39,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         registerForKeyboardWillShowNotification(tableView)
                registerForKeyboardWillHideNotification(tableView)
      
-       
+        print("Users state is : \(FirebaseService.shared.authState)")
+        print("Authentication state is : \(String(describing: FirebaseService.shared.authenticationState))")
         
         //FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
     }

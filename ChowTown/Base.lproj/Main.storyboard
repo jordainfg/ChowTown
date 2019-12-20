@@ -16,22 +16,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Scan-->
-        <scene sceneID="UJK-SS-CDV">
-            <objects>
-                <viewController id="lTK-Oc-c11" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D9m-9S-N1a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ATA-An-9lj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Scan" image="qrcode" catalog="system" id="d2v-0y-2kl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hDF-Wf-TUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3377" y="-609"/>
-        </scene>
         <!--Reservations-->
         <scene sceneID="HxI-Vk-J0c">
             <objects>
@@ -135,40 +119,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7Z-am-2xx" customClass="DesignableButton" customModule="Berry" customModuleProvider="target">
-                                            <rect key="frame" x="326" y="60" width="68" height="25"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="68" id="OLo-I6-qfY"/>
-                                                <constraint firstAttribute="height" constant="25" id="sOn-6z-GMU"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                            <state key="normal" title="10" image="eurosign.circle.fill" catalog="system">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="12"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="DarkModeBlack"/>
                                     <constraints>
-                                        <constraint firstItem="P7Z-am-2xx" firstAttribute="top" secondItem="HOo-FD-PnB" secondAttribute="top" constant="60" id="1cf-pu-j3f"/>
                                         <constraint firstAttribute="bottom" secondItem="HOo-FD-PnB" secondAttribute="bottom" id="6jb-Ry-gVQ"/>
-                                        <constraint firstItem="HOo-FD-PnB" firstAttribute="trailing" secondItem="P7Z-am-2xx" secondAttribute="trailing" constant="20" id="BaR-uK-cDA"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="leading" secondItem="Wj2-c2-nmv" secondAttribute="leading" id="Mbe-gg-bxJ"/>
                                         <constraint firstItem="HOo-FD-PnB" firstAttribute="top" secondItem="Wj2-c2-nmv" secondAttribute="top" id="lhl-FL-zTZ"/>
                                         <constraint firstAttribute="trailing" secondItem="HOo-FD-PnB" secondAttribute="trailing" id="mhu-6U-qCw"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="P7Z-am-2xx"/>
-                                        </mask>
-                                    </variation>
                                 </view>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
@@ -236,7 +194,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Present this QR code to collect your badges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-TB-X60">
-                                                <rect key="frame" x="0.0" y="274" width="316.5" height="263"/>
+                                                <rect key="frame" x="0.0" y="274" width="316" height="263"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
                                                 <color key="textColor" name="WhiteToOrange"/>
                                                 <nil key="highlightedColor"/>
@@ -312,7 +270,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h28-7C-h1v">
-                                <rect key="frame" x="20" y="690" width="374" height="30"/>
+                                <rect key="frame" x="20" y="696" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VSU-Go-1SV"/>
                                 </constraints>
@@ -323,16 +281,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2OI-TY-spI">
-                                <rect key="frame" x="134" y="820" width="146.5" height="42"/>
+                                <rect key="frame" x="133.5" y="826" width="147" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-zx-tdJ">
-                                        <rect key="frame" x="46" y="0.0" width="54" height="19.5"/>
+                                        <rect key="frame" x="47.5" y="0.0" width="52.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-w9-Rhh">
-                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="147" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -344,7 +302,6 @@
                         <constraints>
                             <constraint firstItem="vVI-Gs-QIc" firstAttribute="centerX" secondItem="gnF-nD-9X9" secondAttribute="centerX" id="6mT-fc-GTk"/>
                             <constraint firstItem="h28-7C-h1v" firstAttribute="leading" secondItem="7xu-yW-3Yg" secondAttribute="leading" constant="20" id="9TH-s5-lPH"/>
-                            <constraint firstItem="h28-7C-h1v" firstAttribute="centerX" secondItem="gnF-nD-9X9" secondAttribute="centerX" id="MEl-JO-4sZ"/>
                             <constraint firstItem="2OI-TY-spI" firstAttribute="bottom" secondItem="gnF-nD-9X9" secondAttribute="bottom" constant="-34" id="Str-Dw-0As"/>
                             <constraint firstItem="2OI-TY-spI" firstAttribute="centerX" secondItem="gnF-nD-9X9" secondAttribute="centerX" id="YJj-fD-l44"/>
                             <constraint firstItem="vVI-Gs-QIc" firstAttribute="top" secondItem="7xu-yW-3Yg" secondAttribute="top" constant="20" id="oTr-bj-l2C"/>
@@ -502,13 +459,12 @@
                             <color key="tintColor" name="DarkModeOrange"/>
                             <connections>
                                 <action selector="settingsButtonPresesed:" destination="7LW-fw-8pr" id="imm-a1-Ayt"/>
-                                <segue destination="ou9-Tn-HGU" kind="presentation" id="4DR-v3-jms"/>
+                                <segue destination="ou9-Tn-HGU" kind="presentation" identifier="toSettingsPane" id="4DR-v3-jms"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="G9K-OW-0sG">
                             <color key="tintColor" name="DarkModeOrange"/>
                             <connections>
-                                <action selector="testButtonPressed:" destination="7LW-fw-8pr" id="Gbj-BB-6zK"/>
                                 <segue destination="xwk-Ce-TaY" kind="presentation" customClass="LarkSeque" customModule="Berry" customModuleProvider="target" id="sdR-fU-MBI"/>
                             </connections>
                         </barButtonItem>
@@ -568,11 +524,62 @@
                     <navigationItem key="navigationItem" id="lTb-6K-hDD"/>
                     <connections>
                         <outlet property="tableView" destination="3WU-v3-lGi" id="5fh-KO-jQW"/>
+                        <segue destination="uXZ-Ua-abv" kind="show" identifier="showSignUp" id="h3i-Fl-Xto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjc-og-baV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5969.5652173913049" y="870.53571428571422"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="ZqR-in-nQQ">
+            <objects>
+                <viewController id="uXZ-Ua-abv" customClass="SignUpViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzr-NN-EzO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-z1-3S9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Sign up" id="wMB-iF-iZj">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark.circle.fill" catalog="system" id="8BH-rP-5US">
+                                            <color key="tintColor" name="BlackToOrange"/>
+                                            <connections>
+                                                <action selector="closeButtonPressed:" destination="uXZ-Ua-abv" id="9h3-3Z-CGd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-QF-fr1">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uXZ-Ua-abv" id="w81-3k-qSV"/>
+                                    <outlet property="delegate" destination="uXZ-Ua-abv" id="x5q-vy-MpZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dtu-z1-3S9" firstAttribute="leading" secondItem="1EQ-uW-s1D" secondAttribute="leading" id="9hx-3v-gFe"/>
+                            <constraint firstItem="XaS-QF-fr1" firstAttribute="leading" secondItem="1EQ-uW-s1D" secondAttribute="leading" id="KNp-rf-MBs"/>
+                            <constraint firstItem="XaS-QF-fr1" firstAttribute="trailing" secondItem="1EQ-uW-s1D" secondAttribute="trailing" id="hnu-Hi-1sW"/>
+                            <constraint firstItem="Dtu-z1-3S9" firstAttribute="top" secondItem="1EQ-uW-s1D" secondAttribute="top" id="lUt-2V-gSu"/>
+                            <constraint firstItem="XaS-QF-fr1" firstAttribute="top" secondItem="Dtu-z1-3S9" secondAttribute="bottom" id="myY-6r-Cgr"/>
+                            <constraint firstAttribute="bottom" secondItem="XaS-QF-fr1" secondAttribute="bottom" id="pgL-Q3-Ksh"/>
+                            <constraint firstItem="Dtu-z1-3S9" firstAttribute="trailing" secondItem="1EQ-uW-s1D" secondAttribute="trailing" id="xAF-M5-uwQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1EQ-uW-s1D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H7j-xM-cke"/>
+                    <connections>
+                        <outlet property="tableView" destination="XaS-QF-fr1" id="ykY-M1-lp5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9C-3M-KIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6692.753623188406" y="875.89285714285711"/>
         </scene>
         <!--Lunch-->
         <scene sceneID="bfv-EX-eu4">
@@ -583,7 +590,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="734"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -594,7 +601,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dcL-ch-zaX" firstAttribute="leading" secondItem="ioa-LB-ZYz" secondAttribute="leading" id="0lb-Ob-KE9"/>
-                            <constraint firstItem="dcL-ch-zaX" firstAttribute="top" secondItem="ze7-Ya-FeV" secondAttribute="top" id="94d-hL-FsU"/>
+                            <constraint firstItem="dcL-ch-zaX" firstAttribute="top" secondItem="ioa-LB-ZYz" secondAttribute="top" id="94d-hL-FsU"/>
                             <constraint firstItem="dcL-ch-zaX" firstAttribute="bottom" secondItem="ioa-LB-ZYz" secondAttribute="bottom" constant="34" id="Jaq-vq-LWs"/>
                             <constraint firstItem="dcL-ch-zaX" firstAttribute="trailing" secondItem="ioa-LB-ZYz" secondAttribute="trailing" id="Tjb-18-i7W"/>
                         </constraints>
@@ -610,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2n-Ry-HJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6643" y="137"/>
+            <point key="canvasLocation" x="6642.0289855072469" y="136.60714285714286"/>
         </scene>
         <!--Menu-->
         <scene sceneID="aZf-nM-iYb">
@@ -691,40 +698,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-NI-oB6" customClass="DesignableButton" customModule="Berry" customModuleProvider="target">
-                                            <rect key="frame" x="326" y="60" width="68" height="25"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="68" id="WkS-Mw-tTo"/>
-                                                <constraint firstAttribute="height" constant="25" id="rpr-Yh-YkE"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                            <state key="normal" title="10" image="eurosign.circle.fill" catalog="system">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="12"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="wle-tg-JsJ" firstAttribute="leading" secondItem="kPX-QG-fzo" secondAttribute="leading" id="23M-fB-ZMH"/>
-                                        <constraint firstItem="wle-tg-JsJ" firstAttribute="trailing" secondItem="dUb-NI-oB6" secondAttribute="trailing" constant="20" id="GSd-k0-faD"/>
                                         <constraint firstItem="wle-tg-JsJ" firstAttribute="top" secondItem="kPX-QG-fzo" secondAttribute="top" id="XAw-vb-Vy9"/>
                                         <constraint firstAttribute="trailing" secondItem="wle-tg-JsJ" secondAttribute="trailing" id="jpi-do-ORv"/>
-                                        <constraint firstItem="dUb-NI-oB6" firstAttribute="top" secondItem="wle-tg-JsJ" secondAttribute="top" constant="60" id="pRj-vo-4ov"/>
                                         <constraint firstAttribute="bottom" secondItem="wle-tg-JsJ" secondAttribute="bottom" id="zXm-4b-rdV"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="dUb-NI-oB6"/>
-                                        </mask>
-                                    </variation>
                                 </view>
                                 <connections>
                                     <outlet property="dataSource" destination="WA2-C4-63L" id="SOm-lA-kSQ"/>
@@ -956,7 +937,7 @@
                     <tabBarItem key="tabBarItem" title="Rewards" image="star.circle.fill" catalog="system" id="gfj-ar-Bku"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7zS-Or-gQm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -994,7 +975,6 @@
         <image name="RewardsBanner" width="184.5" height="162.5"/>
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="eurosign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="icMenu" width="24" height="24"/>

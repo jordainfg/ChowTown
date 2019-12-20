@@ -51,7 +51,7 @@ class AuthenticationService {
     
     func loginUser(Email: String, password: String, completionHandler: @escaping (Result<User, CoreError>) -> Void){
         Auth.auth().signIn(withEmail: Email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
+            guard self != nil else { return }
             if let authResult = authResult{
                 Auth.auth().addStateDidChangeListener { (auth, user) in
                     if let user = user {

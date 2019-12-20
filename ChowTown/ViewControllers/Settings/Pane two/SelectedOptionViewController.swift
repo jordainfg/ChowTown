@@ -40,7 +40,7 @@ class SelectedOptionViewController: UIViewController {
     
     var header:[Int:String] = [1:"", 2:"", 3:""]
     
-    
+    var delegate : AuthenticationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -187,6 +187,7 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
         case .LogOutbutton:
             FirebaseService.shared.clearAllSessionData()
             configureSettingsForView(selectedSettings: selectedSettings!)
+            delegate?.didLogout()
             tableView.reloadData()
         case .LoginButton:
             performSegue(withIdentifier: "presentAuthentication", sender: nil)
@@ -261,6 +262,14 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
 }
 
 extension SelectedOptionViewController : AuthenticationDelegate{
+    func didCreateSuccessfully(isTrue: Bool) {
+        
+    }
+    
+    func didLogout() {
+        
+    }
+    
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue{
             header[1] = "Profile info".uppercased()
@@ -310,3 +319,5 @@ extension SelectedOptionViewController : appearanceSwitchDelegator{
     
     
 }
+
+

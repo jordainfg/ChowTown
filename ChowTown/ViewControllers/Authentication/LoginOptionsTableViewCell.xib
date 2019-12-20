@@ -24,24 +24,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fyf-tb-Oyb">
                         <rect key="frame" x="20" y="5" width="280" height="197"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrY-bP-cNA" customClass="LeftAlignedIconButton" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
-                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Login" image="iCbestseller">
-                                    <color key="titleColor" white="1" alpha="0.9198148545" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="27"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-zh-8la" customClass="LeftAlignedIconButton" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="63" width="280" height="53"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="53"/>
                                 <color key="backgroundColor" red="0.25476518269999998" green="0.5176934004" blue="0.95282274479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
                                 <constraints>
@@ -60,16 +44,14 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wa-vs-wFR">
-                                <rect key="frame" x="132.5" y="126" width="15.5" height="71"/>
+                                <rect key="frame" x="132.5" y="63" width="15.5" height="134"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="a9T-zh-8la" firstAttribute="height" secondItem="PrY-bP-cNA" secondAttribute="height" id="Hkm-zj-WzF"/>
-                            <constraint firstItem="PrY-bP-cNA" firstAttribute="width" secondItem="fyf-tb-Oyb" secondAttribute="width" id="oZ6-Lf-fnH"/>
-                            <constraint firstItem="PrY-bP-cNA" firstAttribute="width" secondItem="a9T-zh-8la" secondAttribute="width" id="pK9-8q-Uva"/>
+                            <constraint firstItem="a9T-zh-8la" firstAttribute="width" secondItem="fyf-tb-Oyb" secondAttribute="width" id="ena-qc-RLg"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -85,7 +67,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="iCbestseller" width="24" height="24"/>
         <image name="icGoogleCircle" width="24" height="24"/>
     </resources>
 </document>

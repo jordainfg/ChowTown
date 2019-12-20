@@ -15,12 +15,15 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     var headerView: UIView!
-    var kTableHeaderHeight:CGFloat = 170
+    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 5
     let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         viewModel.addRewardPoints(points: 30)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func setupTableView() {
@@ -55,11 +58,27 @@ class RewardsViewController: UIViewController {
         headerView.frame = headerRect
     }
     
-    @IBAction func testButtonPressed(_ sender: Any) {
-        viewModel.addRewardPoints(points: 30)
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        switch segue.identifier {
+        case "presentAuthentication":
+            let secondVC = segue.destination as! AuthenticationViewController
+            secondVC.delegate = self
+        case "toSettingsPane":
+                   let navController = segue.destination as! UINavigationController
+                 let secondVC = navController.topViewController as! SettingsViewController
+                 secondVC.delegate = self
+        default:
+            return
+        }
         
-        
+      
     }
+    
+    //makes sure the shadow color changes when dark mode is turned on 
+     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+           // Trait collection will change. Use this one so you know what the state is changing to.
+        tableView.reloadData()
+       }
     
    
     
@@ -85,6 +104,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
             return cell
         case .reward(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
+            cell.isUserInteractionEnabled = false
             return cell
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
@@ -140,5 +160,26 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         }
         
     }
+    
+}
+
+
+extension RewardsViewController : AuthenticationDelegate{
+    func didCreateSuccessfully(isTrue: Bool) {
+        
+    }
+    
+    func didAuthenticateSuccessfully(isTrue: Bool) {
+        if isTrue {
+            tableView.reloadData()
+        } else {
+            
+        }
+    }
+    
+    func didLogout() {
+        tableView.reloadData()
+    }
+    
     
 }

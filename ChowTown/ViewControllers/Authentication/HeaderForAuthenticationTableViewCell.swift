@@ -10,6 +10,9 @@ import UIKit
 
 class HeaderForAuthenticationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var headerText: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

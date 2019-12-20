@@ -21,7 +21,7 @@ enum mealDetailTableViewDataType {
     case nutritionInfo
     case aboutIconSet(String)
     case alergenIconSet(String)
-    case addOns(AddOn)
+    case addOns(String)
 }
 
 enum SearchTableViewDataType {
@@ -60,6 +60,7 @@ public class ViewModel{
     var isLoggedIn : Bool = true
     
     var selectedRestaurant : Restaurant?
+    var selectedMeal : Meal?
     
     // MARK: - Views
     // ChoiceMenuViewController
@@ -78,7 +79,7 @@ public class ViewModel{
     
     var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
         
-        let AddOns = addons.map { mealDetailTableViewDataType.addOns($0) }
+        let AddOns = selectedMeal?.additions.map { mealDetailTableViewDataType.addOns($0) } ?? [.addOns("No addons for this meal")]
         
         let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
         
@@ -107,9 +108,9 @@ public class ViewModel{
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
          let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
-        if FirebaseService.shared.authenticationState != nil {
+        if FirebaseService.shared.authState == .isLoggedIn {
            types = [[.header],rewardsTypes]
-        } else{
+        } else {
           types = [[.login]]
         }
         return types

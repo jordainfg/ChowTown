@@ -1,33 +1,26 @@
 //
-//  AuthenticationViewController.swift
+//  SignUpViewController.swift
 //  ChowTown
 //
-//  Created by Jordain Gijsbertha on 12/12/2019.
+//  Created by Jordain Gijsbertha on 20/12/2019.
 //  Copyright © 2019 Jordain Gijsbertha. All rights reserved.
 //
 
 import UIKit
+import UIKit
 import SPStorkController
 import Firebase
-enum authenticationDataType {
+enum signUpDataType {
     case header
-    case loginOptions
     case email
     case password
-    case loginButon
-    case footer
-    
-}
-
-protocol AuthenticationDelegate {
-    func didAuthenticateSuccessfully(isTrue : Bool)
-    func didCreateSuccessfully(isTrue : Bool)
-    func didLogout()
+    case createButon
     
 }
 
 
-class AuthenticationViewController: UIViewController {
+
+class SignUpViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,8 +29,8 @@ class AuthenticationViewController: UIViewController {
     var email : String = ""
     var password : String = ""
     var buttonIsActive : Bool = false
-    var tableViewcellTypes: [[authenticationDataType]] {
-        let types: [[authenticationDataType]] = [[.header,.loginOptions,.email,.password,.loginButon],[.footer]]
+    var tableViewcellTypes: [[signUpDataType]] {
+        let types: [[signUpDataType]] = [[.header,.email,.password,.createButon]]
         
         return types
     }
@@ -46,28 +39,25 @@ class AuthenticationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-//        let controller = UIViewController()
-//        self.presentAsStork(controller)
+        //        let controller = UIViewController()
+        //        self.presentAsStork(controller)
         // Do any additional setup after loading the view.
     }
     
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(UINib(nibName: LoginOptionsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: LoginOptionsTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: ButtonTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ButtonTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: textFieldTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: textFieldTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForAuthenticationTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForAuthenticationTableViewCell.reuseIdentifier())
-         tableView.register(UINib(nibName: AuthenticationFooterTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: AuthenticationFooterTableViewCell.reuseIdentifier())
         //        tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
     }
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 
-extension AuthenticationViewController : UITableViewDataSource , UITableViewDelegate, UITextFieldDelegate{
+extension SignUpViewController : UITableViewDataSource , UITableViewDelegate, UITextFieldDelegate{
     func textFieldShouldReturn(_: UITextField) -> Bool {
         view.endEditing(true)
         return false
@@ -87,10 +77,9 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
             
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: HeaderForAuthenticationTableViewCell.reuseIdentifier()) as! HeaderForAuthenticationTableViewCell
+            cell.headerText.text = "Sign up and unlock Berry's full potential."
             return cell
-        case .loginOptions:
-            let cell = tableView.dequeueReusableCell(withIdentifier: LoginOptionsTableViewCell.reuseIdentifier()) as! LoginOptionsTableViewCell
-            return cell
+            
         case .email:
             let cell = tableView.dequeueReusableCell(withIdentifier: textFieldTableViewCell.reuseIdentifier()) as! textFieldTableViewCell
             cell.configure(placeHoldertext: "Email", textFieldType: textFieldDataType.email)
@@ -104,61 +93,50 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
             cell.delegate = self
             return cell
             
-        case .loginButon:
+        case .createButon:
             let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.reuseIdentifier()) as! ButtonTableViewCell
-            cell.selectionStyle = .none
+            cell.name.setTitle("Create", for: .normal)
             return cell
-        case .footer:
-             let cell = tableView.dequeueReusableCell(withIdentifier: AuthenticationFooterTableViewCell.reuseIdentifier()) as! AuthenticationFooterTableViewCell
-             cell.selectionStyle = .none
-             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = tableViewcellTypes[indexPath.section][indexPath.row]
-               switch type {
-               case .header:
-                   return
-               case .loginOptions:
-                   return
-               case .email:
-                   return
-               case .password:
-                   return
-               case .loginButon:
-                tableView.deselectRow(at: indexPath, animated: true)
-               if email.count > 0 && password.count > 0 {
-                FirebaseService.shared.loginUser(Email: "jordainf@gmail.com", password: "boombam1234") { (result : Result<User, CoreError>) in
+        switch type {
+        case .header:
+            return
+            
+        case .email:
+            return
+        case .password:
+            return
+        case .createButon:
+            tableView.deselectRow(at: indexPath, animated: true)
+            if email.count > 0 && password.count > 0 {
+                FirebaseService.shared.createUser(withEmail: email, password: password) { (result : Result<User, CoreError>) in
                     switch result {
                     case .success(_):
-                        let alert = UIAlertController(title: "Success", message: "", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Success", message: "You can now sign in.", preferredStyle: UIAlertController.Style.alert)
                         self.present(alert, animated: true)
                         alert.addAction(UIAlertAction(title: "Okay",
                                                       style: UIAlertAction.Style.default,
-                        handler: {(alert: UIAlertAction!) in
-                            self.delegate?.didAuthenticateSuccessfully(isTrue: true)
-                            self.dismiss(animated: true, completion: nil)
-                            
+                                                      handler: {(alert: UIAlertAction!) in
+                                                        self.dismiss(animated: true, completion: nil)
                         }))
                     case .failure(_):
-                        let alert = UIAlertController(title: "Invalid credentials", message: "", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                        let alert = UIAlertController(title: "Oops", message: "Looks like currently you can't sign up, please try again later", preferredStyle: UIAlertController.Style.alert)
                         self.present(alert, animated: true)
                         alert.addAction(UIAlertAction(title: "Okay",
                                                       style: UIAlertAction.Style.default,
-                        handler: {(alert: UIAlertAction!) in
-                              self.navigationController?.popViewController(animated: true)
-                            self.delegate?.didAuthenticateSuccessfully(isTrue: false)
-                            
+                                                      handler: {(alert: UIAlertAction!) in
+                                                        self.dismiss(animated: true, completion: nil)
+                                                        
                         }))
                         
                     }
                 }
-               }
-                   
-               case .footer:
-                performSegue(withIdentifier: "showSignUp", sender: nil)
+            }
+            
         }
     }
     
@@ -169,7 +147,7 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
             return 60
         case .password:
             return 60
-        case .loginButon:
+        case .createButon:
             return 90
         default:
             return UITableView.automaticDimension
@@ -179,7 +157,7 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
     
 }
 
-extension AuthenticationViewController : textFieldCellDelegate{
+extension SignUpViewController : textFieldCellDelegate{
     func didEditTextField(text: String, type: textFieldDataType) {
         
         switch type {

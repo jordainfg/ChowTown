@@ -66,7 +66,7 @@ extension ViewModel{
     func getPopularMeals( completion: @escaping () -> Void){
         self.Popularmeals.removeAll()
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
-        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+     //   let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         //print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
         db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").getDocuments() { (querySnapshot, err) in
             if let err = err {
