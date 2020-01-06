@@ -77,7 +77,7 @@ public extension UITableView {
         let messageLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = UIColor(named: "BlackToOrange")!
+        titleLabel.textColor = UIColor(named: "BlackToOrange")
         titleLabel.font = UIFont(name: "Nunito-Bold", size: 16)
         messageLabel.textColor = UIColor.lightGray
         messageLabel.font = UIFont(name: "Nunito-SemiBold", size: 15)

@@ -46,6 +46,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
                                   options: .transitionCrossDissolve,
                                   animations: { self.tableView.reloadData() })
             }
+        } else {
+         // TODO - Alert that something went wrong
         }
         setupView()
         

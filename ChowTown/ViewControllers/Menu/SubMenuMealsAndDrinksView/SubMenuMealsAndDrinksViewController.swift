@@ -23,15 +23,21 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         self.title = menu?.title
         setupTableView()
         tableView.showLoadingIndicator()
-        viewModel.getMealsForMenu(selectedMenu: menu!){
-            self.viewModel.filterdMeals = self.viewModel.meals
-            self.tableView.hideLoadingIndicator()
-            UIView.transition(with: self.tableView,
-                              duration: 0.5,
-                              options: .transitionCrossDissolve,
-                              animations: { self.tableView.reloadData() })
-            
+        
+        if let unwrappedMenu = menu {
+            viewModel.getMealsForMenu(selectedMenu: unwrappedMenu){
+                      self.viewModel.filterdMeals = self.viewModel.meals
+                      self.tableView.hideLoadingIndicator()
+                      UIView.transition(with: self.tableView,
+                                        duration: 0.5,
+                                        options: .transitionCrossDissolve,
+                                        animations: { self.tableView.reloadData() })
+                
+            }
+        } else {
+            // TODO - Error getting menu , think about what to do in this sencerio
         }
+      
         
         
     }

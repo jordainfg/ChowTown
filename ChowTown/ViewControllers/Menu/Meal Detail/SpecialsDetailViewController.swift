@@ -27,7 +27,7 @@ class SpecialsDetailViewController: UIViewController {
         super.viewDidLoad()
         // imageView.hero.id = "specialHeroID\(specialHeroID)"
         
-        //needs optimizing
+        // TODO - Needs a better implementation, force unwrapping has to go, needs a placeholder image
         httpsReference =   viewModel.storage.reference(forURL: meal!.imageRef)
         imageView.sd_setImage(with: httpsReference!, placeholderImage: placeholderImage)
         //
@@ -178,7 +178,7 @@ extension SpecialsDetailViewController : UITableViewDataSource , UITableViewDele
         switch section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: MealHeaderTableViewCell.reuseIdentifier()) as! MealHeaderTableViewCell
-            cell.configure(meal: meal!)
+            cell.configure(meal: meal!) // TODO - Remove force unwrapping
             cell.indentationLevel = 2;
             return cell
         case 1:

@@ -70,7 +70,6 @@
 		116F75A4238BE063002FB784 /* RestaurantAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */; };
 		116F75A5238BE063002FB784 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A2238BE063002FB784 /* RestaurantViewController.swift */; };
 		116F75A6238BE063002FB784 /* RestaurantAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */; };
-		1178120C239E7F9F00EFD552 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */; };
 		1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180BB9C2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift */; };
 		1180BB9F2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1180BB9D2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib */; };
 		1180BBA22394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180BBA02394FFBC003227DD /* SubMenuMealsAndDrinksFilterItemCollectionViewCell.swift */; };
@@ -85,7 +84,6 @@
 		1196871623A298DF00D2F831 /* UserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */; };
 		1196871923A29C9600D2F831 /* SettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */; };
 		1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */; };
-		11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */; };
 		119B88B123A38026003312B1 /* SettingsTextBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B88AF23A38026003312B1 /* SettingsTextBoxTableViewCell.swift */; };
 		119B88B223A38026003312B1 /* SettingsTextBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */; };
 		119B88B523A384D3003312B1 /* SettingsInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */; };
@@ -171,6 +169,8 @@
 		11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */; };
 		11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */; };
 		223B22B7CC103DC515F8D878 /* Pods_ChowTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */; };
+		5E0FC73F23C320DE0062E188 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */; };
+		5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,8 +248,6 @@
 		1196871423A298DF00D2F831 /* UserProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewCell.xib; sourceTree = "<group>"; };
 		1196871723A29C9600D2F831 /* SettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
 		1196871823A29C9600D2F831 /* SettingsButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsButtonTableViewCell.xib; sourceTree = "<group>"; };
-		11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iconWithLabelTableViewCell.swift; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.swift"; sourceTree = "<absolute>"; };
-		11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = iconWithLabelTableViewCell.xib; path = "/Users/jordaingijsbertha/Xcode Projects/ChowTown/ChowTown/ViewControllers/Search/Restaurant/iconWithLabelTableViewCell.xib"; sourceTree = "<absolute>"; };
 		119B88AF23A38026003312B1 /* SettingsTextBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextBoxTableViewCell.swift; sourceTree = "<group>"; };
 		119B88B023A38026003312B1 /* SettingsTextBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextBoxTableViewCell.xib; sourceTree = "<group>"; };
 		119B88B323A384D3003312B1 /* SettingsInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -361,6 +359,8 @@
 		11F3DCEC237C397F00EA1932 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+extension.swift"; sourceTree = "<group>"; };
 		11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsDetailViewController.swift; sourceTree = "<group>"; };
+		5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iconWithLabelTableViewCell.xib; sourceTree = "<group>"; };
+		5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconWithLabelTableViewCell.swift; sourceTree = "<group>"; };
 		74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.debug.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.release.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,8 +443,8 @@
 				116F75A2238BE063002FB784 /* RestaurantViewController.swift */,
 				116F75A3238BE063002FB784 /* RestaurantAboutTableViewCell.swift */,
 				116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */,
-				11984CEC238BE2D8001E1BF0 /* iconWithLabelTableViewCell.swift */,
-				11984CED238BE2D8001E1BF0 /* iconWithLabelTableViewCell.xib */,
+				5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */,
+				5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -920,6 +920,7 @@
 				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
 				11248273239916C400946402 /* DateTimePickerTableViewCell.xib in Resources */,
+				5E0FC73F23C320DE0062E188 /* iconWithLabelTableViewCell.xib in Resources */,
 				11A4EBE22397C60000D26756 /* ReservationTableViewCell.xib in Resources */,
 				1124827D2399272C00946402 /* MakeReservationButtonTableViewCell.xib in Resources */,
 				116F7598238BDABB002FB784 /* Nunito-ExtraLight.ttf in Resources */,
@@ -960,7 +961,6 @@
 				1117BB23237EC49300CB1CD9 /* FavoriteEstablishmentCollectionViewCell.xib in Resources */,
 				1162FE7F2382DF5A00943CEE /* MenuSpecialsTableViewCell.xib in Resources */,
 				110F12A3239554E200E80E4D /* HeaderForSectionTableViewCell.xib in Resources */,
-				11984CEF238BEA99001E1BF0 /* iconWithLabelTableViewCell.xib in Resources */,
 				11B8DF2F23A23FCC00D7FFFC /* LoginOptionsTableViewCell.xib in Resources */,
 				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
@@ -1115,10 +1115,10 @@
 				115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */,
 				110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */,
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,
-				1178120C239E7F9F00EFD552 /* iconWithLabelTableViewCell.swift in Sources */,
 				11C26304237AC9E600E74394 /* iconCollectionViewCell.swift in Sources */,
 				11CDCC7223A284A400661D1A /* SettingHeaderTableViewCell.swift in Sources */,
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
+				5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */,
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,

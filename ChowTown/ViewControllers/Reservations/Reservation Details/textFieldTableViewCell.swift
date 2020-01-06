@@ -39,7 +39,7 @@ class textFieldTableViewCell: UITableViewCell {
         } else {
             applyDarkStyle(to: textField)
         }
-        //   textField.titleFont = UIFont(name: "Overpass-SemiBold", size: 13)!
+    
         
     }
     
@@ -76,7 +76,7 @@ class textFieldTableViewCell: UITableViewCell {
         v.tintColor = UIColor(named: "BlackToOrange")
         v.textColor = UIColor.white
         v.inactiveHintColor = UIColor(red: 209/255, green: 211/255, blue: 212/255, alpha: 1)
-        v.activeHintColor = UIColor(named: "BlackToOrange")!
+        v.activeHintColor = UIColor(named: "BlackToOrange") ?? UIColor.black
         v.focusedBackgroundColor = UIColor.hexStringToUIColor(hex: "#212121")
         v.defaultBackgroundColor = UIColor.hexStringToUIColor(hex: "#424242")
         v.borderColor = UIColor.clear

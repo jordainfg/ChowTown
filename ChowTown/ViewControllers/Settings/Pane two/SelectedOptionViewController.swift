@@ -44,7 +44,7 @@ class SelectedOptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSettingsForView(selectedSettings: selectedSettings!)
+        configureSettingsForView(selectedSettings: selectedSettings!) // TODO - Remove force unwrapping
         setupTableView()
         
     }
