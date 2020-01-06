@@ -62,6 +62,8 @@ public class ViewModel{
     var selectedRestaurant : Restaurant?
     var selectedMeal : Meal?
     
+    var rewards : [Reward] = []
+    var rewardPoints : UserRewardPoints?
     // MARK: - Views
     // ChoiceMenuViewController
     
@@ -110,7 +112,7 @@ public class ViewModel{
     
     
     //Rewards
-    var rewards : [Reward] = [Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),Reward(name: "re", points: 2),]
+
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
         let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]

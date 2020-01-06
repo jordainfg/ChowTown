@@ -12,10 +12,8 @@ import Firebase
 extension ViewModel{
     // MARK: - CR MEALS
     func addMeal(refRestaurant : DocumentReference?, refMenu :DocumentReference?){
-        // Add a new document with a generated ID
-        
-     //  let refMeal = db.collection("Restaurant/\(refRestaurant.documentID)/Menu/\(refMenu.documentID)/Meals").document()
-        let refMeal = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/Menu/Bwv6ujfH8P9eDcx0X4xb/Meals").document()
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let refMeal = db.collection("Restaurant/\(restID)/Menu/Bwv6ujfH8P9eDcx0X4xb/Meals").document()
         refMeal.setData([
             "companyID" : "2",
             "name": "Noosh Bowl",
@@ -40,7 +38,8 @@ extension ViewModel{
     
     func addPopularMeal(){
            // Add a new document with a generated ID
-          let refMeal = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").document()
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+          let refMeal = db.collection("Restaurant/\(restID)/PopularMeals").document()
            refMeal.setData([
                "companyID" : "2",
                "name": "Acai bowl",
@@ -66,9 +65,9 @@ extension ViewModel{
     func getPopularMeals( completion: @escaping () -> Void){
         self.Popularmeals.removeAll()
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
-     //   let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         //print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
-        db.collection("Restaurant/XyKLjdbP818Od9uX7atq/PopularMeals").getDocuments() { (querySnapshot, err) in
+        db.collection("Restaurant/\(restID)/PopularMeals").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -113,7 +112,8 @@ extension ViewModel{
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
        //  let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
-        let refMenu = db.collection("Restaurant/XyKLjdbP818Od9uX7atq/Menu").document()
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let refMenu = db.collection("Restaurant/\(restID))/Menu").document()
         refMenu.setData([
             "menuID" : refMenu.documentID,
             "companyID" : "2",
@@ -224,9 +224,32 @@ extension ViewModel{
     }
     
     // MARK: - CR Rewards
+    
+    func getRewards( completion: @escaping () -> Void){
+          rewards.removeAll()
+          let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+          db.collection("Restaurant/\(restID)/Rewards").getDocuments() { (querySnapshot, err) in
+              if let err = err {
+                  print("Error getting documents: \(err)")
+              } else {
+                  for document in querySnapshot!.documents {
+                      
+                      self.rewards.append(Reward(dictionary: document.data())! )
+                      
+                    self.getRewardPointsForRestaurant{
+                        completion()
+                    }
+                  }
+                  
+                  print("Boom, \(self.meals)")
+              }
+          }
+      }
+    
     func addRewardPoints(points : Int){
-        // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
-               let docRef = db.collection("Users/muzunI6MKLNck3msZU5dO0NeBNh1/Rewards").document()
+         let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+               let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
 
                     docRef.setData( [
                        "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
@@ -241,6 +264,24 @@ extension ViewModel{
             }
         }
         
+    }
+    
+    func getRewardPointsForRestaurant(completion: @escaping () -> Void){
+        if let userID = FirebaseService.shared.authenticationState?.user_ID {
+            let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                self.rewardPoints = UserRewardPoints(dictionary: document.data()!)
+                print("Document data: \(dataDescription)")
+                completion()
+            } else {
+                print("Document does not exist")
+            }
+        }
+        }
     }
     
 }

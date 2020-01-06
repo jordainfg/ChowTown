@@ -10,6 +10,7 @@ import UIKit
 
 class RewardsHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var points: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

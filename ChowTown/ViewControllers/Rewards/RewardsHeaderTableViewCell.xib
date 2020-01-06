@@ -81,6 +81,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" name="WhiteToBlack"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="points" destination="eR7-hN-w4q" id="ay9-pQ-VXk"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="134.93303571428569"/>
         </tableViewCell>
     </objects>

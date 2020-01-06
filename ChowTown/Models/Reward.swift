@@ -10,15 +10,33 @@ import Foundation
 public struct Reward{
     
     var name : String
-    var points: Int
+    var points: String
     
     
+    init?(dictionary: [String: Any]) {
+          guard let name = dictionary["name"] as? String else { return nil }
+          self.name = name
+          self.points = dictionary["points"] as! String
+         
+     
+          
+      }
+        
+}
+
+public struct UserRewardPoints{
     
-//    init?(dictionary: [String: Any]) {
-//        guard let title = dictionary["title"] as? String else { return nil }
-//        self.title = title
-//        self.detail = dictionary["detail"] as! String
-//
-//    }
+    var restID : String
+    var rewardPoints: String
+    
+    
+    init?(dictionary: [String: Any]) {
+          guard let restID = dictionary["restID"] as? String else { return nil }
+          self.restID = restID
+          self.rewardPoints = dictionary["rewardPoints"] as! String
+         
+     
+          
+      }
         
 }

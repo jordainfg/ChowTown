@@ -10,6 +10,8 @@ import UIKit
 
 class RewardPrizeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var points: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

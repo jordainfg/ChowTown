@@ -19,8 +19,15 @@ class RewardsViewController: UIViewController {
     let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if FirebaseService.shared.authState == .isLoggedIn {
+            tableView.showLoadingIndicator()
+                       viewModel.getRewards {
+                           self.tableView.reloadData()
+                           self.tableView.hideLoadingIndicator()
+                       }
+        }
         setupTableView()
-        viewModel.addRewardPoints(points: 30)
+       // viewModel.addRewardPoints(points: 30)
     }
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -101,9 +108,12 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         switch type {
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsHeaderTableViewCell.reuseIdentifier()) as! RewardsHeaderTableViewCell
+            cell.points.text = viewModel.rewardPoints?.rewardPoints
             return cell
-        case .reward(_):
+        case let .reward(reward):
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
+            cell.name.text = reward.name
+            cell.points.text = reward.points
             cell.isUserInteractionEnabled = false
             return cell
         case .login:
@@ -171,7 +181,12 @@ extension RewardsViewController : AuthenticationDelegate{
     
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue {
-            tableView.reloadData()
+            tableView.showLoadingIndicator()
+            viewModel.getRewards {
+                self.tableView.reloadData()
+                self.tableView.hideLoadingIndicator()
+            }
+            
         } else {
             
         }
