@@ -25,14 +25,16 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.showLoadingIndicator()
+        tableView.LoadingIndicator(isVisable: true)
         viewModel.getRestaurants {
             self.filterdEstablishments =  self.viewModel.restaurants
-            self.tableView.hideLoadingIndicator()
+          
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
                               animations: { self.tableView.reloadData() })
+            
+              self.tableView.LoadingIndicator(isVisable: false)
         }
         
         setUpTableView()
@@ -68,6 +70,7 @@ class SearchViewController: UIViewController {
         case "toRestaurant":
             let secondVC = segue.destination as! RestaurantViewController
             secondVC.restaurant = selectedRestaurant
+            viewModel.selectedRestaurant = selectedRestaurant
             secondVC.viewModel = self.viewModel
         default:
             return

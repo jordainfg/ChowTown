@@ -176,6 +176,24 @@ extension ViewModel{
         }
     }
     
+    func getRestaurant(completion: @escaping () -> Void){
+           
+           let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+           let docRef = db.collection("Restaurant").document(restID)
+           
+           docRef.getDocument { (document, error) in
+               if let document = document, document.exists {
+                _ = document.data().map(String.init(describing:)) ?? "nil"
+                   self.selectedRestaurant = Restaurant(dictionary: document.data()!)
+                   print("got the restaurant")
+                   completion()
+               } else {
+                   print("Document does not exist")
+               }
+           }
+           
+       }
+    
     func addRestaurant(){
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
@@ -206,22 +224,22 @@ extension ViewModel{
         
     }
     
-    func favoriteRestaurant(){
-       // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
-        let docRef = db.collection("Users").document("muzunI6MKLNck3msZU5dO0NeBNh1")
-
-             docRef.setData( [
-                   "user_ID" : "testing",
-                  
-               ]){ err in
-                   if let err = err {
-                       print("Error adding document: \(err)")
-                   } else {
-                       print("Edites")
-                      
-                   }
-               }
-    }
+//    func favoriteRestaurant(){
+//       // let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+//        let docRef = db.collection("Users").document("muzunI6MKLNck3msZU5dO0NeBNh1")
+//
+//             docRef.setData( [
+//                   "user_ID" : "testing",
+//                  
+//               ]){ err in
+//                   if let err = err {
+//                       print("Error adding document: \(err)")
+//                   } else {
+//                       print("Edites")
+//                      
+//                   }
+//               }
+//    }
     
     // MARK: - CR Rewards
     
@@ -237,11 +255,12 @@ extension ViewModel{
                       self.rewards.append(Reward(dictionary: document.data())! )
                       
                     self.getRewardPointsForRestaurant{
+                        print("got the reward points for the user")
+                        
                         completion()
                     }
                   }
                   
-                  print("Boom, \(self.meals)")
               }
           }
       }
@@ -275,7 +294,7 @@ extension ViewModel{
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 self.rewardPoints = UserRewardPoints(dictionary: document.data()!)
-                print("Document data: \(dataDescription)")
+                print("got the reward points for the user")
                 completion()
             } else {
                 print("Document does not exist")

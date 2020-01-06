@@ -17,17 +17,24 @@ class RewardsViewController: UIViewController {
     var headerView: UIView!
     var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 5
     let viewModel = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.getRestaurant {
         if FirebaseService.shared.authState == .isLoggedIn {
-            tableView.showLoadingIndicator()
-                       viewModel.getRewards {
-                           self.tableView.reloadData()
-                           self.tableView.hideLoadingIndicator()
-                       }
+            self.tableView.LoadingIndicator(isVisable: true)
+            self.viewModel.getRewards {
+                if self.viewModel.rewards.isEmpty {
+                    self.tableView.setEmptyViewWithImage(title: "Oops", message: "Looks like this restaurant doesn't participate in our rewards program :(", messageImage: #imageLiteral(resourceName: "Group 8"))
+                }
+                self.tableView.LoadingIndicator(isVisable: false)
+                self.tableView.reloadData()
+                
+            }
+        }
         }
         setupTableView()
-       // viewModel.addRewardPoints(points: 30)
+        // viewModel.addRewardPoints(points: 30)
     }
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -52,7 +59,7 @@ class RewardsViewController: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
-       
+        
     }
     func updateHeaderView() {
         
@@ -71,23 +78,23 @@ class RewardsViewController: UIViewController {
             let secondVC = segue.destination as! AuthenticationViewController
             secondVC.delegate = self
         case "toSettingsPane":
-                   let navController = segue.destination as! UINavigationController
-                 let secondVC = navController.topViewController as! SettingsViewController
-                 secondVC.delegate = self
+            let navController = segue.destination as! UINavigationController
+            let secondVC = navController.topViewController as! SettingsViewController
+            secondVC.delegate = self
         default:
             return
         }
         
-      
+        
     }
     
     //makes sure the shadow color changes when dark mode is turned on 
-     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-           // Trait collection will change. Use this one so you know what the state is changing to.
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        // Trait collection will change. Use this one so you know what the state is changing to.
         tableView.reloadData()
-       }
+    }
     
-   
+    
     
     
 }
@@ -119,7 +126,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
             cell.selectionStyle = .none
-        
+            
             return cell
         }
     }
@@ -181,10 +188,10 @@ extension RewardsViewController : AuthenticationDelegate{
     
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue {
-            tableView.showLoadingIndicator()
+            tableView.LoadingIndicator(isVisable: true)
             viewModel.getRewards {
                 self.tableView.reloadData()
-                self.tableView.hideLoadingIndicator()
+                self.tableView.LoadingIndicator(isVisable: false)
             }
             
         } else {

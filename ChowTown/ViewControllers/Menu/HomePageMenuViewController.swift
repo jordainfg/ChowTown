@@ -26,6 +26,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         super.viewDidLoad()
       //  viewModel.favoriteRestaurant()
         setupTableView()
+        print("tetetetetetetete")
+        print(viewModel.selectedRestaurant)
         //viewModel.addPopularMeal()
         //viewModel.addRestaurant()
         //        viewModel.getMealsForMenu()  {
@@ -120,6 +122,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        
         switch segue.identifier {
         case "toMeal":
             let secondVC = segue.destination as! SpecialsDetailViewController
@@ -134,6 +137,9 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         default:
             return
         }
+        // passing data to tab bar viewcontroller and then to navigation controller and then to the final view controller
+       
+        
     }
     
 }

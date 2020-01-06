@@ -22,12 +22,12 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         super.viewDidLoad()
         self.title = menu?.title
         setupTableView()
-        tableView.showLoadingIndicator()
+        tableView.LoadingIndicator(isVisable: true)
         
         if let unwrappedMenu = menu {
             viewModel.getMealsForMenu(selectedMenu: unwrappedMenu){
                       self.viewModel.filterdMeals = self.viewModel.meals
-                      self.tableView.hideLoadingIndicator()
+                self.tableView.LoadingIndicator(isVisable: false)
                       UIView.transition(with: self.tableView,
                                         duration: 0.5,
                                         options: .transitionCrossDissolve,
@@ -87,7 +87,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
         if viewModel.filterdMeals.count == 0 {
-            self.tableView.setEmptyView(title: "No results", message: "We do not have any options for your choice")
+            self.tableView.setEmptyViewWithImage(title: "", message: "", messageImage: #imageLiteral(resourceName: "appLogo"))
         } else {
           self.tableView.restore()
         }

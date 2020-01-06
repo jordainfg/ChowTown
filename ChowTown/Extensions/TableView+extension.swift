@@ -19,7 +19,7 @@ public extension UITableView {
         let titleLabel = UILabel()
         let messageLabel = UILabel()
         
-        messageImageView.backgroundColor = .clear
+        messageImageView.backgroundColor = .white
         // emptyView.backgroundColor = .red
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +53,7 @@ public extension UITableView {
         messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
         
         messageImageView.image = messageImage
+        messageImageView.tintColor = UIColor.lightGray
         titleLabel.text = title
         messageLabel.text = message
         messageLabel.numberOfLines = 0
@@ -65,13 +66,13 @@ public extension UITableView {
         backgroundView = nil
         separatorStyle = .none
         if let viewWithTag = self.viewWithTag(20) {
-                   viewWithTag.removeFromSuperview()
-                   
-               backgroundView = nil
-           }
+            viewWithTag.removeFromSuperview()
+            
+            backgroundView = nil
+        }
     }
     
-    func setEmptyView(title: String, message: String) {
+    func setEmptyViewWithImage(title: String, message: String) {
         let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
         let titleLabel = UILabel()
         let messageLabel = UILabel()
@@ -98,31 +99,40 @@ public extension UITableView {
         separatorStyle = .none
     }
     
-    func showLoadingIndicator() {
+    func LoadingIndicator(isVisable: Bool) {
+        let activityIndicator = UIActivityIndicatorView()
         let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
-        backgroundView = emptyView
-       // let activityIndicator = MaterialLoadingIndicator(radius: 14, color: UIColor.softBlue)
-           let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.style = .medium
-        activityIndicator.color = UIColor.black
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        activityIndicator.center = CGPoint(x: backgroundView!.frame.width / 2, y: backgroundView!.frame.height / 2)
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.tag = 20
-        self.addSubview(activityIndicator)
-       // backgroundView?.addSubview(activityIndicator)
-        activityIndicator.centerXAnchor.constraint(equalTo: backgroundView!.centerXAnchor, constant: 0).isActive = true
-        activityIndicator.centerYAnchor.constraint(equalTo: backgroundView!.centerYAnchor, constant: -50).isActive = true
-        activityIndicator.startAnimating()
+        if isVisable{
+            
+            backgroundView = emptyView
+            // let activityIndicator = MaterialLoadingIndicator(radius: 14, color: UIColor.softBlue)
+            
+            activityIndicator.style = .medium
+            activityIndicator.color = UIColor.black
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+            activityIndicator.center = CGPoint(x: backgroundView!.frame.width / 2, y: backgroundView!.frame.height / 2)
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            
+            emptyView.addSubview(activityIndicator)
+            // backgroundView?.addSubview(activityIndicator)
+            activityIndicator.centerXAnchor.constraint(equalTo: backgroundView!.centerXAnchor, constant: 0).isActive = true
+            activityIndicator.centerYAnchor.constraint(equalTo: backgroundView!.centerYAnchor, constant: -50).isActive = true
+            activityIndicator.startAnimating()
+            
+            backgroundView = emptyView
+        } else {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+            emptyView.removeFromSuperview()
+            backgroundView = nil
+            
+        }
     }
     
-    func hideLoadingIndicator(){
-        if let viewWithTag = self.viewWithTag(20) {
-            viewWithTag.removeFromSuperview()
-            
-        backgroundView = nil
-    }
-    }
+    
+    
+    
+    
 }
 
 extension UIColor {
