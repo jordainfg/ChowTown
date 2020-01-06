@@ -13,26 +13,18 @@ import SPLarkController
 class RewardsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var imageView: UIImageView!
-    var headerView: UIView!
-    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 5
+    
     let viewModel = ViewModel()
+    
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getRestaurant {
-        if FirebaseService.shared.authState == .isLoggedIn {
-            self.tableView.LoadingIndicator(isVisable: true)
-            self.viewModel.getRewards {
-                if self.viewModel.rewards.isEmpty {
-                    self.tableView.setEmptyViewWithImage(title: "Oops", message: "Looks like this restaurant doesn't participate in our rewards program :(", messageImage: #imageLiteral(resourceName: "Group 8"))
-                }
-                self.tableView.LoadingIndicator(isVisable: false)
-                self.tableView.reloadData()
-                
-            }
-        }
-        }
+        refreshControl = UIRefreshControl()
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
+        self.refreshControl.beginRefreshing()
+        getRewardsData()
         setupTableView()
         // viewModel.addRewardPoints(points: 30)
     }
@@ -42,14 +34,6 @@ class RewardsViewController: UIViewController {
     
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
-        headerView = tableView.tableHeaderView
-        tableView.tableHeaderView = nil
-        tableView.addSubview(headerView)
-        tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -kTableHeaderHeight)
-        
-        
-        updateHeaderView()
         
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         tableView.register(UINib(nibName: RewardsHeaderTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsHeaderTableViewCell.reuseIdentifier())
@@ -61,16 +45,7 @@ class RewardsViewController: UIViewController {
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
         
     }
-    func updateHeaderView() {
-        
-        var headerRect = CGRect(x: 0, y: -kTableHeaderHeight, width: tableView.bounds.width, height: kTableHeaderHeight)
-        if tableView.contentOffset.y < -kTableHeaderHeight {
-            headerRect.origin.y = tableView.contentOffset.y
-            headerRect.size.height = -tableView.contentOffset.y
-        }
-        
-        headerView.frame = headerRect
-    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         switch segue.identifier {
@@ -88,13 +63,43 @@ class RewardsViewController: UIViewController {
         
     }
     
+    func getRewardsData(){
+     
+            if FirebaseService.shared.authState == .isLoggedIn {
+                self.viewModel.getRewards {
+                    if self.viewModel.rewards.isEmpty {
+                        self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+                    } else{
+                         self.tableView.restore()
+                    }
+                    self.tableView.reloadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                        self.refreshControl.endRefreshing()
+                    })
+                    
+                }
+            } else{
+                if self.viewModel.rewards.isEmpty {
+                    self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+                } else{
+                    self.tableView.restore()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                    self.refreshControl.endRefreshing()
+                })
+            }
+        
+    }
+    
     //makes sure the shadow color changes when dark mode is turned on 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         // Trait collection will change. Use this one so you know what the state is changing to.
         tableView.reloadData()
     }
     
-    
+    @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
+        getRewardsData()
+    }
     
     
 }
@@ -115,7 +120,12 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         switch type {
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsHeaderTableViewCell.reuseIdentifier()) as! RewardsHeaderTableViewCell
-            cell.points.text = viewModel.rewardPoints?.rewardPoints
+            if let points = viewModel.rewardPoints?.rewardPoints{
+                cell.points.text = points
+            } else{
+                cell.points.text = "0"
+            }
+            
             return cell
         case let .reward(reward):
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardPrizeTableViewCell.reuseIdentifier()) as! RewardPrizeTableViewCell
@@ -141,9 +151,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
             performSegue(withIdentifier: "presentAuthentication", sender: nil)
         }
     }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        updateHeaderView()
-    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let type = viewModel.rewardsTableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
@@ -188,11 +196,7 @@ extension RewardsViewController : AuthenticationDelegate{
     
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue {
-            tableView.LoadingIndicator(isVisable: true)
-            viewModel.getRewards {
-                self.tableView.reloadData()
-                self.tableView.LoadingIndicator(isVisable: false)
-            }
+            getRewardsData()
             
         } else {
             

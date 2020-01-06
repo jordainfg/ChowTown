@@ -19,17 +19,17 @@ public extension UITableView {
         let titleLabel = UILabel()
         let messageLabel = UILabel()
         
-        messageImageView.backgroundColor = .white
+        //messageImageView.backgroundColor = 
         // emptyView.backgroundColor = .red
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageImageView.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "Overpass-Bold", size: 16)
+        titleLabel.font = UIFont(name: "Nunito-Bold", size: 17)
         
         messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: "Overpass-Regular", size: 15)
+        messageLabel.font = UIFont(name: "Nunito-SemiBold", size: 16)
         
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageImageView)
@@ -49,6 +49,10 @@ public extension UITableView {
         titleLabel.topAnchor.constraint(equalTo: messageImageView.bottomAnchor, constant: 10).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
         
+        messageLabel.leftAnchor.constraint(equalTo: messageLabel.leftAnchor, constant: 30).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: messageLabel.rightAnchor, constant: 30).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor).isActive = true
         messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
         

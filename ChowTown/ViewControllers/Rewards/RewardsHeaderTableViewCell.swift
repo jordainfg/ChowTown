@@ -11,9 +11,14 @@ import UIKit
 class RewardsHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var points: UILabel!
+    @IBOutlet weak var name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if let userName = FirebaseService.shared.authenticationState?.name{
+            name.text = "HI, \(userName.uppercased())!"
+        }
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

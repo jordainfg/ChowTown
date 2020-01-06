@@ -101,10 +101,11 @@ class FirebaseService : NSObject {
                     "user_ID": "\(authResult.user.uid)",
                     
                 ])
+//               
                 completionHandler(.success(authResult.user))
             }
             else if error != nil{
-               // print(error)
+                print(error)
                 completionHandler(.failure(.unAuthenticated))
             }
             
@@ -132,6 +133,8 @@ class FirebaseService : NSObject {
                 completionHandler(.failure(.unAuthenticated))
             }
         }
+        
+        
         
     }
     

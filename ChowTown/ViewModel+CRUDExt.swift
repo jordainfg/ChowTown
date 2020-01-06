@@ -250,14 +250,17 @@ extension ViewModel{
               if let err = err {
                   print("Error getting documents: \(err)")
               } else {
+                if querySnapshot!.documents.isEmpty {
+                    completion()
+                }
                   for document in querySnapshot!.documents {
                       
                       self.rewards.append(Reward(dictionary: document.data())! )
                       
                     self.getRewardPointsForRestaurant{
                         print("got the reward points for the user")
-                        
-                        completion()
+                         completion()
+                       
                     }
                   }
                   
@@ -292,12 +295,13 @@ extension ViewModel{
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                _ = document.data().map(String.init(describing:)) ?? "nil"
                 self.rewardPoints = UserRewardPoints(dictionary: document.data()!)
                 print("got the reward points for the user")
                 completion()
             } else {
                 print("Document does not exist")
+                completion()
             }
         }
         }

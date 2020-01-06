@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         print("Users state is : \(FirebaseService.shared.authState)")
         print("Authentication state is : \(String(describing: FirebaseService.shared.authenticationState))")
         
-        //FirebaseService.shared.createUser(withEmail: "jordainf@gmail.com", password: "boombam1234" ){_ in }
+        FirebaseService.shared.createUser(withEmail: "Booooon@gmail.com", password: "boombam1234" ){_ in }
     }
     
     func checkForAppreanceMode(){

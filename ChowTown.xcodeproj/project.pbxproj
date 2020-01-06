@@ -171,6 +171,7 @@
 		223B22B7CC103DC515F8D878 /* Pods_ChowTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */; };
 		5E0FC73F23C320DE0062E188 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */; };
 		5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */; };
+		5E68BF2123C3769A0003EBEE /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E68BF2023C3769A0003EBEE /* RefreshContents.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,6 +362,7 @@
 		11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsDetailViewController.swift; sourceTree = "<group>"; };
 		5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iconWithLabelTableViewCell.xib; sourceTree = "<group>"; };
 		5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconWithLabelTableViewCell.swift; sourceTree = "<group>"; };
+		5E68BF2023C3769A0003EBEE /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.debug.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.release.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +465,7 @@
 		1191F5B0236C49B400649C79 /* Designables */ = {
 			isa = PBXGroup;
 			children = (
+				5E68BF2023C3769A0003EBEE /* RefreshContents.xib */,
 				1191F5B1236C49E400649C79 /* customProgressBar.swift */,
 				1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */,
 				11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */,
@@ -948,6 +951,7 @@
 				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
 				11A4E6F723ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib in Resources */,
+				5E68BF2123C3769A0003EBEE /* RefreshContents.xib in Resources */,
 				116F7597238BDABB002FB784 /* Nunito-Black.ttf in Resources */,
 				11C5081F23685FEA003400D0 /* Main.storyboard in Resources */,
 				1196871A23A29C9600D2F831 /* SettingsButtonTableViewCell.xib in Resources */,
