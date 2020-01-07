@@ -63,37 +63,51 @@ class RewardsViewController: UIViewController {
     
     func getRewardsData(){
         self.tableView.restore()
-        self.tableView.reloadData()
-        self.viewModel.getRewards {
-            if self.viewModel.rewards.isEmpty {
-                self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
-            } else{
-                
-                self.viewModel.getRewardPointsForRestaurant{
-                    print("got the reward points for the user")
-                    self.tableView.reloadData()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                        self.refreshControl.endRefreshing()
-                    })
+        
+        self.viewModel.getRewards {(result) in
+            switch result{
+            case .success:
+                self.viewModel.getRewardPointsForRestaurant{ (result) in
+                    switch result{
+                    case .success:
+                        self.tableView.reloadData()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                            self.refreshControl.endRefreshing()
+                        })
+                    case let .failure(error):
+                        self.tableView.reloadData()
+                        print("Error for getRewardPointsForRestaurant method:\(error)")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                                                   self.refreshControl.endRefreshing()
+                                               })
+                    }
+                    
                 }
-                
+            case let .failure(error):
+                self.tableView.reloadData()
+                self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+                print("Error for getRewards method:\(error)")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                    self.refreshControl.endRefreshing()
+                })
             }
+            
         }
-        
-        
+  
     }
     
-    //makes sure the shadow color changes when dark mode is turned on 
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        // Trait collection will change. Use this one so you know what the state is changing to.
-        tableView.reloadData()
-    }
-    
-    @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
-        getRewardsData()
-    }
-    
-    
+
+//makes sure the shadow color changes when dark mode is turned on
+override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    // Trait collection will change. Use this one so you know what the state is changing to.
+    tableView.reloadData()
+}
+
+@objc func refreshControlAction(refreshControl _: UIRefreshControl) {
+    getRewardsData()
+}
+
+
 }
 extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
     
@@ -160,7 +174,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             headerCell.sectionName.text = "Badges add up to Rewards"
-            headerCell.sectionName.textColor = UIColor.black
+            headerCell.sectionName.textColor = UIColor.label
             headerCell.sectionName.font.withSize(18)
             return headerCell.contentView
             

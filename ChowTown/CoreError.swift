@@ -18,4 +18,13 @@ public enum CoreError: Error {
     case googleLoginFailed
     case error(error: Error)
     case failed(reason: String)
+    case noSuchCollection
+    case noSuchDocument
+}
+
+public enum Response {
+    case collectionRetrieved
+    case noSuchCollection
+    case documentRetrieved
+   
 }

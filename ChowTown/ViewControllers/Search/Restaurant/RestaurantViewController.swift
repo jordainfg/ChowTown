@@ -34,7 +34,7 @@ class RestaurantViewController: UIViewController {
     
     var headerHeight : CGFloat?
     var headerView: UIView!
-    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3
+    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3.8
     
     override func viewDidLoad() {
         super.viewDidLoad()

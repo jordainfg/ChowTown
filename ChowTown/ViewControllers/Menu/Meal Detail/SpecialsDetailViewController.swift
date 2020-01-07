@@ -17,12 +17,14 @@ class SpecialsDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+   
     var headerView: UIView!
     var specialHeroID = 0
-    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3
+    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3.8
     let placeholderImage = UIImage(named: "placeHolder")
     var httpsReference :  StorageReference?
     var isPopOver = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // imageView.hero.id = "specialHeroID\(specialHeroID)"
@@ -50,8 +52,8 @@ class SpecialsDetailViewController: UIViewController {
     func setUpView(){
         
         tableView.rowHeight = UITableView.automaticDimension
-        
         headerView = tableView.tableHeaderView
+        headerView.backgroundColor = UIColor.label
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
         tableView.contentInset = UIEdgeInsets(top: kTableHeaderHeight, left: 0, bottom: 0, right: 0)
@@ -87,8 +89,8 @@ class SpecialsDetailViewController: UIViewController {
             headerRect.origin.y = tableView.contentOffset.y
             headerRect.size.height = -tableView.contentOffset.y
         }
-        
         headerView.frame = headerRect
+        
     }
     
     

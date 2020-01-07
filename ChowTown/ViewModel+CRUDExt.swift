@@ -243,21 +243,22 @@ extension ViewModel{
     
     // MARK: - CR Rewards
     
-    func getRewards( completion: @escaping () -> Void){
+    func getRewards(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
           rewards.removeAll()
           let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
           db.collection("Restaurant/\(restID)/Rewards").getDocuments() { (querySnapshot, err) in
               if let err = err {
                   print("Error getting documents: \(err)")
+                completionHandler(.failure(.error(error: err)))
               } else {
                 if querySnapshot!.documents.isEmpty {
-                    completion()
+                    completionHandler(.failure(.noSuchCollection))
                 }
                   for document in querySnapshot!.documents {
                       
                       self.rewards.append(Reward(dictionary: document.data())! )
                       
-                    completion()
+                    completionHandler(.success(.collectionRetrieved))
                   }
                   
               }
@@ -284,20 +285,27 @@ extension ViewModel{
         
     }
     
-    func getRewardPointsForRestaurant(completion: @escaping () -> Void){
+    func getRewardPointsForRestaurant(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+        if FirebaseService.shared.authState == .isLoggedOut {
+            completionHandler(.failure(.unAuthenticated))
+            print (completionHandler(.failure(.unAuthenticated)))
+        }
         if let userID = FirebaseService.shared.authenticationState?.user_ID {
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
         
         docRef.getDocument { (document, error) in
+            if let err = error {
+              completionHandler(.failure(.error(error: err)))
+            }
             if let document = document, document.exists {
                 _ = document.data().map(String.init(describing:)) ?? "nil"
                 self.rewardPoints = UserRewardPoints(dictionary: document.data()!)
                 print("got the reward points for the user")
-                completion()
+                completionHandler(.success(.documentRetrieved))
             } else {
                 print("Document does not exist")
-                completion()
+                completionHandler(.failure(.noSuchDocument))
             }
         }
         }
