@@ -68,6 +68,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationController?.navigationBar.backgroundColor = nil
+         self.navigationController?.navigationBar.shadowImage = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +77,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.backgroundColor = nil
+        navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
     }
     
     @IBAction func changeLocationButtonPressed(_ sender: Any) {
@@ -181,7 +184,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             
         case .MenuHeader(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuHeaderTableViewCell.reuseIdentifier()) as! SubMenuHeaderTableViewCell
-            let storageRefrence = viewModel.storage.reference(forURL: viewModel.selectedRestaurant?.logoURL ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
+            let storageRefrence = viewModel.storage.reference(forURL: viewModel.selectedRestaurant!.logoURL )
             cell.logoImageView.sd_setImage(with: storageRefrence, placeholderImage: UIImage(named: "placeHolder"))
                   
 //             imageView.sd_setImage(with: httpsReference)

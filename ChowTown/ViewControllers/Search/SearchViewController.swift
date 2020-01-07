@@ -133,7 +133,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         case .favorite(_):
             tableView.deselectRow(at: indexPath, animated: true)
         case let .restaurant(restaurant):
-            selectedRestaurant = viewModel.restaurants.filter({ $0.restID == restaurant.restID }).first
+            selectedRestaurant = viewModel.restaurants.filter({ $0.restID == "XyKLjdbP818Od9uX7atq" }).first
             if selectedRestaurant != nil{
                 performSegue(withIdentifier: "toRestaurant", sender: nil)
                 tableView.deselectRow(at: indexPath, animated: true)

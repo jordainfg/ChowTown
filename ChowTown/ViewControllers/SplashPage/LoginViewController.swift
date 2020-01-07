@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForAppreanceMode()
-        setUpView()
+        setUpNavBar()
     //    viewModel.addRestaurant()
         setupTableView()
         // Do any additional setup after loading the view.
@@ -61,13 +61,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    func setUpView(){
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavBar()
+    }
+    func setUpNavBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
-
-          self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
     
     func setupTableView() {

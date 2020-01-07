@@ -41,6 +41,16 @@ class RestaurantViewController: UIViewController {
         setUpView()
         setupTableView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+           setUpNavBar()
+       }
+       func setUpNavBar(){
+           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+           self.navigationController?.navigationBar.shadowImage = UIImage()
+           self.navigationController?.navigationBar.isTranslucent = true
+           self.navigationController?.view.backgroundColor = UIColor.clear
+           self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+       }
     
     func setUpView(){
         tableView.rowHeight = UITableView.automaticDimension
@@ -99,10 +109,8 @@ class RestaurantViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
           if let barVC = segue.destination as? UITabBarController {
               barVC.viewControllers?.forEach {
-                  if let vc = $0 as? UINavigationController {
-                    if let vcc = vc.viewControllers[0] as? HomePageMenuViewController {
-                        vcc.viewModel = self.viewModel
-                    }
+                  if let vc = $0 as? HomePageMenuViewController {
+                    vc.viewModel = self.viewModel
                       
                   }
               }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WlX-1U-w1y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cm8-5y-hX2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="CwO-Kv-Fug" customClass="ReservationsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THX-J5-Nw0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-RJ-cgl">
-                                <rect key="frame" x="0.0" y="116.5" width="414" height="725.5"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="747.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CwO-Kv-Fug" id="Eku-5q-Puj"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S THE OCCASION ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-pP-ea4">
-                                <rect key="frame" x="86" y="86" width="242.5" height="23"/>
+                                <rect key="frame" x="86" y="118" width="242.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,18 +58,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ouk-jq-BQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4242.0289855072469" y="-609.375"/>
+            <point key="canvasLocation" x="5152.1739130434789" y="-609.375"/>
         </scene>
         <!--Reservation-->
         <scene sceneID="aQ0-JM-xTI">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="RlT-QF-hhs" customClass="ReservationDetailsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgm-Ac-WKC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-FW-r78">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RlT-QF-hhs" id="4Fr-h1-gjc"/>
@@ -93,18 +93,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS8-wj-JtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4950.7246376811599" y="-611.38392857142856"/>
+            <point key="canvasLocation" x="5860.8695652173919" y="-611.38392857142856"/>
         </scene>
         <!--Specials Detail View Controller-->
         <scene sceneID="KZT-YP-NmX">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="dEX-qv-diC" customClass="SpecialsDetailViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZ2-IN-jB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lia-Z7-CMX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Wj2-c2-nmv" customClass="GradientView" customModule="Berry" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -181,13 +181,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Present this QR code to collect your badges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-TB-X60">
-                                                <rect key="frame" x="0.0" y="34" width="277" height="16.5"/>
+                                                <rect key="frame" x="0.0" y="34" width="276.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                                 <color key="textColor" name="WhiteToOrange"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xWu-zH-8yL">
-                                                <rect key="frame" x="0.0" y="61.5" width="19.5" height="524"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="19.5" height="521"/>
                                                 <color key="tintColor" name="WhiteToOrange"/>
                                             </imageView>
                                         </subviews>
@@ -244,7 +244,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-Gs-QIc">
-                                <rect key="frame" x="91" y="64" width="232.5" height="64.5"/>
+                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXm-DQ-IOO">
                                         <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
@@ -311,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDk-XP-1iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2410" y="-609"/>
+            <point key="canvasLocation" x="3318.840579710145" y="-609.375"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="cxI-Jc-hcn">
@@ -374,14 +374,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnd-Wz-oWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="-609"/>
+            <point key="canvasLocation" x="2513.04347826087" y="-609.375"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Menu-->
         <scene sceneID="ND7-Ep-Gde">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="PuI-ev-v0e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Lgq-fx-zNa"/>
+                    <navigationItem key="navigationItem" title="Menu" id="Lgq-fx-zNa"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFG-kT-nDX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -389,24 +389,24 @@
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ISZ-aB-xfc" kind="relationship" relationship="viewControllers" id="01e-L4-LJ7"/>
-                        <segue destination="gVJ-Q4-JLt" kind="relationship" relationship="viewControllers" id="j8G-CJ-sRp"/>
+                        <segue destination="ulw-qS-t2C" kind="relationship" relationship="viewControllers" id="sAs-Ti-u05"/>
+                        <segue destination="7LW-fw-8pr" kind="relationship" relationship="viewControllers" id="qaC-xZ-TGK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmY-Zh-SFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4181" y="137"/>
+            <point key="canvasLocation" x="4229" y="137"/>
         </scene>
-        <!--Berry® Rewards-->
+        <!--Item-->
         <scene sceneID="P36-HM-iLS">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="7LW-fw-8pr" customClass="RewardsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GuX-4I-bKv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-aB-jSS">
-                                <rect key="frame" x="0.0" y="56" width="414" height="766"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7LW-fw-8pr" id="yrm-WO-ssK"/>
@@ -414,7 +414,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1s-m2-udA" customClass="DesignableButton" customModule="Berry" customModuleProvider="target">
-                                <rect key="frame" x="228.5" y="691" width="165.5" height="48"/>
+                                <rect key="frame" x="228.5" y="745" width="165.5" height="48"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="createMeetingButton"/>
                                 <constraints>
@@ -434,28 +434,36 @@
                                     <segue destination="xwk-Ce-TaY" kind="presentation" customClass="LarkSeque" customModule="Berry" customModuleProvider="target" id="hol-Ah-YB3"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-8t-ndO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Berry® Rewards" id="Cnx-cO-1uh">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="gear" catalog="system" id="oCJ-ch-JNM">
+                                            <connections>
+                                                <segue destination="ou9-Tn-HGU" kind="show" id="wYY-cz-lcc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="OZR-aB-jSS" firstAttribute="top" secondItem="X8e-8n-o9Q" secondAttribute="top" id="93d-nf-RUl"/>
+                            <constraint firstItem="dUT-8t-ndO" firstAttribute="trailing" secondItem="X8e-8n-o9Q" secondAttribute="trailing" id="7LZ-fg-YCr"/>
+                            <constraint firstItem="OZR-aB-jSS" firstAttribute="top" secondItem="dUT-8t-ndO" secondAttribute="bottom" id="93d-nf-RUl"/>
                             <constraint firstItem="OZR-aB-jSS" firstAttribute="leading" secondItem="X8e-8n-o9Q" secondAttribute="leading" id="AVC-GW-BKn"/>
+                            <constraint firstItem="dUT-8t-ndO" firstAttribute="top" secondItem="X8e-8n-o9Q" secondAttribute="top" id="Fh2-43-Jle"/>
+                            <constraint firstItem="dUT-8t-ndO" firstAttribute="leading" secondItem="X8e-8n-o9Q" secondAttribute="leading" id="HPC-Ci-bQj"/>
                             <constraint firstAttribute="bottom" secondItem="OZR-aB-jSS" secondAttribute="bottom" constant="20" symbolic="YES" id="KYw-Tu-2yN"/>
                             <constraint firstItem="e1s-m2-udA" firstAttribute="width" secondItem="OZR-aB-jSS" secondAttribute="width" multiplier="0.4" id="Khu-Az-wqY"/>
                             <constraint firstItem="OZR-aB-jSS" firstAttribute="trailing" secondItem="X8e-8n-o9Q" secondAttribute="trailing" id="MnE-iO-cvX"/>
                             <constraint firstItem="X8e-8n-o9Q" firstAttribute="trailing" secondItem="e1s-m2-udA" secondAttribute="trailing" constant="20" id="S6F-Aa-bxM"/>
                             <constraint firstItem="X8e-8n-o9Q" firstAttribute="bottom" secondItem="e1s-m2-udA" secondAttribute="bottom" constant="20" id="ni2-bK-xTu"/>
+                            <constraint firstItem="OZR-aB-jSS" firstAttribute="top" secondItem="dUT-8t-ndO" secondAttribute="bottom" symbolic="YES" id="pkL-Nn-xye"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8e-8n-o9Q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Berry® Rewards" largeTitleDisplayMode="never" id="P3x-PQ-aqr">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="gear" catalog="system" id="j89-NO-Mm0">
-                            <color key="tintColor" name="DarkModeOrange"/>
-                            <connections>
-                                <action selector="settingsButtonPresesed:" destination="7LW-fw-8pr" id="imm-a1-Ayt"/>
-                                <segue destination="ou9-Tn-HGU" kind="presentation" identifier="toSettingsPane" id="4DR-v3-jms"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Item" id="Xif-C2-Ss0"/>
                     <connections>
                         <outlet property="tableView" destination="OZR-aB-jSS" id="GYz-SA-PO4"/>
                         <segue destination="Gbu-GU-21H" kind="presentation" identifier="presentAuthentication" id="Qbn-Ya-zpw"/>
@@ -572,11 +580,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="Sa0-yr-Tmp" customClass="SubMenuMealsAndDrinksViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ze7-Ya-FeV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-ch-zaX">
-                                <rect key="frame" x="0.0" y="108" width="414" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sa0-yr-Tmp" id="YTn-Id-NYb"/>
                                     <outlet property="delegate" destination="Sa0-yr-Tmp" id="3Jt-Qr-eBY"/>
@@ -610,11 +618,11 @@
             <objects>
                 <viewController title="Menu" modalPresentationStyle="fullScreen" id="ulw-qS-t2C" customClass="HomePageMenuViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xS-A4-SoV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -632,6 +640,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Menu" selectedImage="Reservation-50" id="rCm-58-mFa"/>
                     <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="lJj-uh-xV2">
                         <barButtonItem key="backBarButtonItem" title="Back" id="34P-yc-n24"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
@@ -658,7 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcG-gl-EEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5842" y="137"/>
+            <point key="canvasLocation" x="5036" y="137"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="BuM-TG-LLV">
@@ -669,7 +678,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-6n-yyk">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="940"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="kPX-QG-fzo" customClass="GradientView" customModule="Berry" customModuleProvider="target">
@@ -750,7 +759,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="149" width="414" height="747"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
@@ -759,38 +768,22 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="93" width="374" height="56"/>
+                                <rect key="frame" x="20" y="88" width="374" height="56"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="nKH-y5-QHz" id="Nhd-le-IOn"/>
                                 </connections>
                             </searchBar>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-wz-lln">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Search" id="Tb2-0f-OQ7">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5EQ-Gf-zis">
-                                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="cancelButtonPressed:" destination="nKH-y5-QHz" id="qER-3T-muQ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" name="DarkModeBlack"/>
                         <constraints>
-                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="IZ2-wz-lln" secondAttribute="bottom" constant="5" id="8t2-1i-Gjh"/>
-                            <constraint firstItem="IZ2-wz-lln" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="B9n-IN-ele"/>
                             <constraint firstItem="jYq-wj-d8u" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" constant="20" id="EHI-32-Bvr"/>
                             <constraint firstItem="Hsc-2s-9X1" firstAttribute="trailing" secondItem="jYq-wj-d8u" secondAttribute="trailing" constant="20" id="Gv3-mf-Jts"/>
+                            <constraint firstItem="jYq-wj-d8u" firstAttribute="top" secondItem="Hsc-2s-9X1" secondAttribute="top" id="Jdr-kD-kUG"/>
                             <constraint firstAttribute="bottom" secondItem="AcJ-Jo-mow" secondAttribute="bottom" id="LUF-aU-5M8"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="top" secondItem="jYq-wj-d8u" secondAttribute="bottom" id="Mxf-BI-X9p"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="XRu-iY-vrh"/>
-                            <constraint firstItem="IZ2-wz-lln" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="c5U-OU-EZm"/>
-                            <constraint firstItem="IZ2-wz-lln" firstAttribute="trailing" secondItem="Hsc-2s-9X1" secondAttribute="trailing" id="e2h-6m-jNi"/>
                             <constraint firstItem="AcJ-Jo-mow" firstAttribute="leading" secondItem="Hsc-2s-9X1" secondAttribute="leading" id="sdd-Lo-8AS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
@@ -799,7 +792,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ojX-Yd-h4U"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="navBar" destination="IZ2-wz-lln" id="UjM-tf-bl5"/>
                         <outlet property="searchBar" destination="jYq-wj-d8u" id="opA-dV-38h"/>
                         <outlet property="tableView" destination="AcJ-Jo-mow" id="mZa-dz-KLz"/>
                         <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="Gvu-n7-VaL"/>
@@ -809,36 +801,16 @@
             </objects>
             <point key="canvasLocation" x="2511.594202898551" y="136.60714285714286"/>
         </scene>
-        <!--Menu-->
-        <scene sceneID="GrU-TC-9U4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ISZ-aB-xfc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" id="v6S-Mi-sgE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VXO-aM-KaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.4019150138" green="0.76379770039999995" blue="0.54899060730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ulw-qS-t2C" kind="relationship" relationship="rootViewController" id="7H9-J3-4Ob"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LFR-sK-QEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5042" y="137"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="FpV-o1-pwL">
             <objects>
                 <viewController id="WoS-MH-jiV" customClass="SettingsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBP-9j-9oi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lth-6v-S60">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -873,18 +845,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9c-WH-BPZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6750.7246376811599" y="-585.26785714285711"/>
+            <point key="canvasLocation" x="7660.8695652173919" y="-585.26785714285711"/>
         </scene>
         <!--Selected Option View Controller-->
         <scene sceneID="ba9-sv-sUs">
             <objects>
                 <viewController id="No5-xt-vor" customClass="SelectedOptionViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3p-2n-hTt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-JS-yl7">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="No5-xt-vor" id="1WF-l3-ylR"/>
@@ -909,34 +881,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKH-S0-6bG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7550.7246376811599" y="-585.26785714285711"/>
-        </scene>
-        <!--Rewards-->
-        <scene sceneID="rib-xy-zTJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gVJ-Q4-JLt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rewards" image="star.circle.fill" catalog="system" id="gfj-ar-Bku"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7zS-Or-gQm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="7LW-fw-8pr" kind="relationship" relationship="rootViewController" id="Ng8-S8-qG0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DdK-8Y-l2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4179.7101449275369" y="870.53571428571422"/>
+            <point key="canvasLocation" x="8460.8695652173919" y="-585.26785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1E8-8d-wly">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ou9-Tn-HGU" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ulc-U4-7Tk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="osI-Ak-gnF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="DarkModeOrange"/>
                     </navigationBar>
@@ -947,7 +901,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGs-Vi-4Wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5840.579710144928" y="-585.26785714285711"/>
+            <point key="canvasLocation" x="6750.7246376811599" y="-585.26785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PeN-UN-M8z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cm8-5y-hX2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OuO-Wa-Jeh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WlX-1U-w1y" kind="relationship" relationship="rootViewController" id="mqn-Dk-1M8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mL-W8-SLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602.8985507246377" y="-609.375"/>
         </scene>
     </scenes>
     <resources>
@@ -959,7 +931,6 @@
         <image name="icChangeLocation" width="24" height="24"/>
         <image name="icMenu" width="24" height="24"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
-        <image name="star.circle.fill" catalog="system" width="64" height="60"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="BlackToOrange">
@@ -979,7 +950,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="moR-fd-9Rm"/>
+        <segue reference="Gvu-n7-VaL"/>
         <segue reference="Qbn-Ya-zpw"/>
         <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
