@@ -182,7 +182,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         case .MenuHeader(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuHeaderTableViewCell.reuseIdentifier()) as! SubMenuHeaderTableViewCell
             let storageRefrence = viewModel.storage.reference(forURL: viewModel.selectedRestaurant?.logoURL ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
-            cell.logoImageView.sd_setImage(with: storageRefrence)
+            cell.logoImageView.sd_setImage(with: storageRefrence, placeholderImage: UIImage(named: "placeHolder"))
                   
 //             imageView.sd_setImage(with: httpsReference)
             return cell

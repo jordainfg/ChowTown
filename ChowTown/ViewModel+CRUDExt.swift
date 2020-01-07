@@ -257,11 +257,7 @@ extension ViewModel{
                       
                       self.rewards.append(Reward(dictionary: document.data())! )
                       
-                    self.getRewardPointsForRestaurant{
-                        print("got the reward points for the user")
-                         completion()
-                       
-                    }
+                    completion()
                   }
                   
               }
@@ -290,7 +286,7 @@ extension ViewModel{
     
     func getRewardPointsForRestaurant(completion: @escaping () -> Void){
         if let userID = FirebaseService.shared.authenticationState?.user_ID {
-            let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
         
         docRef.getDocument { (document, error) in

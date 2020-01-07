@@ -40,7 +40,7 @@ class SubMenuMealsAndDrinksTableViewCell: UITableViewCell {
     func configure(meal: Meal, StorageRef : StorageReference){
         name.text = meal.name
         about.text = meal.detail
-        mealImageView?.sd_setImage(with: StorageRef, placeholderImage: nil)
+        mealImageView?.sd_setImage(with: StorageRef, placeholderImage: UIImage(named: "placeHolder"))
       
          
         

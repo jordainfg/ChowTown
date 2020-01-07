@@ -25,7 +25,7 @@ class SpecialCollectionViewCell: UICollectionViewCell {
         specialName.text = meal.name
         specialDetail.text = meal.detail
         
-        let placeholderImage = UIImage(named: "icLunch")
+        let placeholderImage = UIImage(named: "placeHolder")
         let httpsReference =   viewModel.storage.reference(forURL: meal.imageRef)
         
         coverImageView.sd_setImage(with: httpsReference, placeholderImage: placeholderImage)

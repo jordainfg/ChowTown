@@ -119,7 +119,7 @@ public class ViewModel{
         if FirebaseService.shared.authState == .isLoggedIn && !rewards.isEmpty {
             types = [[.header],rewardsTypes]
         }
-        else if FirebaseService.shared.authState == .isLoggedOut && !rewards.isEmpty {
+        else if FirebaseService.shared.authState == .isLoggedOut  {
             types = [[.login]]
         } else {
            types = [[]]

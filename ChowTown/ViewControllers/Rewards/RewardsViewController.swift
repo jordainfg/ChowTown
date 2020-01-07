@@ -28,9 +28,7 @@ class RewardsViewController: UIViewController {
         setupTableView()
         // viewModel.addRewardPoints(points: 30)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
+    
     
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
@@ -64,30 +62,24 @@ class RewardsViewController: UIViewController {
     }
     
     func getRewardsData(){
-     
-            if FirebaseService.shared.authState == .isLoggedIn {
-                self.viewModel.getRewards {
-                    if self.viewModel.rewards.isEmpty {
-                        self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
-                    } else{
-                         self.tableView.restore()
-                    }
+        self.tableView.restore()
+        self.tableView.reloadData()
+        self.viewModel.getRewards {
+            if self.viewModel.rewards.isEmpty {
+                self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+            } else{
+                
+                self.viewModel.getRewardPointsForRestaurant{
+                    print("got the reward points for the user")
                     self.tableView.reloadData()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
                         self.refreshControl.endRefreshing()
                     })
-                    
                 }
-            } else{
-                if self.viewModel.rewards.isEmpty {
-                    self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
-                } else{
-                    self.tableView.restore()
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                    self.refreshControl.endRefreshing()
-                })
+                
             }
+        }
+        
         
     }
     
