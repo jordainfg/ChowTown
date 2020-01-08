@@ -7,50 +7,33 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
-
-class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
+class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , BannerColorsProtocol{
+    func color(for style: BannerStyle) -> UIColor {
+        return UIColor.red
+    }
+    
     
     // MARK: - Variables
     var viewModel = ViewModel()
     var selectedSpecial = 0
     var selectedMenu : Menu?
-    
+    let banner = NotificationBanner(customView: reloadView(frame: .zero))
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: - ViewDidLoad, Apear, Desapear
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       //  viewModel.favoriteRestaurant()
         setupTableView()
-        print("tetetetetetetete")
-        print(viewModel.selectedRestaurant)
-        //viewModel.addPopularMeal()
-        //viewModel.addRestaurant()
-        //        viewModel.getMealsForMenu()  {
-        //            self.tableView.reloadData()
-        //        }
-        if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
-            viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
-                UIView.transition(with: self.tableView,
-                                  duration: 0.5,
-                                  options: .transitionCrossDissolve,
-                                  animations: { self.tableView.reloadData() })
-                
-                
-            }
-            viewModel.getPopularMeals{
-                UIView.transition(with: self.tableView,
-                                  duration: 0.5,
-                                  options: .transitionCrossDissolve,
-                                  animations: { self.tableView.reloadData() })
-            }
-        } else {
-         // TODO - Alert that something went wrong
-        }
+        banner.bannerHeight = 120
+        getMenusAndSpecials()
         setupView()
         
     }
@@ -65,10 +48,17 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         let backImage = UIImage(systemName: "chevron.left.circle.fill")
         backButton.tintColor = UIColor.label
+        
+        
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationController?.navigationBar.backgroundColor = nil
          self.navigationController?.navigationBar.shadowImage = nil
+        
+        self.banner.onTap = {
+                                // Do something regarding the banner
+            self.getMenusAndSpecials()
+                            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +70,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         navigationController?.navigationBar.barTintColor = nil
         self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
     }
+    
     
     @IBAction func changeLocationButtonPressed(_ sender: Any) {
         // 1
@@ -145,6 +136,30 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         
     }
     
+    func getMenusAndSpecials() {
+           if UserDefaults.standard.string(forKey: "selectedRestaurant") != nil{
+               viewModel.getMenus(forRestaurant: UserDefaults.standard.string(forKey: "selectedRestaurant")!) {
+                self.viewModel.getPopularMeals{ (result) in
+                       switch result {
+                       case .success:
+                           UIView.transition(with: self.tableView,
+                                             duration: 0.5,
+                                             options: .transitionCrossDissolve,
+                                             animations: { self.tableView.reloadData() })
+                       case .failure:
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+                            //  self.refreshControl.endRefreshing()
+                              self.banner.show()
+                        })
+                        
+                       }
+                       
+                   }
+               }
+               
+           }
+       }
+    
 }
 extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelegate{
     
@@ -197,6 +212,8 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
                switch type {
               
                case .MenuFood(_):
+               
+                
                 tableView.deselectRow(at: indexPath, animated: true)
                 performSegue(withIdentifier: "toMenu", sender: nil)
                case .MenuDrinks(_):

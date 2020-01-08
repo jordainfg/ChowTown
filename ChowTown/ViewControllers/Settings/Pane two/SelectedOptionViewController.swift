@@ -188,7 +188,7 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
             FirebaseService.shared.clearAllSessionData()
             configureSettingsForView(selectedSettings: selectedSettings!)
             delegate?.didLogout()
-            tableView.reloadData()
+            navigationController?.popViewController(animated: true)
         case .LoginButton:
             performSegue(withIdentifier: "presentAuthentication", sender: nil)
         case .lightModeButton(_):

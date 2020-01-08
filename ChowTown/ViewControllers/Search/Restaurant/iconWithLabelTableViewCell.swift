@@ -23,13 +23,13 @@ class iconWithLabelTableViewCell: UITableViewCell {
     }
     
     // Reuser identifier
-           class func reuseIdentifier() -> String {
-               return "iconWithLabelTableViewCellID"
-           }
+    class func reuseIdentifier() -> String {
+    return "iconWithLabelTableViewCellID"
+    }
            
-           // Nib name
-           class func nibName() -> String {
-               return "iconWithLabelTableViewCell"
-           }
+    // Nib name
+    class func nibName() -> String {
+    return "iconWithLabelTableViewCell"
+    }
     
 }

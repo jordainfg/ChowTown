@@ -13,6 +13,8 @@ import SPLarkController
 class RewardsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var redeemButton: DesignableButton!
     
     let viewModel = ViewModel()
     
@@ -20,20 +22,21 @@ class RewardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshControl = UIRefreshControl()
-        tableView.addSubview(refreshControl)
-        refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
-        self.refreshControl.beginRefreshing()
-        getRewardsData()
-        setupTableView()
-        // viewModel.addRewardPoints(points: 30)
+        setUpView()
+        
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        if FirebaseService.shared.authState == .isLoggedIn{
+            redeemButton.alpha = 1
+        } else{
+            redeemButton.alpha = 0
+        }
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -49,6 +52,18 @@ class RewardsViewController: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
         //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
+        
+    }
+    func setUpView(){
+        refreshControl = UIRefreshControl()
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
+        self.refreshControl.beginRefreshing()
+        getRewardsData()
+        setupTableView()
+        navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navBar.backgroundColor = UIColor.clear
+        
         
     }
     
@@ -78,16 +93,26 @@ class RewardsViewController: UIViewController {
                 self.viewModel.getRewardPointsForRestaurant{ (result) in
                     switch result{
                     case .success:
-                        self.tableView.reloadData()
+                        UIView.transition(with: self.tableView,
+                                          duration: 0.9,
+                                          options: .transitionCrossDissolve,
+                                          animations: { self.tableView.reloadData()
+                                            self.redeemButton.alpha = 1
+                        })
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
                             self.refreshControl.endRefreshing()
                         })
                     case let .failure(error):
-                        self.tableView.reloadData()
+                        UIView.transition(with: self.tableView,
+                                          duration: 0.9,
+                                          options: .transitionCrossDissolve,
+                                          animations: { self.tableView.reloadData()
+                                           
+                        })
                         print("Error for getRewardPointsForRestaurant method:\(error)")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                                                   self.refreshControl.endRefreshing()
-                                               })
+                            self.refreshControl.endRefreshing()
+                        })
                     }
                     
                 }
@@ -101,21 +126,21 @@ class RewardsViewController: UIViewController {
             }
             
         }
-  
+        
     }
     
-
-//makes sure the shadow color changes when dark mode is turned on
-override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    
+    //makes sure the shadow color changes when dark mode is turned on
+    //override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
     // Trait collection will change. Use this one so you know what the state is changing to.
-    tableView.reloadData()
-}
-
-@objc func refreshControlAction(refreshControl _: UIRefreshControl) {
-    getRewardsData()
-}
-
-
+    //    tableView.reloadData()
+    //}
+    
+    @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
+        getRewardsData()
+    }
+    
+    
 }
 extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
     
@@ -218,7 +243,14 @@ extension RewardsViewController : AuthenticationDelegate{
     }
     
     func didLogout() {
-        tableView.reloadData()
+        UIView.transition(with: self.tableView,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: { self.tableView.reloadData()
+                            self.redeemButton.alpha = 0
+        })
+       
+        
     }
     
     

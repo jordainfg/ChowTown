@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NotificationBannerSwift
 class SubMenuMealsAndDrinksViewController: UIViewController {
     
     
@@ -15,29 +15,24 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     var viewModel = ViewModel()
     var menu : Menu? = nil
     var selectedMeal : Meal?
+    let banner = NotificationBanner(customView: reloadView(frame: .zero))
     
     var filterMeals : [Meal] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = menu?.title
         setupTableView()
         tableView.LoadingIndicator(isVisable: true)
-        
-        if let unwrappedMenu = menu {
-            viewModel.getMealsForMenu(selectedMenu: unwrappedMenu){
-                      self.viewModel.filterdMeals = self.viewModel.meals
-                self.tableView.LoadingIndicator(isVisable: false)
-                      UIView.transition(with: self.tableView,
-                                        duration: 0.5,
-                                        options: .transitionCrossDissolve,
-                                        animations: { self.tableView.reloadData() })
-                
-            }
-        } else {
-            // TODO - Error getting menu , think about what to do in this sencerio
+        banner.bannerHeight = 120
+        self.banner.onTap = {
+            // Do something regarding the banner
+            self.getMealsForMenu()
         }
-      
+        getMealsForMenu()
+        
         
         
     }
@@ -74,6 +69,33 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         }
     }
     
+    func getMealsForMenu() {
+        if let unwrappedMenu = menu {
+            viewModel.getMealsForMenu(selectedMenu: unwrappedMenu){(result) in
+                switch result {
+                case .success:
+                    self.viewModel.filterdMeals = self.viewModel.meals
+                    self.tableView.LoadingIndicator(isVisable: false)
+                    UIView.transition(with: self.tableView,
+                                      duration: 0.5,
+                                      options: .transitionCrossDissolve,
+                                      animations: { self.tableView.reloadData() })
+                case .failure:
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+                        self.banner.show()
+                    })
+                    
+                }
+                
+                
+                
+            }
+        } else {
+            // TODO - Error getting menu , think about what to do in this sencerio
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     
 }
 
@@ -89,7 +111,7 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
         if viewModel.filterdMeals.count == 0 {
             self.tableView.setEmptyViewWithImage(title: "", message: "", messageImage: #imageLiteral(resourceName: "appLogo"))
         } else {
-          self.tableView.restore()
+            self.tableView.restore()
         }
         return viewModel.SubMenuMealsAndDrinksTableViewcellTypes[section].count
     }

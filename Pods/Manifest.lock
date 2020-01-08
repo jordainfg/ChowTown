@@ -280,15 +280,20 @@ PODS:
   - GTMSessionFetcher/Core (1.3.0)
   - KeychainSwift (18.0.0)
   - leveldb-library (1.22)
+  - MarqueeLabel (4.0.1)
   - MSPeekCollectionViewDelegateImplementation (3.0.3)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - NotificationBannerSwift (3.0.2):
+    - MarqueeLabel (~> 4.0.0)
+    - SnapKit (~> 5.0.0)
   - SDWebImage (5.4.0):
     - SDWebImage/Core (= 5.4.0)
   - SDWebImage/Core (5.4.0)
+  - SnapKit (5.0.1)
   - SPLarkController (1.1)
   - SPStorkController (1.7.9)
 
@@ -302,6 +307,7 @@ DEPENDENCIES:
   - FirebaseUI/Storage
   - KeychainSwift (~> 18.0)
   - MSPeekCollectionViewDelegateImplementation
+  - NotificationBannerSwift (~> 3.0.0)
   - SPLarkController
   - SPStorkController
 
@@ -330,9 +336,12 @@ SPEC REPOS:
     - GTMSessionFetcher
     - KeychainSwift
     - leveldb-library
+    - MarqueeLabel
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
+    - NotificationBannerSwift
     - SDWebImage
+    - SnapKit
     - SPLarkController
     - SPStorkController
 
@@ -360,12 +369,15 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
   KeychainSwift: c46e1438d121e47459fb304ac88c5e058a2a91ed
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MarqueeLabel: d24e821159667c93064ea3042ccf1875ca94db6b
   MSPeekCollectionViewDelegateImplementation: 3e6beb9a722daf6c920ba5db21083cbe7d0e7359
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
   SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SPLarkController: 22c79e54b12a29705b87ee0179455e1c51f2fdc8
   SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
 
-PODFILE CHECKSUM: 556aaca20b4108c978cbb931e002a36ec2a01fe4
+PODFILE CHECKSUM: 8eccfe9a48cb68309fd5813be99b1f83b65d0383
 
 COCOAPODS: 1.8.4

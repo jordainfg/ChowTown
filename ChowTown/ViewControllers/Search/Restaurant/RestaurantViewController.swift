@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SafariServices
+import CoreLocation
+import MessageUI
 
 enum RestaurantDataType {
     case header(String,String)
@@ -16,10 +19,14 @@ enum RestaurantDataType {
     case phone(String)
     case website(String)
     case social
+    case button
     
 }
 
-class RestaurantViewController: UIViewController {
+class RestaurantViewController: UIViewController , MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
@@ -27,7 +34,7 @@ class RestaurantViewController: UIViewController {
     var restaurant : Restaurant?
     
     var tableViewcellTypes: [[RestaurantDataType]] {
-        let types: [[RestaurantDataType]] = [[.header(restaurant?.name ?? "No info",restaurant?.about ?? "No info"),.address(restaurant?.address ?? "No info"),.hours(restaurant?.hours ?? "No info"),.phone(restaurant?.phone ?? "No info"),.emailAddress(restaurant?.emailAddress ?? "No info"),.website(restaurant?.websiteURL ?? "No info")]]
+        let types: [[RestaurantDataType]] = [[.header(restaurant?.name ?? "No info",restaurant?.about ?? "No info"),.address(restaurant?.address ?? "No info"),.hours(restaurant?.hours ?? "No info"),.phone(restaurant?.phone ?? "No info"),.emailAddress(restaurant?.emailAddress ?? "No info"),.website(restaurant?.websiteURL ?? "No info"),.button]]
         
         return types
     }
@@ -45,11 +52,15 @@ class RestaurantViewController: UIViewController {
            setUpNavBar()
        }
        func setUpNavBar(){
-           self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-           self.navigationController?.navigationBar.shadowImage = UIImage()
-           self.navigationController?.navigationBar.isTranslucent = true
-           self.navigationController?.view.backgroundColor = UIColor.clear
-           self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
+                  //sets nav bar to default appearance
+                  self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+                  self.navigationController?.navigationBar.shadowImage = nil
+                  self.navigationController?.navigationBar.isTranslucent = true
+                  self.navigationController?.navigationBar.backgroundColor = nil
+                  navigationController?.navigationBar.barTintColor = nil
+                  self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+              
        }
     
     func setUpView(){
@@ -62,11 +73,11 @@ class RestaurantViewController: UIViewController {
         updateHeaderView()
          
         // Dismiss view button
-        let button = UIButton(frame: CGRect(x: 20, y: 55, width: 30, height: 30))
-        button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(button)
+      //  let button = UIButton(frame: CGRect(x: 20, y: 55, width: 30, height: 30))
+      //  button.setBackgroundImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+      //  button.tintColor = UIColor.white
+      //  button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+      //  self.view.addSubview(button)
         
         //add header image
         let httpsReference =   viewModel.storage.reference(forURL: restaurant?.imageRefrence ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
@@ -87,6 +98,7 @@ class RestaurantViewController: UIViewController {
         
         tableView.register(UINib(nibName: RestaurantAboutTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RestaurantAboutTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: iconWithLabelTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: iconWithLabelTableViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: showMenuButtonTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: showMenuButtonTableViewCell.reuseIdentifier())
         self.tableView.tableFooterView = UIView()
     }
     @objc func buttonAction(sender: UIButton) {
@@ -96,11 +108,6 @@ class RestaurantViewController: UIViewController {
     // MARK: - Segues
     
     @IBAction func menuButtonPressed(_ sender: Any) {
-        if restaurant != nil {
-            UserDefaults.standard.set(restaurant?.restID, forKey: "selectedRestaurant")
-            viewModel.selectedRestaurant = restaurant
-            performSegue(withIdentifier: "toMenu", sender: nil)
-        }
         
         
     }
@@ -149,7 +156,7 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
         case let .emailAddress(emailAddress):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = emailAddress
-            cell.icon.image = UIImage(systemName: "link")
+            cell.icon.image = UIImage(systemName: "envelope.fill")
             return cell
         case let .hours(hours):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
@@ -172,6 +179,11 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             cell.icon.image = UIImage(systemName: "link")
             return cell
             
+        case .button:
+        let cell = tableView.dequeueReusableCell(withIdentifier: showMenuButtonTableViewCell.reuseIdentifier()) as! showMenuButtonTableViewCell
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
+        return cell
+                      
         }
     }
     
@@ -181,18 +193,64 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             
         case .header:
             tableView.deselectRow(at: indexPath, animated: true)
-        case .address:
+        case let .address(address):
+    
+            let originalString = address
+            let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            print(escapedString!)
+            if let string = escapedString {
+                let directionsURL = "http://maps.apple.com/?saddr=Current%20Location&daddr=\(string)"
+                guard let url = URL(string: directionsURL) else {
+                    return
+                }
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+           
             tableView.deselectRow(at: indexPath, animated: true)
-        case .emailAddress:
+        case let .emailAddress(email):
             tableView.deselectRow(at: indexPath, animated: true)
+            if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email])
+                        mail.setSubject("Mail from Berry user")
+                        //mail.setMessageBody("Mail from Berry App", isHTML: true)
+            
+                        
+                        present(mail, animated: true)
+                    } else {
+                     
+                    }
+            
         case .hours:
             tableView.deselectRow(at: indexPath, animated: true)
-        case .phone:
+        case let .phone(phonenumber):
             tableView.deselectRow(at: indexPath, animated: true)
-        case .website:
-            tableView.deselectRow(at: indexPath, animated: true)
+            guard let number = URL(string: "tel://" + phonenumber) else { return }
+            UIApplication.shared.open(number)
+            
+        case let .website(link):
+             tableView.deselectRow(at: indexPath, animated: true)
+             guard let url = URL(string: link) else{
+                return
+            }
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true)
         case .social:
             tableView.deselectRow(at: indexPath, animated: true)
+            
+        case .button:
+            tableView.deselectRow(at: indexPath, animated: true)
+            if restaurant != nil {
+                
+                UserDefaults.standard.set(restaurant?.restID, forKey: "selectedRestaurant")
+                viewModel.selectedRestaurant = restaurant
+                performSegue(withIdentifier: "toMenu", sender: nil)
+            }
             
         }
     }
@@ -216,6 +274,9 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             return heightForIcons
         case .social:
             return heightForIcons
+            
+        case .button:
+        return UITableView.automaticDimension
             
         }
     }

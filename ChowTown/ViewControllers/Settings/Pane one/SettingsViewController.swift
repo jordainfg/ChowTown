@@ -28,17 +28,26 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     var delegate : AuthenticationDelegate?
     
+    var didLogOut = false
+    
+    
     var tableViewcellTypes: [[SettingOptionDataType]] {
-        let types: [[SettingOptionDataType]] = [[.profile("Profile")],[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
-        
+        var types: [[SettingOptionDataType]] = [[.profile("Profile")],[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
+        if FirebaseService.shared.authState == .isLoggedIn{
+          types =  [[.profile("Profile")],[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
+        } else{
+           types =  [[.appearance("Appearance")],[.review("Leave a review"),.contact("Contact the developer")],[.aboutApp("About the App")]]
+        }
         return types
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        self.isModalInPresentation = true
         // Do any additional setup after loading the view.
-        
+       
+        didLogOut = false
     }
     
     
@@ -60,7 +69,11 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true){
+            if self.didLogOut {
+                self.delegate?.didLogout()
+                   }
+        }
     }
 }
 
@@ -203,11 +216,12 @@ extension SettingsViewController : AuthenticationDelegate{
     }
     
     func didAuthenticateSuccessfully(isTrue: Bool) {
-        
+    //   didLogin = isTrue
     }
     
     func didLogout() {
-        delegate?.didLogout()
+       didLogOut = true
+        tableView.reloadData()
     }
     
     

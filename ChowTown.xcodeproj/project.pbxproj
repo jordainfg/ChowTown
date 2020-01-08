@@ -169,9 +169,13 @@
 		11F3DCEF237C4DD600EA1932 /* CGRect+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */; };
 		11FFC0E7236AE10200DCBCD1 /* SpecialsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */; };
 		223B22B7CC103DC515F8D878 /* Pods_ChowTown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */; };
+		5E088A3723C5CFE70092E472 /* reloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E088A3623C5CFE70092E472 /* reloadView.xib */; };
+		5E088A3923C5D0180092E472 /* reloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E088A3823C5D0180092E472 /* reloadView.swift */; };
 		5E0FC73F23C320DE0062E188 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */; };
 		5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */; };
 		5E68BF2123C3769A0003EBEE /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E68BF2023C3769A0003EBEE /* RefreshContents.xib */; };
+		5E793EE323C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */; };
+		5E793EE423C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,9 +364,13 @@
 		11F3DCEC237C397F00EA1932 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		11F3DCEE237C4DD600EA1932 /* CGRect+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+extension.swift"; sourceTree = "<group>"; };
 		11FFC0E6236AE10200DCBCD1 /* SpecialsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsDetailViewController.swift; sourceTree = "<group>"; };
+		5E088A3623C5CFE70092E472 /* reloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reloadView.xib; sourceTree = "<group>"; };
+		5E088A3823C5D0180092E472 /* reloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reloadView.swift; sourceTree = "<group>"; };
 		5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iconWithLabelTableViewCell.xib; sourceTree = "<group>"; };
 		5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconWithLabelTableViewCell.swift; sourceTree = "<group>"; };
 		5E68BF2023C3769A0003EBEE /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
+		5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showMenuButtonTableViewCell.swift; sourceTree = "<group>"; };
+		5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = showMenuButtonTableViewCell.xib; sourceTree = "<group>"; };
 		74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.debug.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.release.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -447,6 +455,8 @@
 				116F75A1238BE063002FB784 /* RestaurantAboutTableViewCell.xib */,
 				5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */,
 				5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */,
+				5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */,
+				5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -470,6 +480,8 @@
 				1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */,
 				11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */,
 				11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */,
+				5E088A3623C5CFE70092E472 /* reloadView.xib */,
+				5E088A3823C5D0180092E472 /* reloadView.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -948,6 +960,7 @@
 				116F7595238BDABB002FB784 /* Nunito-Bold.ttf in Resources */,
 				11B8DF2B23A23FA400D7FFFC /* HeaderForAuthenticationTableViewCell.xib in Resources */,
 				1164B6FF23A1350300972B46 /* RewardPointsTableViewCell.xib in Resources */,
+				5E793EE423C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib in Resources */,
 				116F758D238BDABB002FB784 /* Nunito-ExtraBoldItalic.ttf in Resources */,
 				1162FE8D2382ED4B00943CEE /* SubMenuCollectionViewCell.xib in Resources */,
 				11A4E6F723ACCCCB00569CFE /* AuthenticationFooterTableViewCell.xib in Resources */,
@@ -969,6 +982,7 @@
 				1164B6F723A132AF00972B46 /* RewardCardTableViewCell.xib in Resources */,
 				116F759A238BDABB002FB784 /* Nunito-BlackItalic.ttf in Resources */,
 				115694BD2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.xib in Resources */,
+				5E088A3723C5CFE70092E472 /* reloadView.xib in Resources */,
 				116F758F238BDABB002FB784 /* Nunito-ExtraBold.ttf in Resources */,
 				11C26301237AC8E700E74394 /* IconsTableViewCell.xib in Resources */,
 				116F7593238BDABB002FB784 /* Nunito-Regular.ttf in Resources */,
@@ -1078,6 +1092,7 @@
 				1164B6F623A132AF00972B46 /* RewardCardTableViewCell.swift in Sources */,
 				1191F5AE236C47F800649C79 /* NutritionInformationTableViewCell.swift in Sources */,
 				11C2630E237AF24900E74394 /* AddOn.swift in Sources */,
+				5E088A3923C5D0180092E472 /* reloadView.swift in Sources */,
 				114F092123A14D30001B86C7 /* Reward.swift in Sources */,
 				11B8DF2023A2253C00D7FFFC /* AuthenticationState.swift in Sources */,
 				11B8DF3623A2472600D7FFFC /* LeftAlignedIconButton.swift in Sources */,
@@ -1116,6 +1131,7 @@
 				11CDCC7723A28AAC00661D1A /* SelectedOptionViewController.swift in Sources */,
 				11C5089423687EE4003400D0 /* UIImageView+extension.swift in Sources */,
 				11C5089F23687EE4003400D0 /* UITextFIield+extension.swift in Sources */,
+				5E793EE323C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift in Sources */,
 				115694BC2385488800B0BD7F /* SubMenuMealsAndDrinksTableViewCell.swift in Sources */,
 				110F12A2239554E200E80E4D /* HeaderForSectionTableViewCell.swift in Sources */,
 				1180BB9E2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.swift in Sources */,

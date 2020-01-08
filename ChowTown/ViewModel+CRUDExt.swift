@@ -62,30 +62,33 @@ extension ViewModel{
            }
        }
     
-    func getPopularMeals( completion: @escaping () -> Void){
+    func getPopularMeals(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
         self.Popularmeals.removeAll()
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         //print("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals")
         db.collection("Restaurant/\(restID)/PopularMeals").getDocuments() { (querySnapshot, err) in
             if let err = err {
-                print("Error getting documents: \(err)")
+                print("Error getting popularMeals: \(err)")
+                completionHandler(.failure(.noSuchCollection))
             } else {
+                if querySnapshot!.documents.isEmpty{
+                    completionHandler(.failure(.noSuchCollection))
+                    return
+                }
                 for document in querySnapshot!.documents {
                     
                     self.Popularmeals.append(Meal(dictionary: document.data())! )
-                    
-                    
-                } 
-                completion()
-                print("Boom, \(self.meals)")
+                    completionHandler(.success(.collectionRetrieved))
+                }
+               
             }
         }
     }
 
     
     
-    func getMealsForMenu(selectedMenu : Menu, completion: @escaping () -> Void){
+    func getMealsForMenu(selectedMenu : Menu,completionHandler: @escaping (Result<Response, CoreError>) -> Void){
        // selectedMenu : Menu,
          //db.collection("Menus/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
         self.meals.removeAll()
@@ -94,15 +97,18 @@ extension ViewModel{
         db.collection("Restaurant/\(restID)/Menu/\(selectedMenu.menuID)/Meals").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
+                completionHandler(.failure(.noSuchCollection))
             } else {
+                if querySnapshot!.documents.isEmpty{
+                    completionHandler(.failure(.noSuchCollection))
+                    return
+                }
                 for document in querySnapshot!.documents {
                    
                     self.meals.append(Meal(dictionary: document.data())! )
-                    
+                    completionHandler(.success(.collectionRetrieved))
                     
                 }
-                completion()
-                print("Boom, \(self.meals)")
             }
         }
     }

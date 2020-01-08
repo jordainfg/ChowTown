@@ -132,15 +132,9 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
                 FirebaseService.shared.loginUser(Email: "jordainf@gmail.com", password: "boombam1234") { (result : Result<User, CoreError>) in
                     switch result {
                     case .success(_):
-                        let alert = UIAlertController(title: "Success", message: "", preferredStyle: UIAlertController.Style.alert)
-                        self.present(alert, animated: true)
-                        alert.addAction(UIAlertAction(title: "Okay",
-                                                      style: UIAlertAction.Style.default,
-                        handler: {(alert: UIAlertAction!) in
+                        self.dismiss(animated: true) {
                             self.delegate?.didAuthenticateSuccessfully(isTrue: true)
-                            self.dismiss(animated: true, completion: nil)
-                            
-                        }))
+                        }
                     case .failure(_):
                         let alert = UIAlertController(title: "Invalid credentials", message: "", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
