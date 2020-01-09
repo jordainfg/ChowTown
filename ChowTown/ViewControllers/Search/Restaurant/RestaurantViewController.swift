@@ -120,6 +120,11 @@ class RestaurantViewController: UIViewController , MFMailComposeViewControllerDe
                     vc.viewModel = self.viewModel
                       
                   }
+                
+                if let vcc = $0 as? RewardsViewController {
+                  vcc.viewModel = self.viewModel
+                    
+                }
               }
           }
     }

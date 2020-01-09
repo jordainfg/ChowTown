@@ -24,6 +24,7 @@ public struct Restaurant{
     var instagramURL : String
     var logoURL : String
     var websiteURL : String
+    var subscriptionPlan : Int
     
     
     
@@ -43,7 +44,7 @@ public struct Restaurant{
         self.instagramURL = dictionary["instagramURL"] as! String
         self.logoURL = dictionary["logoURL"] as! String
         self.websiteURL = dictionary["websiteURL"] as! String
-        
+        self.subscriptionPlan = dictionary["subscriptionPlan"] as! Int
 
     }
         

@@ -16,7 +16,7 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var redeemButton: DesignableButton!
     
-    let viewModel = ViewModel()
+    var viewModel = ViewModel()
     
     var refreshControl: UIRefreshControl!
     
@@ -30,11 +30,16 @@ class RewardsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if FirebaseService.shared.authState == .isLoggedIn{
-            redeemButton.alpha = 1
-        } else{
+        if let plan = viewModel.selectedRestaurant?.subscriptionPlan {
+            if FirebaseService.shared.authState == .isLoggedIn && plan == 1{
+                redeemButton.alpha = 1
+            }else{
+                redeemButton.alpha = 0
+            }
+        }else{
             redeemButton.alpha = 0
         }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,6 +92,16 @@ class RewardsViewController: UIViewController {
     func getRewardsData(){
         self.tableView.restore()
         
+        if viewModel.selectedRestaurant?.subscriptionPlan == 0 {
+             self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+             self.refreshControl.endRefreshing()
+             UIView.transition(with: self.tableView,
+                                                     duration: 0.9,
+                                                     options: .transitionCrossDissolve,
+                                                     animations: { self.tableView.reloadData()
+                                                      
+                                   })
+        } else {
         self.viewModel.getRewards {(result) in
             switch result{
             case .success:
@@ -118,13 +133,14 @@ class RewardsViewController: UIViewController {
                 }
             case let .failure(error):
                 self.tableView.reloadData()
-                self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+                self.tableView.setEmptyViewWithImage(title: "Oops", message: "Something went wrong, try again later or contact the developer in settings", messageImage: #imageLiteral(resourceName: "appLogo"))
                 print("Error for getRewards method:\(error)")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
                     self.refreshControl.endRefreshing()
                 })
             }
             
+        }
         }
         
     }

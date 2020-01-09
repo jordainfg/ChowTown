@@ -35,6 +35,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
         banner.bannerHeight = 120
         getMenusAndSpecials()
         setupView()
+        print("TT\(viewModel.selectedRestaurant )" )
         
     }
     

@@ -112,40 +112,43 @@ public class ViewModel{
     
     
     //Rewards
-
+    
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
         let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
-        var types: [[RewardsTableViewDataType]] = [[.header],rewardsTypes]
-        if FirebaseService.shared.authState == .isLoggedIn && !rewards.isEmpty {
+        var types: [[RewardsTableViewDataType]] = [[]]
+        if let plan = selectedRestaurant?.subscriptionPlan {
+        if FirebaseService.shared.authState == .isLoggedIn && plan == 1 {
             types = [[.header],rewardsTypes]
         }
-        else if FirebaseService.shared.authState == .isLoggedOut  {
-            types = [[.login]]
-        } else {
-           types = [[]]
+        else if FirebaseService.shared.authState == .isLoggedIn && plan == 0 {
+        types = [[]]
         }
-        return types
-    }
+        else if FirebaseService.shared.authState == .isLoggedOut && plan == 1  {
+        types = [[.login]]
+        }
+        }
+    return types
+}
+
+
+
+// SubMenuMealsAndDrinks
+
+var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
+    let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
+    let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
     
-    
-    
-    // SubMenuMealsAndDrinks
-    
-    var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
-        let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
-        let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
-        
-        return types
-    }
-    
-    // REWARDS
-    
-    
-    
-    
-    
-    
-    
+    return types
+}
+
+// REWARDS
+
+
+
+
+
+
+
 }
 
 
