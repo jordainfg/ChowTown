@@ -31,6 +31,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     override func viewDidLoad() {
         super.viewDidLoad()
       //  viewModel.favoriteRestaurant()
+       // viewModel.addMenu()
         setupTableView()
         banner.bannerHeight = 120
         getMenusAndSpecials()
@@ -63,12 +64,6 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //sets nav bar to default appearance
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = nil
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = nil
-        navigationController?.navigationBar.barTintColor = nil
         self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
     }
     

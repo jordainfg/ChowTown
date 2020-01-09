@@ -113,6 +113,8 @@ class FirebaseService : NSObject {
         
     }
     
+   
+    
     func loginUser(Email: String, password: String, completionHandler: @escaping (Result<User, CoreError>) -> Void){
         Auth.auth().signIn(withEmail: Email, password: password) { [weak self] authResult, error in
             guard self != nil else { return }

@@ -89,58 +89,65 @@ class RewardsViewController: UIViewController {
         
     }
     
+    
     func getRewardsData(){
         self.tableView.restore()
         
         if viewModel.selectedRestaurant?.subscriptionPlan == 0 {
-             self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
-             self.refreshControl.endRefreshing()
-             UIView.transition(with: self.tableView,
-                                                     duration: 0.9,
-                                                     options: .transitionCrossDissolve,
-                                                     animations: { self.tableView.reloadData()
-                                                      
-                                   })
+            self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
+            self.refreshControl.endRefreshing()
+            UIView.transition(with: self.tableView,
+                              duration: 0.9,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData()
+                                
+            })
         } else {
-        self.viewModel.getRewards {(result) in
-            switch result{
-            case .success:
-                self.viewModel.getRewardPointsForRestaurant{ (result) in
-                    switch result{
-                    case .success:
-                        UIView.transition(with: self.tableView,
-                                          duration: 0.9,
-                                          options: .transitionCrossDissolve,
-                                          animations: { self.tableView.reloadData()
-                                            self.redeemButton.alpha = 1
-                        })
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                            self.refreshControl.endRefreshing()
-                        })
-                    case let .failure(error):
-                        UIView.transition(with: self.tableView,
-                                          duration: 0.9,
-                                          options: .transitionCrossDissolve,
-                                          animations: { self.tableView.reloadData()
-                                           
-                        })
-                        print("Error for getRewardPointsForRestaurant method:\(error)")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                            self.refreshControl.endRefreshing()
-                        })
+            self.viewModel.getRewards {(result) in
+                switch result{
+                case .success:
+                    UIView.transition(with: self.tableView,
+                                      duration: 0.9,
+                                      options: .transitionCrossDissolve,
+                                      animations: { self.tableView.reloadData()
+                                        
+                    })
+                    self.viewModel.getRewardPointsForRestaurant{ (result) in
+                        switch result{
+                        case .success:
+                            UIView.transition(with: self.tableView,
+                                              duration: 0.9,
+                                              options: .transitionCrossDissolve,
+                                              animations: { self.tableView.reloadData()
+                                                self.redeemButton.alpha = 1
+                            })
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                                self.refreshControl.endRefreshing()
+                            })
+                        case let .failure(error):
+                            UIView.transition(with: self.tableView,
+                                              duration: 0.9,
+                                              options: .transitionCrossDissolve,
+                                              animations: { self.tableView.reloadData()
+                                                
+                            })
+                            print("Error for getRewardPointsForRestaurant method:\(error)")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                                self.refreshControl.endRefreshing()
+                            })
+                        }
+                        
                     }
-                    
+                case let .failure(error):
+                    self.tableView.reloadData()
+                    self.tableView.setEmptyViewWithImage(title: "Oops", message: "Something went wrong, try again later or contact the developer in settings", messageImage: #imageLiteral(resourceName: "appLogo"))
+                    print("Error for getRewards method:\(error)")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                        self.refreshControl.endRefreshing()
+                    })
                 }
-            case let .failure(error):
-                self.tableView.reloadData()
-                self.tableView.setEmptyViewWithImage(title: "Oops", message: "Something went wrong, try again later or contact the developer in settings", messageImage: #imageLiteral(resourceName: "appLogo"))
-                print("Error for getRewards method:\(error)")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
-                    self.refreshControl.endRefreshing()
-                })
+                
             }
-            
-        }
         }
         
     }
@@ -265,7 +272,7 @@ extension RewardsViewController : AuthenticationDelegate{
                           animations: { self.tableView.reloadData()
                             self.redeemButton.alpha = 0
         })
-       
+        
         
     }
     

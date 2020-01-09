@@ -33,19 +33,14 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
         }
         getMealsForMenu()
         
-        
+         self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = nil
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.tintColor = UIColor.black
-        
-        
-    }
+        override func viewWillAppear(_ animated: Bool) {
+           self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+       }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent

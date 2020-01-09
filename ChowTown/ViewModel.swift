@@ -52,6 +52,7 @@ public class ViewModel{
     let storage = Storage.storage()
     
     var restaurants : [Restaurant] = []
+    var filterdRestaurants : [Restaurant] = []
     var menus : [Menu] = []
     var meals : [Meal] = []
     var filterdMeals : [Meal] = []
@@ -100,7 +101,7 @@ public class ViewModel{
         
         //let favorites = []
         // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
-        let restaurantDataTypes = restaurants.map { SearchTableViewDataType.restaurant($0) }
+        let restaurantDataTypes = filterdRestaurants.map { SearchTableViewDataType.restaurant($0) }
         var types: [[SearchTableViewDataType]] = [[],restaurantDataTypes]
         
         if favoritesIsShowing {

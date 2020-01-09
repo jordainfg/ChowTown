@@ -49,7 +49,7 @@ class RestaurantViewController: UIViewController , MFMailComposeViewControllerDe
         setupTableView()
     }
     override func viewWillAppear(_ animated: Bool) {
-           setUpNavBar()
+          // setUpNavBar()
        }
        func setUpNavBar(){
         

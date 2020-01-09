@@ -11,22 +11,24 @@ import Firebase
 
 extension ViewModel{
     // MARK: - CR MEALS
-    func addMeal(refRestaurant : DocumentReference?, refMenu :DocumentReference?){
+    func addMeal( refMenu :DocumentReference?){
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
-        let refMeal = db.collection("Restaurant/\(restID)/Menu/Bwv6ujfH8P9eDcx0X4xb/Meals").document()
+        if let menuID = refMenu?.documentID {
+        let refMeal = db.collection("Restaurant/ss/Menu/\(menuID)/Meals").document()
         refMeal.setData([
-            "companyID" : "2",
-            "name": "Noosh Bowl",
-            "detail": "Geweld in appelsap, met wortel, noten en vers fruit",
-            "price" : 10,
+            "companyID": "2",
+            "name": "Acai bowl",
+            "detail": "Choose from Berries, pears, apples, grapes, citrus. winter: grapefruit, oranges, kiwi,",
+            "price" : 15,
             "about": [1,2,3,5,6,7],
             "allergens": [1,2,3,4],
-            "protein": "",
-            "fat": "",
-            "carbs": "",
-            "additions": [],
+            "protein": "200",
+            "fat": "20",
+            "calories": "900",
+            "carbs": "100",
+            "additions": ["Avocado,4", "Onions,8"],
             "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg",
+            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/placeholder7.jpg",
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -34,23 +36,25 @@ extension ViewModel{
                 print("Meal added with ID: \(refMeal.documentID)")
             }
         }
+        }
     }
     
     func addPopularMeal(){
            // Add a new document with a generated ID
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
-          let refMeal = db.collection("Restaurant/\(restID)/PopularMeals").document()
+          let refMeal = db.collection("Restaurant/ss/PopularMeals").document()
            refMeal.setData([
-               "companyID" : "2",
+               "companyID": "2",
                "name": "Acai bowl",
                "detail": "Choose from Berries, pears, apples, grapes, citrus. winter: grapefruit, oranges, kiwi,",
-               "price" : 10,
+               "price" : 15,
                "about": [1,2,3,5,6,7],
                "allergens": [1,2,3,4],
-               "protein": "",
-               "fat": "",
-               "carbs": "",
-               "additions": [],
+               "protein": "200",
+               "fat": "20",
+               "calories": "900",
+               "carbs": "100",
+               "additions": ["Avocado,4", "Onions,8"],
                "isPopular": true,
                "imageRef": "gs://chow-town-bc783.appspot.com/Meals/placeholder7.jpg",
            ]) { err in
@@ -114,12 +118,12 @@ extension ViewModel{
     }
     
     // MARK: - CR Menus
-    func addMenu(reff: DocumentReference?){
+    func addMenu(){
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
        //  let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
-        let refMenu = db.collection("Restaurant/\(restID))/Menu").document()
+        let refMenu = db.collection("Restaurant/ss/Menu").document()
         refMenu.setData([
             "menuID" : refMenu.documentID,
             "companyID" : "2",
@@ -136,7 +140,7 @@ extension ViewModel{
                 print("Error adding document: \(err)")
             } else {
                 print("Menu added with ID: \(refMenu.documentID)")
-                self.addMeal(refRestaurant: reff, refMenu: refMenu)
+                self.addMeal(refMenu: refMenu)
             }
         }
         
@@ -165,13 +169,13 @@ extension ViewModel{
     
     // MARK: - CR Restaurants
     func getRestaurants(completion: @escaping () -> Void){
-       
+       self.restaurants.removeAll()
         db.collection("Restaurant").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                     self.restaurants.removeAll()
+                     
                     self.restaurants.append(Restaurant(dictionary: document.data())! )
                     
                     
@@ -207,24 +211,25 @@ extension ViewModel{
         
         ref.setData( [
             "restID" : ref.documentID,
-            "name" : "Anne&Max",
-            "about": "Sandwiches - Panini - Biologishe Koffie & Thee - Salades - Speltmuesli. Anne&Max de freshfood&coffeecafe. Elke dag ontbijt, koffie, lunch, high tea en borrel. Gratis WiFi. Van ontbijt tot borrel. Vers & Gezonde producten",
-            "address": "Kerkplein 4, 2513 AZ Den Haag",
-            "emailAddress" : "annem@max.nl",
+            "name" : "Kaafi",
+            "about": "Multi-Roaster Specialty Coffee Shop, in the heart of the historic, bustling and beautiful City of Peace and Justice - The Hague.",
+            "emailAddress" : "info@kaafi.nl",
+            "address" : "Prinsestraat 25, 2513CA , Den Haag",
             "hours": "Monday - Friday",
-            "phone": "070 891 2860",
-            "color": "#FFC872",
+            "phone": "0345664640",
+            "color": "#E2474C",
             "imageRefrence": "",
             "facebookURL": "",
             "instagramURL": "",
             "logoURL" : "",
-            "websiteURL" : "",
+            "subscriptionPlan" : 1,
+            "websiteURL" : "http://kaafi.nl/?fbclid=IwAR1GCl6DZ85kIIqRzMnTQ0vvRy9w7YWoU6UDyaDl5-fda1JUDwf7eMTZBt8",
         ]){ err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Restaurant added with ID: \(ref.documentID)")
-                self.addMenu(reff: ref)
+              //  self.addMenu()
             }
         }
         
@@ -271,25 +276,7 @@ extension ViewModel{
           }
       }
     
-    func addRewardPoints(points : Int){
-         let userID = (FirebaseService.shared.authenticationState?.user_ID)!
-        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
-               let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
-
-                    docRef.setData( [
-                       "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
-                          "rewardPoints" : points,
-                         
-                      ]){ err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("rewards added with ID: \(docRef.documentID)")
-               
-            }
-        }
-        
-    }
+    
     
     func getRewardPointsForRestaurant(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
         if FirebaseService.shared.authState == .isLoggedOut {
@@ -310,11 +297,44 @@ extension ViewModel{
                 print("got the reward points for the user")
                 completionHandler(.success(.documentRetrieved))
             } else {
+                //If there is a new user the below lines will add a new document to the users rewards collection so they can start saving award points.
                 print("Document does not exist")
-                completionHandler(.failure(.noSuchDocument))
+                self.addRewardPoints(points: 30) { (result) in
+                    switch result{
+                    case .success:
+                        completionHandler(.success(.documentAdded))
+                    case .failure:
+                        print("")
+                        completionHandler(.failure(.noSuchDocument))
+                    }
+                    
+                }
+                
             }
         }
         }
     }
+    
+    func addRewardPoints(points : Int, completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+           let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+           let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+           let docRef = db.collection("Users/\(userID)/Rewards").document(restID)
+
+                       docRef.setData( [
+                          "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
+                             "rewardPoints" : "\(points)",
+                            
+                         ]){ err in
+               if let err = err {
+                   print("Error adding document: \(err)")
+                completionHandler(.failure(.error(error: err)))
+               } else {
+                   print("rewards added with ID: \(docRef.documentID)")
+                completionHandler(.success(.documentAdded))
+                  
+               }
+           }
+           
+       }
     
 }

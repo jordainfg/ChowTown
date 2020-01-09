@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     var viewModel = ViewModel()
     
-    var filterdEstablishments : [Restaurant] = []
+    var filterdRestaurants : [Restaurant] = []
     
     var selectedRestaurant : Restaurant?
     
@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
         
         tableView.LoadingIndicator(isVisable: true)
         viewModel.getRestaurants {
-            self.filterdEstablishments =  self.viewModel.restaurants
+            self.viewModel.filterdRestaurants = self.viewModel.restaurants
           
             UIView.transition(with: self.tableView,
                               duration: 0.5,
@@ -100,10 +100,10 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             
         case 1:
             
-            return filterdEstablishments.count
+            return viewModel.filterdRestaurants.count
             
         default:
-            return filterdEstablishments.count
+            return viewModel.filterdRestaurants.count
         }
     }
     
@@ -133,7 +133,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         case .favorite(_):
             tableView.deselectRow(at: indexPath, animated: true)
         case let .restaurant(restaurant):
-            selectedRestaurant = viewModel.restaurants.filter({ $0.restID == "XyKLjdbP818Od9uX7atq" }).first
+            selectedRestaurant = viewModel.restaurants.filter({ $0.restID == restaurant.restID }).first
             if selectedRestaurant != nil{
                 performSegue(withIdentifier: "toRestaurant", sender: nil)
                 tableView.deselectRow(at: indexPath, animated: true)
@@ -199,7 +199,7 @@ extension SearchViewController: UISearchBarDelegate
     {
         //Filter function
         if searchText.isEmpty{
-            filterdEstablishments =  viewModel.restaurants
+            self.viewModel.filterdRestaurants = self.viewModel.restaurants
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
@@ -207,8 +207,8 @@ extension SearchViewController: UISearchBarDelegate
             
             
         } else{
-            filterdEstablishments =  viewModel.restaurants
-            filterdEstablishments = filterdEstablishments.filter { $0.name.range(of: searchText) != nil}
+            self.viewModel.filterdRestaurants = self.viewModel.restaurants
+            self.viewModel.filterdRestaurants = self.viewModel.filterdRestaurants.filter { $0.name.range(of: searchText) != nil}
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
@@ -241,7 +241,7 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
-        filterdEstablishments =  viewModel.restaurants
+        filterdRestaurants =  viewModel.restaurants
         UIView.transition(with: self.tableView,
                           duration: 0.5,
                           options: .transitionCrossDissolve,

@@ -35,15 +35,13 @@ class SpecialsDetailViewController: UIViewController {
         //
         setUpView()
         setupTableView()
-        
+      
     }
+   
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
     }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

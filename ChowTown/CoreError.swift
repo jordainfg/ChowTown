@@ -27,5 +27,5 @@ public enum Response {
     case collectionRetrieved
     case noSuchCollection
     case documentRetrieved
-   
+    case documentAdded
 }

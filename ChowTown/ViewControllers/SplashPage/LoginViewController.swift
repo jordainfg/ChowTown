@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         super.viewDidLoad()
         checkForAppreanceMode()
         setUpNavBar()
-    //    viewModel.addRestaurant()
+      
         setupTableView()
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         print("Users state is : \(FirebaseService.shared.authState)")
         print("Authentication state is : \(String(describing: FirebaseService.shared.authenticationState))")
         
-        FirebaseService.shared.createUser(withEmail: "Booooon@gmail.com", password: "boombam1234" ){_ in }
+     //   FirebaseService.shared.createUser(withEmail: "Booooon@gmail.com", password: "boombam1234" ){_ in }
     }
     
     func checkForAppreanceMode(){
