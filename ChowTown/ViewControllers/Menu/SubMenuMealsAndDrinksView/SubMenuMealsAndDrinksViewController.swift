@@ -23,6 +23,8 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.filterdMeals.removeAll()
+        self.tableView.restore()
         self.title = menu?.title
         setupTableView()
         tableView.LoadingIndicator(isVisable: true)
@@ -31,6 +33,8 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
             // Do something regarding the banner
             self.getMealsForMenu()
         }
+        
+       
         getMealsForMenu()
         
          self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
@@ -47,6 +51,11 @@ class SubMenuMealsAndDrinksViewController: UIViewController {
     }
     
     func setupTableView() {
+        let emptyView = emptyTableView(frame : .zero)
+               emptyView.titleLabel.text = "Coming soon"
+               emptyView.titleLabel.text = ""
+               
+                   self.tableView.backgroundView = emptyView
         tableView.register(UINib(nibName: SubMenuMealsAndDrinksTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: SubMenuMealsAndDrinksFilteringTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuMealsAndDrinksFilteringTableViewCell.reuseIdentifier())
     }
@@ -103,10 +112,13 @@ extension SubMenuMealsAndDrinksViewController : UITableViewDataSource , UITableV
     }
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let emptyView = emptyTableView(frame : .zero)
+        emptyView.titleLabel.text = ""
+        emptyView.subTitleLabel.text = ""
         if viewModel.filterdMeals.count == 0 {
-            self.tableView.setEmptyViewWithImage(title: "", message: "", messageImage: #imageLiteral(resourceName: "appLogo"))
+            self.tableView.backgroundView = emptyView
         } else {
-            self.tableView.restore()
+           self.tableView.backgroundView = nil
         }
         return viewModel.SubMenuMealsAndDrinksTableViewcellTypes[section].count
     }

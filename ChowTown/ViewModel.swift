@@ -62,6 +62,7 @@ public class ViewModel{
     
     var selectedRestaurant : Restaurant?
     var selectedMeal : Meal?
+    var selectedMenu : Menu?
     
     var rewards : [Reward] = []
     var rewardPoints : UserRewardPoints?
@@ -72,7 +73,7 @@ public class ViewModel{
         
         // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
         //  let specials = meals.filter {$0.isPopular == true}
-        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == false})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
+        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
         return types
     }
@@ -137,8 +138,14 @@ public class ViewModel{
 
 var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
     let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
-    let types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
-    
+    var types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
+    if let menu = selectedMenu {
+         if menu.isMeal{
+             types =  [[.header],mealsForMenu]
+         } else{
+             types =  [mealsForMenu]
+         }
+     }
     return types
 }
 

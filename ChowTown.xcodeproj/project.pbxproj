@@ -176,6 +176,8 @@
 		5E68BF2123C3769A0003EBEE /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E68BF2023C3769A0003EBEE /* RefreshContents.xib */; };
 		5E793EE323C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */; };
 		5E793EE423C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */; };
+		5EC75B4423C7708B0038C40B /* emptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC75B4323C7708B0038C40B /* emptyTableView.swift */; };
+		5EC75B4623C777B90038C40B /* emptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC75B4523C777B90038C40B /* emptyTableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -371,6 +373,8 @@
 		5E68BF2023C3769A0003EBEE /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showMenuButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = showMenuButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5EC75B4323C7708B0038C40B /* emptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyTableView.swift; sourceTree = "<group>"; };
+		5EC75B4523C777B90038C40B /* emptyTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = emptyTableView.xib; sourceTree = "<group>"; };
 		74F38D988E823075AC9060EB /* Pods-ChowTown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.debug.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.debug.xcconfig"; sourceTree = "<group>"; };
 		86892CF30DAC40C2C03A38E8 /* Pods-ChowTown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChowTown.release.xcconfig"; path = "Target Support Files/Pods-ChowTown/Pods-ChowTown.release.xcconfig"; sourceTree = "<group>"; };
 		88D659DEFC1F9CDFC0C61481 /* Pods_ChowTown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChowTown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +484,8 @@
 				1191F5B3236C742C00649C79 /* ZoomAndSnapFlowLayout.swift */,
 				11B8DF3523A2472600D7FFFC /* LeftAlignedIconButton.swift */,
 				11B4AE5623A7B6100089D7B3 /* LarkSeque.swift */,
+				5EC75B4323C7708B0038C40B /* emptyTableView.swift */,
+				5EC75B4523C777B90038C40B /* emptyTableView.xib */,
 				5E088A3623C5CFE70092E472 /* reloadView.xib */,
 				5E088A3823C5D0180092E472 /* reloadView.swift */,
 			);
@@ -931,6 +937,7 @@
 				1191F5AF236C47F800649C79 /* NutritionInformationTableViewCell.xib in Resources */,
 				11DB44FC23A2664A009B4095 /* SettingOptionTableViewCell.xib in Resources */,
 				1180BB9F2394FF2C003227DD /* SubMenuMealsAndDrinksFilteringTableViewCell.xib in Resources */,
+				5EC75B4623C777B90038C40B /* emptyTableView.xib in Resources */,
 				11C262F6237AC4D700E74394 /* GoogleService-Info.plist in Resources */,
 				116F759C238BDABB002FB784 /* Overpass-SemiBold.ttf in Resources */,
 				11C5082723685FEC003400D0 /* LaunchScreen.storyboard in Resources */,
@@ -1140,6 +1147,7 @@
 				1152EC3D238425CC00CCA098 /* SubMenuHeaderTableViewCell.swift in Sources */,
 				5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */,
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
+				5EC75B4423C7708B0038C40B /* emptyTableView.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,
 				11A4E6F623ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift in Sources */,

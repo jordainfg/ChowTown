@@ -124,6 +124,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
             let secondVC = segue.destination as! SubMenuMealsAndDrinksViewController
             secondVC.menu = selectedMenu
             secondVC.viewModel = self.viewModel
+            viewModel.selectedMenu = selectedMenu
         default:
             return
         }

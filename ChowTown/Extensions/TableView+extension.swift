@@ -46,6 +46,7 @@ public extension UITableView {
         //        messageImageView.widthAnchor.constraint(equalToConstant: 300).isActive = true // adjust image width
         //        messageImageView.heightAnchor.constraint(equalToConstant: 300).isActive = true // adjust image height
         
+        titleLabel.center = CGPoint(x: emptyView.frame.size.width  / 2, y: emptyView.frame.size.height / 2)
         titleLabel.topAnchor.constraint(equalTo: messageImageView.bottomAnchor, constant: 10).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
         
