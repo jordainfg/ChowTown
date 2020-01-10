@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForAppreanceMode()
-        setUpNavBar()
+        //setUpNavBar()
       
         setupTableView()
         // Do any additional setup after loading the view.
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         return .lightContent
     }
     override func viewWillAppear(_ animated: Bool) {
-        setUpNavBar()
+    setUpNavBar()
     }
     func setUpNavBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -136,9 +136,9 @@ extension LoginViewController : UITableViewDataSource , UITableViewDelegate{
         switch type {
             
         case .header:
-            return tableView.frame.size.height  / 4
+            return tableView.frame.size.height  / 6
         case .body:
-            return tableView.frame.size.height  / 3
+            return tableView.frame.size.height  / 4
         case .footer:
             return 100
             

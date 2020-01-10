@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-RJ-cgl">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="747.5"/>
+                                <rect key="frame" x="0.0" y="200.5" width="414" height="695.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CwO-Kv-Fug" id="Eku-5q-Puj"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S THE OCCASION ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-pP-ea4">
-                                <rect key="frame" x="86" y="118" width="242.5" height="23"/>
+                                <rect key="frame" x="86" y="170" width="242.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-FW-r78">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RlT-QF-hhs" id="4Fr-h1-gjc"/>
@@ -244,7 +244,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-Gs-QIc">
-                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
+                                <rect key="frame" x="91" y="160" width="232.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXm-DQ-IOO">
                                         <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
@@ -365,7 +365,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJz-Ms-2Rc"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Egn-JN-Pi6"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Egn-JN-Pi6"/>
                     <connections>
                         <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
                         <segue destination="JQC-7o-9D2" kind="show" identifier="toScanView" id="luz-0y-2TV"/>
@@ -381,7 +381,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="PuI-ev-v0e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="Lgq-fx-zNa"/>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="Lgq-fx-zNa"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFG-kT-nDX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -406,7 +406,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-aB-jSS">
-                                <rect key="frame" x="0.0" y="132" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="192.5" width="414" height="683.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7LW-fw-8pr" id="yrm-WO-ssK"/>
@@ -435,14 +435,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhz-sP-4vj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="192.5"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-8t-ndO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <navigationItem title="Berry® Rewards" id="Cnx-cO-1uh">
+                                    <navigationItem title="Berry® Rewards" largeTitleDisplayMode="never" id="Cnx-cO-1uh">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="gear" catalog="system" id="oCJ-ch-JNM">
                                             <connections>
                                                 <segue destination="ou9-Tn-HGU" kind="show" identifier="toSettingsPane" id="wYY-cz-lcc"/>
@@ -642,7 +642,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -651,7 +651,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-U4-RnO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                         </subviews>
@@ -707,7 +707,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bDD-6n-yyk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="kPX-QG-fzo" customClass="GradientView" customModule="Berry" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -736,11 +736,11 @@
                             <constraint firstItem="bDD-6n-yyk" firstAttribute="leading" secondItem="Jhk-6d-IAa" secondAttribute="leading" id="1od-bp-KNd"/>
                             <constraint firstAttribute="bottom" secondItem="bDD-6n-yyk" secondAttribute="bottom" id="8Uv-CN-5Kr"/>
                             <constraint firstItem="bDD-6n-yyk" firstAttribute="trailing" secondItem="Jhk-6d-IAa" secondAttribute="trailing" id="jzB-OB-PqL"/>
-                            <constraint firstItem="bDD-6n-yyk" firstAttribute="top" secondItem="Jhk-6d-IAa" secondAttribute="top" constant="-88" id="nix-G9-w1i"/>
+                            <constraint firstItem="bDD-6n-yyk" firstAttribute="top" secondItem="Q5o-4N-up8" secondAttribute="top" id="nix-G9-w1i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhk-6d-IAa"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="fPS-Ly-odg">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="fPS-Ly-odg">
                         <barButtonItem key="backBarButtonItem" title="Search" id="Yfb-0s-X1s"/>
                     </navigationItem>
                     <connections>
@@ -751,7 +751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0F-sP-USI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="137"/>
+            <point key="canvasLocation" x="3385.507246376812" y="136.60714285714286"/>
         </scene>
         <!--Search-->
         <scene sceneID="icj-17-Iwj">
@@ -762,7 +762,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="700"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
@@ -771,7 +771,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="88" width="374" height="56"/>
+                                <rect key="frame" x="20" y="140" width="374" height="56"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -791,7 +791,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="never" id="icD-pA-DIk">
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="icD-pA-DIk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ojX-Yd-h4U"/>
                     </navigationItem>
                     <connections>
@@ -958,7 +958,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Gvu-n7-VaL"/>
         <segue reference="Qbn-Ya-zpw"/>
-        <segue reference="JS9-e9-O0z"/>
+        <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

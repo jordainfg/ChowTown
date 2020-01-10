@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 enum ChoiceMenuTableViewDataType {
-    case MenuHeader(String)
+    case MenuHeader(Restaurant)
     case MenuSpecials([Meal])
     case MenuFood([Menu])
     case MenuDrinks([Menu])
@@ -73,8 +73,11 @@ public class ViewModel{
         
         // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
         //  let specials = meals.filter {$0.isPopular == true}
-        let types: [[ChoiceMenuTableViewDataType]] = [[.MenuHeader("")],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
         
+        var types: [[ChoiceMenuTableViewDataType]] = [[]]
+        if let rest = selectedRestaurant{
+            types = [[.MenuHeader(rest)],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
+        }
         return types
     }
     

@@ -194,12 +194,12 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             cell.delegate = self
             return cell
             
-        case .MenuHeader(_):
+        case let .MenuHeader(rest):
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuHeaderTableViewCell.reuseIdentifier()) as! SubMenuHeaderTableViewCell
-            let storageRefrence = viewModel.storage.reference(forURL: viewModel.selectedRestaurant!.logoURL )
-            cell.logoImageView.sd_setImage(with: storageRefrence, placeholderImage: UIImage(named: "placeHolder"))
-                  
-//             imageView.sd_setImage(with: httpsReference)
+             let storageRefrence = viewModel.storage.reference(forURL: rest.logoURL )
+             cell.headerimageView.sd_setImage(with: storageRefrence)
+            cell.name.text = rest.name
+            cell.address.text = rest.address
             return cell
         }
     }
@@ -234,12 +234,16 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         case .MenuDrinks(_):
             return 150
         case .MenuHeader(_):
-            return 120
+            return UITableView.automaticDimension
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
+            case 0:
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
+            headerCell.sectionName.text = "About"
+            return headerCell.contentView
             
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
@@ -261,7 +265,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     }
     
     func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 { return 20 } 
+        
         return 40
     }
     

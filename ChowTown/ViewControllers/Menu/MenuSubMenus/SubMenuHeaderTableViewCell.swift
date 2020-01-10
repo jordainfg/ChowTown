@@ -10,10 +10,13 @@ import UIKit
 
 class SubMenuHeaderTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var logoImageView: UIImageView!
+     @IBOutlet var headerimageView: UIImageView!
+       @IBOutlet weak var address: UILabel!
+       @IBOutlet weak var name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+            headerimageView.makeRounded()
     }
 
     // Reuser identifier
