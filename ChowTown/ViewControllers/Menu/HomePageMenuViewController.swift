@@ -68,7 +68,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     }
     
     
-    @IBAction func changeLocationButtonPressed(_ sender: Any) {
+     func changeLocationButtonPressed() {
         // 1
         let optionMenu = UIAlertController(title: nil, message: "Would you change the menu?", preferredStyle: .actionSheet)
         
@@ -200,6 +200,10 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
              cell.headerimageView.sd_setImage(with: storageRefrence)
             cell.name.text = rest.name
             cell.address.text = rest.address
+            cell.selectionStyle = .none
+           // if rest.subscriptionPlan < 3 {
+              //  cell.notificationBellButton.isHidden = true
+           // }
             return cell
         }
     }
@@ -207,7 +211,9 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = viewModel.choiceMenuTableViewCellTypes[indexPath.section][indexPath.row]
                switch type {
-              
+               case .MenuHeader(_):
+                changeLocationButtonPressed()
+               tableView.deselectRow(at: indexPath, animated: true)
                case .MenuFood(_):
                
                 

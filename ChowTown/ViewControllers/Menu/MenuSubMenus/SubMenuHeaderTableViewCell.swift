@@ -13,6 +13,7 @@ class SubMenuHeaderTableViewCell: UITableViewCell {
      @IBOutlet var headerimageView: UIImageView!
        @IBOutlet weak var address: UILabel!
        @IBOutlet weak var name: UILabel!
+    @IBOutlet var notificationBellButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,5 +34,6 @@ class SubMenuHeaderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
 }

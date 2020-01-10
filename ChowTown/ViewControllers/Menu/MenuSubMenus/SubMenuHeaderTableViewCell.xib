@@ -26,10 +26,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMt-sU-YXJ" customClass="DesignableView" customModule="Berry" customModuleProvider="target">
-                        <rect key="frame" x="20" y="5" width="280" height="125"/>
+                        <rect key="frame" x="20" y="5" width="270" height="125"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ryG-VV-oOr">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="125"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ryG-VV-oOr">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="125"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluebrryPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="fyW-5n-f5f">
                                         <rect key="frame" x="0.0" y="35" width="55" height="55"/>
@@ -45,31 +45,35 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-dU-o6n">
-                                        <rect key="frame" x="65" y="38.5" width="170" height="48"/>
+                                        <rect key="frame" x="70" y="34.5" width="161" height="56.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnZ-dJ-v39">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amsterdamse Veerkade 57-A, 2512 AH " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-6j-UGh">
-                                                <rect key="frame" x="0.0" y="20" width="163.5" height="28"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="152.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0K-9O-Mvd">
-                                        <rect key="frame" x="245" y="45" width="35" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="LrE-Vx-tYT"/>
-                                            <constraint firstAttribute="width" constant="35" id="XLC-hA-Vie"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-HS-Np1">
+                                        <rect key="frame" x="246" y="51" width="24" height="23.5"/>
                                         <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="bell" catalog="system"/>
-                                    </button>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Y3M-XU-684"/>
+                                            <constraint firstAttribute="width" constant="24" id="oHo-dN-JYR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -85,7 +89,7 @@
                 <constraints>
                     <constraint firstItem="iMt-sU-YXJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="742-Xe-HaV"/>
                     <constraint firstItem="iMt-sU-YXJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="95r-Ye-BzE"/>
-                    <constraint firstAttribute="trailing" secondItem="iMt-sU-YXJ" secondAttribute="trailing" constant="20" id="d6z-hf-exi"/>
+                    <constraint firstAttribute="trailing" secondItem="iMt-sU-YXJ" secondAttribute="trailing" constant="30" id="d6z-hf-exi"/>
                     <constraint firstAttribute="bottom" secondItem="iMt-sU-YXJ" secondAttribute="bottom" constant="5" id="xqj-pQ-zDw"/>
                 </constraints>
             </tableViewCellContentView>
@@ -100,7 +104,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bell" catalog="system" width="64" height="62"/>
+        <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
