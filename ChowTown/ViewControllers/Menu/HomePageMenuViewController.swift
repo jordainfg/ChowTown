@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationBannerSwift
+import SPAlert
 
 class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , BannerColorsProtocol{
     func color(for style: BannerStyle) -> UIColor {
@@ -74,14 +75,23 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
         
         // 2
         let action = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
-            viewModel.favoriteRestaurant { result in {
+            self.viewModel.favoriteRestaurant { result in
                 switch result{
                 case .success:
-                    
+                    let alertView = SPAlertView(title: "Notifications for \(rest.name) are on", message: nil, preset: SPAlertPreset.bookmark)
+                    alertView.duration = 3
+                    alertView.present()
+                    alertView.haptic = .success
+                   
                 case .failure:
-                    
+                    let alertView = SPAlertView(title: "Try again later", message: nil, preset: SPAlertPreset.exclamation)
+                                       alertView.duration = 3
+                    alertView.haptic = .success
+                                       alertView.present()
+                    //SPAlert.present(title: "Try again later", preset: .exclamation)
                 }
-                }}
+                }
+
             self.dismiss(animated: true, completion: nil)
         })
         
@@ -209,7 +219,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             cell.address.text = rest.address
             cell.selectionStyle = .none
             if rest.subscriptionPlan < 3 && FirebaseService.shared.authState == .isLoggedIn {
-              cell.notificationButton.isHidden = true
+              cell.notificationButton.isHidden = false
             } else{
               cell.notificationButton.isHidden = false
             }

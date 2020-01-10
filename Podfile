@@ -17,6 +17,8 @@ pod 'CocoaTextField', '~> 1.0.0'
 pod 'KeychainSwift', '~> 18.0'
 pod 'SPStorkController'
 pod 'SPLarkController'
+pod 'SPAlert'
+pod 'Firebase/Messaging'
 pod 'NotificationBannerSwift', '~> 3.0.0'
   # Pods for Nutshell
 
