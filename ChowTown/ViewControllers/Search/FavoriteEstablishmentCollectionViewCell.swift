@@ -37,10 +37,10 @@ class FavoriteEstablishmentCollectionViewCell: UICollectionViewCell {
         return "FavoriteEstablishmentCollectionViewCell"
     }
     
-    func configure(with establishment: Restaurant?){
+    func configure(with establishment: FavoriteRestaurant?){
         name.text = establishment?.name
         address.setTitle(establishment?.address, for: .normal)
-        about.setTitle(establishment?.about, for: .normal)
+       // about.setTitle(establishment?.about, for: .normal)
     }
     
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {

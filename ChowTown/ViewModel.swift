@@ -25,7 +25,7 @@ enum mealDetailTableViewDataType {
 }
 
 enum SearchTableViewDataType {
-    case favorite([Restaurant])
+    case favorite(FavoriteRestaurant)
     case restaurant(Restaurant)
 }
 
@@ -53,6 +53,8 @@ public class ViewModel{
     
     var restaurants : [Restaurant] = []
     var filterdRestaurants : [Restaurant] = []
+    var favoriteRestaurants : [FavoriteRestaurant] = []
+    
     var menus : [Menu] = []
     var meals : [Meal] = []
     var filterdMeals : [Meal] = []
@@ -104,12 +106,14 @@ public class ViewModel{
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
         //let favorites = []
-         //let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
+         let favoritesDataTypes = favoriteRestaurants.map { SearchTableViewDataType.favorite($0) }
         let restaurantDataTypes = filterdRestaurants.map { SearchTableViewDataType.restaurant($0) }
-        var types: [[SearchTableViewDataType]] = [[.favorite(restaurants)],restaurantDataTypes]
+        var types: [[SearchTableViewDataType]] = [[]]
         
-        if favoritesIsShowing {
-            types.append(restaurantDataTypes)
+        if !favoriteRestaurants.isEmpty {
+            types = [favoritesDataTypes,restaurantDataTypes]
+        } else{
+            types = [restaurantDataTypes]
         }
         
         return types
@@ -122,13 +126,13 @@ public class ViewModel{
         let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[]]
         if let plan = selectedRestaurant?.subscriptionPlan {
-        if FirebaseService.shared.authState == .isLoggedIn && plan == 1 {
+        if FirebaseService.shared.authState == .isLoggedIn && plan > 1 {
             types = [[.header],rewardsTypes]
         }
         else if FirebaseService.shared.authState == .isLoggedIn && plan == 0 {
         types = [[]]
         }
-        else if FirebaseService.shared.authState == .isLoggedOut && plan == 1  {
+        else if FirebaseService.shared.authState == .isLoggedOut && plan > 1  {
         types = [[.login]]
         }
         }

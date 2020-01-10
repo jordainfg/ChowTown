@@ -59,6 +59,7 @@ class FirebaseService : NSObject {
         
     }
     
+    
     public private(set) var authenticationState: AuthenticationState? {
         set {
             // save to the keychain
@@ -127,6 +128,8 @@ class FirebaseService : NSObject {
                         self?.userData = user
                         
                         completionHandler(.success(authResult.user))
+                    } else{
+                        
                     }
                 }
             }

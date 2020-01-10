@@ -259,7 +259,7 @@ extension RewardsViewController : AuthenticationDelegate{
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue {
             getRewardsData()
-            
+          
         } else {
             
         }

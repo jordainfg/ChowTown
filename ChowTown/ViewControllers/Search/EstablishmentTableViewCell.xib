@@ -45,7 +45,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2Rt-t6-LRC">
-                                        <rect key="frame" x="60" y="8" width="266" height="58.5"/>
+                                        <rect key="frame" x="60" y="22" width="311" height="30.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUH-f5-IAn">
                                                 <rect key="frame" x="0.0" y="0.0" width="78.5" height="16.5"/>
@@ -54,13 +54,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amsterdamse Veerkade 57-A, 2512 AH Den Haag" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-uh-WEJ">
-                                                <rect key="frame" x="0.0" y="16.5" width="213" height="28"/>
-                                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06384822214" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAr-xF-X13">
-                                                <rect key="frame" x="0.0" y="44.5" width="73.5" height="14"/>
+                                                <rect key="frame" x="0.0" y="16.5" width="266.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -73,12 +67,18 @@
                                             <constraint firstAttribute="width" constant="35" id="k3X-7V-jsE"/>
                                             <constraint firstAttribute="height" constant="35" id="sQ2-GT-nAq"/>
                                         </constraints>
-                                        <state key="normal" image="star" catalog="system"/>
+                                        <color key="tintColor" name="BlackToWhite"/>
+                                        <state key="normal" image="star.fill" catalog="system"/>
                                         <connections>
                                             <action selector="favoriteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jka-Ya-Sm6"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="iFy-00-s9G"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="DarkModeBlack"/>
@@ -124,7 +124,6 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="about" destination="FAr-xF-X13" id="OVQ-p2-PWb"/>
                 <outlet property="address" destination="gHM-uh-WEJ" id="KeV-mO-jQC"/>
                 <outlet property="icon" destination="21P-kQ-ebF" id="x8I-Hf-eie"/>
                 <outlet property="name" destination="RUH-f5-IAn" id="05P-nX-PGm"/>
@@ -134,7 +133,10 @@
     </objects>
     <resources>
         <image name="c.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <namedColor name="BlackToWhite">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

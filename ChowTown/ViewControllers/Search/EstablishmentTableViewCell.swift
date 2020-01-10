@@ -37,8 +37,14 @@ class EstablishmentTableViewCell: UITableViewCell {
     func configure(restaurant: Restaurant){
         name.text = restaurant.name
         address.text = restaurant.address
-        about.text = restaurant.about
         icon.tintColor = UIColor.hexStringToUIColor(hex: restaurant.color)
+        icon.image = UIImage(systemName: "\(restaurant.name.first?.lowercased() ?? "z").circle.fill")
+    }
+    
+    func configureFavorite(restaurant: FavoriteRestaurant){
+        name.text = restaurant.name
+        address.text = restaurant.address
+        icon.tintColor = UIColor.systemIndigo
         icon.image = UIImage(systemName: "\(restaurant.name.first?.lowercased() ?? "z").circle.fill")
     }
     

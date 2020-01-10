@@ -20,6 +20,7 @@ public enum CoreError: Error {
     case failed(reason: String)
     case noSuchCollection
     case noSuchDocument
+    case deleteFailed
     
 }
 

@@ -16,9 +16,9 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     var behavior: MSCollectionViewPeekingBehavior = MSCollectionViewPeekingBehavior(cellPeekWidth: 30)
     
-    var delegate:MyCustomCellDelegator!
+    var delegate:searchViewControllerCellDelegator!
     
-    var favorites : [Restaurant]? = nil
+    var favorites : [FavoriteRestaurant]? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +35,13 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     func setUpCollectionView(){
         
-        collectionView.configureForPeekingBehavior(behavior: behavior)
+        //collectionView.configureForPeekingBehavior(behavior: behavior)
        // delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
        // delegate = MSPeekCollectionViewDelegateImplementation(numberOfItemsToShow: 1)
-        
+           collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
+         collectionView.decelerationRate = .fast // uncomment if necessary
           collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.register(UINib.init(nibName: "FavoriteEstablishmentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavoriteEstablishmentCollectionViewCellID")
         //  guard let collectionView = collectionView else { fatalError() }
@@ -79,12 +80,16 @@ extension FavoriteEstablishmentTableViewCell: UICollectionViewDataSource, UIColl
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       self.delegate.callSegueFromCell(segueIdentifier: "toMeal", index: indexPath.row, selected: "")
+        if let selectedFavorite = favorites?[indexPath.row]{
+            self.delegate.prepareForSequeFromFavCollectionViewCell(segueIdentifier: "toRestaurant", restaurant: selectedFavorite)
+        }
+      
         
     }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
-    }
+   
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//            behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width  , height: collectionView.frame.size.height  )

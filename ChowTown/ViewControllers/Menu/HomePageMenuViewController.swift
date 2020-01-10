@@ -9,7 +9,7 @@
 import UIKit
 import NotificationBannerSwift
 import SPAlert
-
+import Firebase
 class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , BannerColorsProtocol{
     func color(for style: BannerStyle) -> UIColor {
         return UIColor.red
@@ -21,7 +21,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     var selectedSpecial = 0
     var selectedMenu : Menu?
     let banner = NotificationBanner(customView: reloadView(frame: .zero))
-    
+    var isFavorite = true
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -62,6 +62,14 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
                                 // Do something regarding the banner
             self.getMenusAndSpecials()
                             }
+        if let _ = viewModel.favoriteRestaurants.first(where: {$0.restID == viewModel.selectedRestaurant?.restID}) {
+               isFavorite = true
+               
+              
+            } else {
+               isFavorite = false
+               //item could not be found
+            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,19 +78,34 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     
     
     func notificationButtonPressed(rest : Restaurant) {
+        var text = ["add","to"]
+         
+        if isFavorite{
+           
+            text = ["remove","from"]
+          
+        } else if !isFavorite{
+            text  = ["add","to"]
+           //item could not be found
+        }
+
         // 1
-        let optionMenu = UIAlertController(title: "Notification preferences for \(rest.name)", message: "Would you like to favorite this  restaurant?", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: "Notification preferences", message: "Would you like \(text[0]) this restaurant \(text[1]) your favorites?", preferredStyle: .actionSheet)
         
-        // 2
-        let action = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
-            self.viewModel.favoriteRestaurant { result in
+        // 2 Add to favorites
+        let addRestaurantToFavoritesAction = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
+            self.viewModel.favoriteRestaurant(rest: rest, notificationsAreEnabeld: true) { result in
                 switch result{
                 case .success:
-                    let alertView = SPAlertView(title: "Notifications for \(rest.name) are on", message: nil, preset: SPAlertPreset.bookmark)
+                    Messaging.messaging().subscribe(toTopic: rest.messagingTopic) { error in
+                      print("Subscribed \(rest.messagingTopic)")
+                    }
+                    let alertView = SPAlertView(title: "\(rest.name) was added to your favorites", message: nil, preset: SPAlertPreset.star)
                     alertView.duration = 3
                     alertView.present()
                     alertView.haptic = .success
-                   
+                    self.isFavorite = true
+                    self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
                 case .failure:
                     let alertView = SPAlertView(title: "Try again later", message: nil, preset: SPAlertPreset.exclamation)
                                        alertView.duration = 3
@@ -90,10 +113,37 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
                                        alertView.present()
                     //SPAlert.present(title: "Try again later", preset: .exclamation)
                 }
-                }
+            }
 
             self.dismiss(animated: true, completion: nil)
         })
+        
+        
+        // MARK: - remove from favorites
+               let removeRestaurantFromFavoritesAction = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
+                   self.viewModel.deleteFavoriteRestaurant(rest: rest) { result in
+                       switch result{
+                       case .success:
+                        Messaging.messaging().unsubscribe(fromTopic: rest.messagingTopic) { error in
+                             print("UnSubscribed \(rest.messagingTopic)")
+                           }
+                           let alertView = SPAlertView(title: "\(rest.name) was removed from you favorites", message: nil, preset: SPAlertPreset.done)
+                           alertView.duration = 3
+                           alertView.present()
+                           alertView.haptic = .success
+                        self.isFavorite = false
+                        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+                       case .failure:
+                           let alertView = SPAlertView(title: "Try again later", message: nil, preset: SPAlertPreset.exclamation)
+                                              alertView.duration = 3
+                           alertView.haptic = .success
+                                              alertView.present()
+                           //SPAlert.present(title: "Try again later", preset: .exclamation)
+                       }
+                   }
+
+                   self.dismiss(animated: true, completion: nil)
+               })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alert: UIAlertAction!) in
             optionMenu.dismiss(animated: true, completion: nil)
@@ -101,7 +151,16 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
         // 4
         cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
         
-        optionMenu.addAction(action)
+        
+         if isFavorite{
+             optionMenu.addAction(removeRestaurantFromFavoritesAction)
+            }
+            
+         else {
+            optionMenu.addAction(addRestaurantToFavoritesAction)
+           //item could not be found
+        }
+       
         optionMenu.addAction(cancelAction)
         
         
@@ -218,10 +277,20 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             cell.name.text = rest.name
             cell.address.text = rest.address
             cell.selectionStyle = .none
-            if rest.subscriptionPlan < 3 && FirebaseService.shared.authState == .isLoggedIn {
-              cell.notificationButton.isHidden = false
-            } else{
-              cell.notificationButton.isHidden = false
+            if rest.subscriptionPlan < 3 || FirebaseService.shared.authState == .isLoggedOut  {
+              cell.notificationButton.isHidden = true
+            } else if rest.subscriptionPlan == 3 && FirebaseService.shared.authState == .isLoggedIn{
+                 if isFavorite{
+                     cell.notificationButton.isHidden = false
+                     cell.notificationButton.image = UIImage(systemName: "star.fill")
+                            
+                 } else  {
+                    cell.notificationButton.isHidden = false
+                    cell.notificationButton.image = UIImage(systemName: "star")
+                           
+            }
+              
+              
             }
             return cell
         }

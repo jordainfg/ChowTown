@@ -129,15 +129,16 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
                case .loginButon:
                 tableView.deselectRow(at: indexPath, animated: true)
                if email.count > 0 && password.count > 0 {
-                FirebaseService.shared.loginUser(Email: "jordainf@gmail.com", password: "boombam1234") { (result : Result<User, CoreError>) in
+                FirebaseService.shared.loginUser(Email: email, password: password) { (result : Result<User, CoreError>) in
                     switch result {
                     case .success(_):
                         self.dismiss(animated: true) {
                             self.delegate?.didAuthenticateSuccessfully(isTrue: true)
                         }
+                    
                     case .failure(_):
-                        let alert = UIAlertController(title: "Invalid credentials", message: "", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                        let alert = UIAlertController(title: "Invalid credentials", message: "Please provide valid credentials.", preferredStyle: UIAlertController.Style.alert)
+                      //  alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
                         self.present(alert, animated: true)
                         alert.addAction(UIAlertAction(title: "Okay",
                                                       style: UIAlertAction.Style.default,

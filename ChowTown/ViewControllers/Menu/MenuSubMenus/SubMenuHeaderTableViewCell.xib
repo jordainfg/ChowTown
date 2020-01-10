@@ -61,18 +61,13 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-HS-Np1">
-                                        <rect key="frame" x="246" y="51" width="24" height="23.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-HS-Np1">
+                                        <rect key="frame" x="246" y="50.5" width="24" height="24"/>
                                         <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Y3M-XU-684"/>
                                             <constraint firstAttribute="width" constant="24" id="oHo-dN-JYR"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -105,8 +100,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
+        <image name="star" catalog="system" width="64" height="58"/>
         <namedColor name="DarkModeBlack">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

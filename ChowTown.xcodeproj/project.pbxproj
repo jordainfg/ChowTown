@@ -173,6 +173,7 @@
 		5E088A3923C5D0180092E472 /* reloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E088A3823C5D0180092E472 /* reloadView.swift */; };
 		5E0FC73F23C320DE0062E188 /* iconWithLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */; };
 		5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */; };
+		5E3FEEE423C8866600CAEB34 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3FEEE323C8866600CAEB34 /* PushNotificationService.swift */; };
 		5E68BF2123C3769A0003EBEE /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E68BF2023C3769A0003EBEE /* RefreshContents.xib */; };
 		5E793EE323C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */; };
 		5E793EE423C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */; };
@@ -370,6 +371,7 @@
 		5E088A3823C5D0180092E472 /* reloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reloadView.swift; sourceTree = "<group>"; };
 		5E0FC73D23C320DE0062E188 /* iconWithLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iconWithLabelTableViewCell.xib; sourceTree = "<group>"; };
 		5E0FC73E23C320DE0062E188 /* iconWithLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iconWithLabelTableViewCell.swift; sourceTree = "<group>"; };
+		5E3FEEE323C8866600CAEB34 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		5E68BF2023C3769A0003EBEE /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		5E793EE123C5F6E700AF06F0 /* showMenuButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showMenuButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5E793EE223C5F6E700AF06F0 /* showMenuButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = showMenuButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -613,6 +615,7 @@
 				11C5081723685FEA003400D0 /* AppDelegate.swift */,
 				11C262F1237ABC1E00E74394 /* ViewModel.swift */,
 				1188DEE0238C037F00397186 /* ViewModel+CRUDExt.swift */,
+				5E3FEEE323C8866600CAEB34 /* PushNotificationService.swift */,
 				11C262F9237AC53600E74394 /* FirebaseService.swift */,
 				11C2630A237AF17C00E74394 /* Models */,
 				1191F5B0236C49B400649C79 /* Designables */,
@@ -1148,6 +1151,7 @@
 				5E0FC74023C320DE0062E188 /* iconWithLabelTableViewCell.swift in Sources */,
 				1124827C2399272C00946402 /* MakeReservationButtonTableViewCell.swift in Sources */,
 				5EC75B4423C7708B0038C40B /* emptyTableView.swift in Sources */,
+				5E3FEEE423C8866600CAEB34 /* PushNotificationService.swift in Sources */,
 				11C5081A23685FEA003400D0 /* SceneDelegate.swift in Sources */,
 				1188DEE1238C037F00397186 /* ViewModel+CRUDExt.swift in Sources */,
 				11A4E6F623ACCCCB00569CFE /* AuthenticationFooterTableViewCell.swift in Sources */,

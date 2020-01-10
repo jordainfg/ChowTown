@@ -8,11 +8,14 @@
 
 import UIKit
 
-class SearchViewController: UIViewController ,MyCustomCellDelegator {
-    func callSegueFromCell(segueIdentifier: String, index: Int, selected: Any) {
-        
-    }
+protocol searchViewControllerCellDelegator {
+    func prepareForSequeFromFavCollectionViewCell(segueIdentifier : String, restaurant : FavoriteRestaurant )
     
+}
+
+class SearchViewController: UIViewController ,searchViewControllerCellDelegator {
+   
+    var refreshControl: UIRefreshControl!
     
     var viewModel = ViewModel()
     
@@ -29,31 +32,11 @@ class SearchViewController: UIViewController ,MyCustomCellDelegator {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.LoadingIndicator(isVisable: true)
+      
         
         setUpTableView()
-        viewModel.getRestaurants { result in
-            
-            switch result {
-            case .success:
-                self.viewModel.filterdRestaurants = self.viewModel.restaurants
-                UIView.transition(with: self.tableView,
-                                  duration: 0.5,
-                                  options: .transitionCrossDissolve,
-                                  animations: { self.tableView.reloadData() })
-                self.tableView.LoadingIndicator(isVisable: false)
-            case .failure:
-                self.tableView.LoadingIndicator(isVisable: false)
-//             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-//                 //  self.refreshControl.endRefreshing()
-//                   self.banner.show()
-//             })
-             
-            }
-           
-              self.tableView.LoadingIndicator(isVisable: false)
-        }
         
+        getFavoriteRestaurantsAndRestaurants()
         
         
         //  self.navigationController?.view.backgroundColor = UIColor.clear
@@ -62,24 +45,67 @@ class SearchViewController: UIViewController ,MyCustomCellDelegator {
         // Do any additional setup after loading the view.
     }
     
+    func getFavoriteRestaurantsAndRestaurants(){
+        viewModel.getRestaurants { result in
+                    
+                    switch result {
+                    case .success:
+                        if FirebaseService.shared.authState == .isLoggedIn {
+                            self.viewModel.getFavoriteRestaurants{ result in
+                                switch result {
+                                case .success:
+                                    self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                                                           UIView.transition(with: self.tableView,
+                                                                             duration: 0.5,
+                                                                             options: .transitionCrossDissolve,
+                                                                             animations: { self.tableView.reloadData() })
+                                                           self.refreshControl.endRefreshing()
+                                case .failure:
+                                    self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                                                           UIView.transition(with: self.tableView,
+                                                                             duration: 0.5,
+                                                                             options: .transitionCrossDissolve,
+                                                                             animations: { self.tableView.reloadData() })
+                                                           self.refreshControl.endRefreshing()
+                                
+                                }
+                            }
+                        } else {
+                            self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                            UIView.transition(with: self.tableView,
+                                              duration: 0.5,
+                                              options: .transitionCrossDissolve,
+                                              animations: { self.tableView.reloadData() })
+                            self.refreshControl.endRefreshing()
+                        }
+                    
+                    case .failure:
+                        self.refreshControl.endRefreshing()
+        //             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+        //                 //  self.refreshControl.endRefreshing()
+        //                   self.banner.show()
+        //             })
+                     
+                    }
+                   
+                      self.refreshControl.endRefreshing()
+                }
+        
+    }
+    
     func setUpTableView(){
-        //        if #available(iOS 13.0, *) {
-        //            let navBarAppearance = UINavigationBarAppearance()
-        //            navBarAppearance.configureWithOpaqueBackground()
-        //            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-        //            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        //            navBarAppearance.backgroundColor = UIColor.clear
-        //            navBarAppearance.shadowImage = UIImage()
-        //            navBarAppearance.shadowColor = UIColor.clear
-        //            navBar.standardAppearance = navBarAppearance
-        //            navBar.scrollEdgeAppearance = navBarAppearance
-        //
-        //        }
+        refreshControl = UIRefreshControl()
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
+              self.refreshControl.beginRefreshing()
         self.tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         
+    }
+    @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
+        getFavoriteRestaurantsAndRestaurants()
     }
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
@@ -93,6 +119,10 @@ class SearchViewController: UIViewController ,MyCustomCellDelegator {
             return
         }
         
+    }
+    func prepareForSequeFromFavCollectionViewCell(segueIdentifier: String, restaurant: FavoriteRestaurant) {
+        selectedRestaurant = viewModel.restaurants.first(where: {$0.restID == restaurant.restID})
+        performSegue(withIdentifier: segueIdentifier, sender: nil)
     }
     
     
@@ -129,12 +159,12 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-        case let .favorite(favorites):
-            let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier()) as! FavoriteEstablishmentTableViewCell
-            cell.favorites = favorites
-              cell.collectionView.reloadData()
+        case let .favorite(favorite):
+            let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
+            cell.configureFavorite(restaurant: favorite)
             
             return cell
+          
         case let .restaurant(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
             cell.configure(restaurant: Restaurant)
@@ -148,8 +178,15 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-        case .favorite(_):
-            tableView.deselectRow(at: indexPath, animated: true)
+            case let .favorite(restaurant):
+            selectedRestaurant = viewModel.restaurants.first(where: {$0.restID == restaurant.restID})
+            if selectedRestaurant != nil{
+                performSegue(withIdentifier: "toRestaurant", sender: nil)
+                tableView.deselectRow(at: indexPath, animated: true)
+            } else {
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+         
         case let .restaurant(restaurant):
             selectedRestaurant = viewModel.restaurants.filter({ $0.restID == restaurant.restID }).first
             if selectedRestaurant != nil{
@@ -158,7 +195,8 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             } else {
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-            
+            default:
+            return
         }
     }
     // set the height of the row based on the chosen cell
@@ -167,7 +205,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             switch type {
     
             case .favorite(_):
-                return 170
+                return 100
             case .restaurant(_):
                 return 100
             }
@@ -176,6 +214,10 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         switch section {
+            case 0:
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
+            headerCell.sectionName.text = "Favorites"
+            return headerCell.contentView
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             return headerCell.contentView
@@ -197,7 +239,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             return 40
             
         default:
-            return 0
+            return 40
         }
         
     }

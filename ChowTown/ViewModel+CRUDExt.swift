@@ -83,9 +83,9 @@ extension ViewModel{
                 for document in querySnapshot!.documents {
                     
                     self.Popularmeals.append(Meal(dictionary: document.data())! )
-                    completionHandler(.success(.collectionRetrieved))
+                    
                 }
-                
+                completionHandler(.success(.collectionRetrieved))
             }
         }
     }
@@ -182,9 +182,10 @@ extension ViewModel{
                 for document in querySnapshot!.documents {
                     
                     self.restaurants.append(Restaurant(dictionary: document.data())! )
-                    completionHandler(.success(.collectionRetrieved))
+                    
                     
                 }
+                completionHandler(.success(.collectionRetrieved))
                 
                 print("Boom, \(self.restaurants)")
             }
@@ -274,9 +275,8 @@ extension ViewModel{
                     
                     self.rewards.append(Reward(dictionary: document.data())! )
                     
-                    completionHandler(.success(.collectionRetrieved))
                 }
-                
+                  completionHandler(.success(.collectionRetrieved))
             }
         }
     }
@@ -342,14 +342,17 @@ extension ViewModel{
         
     }
     
-    func favoriteRestaurant( completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+    func favoriteRestaurant(rest: Restaurant, notificationsAreEnabeld: Bool,  completionHandler: @escaping (Result<Response, CoreError>) -> Void){
         let userID = (FirebaseService.shared.authenticationState?.user_ID)!
         let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         let docRef = db.collection("Users/\(userID)/Favorites").document(restID)
         
         docRef.setData( [
-            "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
-            "notificationsAreOn" : true,
+            "restID" : rest.restID,
+            "name" : rest.name,
+            "address" : rest.address,
+            "logoURL" : rest.logoURL,
+            "notificationsAreOn" : notificationsAreEnabeld,
             
         ]){ err in
             if let err = err {
@@ -363,6 +366,54 @@ extension ViewModel{
         }
         
     }
+    
+    func deleteFavoriteRestaurant(rest: Restaurant, completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+           let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+           let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+           let docRef = db.collection("Users/\(userID)/Favorites").document(restID)
+           
+           docRef.delete() { err in
+               if let err = err {
+                   print("Error removing document: \(err)")
+                   completionHandler(.failure(.deleteFailed))
+               } else {
+                   print("Document successfully removed!")
+                completionHandler(.success(.documentAdded))
+               }
+           }
+           
+       }
+    
+    func getFavoriteRestaurants(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+        self.favoriteRestaurants.removeAll()
+        
+        
+        let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+        let docRef = db.collection("Users/\(userID)/Favorites")
+           docRef.getDocuments() { (querySnapshot, err) in
+               if let err = err {
+                   print("Error getting documents: \(err)")
+                   completionHandler(.failure(.noSuchCollection))
+               } else {
+                   if querySnapshot!.documents.isEmpty{
+                       completionHandler(.failure(.noSuchCollection))
+                       return
+                   }
+                   for document in querySnapshot!.documents {
+                       
+                       self.favoriteRestaurants.append(FavoriteRestaurant(dictionary: document.data())! )
+                      
+                       
+                   }
+                    completionHandler(.success(.collectionRetrieved))
+                   print("Boom, \(self.restaurants)")
+               }
+           }
+       }
+    
+    
+    
+  
     
     
     
