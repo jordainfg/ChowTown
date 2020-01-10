@@ -72,6 +72,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
                             }
                         } else {
                             self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                            self.viewModel.favoriteRestaurants.removeAll()
                             UIView.transition(with: self.tableView,
                                               duration: 0.5,
                                               options: .transitionCrossDissolve,
@@ -216,7 +217,12 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         switch section {
             case 0:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
-            headerCell.sectionName.text = "Favorites"
+            if viewModel.favoriteRestaurants.isEmpty{
+              headerCell.sectionName.text = ""
+            } else{
+              headerCell.sectionName.text = "Favorites"
+            }
+            
             return headerCell.contentView
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection

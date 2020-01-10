@@ -31,7 +31,7 @@ class RewardsViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         if let plan = viewModel.selectedRestaurant?.subscriptionPlan {
-            if FirebaseService.shared.authState == .isLoggedIn && plan == 1{
+            if FirebaseService.shared.authState == .isLoggedIn && plan > 1{
                 redeemButton.alpha = 1
             }else{
                 redeemButton.alpha = 0
@@ -93,7 +93,7 @@ class RewardsViewController: UIViewController {
     func getRewardsData(){
         self.tableView.restore()
         
-        if viewModel.selectedRestaurant?.subscriptionPlan == 0 {
+        if viewModel.selectedRestaurant?.subscriptionPlan == 0 || viewModel.selectedRestaurant?.subscriptionPlan == 1{
             self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
             self.refreshControl.endRefreshing()
             UIView.transition(with: self.tableView,

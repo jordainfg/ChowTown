@@ -762,7 +762,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-Jo-mow">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="700"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <connections>
@@ -771,7 +771,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="jYq-wj-d8u">
-                                <rect key="frame" x="20" y="88" width="374" height="56"/>
+                                <rect key="frame" x="20" y="140" width="374" height="56"/>
                                 <color key="backgroundColor" name="DarkModeBlack"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -791,7 +791,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsc-2s-9X1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="never" id="icD-pA-DIk">
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="icD-pA-DIk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ojX-Yd-h4U"/>
                     </navigationItem>
                     <connections>
@@ -912,7 +912,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cm8-5y-hX2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OuO-Wa-Jeh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

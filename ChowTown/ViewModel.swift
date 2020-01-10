@@ -113,7 +113,7 @@ public class ViewModel{
         if !favoriteRestaurants.isEmpty {
             types = [favoritesDataTypes,restaurantDataTypes]
         } else{
-            types = [restaurantDataTypes]
+            types = [[],restaurantDataTypes]
         }
         
         return types
