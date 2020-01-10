@@ -243,7 +243,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case 1:
             return 45
         default:
-            return 0
+            return 20
         }
         
     }

@@ -13,7 +13,7 @@ class SubMenuHeaderTableViewCell: UITableViewCell {
      @IBOutlet var headerimageView: UIImageView!
        @IBOutlet weak var address: UILabel!
        @IBOutlet weak var name: UILabel!
-    @IBOutlet var notificationBellButton: UIButton!
+   @IBOutlet var notificationButton: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

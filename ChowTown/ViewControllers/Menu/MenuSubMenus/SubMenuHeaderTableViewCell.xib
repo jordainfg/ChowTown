@@ -45,16 +45,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-dU-o6n">
-                                        <rect key="frame" x="70" y="34.5" width="161" height="56.5"/>
+                                        <rect key="frame" x="70" y="38.5" width="161" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Warung Mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnZ-dJ-v39">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amsterdamse Veerkade 57-A, 2512 AH " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-6j-UGh">
-                                                <rect key="frame" x="0.0" y="23.5" width="152.5" height="33"/>
+                                                <rect key="frame" x="0.0" y="20" width="161" height="28"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -99,6 +99,7 @@
                 <outlet property="address" destination="mGy-6j-UGh" id="3vR-0B-y0g"/>
                 <outlet property="headerimageView" destination="fyW-5n-f5f" id="Pe5-49-ISn"/>
                 <outlet property="name" destination="FnZ-dJ-v39" id="6PA-1d-8KJ"/>
+                <outlet property="notificationButton" destination="Tyy-HS-Np1" id="6Th-Eu-XYd"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="174.44196428571428"/>
         </tableViewCell>

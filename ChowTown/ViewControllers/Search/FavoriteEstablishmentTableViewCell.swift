@@ -13,7 +13,10 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
+    
     var behavior: MSCollectionViewPeekingBehavior = MSCollectionViewPeekingBehavior(cellPeekWidth: 30)
+    
+    var delegate:MyCustomCellDelegator!
     
     var favorites : [Restaurant]? = nil
     
@@ -32,10 +35,10 @@ class FavoriteEstablishmentTableViewCell: UITableViewCell {
     
     func setUpCollectionView(){
         
-        
+        collectionView.configureForPeekingBehavior(behavior: behavior)
        // delegate = MSPeekCollectionViewDelegateImplementation(cellPeekWidth: 20)
        // delegate = MSPeekCollectionViewDelegateImplementation(numberOfItemsToShow: 1)
-        collectionView.configureForPeekingDelegate()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
           collectionView.contentInsetAdjustmentBehavior = .always
@@ -76,8 +79,11 @@ extension FavoriteEstablishmentTableViewCell: UICollectionViewDataSource, UIColl
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       self.delegate.callSegueFromCell(segueIdentifier: "toMeal", index: indexPath.row, selected: "")
         
-        
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+            behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

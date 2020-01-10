@@ -25,7 +25,7 @@ enum mealDetailTableViewDataType {
 }
 
 enum SearchTableViewDataType {
-    case favorite(Restaurant)
+    case favorite([Restaurant])
     case restaurant(Restaurant)
 }
 
@@ -104,9 +104,9 @@ public class ViewModel{
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
         //let favorites = []
-        // let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
+         //let favoritesDataTypes = favorites.map { SearchTableViewDataType.favorite($0) }
         let restaurantDataTypes = filterdRestaurants.map { SearchTableViewDataType.restaurant($0) }
-        var types: [[SearchTableViewDataType]] = [[],restaurantDataTypes]
+        var types: [[SearchTableViewDataType]] = [[.favorite(restaurants)],restaurantDataTypes]
         
         if favoritesIsShowing {
             types.append(restaurantDataTypes)

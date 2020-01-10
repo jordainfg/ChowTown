@@ -168,19 +168,24 @@ extension ViewModel{
     
     
     // MARK: - CR Restaurants
-    func getRestaurants(completion: @escaping () -> Void){
+    func getRestaurants(completionHandler: @escaping (Result<Response, CoreError>) -> Void){
         self.restaurants.removeAll()
         db.collection("Restaurant").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
+                completionHandler(.failure(.noSuchCollection))
             } else {
+                if querySnapshot!.documents.isEmpty{
+                    completionHandler(.failure(.noSuchCollection))
+                    return
+                }
                 for document in querySnapshot!.documents {
                     
                     self.restaurants.append(Restaurant(dictionary: document.data())! )
-                    
+                    completionHandler(.success(.collectionRetrieved))
                     
                 }
-                completion()
+                
                 print("Boom, \(self.restaurants)")
             }
         }
@@ -336,5 +341,29 @@ extension ViewModel{
         }
         
     }
+    
+    func favoriteRestaurant( completionHandler: @escaping (Result<Response, CoreError>) -> Void){
+        let userID = (FirebaseService.shared.authenticationState?.user_ID)!
+        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        let docRef = db.collection("Users/\(userID)/Favorites").document(restID)
+        
+        docRef.setData( [
+            "restID" : UserDefaults.standard.string(forKey: "selectedRestaurant")!,
+            "notificationsAreOn" : true,
+            
+        ]){ err in
+            if let err = err {
+                print("Error adding document: \(err)")
+                completionHandler(.failure(.error(error: err)))
+            } else {
+                print("rewards added with ID: \(docRef.documentID)")
+                completionHandler(.success(.documentAdded))
+                
+            }
+        }
+        
+    }
+    
+    
     
 }

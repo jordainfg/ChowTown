@@ -181,13 +181,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Present this QR code to collect your badges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-TB-X60">
-                                                <rect key="frame" x="0.0" y="34" width="276.5" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="34" width="277" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                                 <color key="textColor" name="WhiteToOrange"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xWu-zH-8yL">
-                                                <rect key="frame" x="0.0" y="64.5" width="19.5" height="521"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="19.5" height="524"/>
                                                 <color key="tintColor" name="WhiteToOrange"/>
                                             </imageView>
                                         </subviews>

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController ,MyCustomCellDelegator {
+    func callSegueFromCell(segueIdentifier: String, index: Int, selected: Any) {
+        
+    }
+    
     
     var viewModel = ViewModel()
     
@@ -26,18 +30,31 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.LoadingIndicator(isVisable: true)
-        viewModel.getRestaurants {
-            self.viewModel.filterdRestaurants = self.viewModel.restaurants
-          
-            UIView.transition(with: self.tableView,
-                              duration: 0.5,
-                              options: .transitionCrossDissolve,
-                              animations: { self.tableView.reloadData() })
+        
+        setUpTableView()
+        viewModel.getRestaurants { result in
             
+            switch result {
+            case .success:
+                self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                UIView.transition(with: self.tableView,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: { self.tableView.reloadData() })
+                self.tableView.LoadingIndicator(isVisable: false)
+            case .failure:
+                self.tableView.LoadingIndicator(isVisable: false)
+//             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+//                 //  self.refreshControl.endRefreshing()
+//                   self.banner.show()
+//             })
+             
+            }
+           
               self.tableView.LoadingIndicator(isVisable: false)
         }
         
-        setUpTableView()
+        
         
         //  self.navigationController?.view.backgroundColor = UIColor.clear
         
@@ -112,9 +129,10 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-        case  .favorite(_):
+        case let .favorite(favorites):
             let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier()) as! FavoriteEstablishmentTableViewCell
-            cell.favorites = viewModel.restaurants
+            cell.favorites = favorites
+              cell.collectionView.reloadData()
             
             return cell
         case let .restaurant(Restaurant):
@@ -144,16 +162,16 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         }
     }
     // set the height of the row based on the chosen cell
-    //    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
-    //        switch type {
-    //
-    //        case .favorite(_):
-    //            return 170
-    //        case .restaurant(_):
-    //            return 100
-    //        }
-    //    }
+        func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
+            switch type {
+    
+            case .favorite(_):
+                return 170
+            case .restaurant(_):
+                return 100
+            }
+        }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         

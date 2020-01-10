@@ -68,14 +68,21 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
     }
     
     
-     func changeLocationButtonPressed() {
+    func notificationButtonPressed(rest : Restaurant) {
         // 1
-        let optionMenu = UIAlertController(title: nil, message: "Would you change the menu?", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: "Notification preferences for \(rest.name)", message: "Would you like to favorite this  restaurant?", preferredStyle: .actionSheet)
         
         // 2
         let action = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
-            
-            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            viewModel.favoriteRestaurant { result in {
+                switch result{
+                case .success:
+                    
+                case .failure:
+                    
+                }
+                }}
+            self.dismiss(animated: true, completion: nil)
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alert: UIAlertAction!) in
@@ -201,9 +208,11 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             cell.name.text = rest.name
             cell.address.text = rest.address
             cell.selectionStyle = .none
-           // if rest.subscriptionPlan < 3 {
-              //  cell.notificationBellButton.isHidden = true
-           // }
+            if rest.subscriptionPlan < 3 && FirebaseService.shared.authState == .isLoggedIn {
+              cell.notificationButton.isHidden = true
+            } else{
+              cell.notificationButton.isHidden = false
+            }
             return cell
         }
     }
@@ -211,8 +220,8 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = viewModel.choiceMenuTableViewCellTypes[indexPath.section][indexPath.row]
                switch type {
-               case .MenuHeader(_):
-                changeLocationButtonPressed()
+               case let .MenuHeader(restaurant):
+                notificationButtonPressed(rest: restaurant)
                tableView.deselectRow(at: indexPath, animated: true)
                case .MenuFood(_):
                
