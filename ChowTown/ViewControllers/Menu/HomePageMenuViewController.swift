@@ -10,18 +10,18 @@ import UIKit
 import NotificationBannerSwift
 import SPAlert
 import Firebase
-class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , BannerColorsProtocol{
-    func color(for style: BannerStyle) -> UIColor {
-        return UIColor.red
-    }
-    
+class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     
     // MARK: - Variables
     var viewModel = ViewModel()
     var selectedSpecial = 0
     var selectedMenu : Menu?
+    var subScriptionPan = 0 
+    
     let banner = NotificationBanner(customView: reloadView(frame: .zero))
     var isFavorite = true
+    
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,7 +37,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator , Banne
         banner.bannerHeight = 120
         getMenusAndSpecials()
         setupView()
-        print("TT\(viewModel.selectedRestaurant )" )
+       // print("TT\(viewModel.selectedRestaurant )" )
         
     }
     

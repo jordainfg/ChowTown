@@ -20,6 +20,9 @@ class RewardsViewController: UIViewController {
     
     var refreshControl: UIRefreshControl!
     
+    var subScriptionPlan : Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -30,15 +33,11 @@ class RewardsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if let plan = viewModel.selectedRestaurant?.subscriptionPlan {
-            if FirebaseService.shared.authState == .isLoggedIn && plan > 1{
-                redeemButton.alpha = 1
-            }else{
-                redeemButton.alpha = 0
-            }
-        }else{
-            redeemButton.alpha = 0
+        
+        if let subScriptionPlan = viewModel.selectedRestaurant?.subscriptionPlan {
+            self.subScriptionPlan = subScriptionPlan
         }
+        
         
     }
     
@@ -46,6 +45,8 @@ class RewardsViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    
     func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         
@@ -56,18 +57,23 @@ class RewardsViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
         tableView.register(UINib(nibName: RewardsLoginTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: RewardsLoginTableViewCell.reuseIdentifier())
-        //            tableView.register(UINib(nibName: "HeaderForTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderCellIdentifier")
-        
-    }
-    func setUpView(){
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
         self.refreshControl.beginRefreshing()
+    }
+    func setUpView(){
+        
         getRewardsData()
         setupTableView()
         navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navBar.backgroundColor = UIColor.clear
+        
+        if FirebaseService.shared.authState == .isLoggedIn && subScriptionPlan > 1{
+            redeemButton.alpha = 1
+        }else{
+            redeemButton.alpha = 0
+        }
         
         
     }
@@ -93,7 +99,7 @@ class RewardsViewController: UIViewController {
     func getRewardsData(){
         self.tableView.restore()
         
-        if viewModel.selectedRestaurant?.subscriptionPlan == 0 || viewModel.selectedRestaurant?.subscriptionPlan == 1{
+        if subScriptionPlan < 2 {
             self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
             self.refreshControl.endRefreshing()
             UIView.transition(with: self.tableView,
@@ -102,6 +108,7 @@ class RewardsViewController: UIViewController {
                               animations: { self.tableView.reloadData()
                                 
             })
+            
         } else {
             self.viewModel.getRewards {(result) in
                 switch result{
@@ -153,12 +160,6 @@ class RewardsViewController: UIViewController {
     }
     
     
-    //makes sure the shadow color changes when dark mode is turned on
-    //override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-    // Trait collection will change. Use this one so you know what the state is changing to.
-    //    tableView.reloadData()
-    //}
-    
     @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
         getRewardsData()
     }
@@ -166,7 +167,6 @@ class RewardsViewController: UIViewController {
     
 }
 extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
-    
     
     
     func numberOfSections(in _: UITableView) -> Int {
@@ -198,10 +198,10 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
         case .login:
             let cell = tableView.dequeueReusableCell(withIdentifier: RewardsLoginTableViewCell.reuseIdentifier()) as! RewardsLoginTableViewCell
             cell.selectionStyle = .none
-            
             return cell
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = viewModel.rewardsTableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
@@ -231,7 +231,7 @@ extension RewardsViewController: UITableViewDataSource , UITableViewDelegate{
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             headerCell.sectionName.text = "Badges add up to Rewards"
             headerCell.sectionName.textColor = UIColor.label
-            headerCell.sectionName.font.withSize(18)
+            headerCell.sectionName.font.withSize(16)
             return headerCell.contentView
             
         default:
@@ -259,7 +259,7 @@ extension RewardsViewController : AuthenticationDelegate{
     func didAuthenticateSuccessfully(isTrue: Bool) {
         if isTrue {
             getRewardsData()
-          
+            
         } else {
             
         }

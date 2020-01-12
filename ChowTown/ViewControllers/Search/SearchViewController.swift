@@ -14,7 +14,7 @@ protocol searchViewControllerCellDelegator {
 }
 
 class SearchViewController: UIViewController ,searchViewControllerCellDelegator {
-   
+    
     var refreshControl: UIRefreshControl!
     
     var viewModel = ViewModel()
@@ -23,74 +23,82 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
     
     var selectedRestaurant : Restaurant?
     
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var navBar: UINavigationBar!
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
-        
+        setUpNavBar()
         setUpTableView()
+       // getFavoriteRestaurantsAndRestaurants()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getFavoriteRestaurantsAndRestaurants()
-        
-        
-        //  self.navigationController?.view.backgroundColor = UIColor.clear
-        
-        //navBar.setValue(true, forKey: "hidesShadow")
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+    }
+    
+    func setUpNavBar(){
+
+        self.extendedLayoutIncludesOpaqueBars = true // fixed the black bar button
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        //self.searchController.searchBar.placeholder = ""
+        self.searchController.searchBar.delegate = self
+        self.definesPresentationContext = true
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     func getFavoriteRestaurantsAndRestaurants(){
+        tableView.LoadingIndicator(isVisable: true)
         viewModel.getRestaurants { result in
-                    
-                    switch result {
-                    case .success:
-                        if FirebaseService.shared.authState == .isLoggedIn {
-                            self.viewModel.getFavoriteRestaurants{ result in
-                                switch result {
-                                case .success:
-                                    self.viewModel.filterdRestaurants = self.viewModel.restaurants
-                                                           UIView.transition(with: self.tableView,
-                                                                             duration: 0.5,
-                                                                             options: .transitionCrossDissolve,
-                                                                             animations: { self.tableView.reloadData() })
-                                                           self.refreshControl.endRefreshing()
-                                case .failure:
-                                    self.viewModel.filterdRestaurants = self.viewModel.restaurants
-                                                           UIView.transition(with: self.tableView,
-                                                                             duration: 0.5,
-                                                                             options: .transitionCrossDissolve,
-                                                                             animations: { self.tableView.reloadData() })
-                                                           self.refreshControl.endRefreshing()
-                                
-                                }
-                            }
-                        } else {
+            switch result {
+            case .success:
+                if FirebaseService.shared.authState == .isLoggedIn {
+                    self.viewModel.getFavoriteRestaurants{ result in
+                        switch result {
+                        case .success:
                             self.viewModel.filterdRestaurants = self.viewModel.restaurants
-                            self.viewModel.favoriteRestaurants.removeAll()
                             UIView.transition(with: self.tableView,
                                               duration: 0.5,
                                               options: .transitionCrossDissolve,
                                               animations: { self.tableView.reloadData() })
                             self.refreshControl.endRefreshing()
+                            self.tableView.LoadingIndicator(isVisable: false)
+                        case .failure:
+                            self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                            UIView.transition(with: self.tableView,
+                                              duration: 0.5,
+                                              options: .transitionCrossDissolve,
+                                              animations: { self.tableView.reloadData() })
+                            self.refreshControl.endRefreshing()
+                            self.tableView.LoadingIndicator(isVisable: false)
+                            
                         }
-                    
-                    case .failure:
-                        self.refreshControl.endRefreshing()
-        //             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-        //                 //  self.refreshControl.endRefreshing()
-        //                   self.banner.show()
-        //             })
-                     
                     }
-                   
-                      self.refreshControl.endRefreshing()
+                } else {
+                    self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                    self.viewModel.favoriteRestaurants.removeAll()
+                    UIView.transition(with: self.tableView,
+                                      duration: 0.5,
+                                      options: .transitionCrossDissolve,
+                                      animations: { self.tableView.reloadData() })
+                    self.refreshControl.endRefreshing()
+                    self.tableView.LoadingIndicator(isVisable: false)
                 }
+                
+            case .failure:
+                self.refreshControl.endRefreshing()
+                self.tableView.LoadingIndicator(isVisable: false)
+                
+            }
+            
+            self.tableView.LoadingIndicator(isVisable: false)
+        }
         
     }
     
@@ -98,7 +106,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
-              self.refreshControl.beginRefreshing()
+        tableView.LoadingIndicator(isVisable: true)
         self.tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: FavoriteEstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: FavoriteEstablishmentTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EstablishmentTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: EstablishmentTableViewCell.reuseIdentifier())
@@ -106,6 +114,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
         
     }
     @objc func refreshControlAction(refreshControl _: UIRefreshControl) {
+        self.refreshControl.beginRefreshing()
         getFavoriteRestaurantsAndRestaurants()
     }
     // MARK: - Segues
@@ -136,6 +145,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
 extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
     
     func numberOfSections(in _: UITableView) -> Int {
+        
         return viewModel.searchTableViewcellTypes.count
     }
     
@@ -165,7 +175,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             cell.configureFavorite(restaurant: favorite)
             
             return cell
-          
+            
         case let .restaurant(Restaurant):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
             cell.configure(restaurant: Restaurant)
@@ -179,7 +189,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch type {
             
-            case let .favorite(restaurant):
+        case let .favorite(restaurant):
             selectedRestaurant = viewModel.restaurants.first(where: {$0.restID == restaurant.restID})
             if selectedRestaurant != nil{
                 performSegue(withIdentifier: "toRestaurant", sender: nil)
@@ -187,7 +197,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             } else {
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-         
+            
         case let .restaurant(restaurant):
             selectedRestaurant = viewModel.restaurants.filter({ $0.restID == restaurant.restID }).first
             if selectedRestaurant != nil{
@@ -196,31 +206,31 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             } else {
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-            default:
+        default:
             return
         }
     }
     // set the height of the row based on the chosen cell
-        func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
-            switch type {
-    
-            case .favorite(_):
-                return 100
-            case .restaurant(_):
-                return 100
-            }
+    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let type = viewModel.searchTableViewcellTypes[indexPath.section][indexPath.row]
+        switch type {
+            
+        case .favorite(_):
+            return 100
+        case .restaurant(_):
+            return 100
         }
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         switch section {
-            case 0:
+        case 0:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderForTableViewSectionID") as! HeaderForTableViewSection
             if viewModel.favoriteRestaurants.isEmpty{
-              headerCell.sectionName.text = ""
+                headerCell.sectionName.text = ""
             } else{
-              headerCell.sectionName.text = "Favorites"
+                headerCell.sectionName.text = "Favorites"
             }
             
             return headerCell.contentView
@@ -241,6 +251,12 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         switch section {
+        case 0 :
+            if viewModel.favoriteRestaurants.isEmpty{
+                return 0
+            } else{
+                return 40
+            }
         case 1:
             return 40
             
@@ -257,6 +273,7 @@ extension SearchViewController: UISearchBarDelegate
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
     {
         //Show Cancel
+        
         searchBar.setShowsCancelButton(true, animated: true)
         searchBar.tintColor = .systemIndigo
     }

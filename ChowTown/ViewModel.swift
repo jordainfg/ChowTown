@@ -46,7 +46,7 @@ enum SubMenuMealsAndDrinksTableViewDataType {
 
 public class ViewModel{
     
-    // MARK: - Firebase
+    // MARK: - Variables
     
     let db = Firestore.firestore()
     let storage = Storage.storage()
@@ -54,54 +54,24 @@ public class ViewModel{
     var restaurants : [Restaurant] = []
     var filterdRestaurants : [Restaurant] = []
     var favoriteRestaurants : [FavoriteRestaurant] = []
+    var selectedRestaurant : Restaurant?
     
     var menus : [Menu] = []
     var meals : [Meal] = []
     var filterdMeals : [Meal] = []
     var Popularmeals : [Meal] = []
     
-    var isLoggedIn : Bool = true
-    
-    var selectedRestaurant : Restaurant?
+
     var selectedMeal : Meal?
     var selectedMenu : Menu?
     
     var rewards : [Reward] = []
     var rewardPoints : UserRewardPoints?
-    // MARK: - Views
-    // ChoiceMenuViewController
     
-    var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
-        
-        // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
-        //  let specials = meals.filter {$0.isPopular == true}
-        
-        var types: [[ChoiceMenuTableViewDataType]] = [[]]
-        if let rest = selectedRestaurant{
-            types = [[.MenuHeader(rest)],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
-        }
-        return types
-    }
     
-    //Meal Detail
-    var addons : [AddOn] = [AddOn(name: "Advocado", price: 12 , iconNumber: 0), AddOn(name: "Advocado", price: 12, iconNumber: 0),AddOn(name: "Advocado", price: 12, iconNumber: 0)]
     
-    var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
-        
-        if let additions = selectedMeal?.additions{
-            let AddOns = additions.map { mealDetailTableViewDataType.addOns($0) }
-            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
-            return types
-        } else{
-            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")]]
-            
-            return types
-        }
-        
-        
-    }
+    // MARK: -  Search & Favorites
     
-    // Search & Favorites
     var favoritesIsShowing = false
     var searchTableViewcellTypes: [[SearchTableViewDataType]] {
         
@@ -119,9 +89,56 @@ public class ViewModel{
         return types
     }
     
+    // MARK: - ChoiceMenuViewController
+    var choiceMenuTableViewCellTypes: [[ChoiceMenuTableViewDataType]] {
+        
+        // let specialmeals = meals.filter {$0.isPopular == true}.map { ChoiceMenuTableViewDataType.MenuSpecials([$0]) }
+        //  let specials = meals.filter {$0.isPopular == true}
+        
+        var types: [[ChoiceMenuTableViewDataType]] = [[]]
+        if let rest = selectedRestaurant{
+            if selectedRestaurant?.subscriptionPlan == 0 {
+               types = [[]]
+            } else {
+               types = [[.MenuHeader(rest)],[.MenuSpecials(Popularmeals)],[.MenuFood(menus.filter {$0.isMeal == true})] ,[.MenuDrinks(menus.filter {$0.isMeal == false})]]
+            }
+        }
+        return types
+    }
     
-    //Rewards
+ // MARK: - SubMenuMealsAndDrinks
+    var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
+        let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
+        var types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
+        if let menu = selectedMenu {
+             if menu.isMeal{
+                 types =  [[.header],mealsForMenu]
+             } else{
+                 types =  [mealsForMenu]
+             }
+         }
+        return types
+    }
+
     
+    // MARK: About Meal
+    var mealDetailTableViewcellTypes: [[mealDetailTableViewDataType]] {
+        
+        if let additions = selectedMeal?.additions{
+            let AddOns = additions.map { mealDetailTableViewDataType.addOns($0) }
+            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")],AddOns]
+            return types
+        } else{
+            let types: [[mealDetailTableViewDataType]] = [[],[.nutritionInfo],[.aboutIconSet("About")],[.alergenIconSet("Alergens")]]
+            
+            return types
+        }
+        
+        
+    }
+    
+
+    // MARK: Rewards
     var rewardsTableViewcellTypes: [[RewardsTableViewDataType]] {
         let rewardsTypes = rewards.map { RewardsTableViewDataType.reward($0) }
         var types: [[RewardsTableViewDataType]] = [[]]
@@ -139,24 +156,6 @@ public class ViewModel{
     return types
 }
 
-
-
-// SubMenuMealsAndDrinks
-
-var SubMenuMealsAndDrinksTableViewcellTypes: [[SubMenuMealsAndDrinksTableViewDataType]] {
-    let mealsForMenu =  filterdMeals.map { SubMenuMealsAndDrinksTableViewDataType.meal($0) }
-    var types: [[SubMenuMealsAndDrinksTableViewDataType]] = [[.header],mealsForMenu]
-    if let menu = selectedMenu {
-         if menu.isMeal{
-             types =  [[.header],mealsForMenu]
-         } else{
-             types =  [mealsForMenu]
-         }
-     }
-    return types
-}
-
-// REWARDS
 
 
 
