@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
 //            overrideUserInterfaceStyle = .light
 //        }
 //        else{
-//          overrideUserInterfaceStyle = .dark
+//          overrideUserInterfaceStyle = .light
 //        }
     }
     
@@ -136,9 +136,9 @@ extension LoginViewController : UITableViewDataSource , UITableViewDelegate{
         switch type {
             
         case .header:
-            return tableView.frame.size.height  / 6
+            return 150
         case .body:
-            return tableView.frame.size.height  / 4
+            return 225
         case .footer:
             return 100
             

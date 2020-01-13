@@ -12,7 +12,7 @@ import Firebase
 extension ViewModel{
     // MARK: - CR MEALS
     func addMeal( refMenu :DocumentReference?){
-        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+        //let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         if let menuID = refMenu?.documentID {
             let refMeal = db.collection("Restaurant/ss/Menu/\(menuID)/Meals").document()
             refMeal.setData([
@@ -41,7 +41,7 @@ extension ViewModel{
     
     func addPopularMeal(){
         // Add a new document with a generated ID
-        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+      //  let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         let refMeal = db.collection("Restaurant/ss/PopularMeals").document()
         refMeal.setData([
             "companyID": "2",
@@ -122,7 +122,7 @@ extension ViewModel{
         // Add a new document with a generated ID
         // var ref: DocumentReference? = nil
         //  let refMenu = db.collection("Restaurant/\(reff.documentID)/Menu").document()
-        let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
+     //   let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
         let refMenu = db.collection("Restaurant/ss/Menu").document()
         refMenu.setData([
             "menuID" : refMenu.documentID,
@@ -352,6 +352,7 @@ extension ViewModel{
             "name" : rest.name,
             "address" : rest.address,
             "logoURL" : rest.logoURL,
+            "imageReference" : rest.imageReference,
             "notificationsAreOn" : notificationsAreEnabeld,
             
         ]){ err in

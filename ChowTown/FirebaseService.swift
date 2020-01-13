@@ -106,7 +106,7 @@ class FirebaseService : NSObject {
                 completionHandler(.success(authResult.user))
             }
             else if error != nil{
-                print(error)
+                print(error!)
                 completionHandler(.failure(.unAuthenticated))
             }
             

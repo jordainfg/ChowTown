@@ -25,6 +25,12 @@ class RewardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let subScriptionPlan = viewModel.selectedRestaurant?.subscriptionPlan {
+            self.subScriptionPlan = subScriptionPlan
+        }
+        
+        setupTableView()
         setUpView()
         
     }
@@ -34,9 +40,6 @@ class RewardsViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        if let subScriptionPlan = viewModel.selectedRestaurant?.subscriptionPlan {
-            self.subScriptionPlan = subScriptionPlan
-        }
         
         
     }
@@ -65,7 +68,6 @@ class RewardsViewController: UIViewController {
     func setUpView(){
         
         getRewardsData()
-        setupTableView()
         navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navBar.backgroundColor = UIColor.clear
         

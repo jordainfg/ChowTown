@@ -67,7 +67,7 @@ class RestaurantViewController: UIViewController , MFMailComposeViewControllerDe
       //  self.view.addSubview(button)
         
         //add header image
-        let httpsReference =   viewModel.storage.reference(forURL: restaurant?.imageRefrence ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
+        let httpsReference =   viewModel.storage.reference(forURL: restaurant?.imageReference ?? "gs://chow-town-bc783.appspot.com/Meals/43690812_260822031257663_7880763896869087864_n.jpg")
          imageView.sd_setImage(with: httpsReference, placeholderImage: UIImage(named: "placeHolder"))
     }
     func updateHeaderView() {

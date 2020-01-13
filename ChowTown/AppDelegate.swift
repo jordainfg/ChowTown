@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseService.shared.checkAuthenticationState()
         
         
+        
         // Notification Service
         Messaging.messaging().delegate = self
         if #available(iOS 10.0, *) {

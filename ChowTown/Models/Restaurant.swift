@@ -19,7 +19,7 @@ public struct Restaurant{
     var hours: String
     var phone : String
     var color : String
-    var imageRefrence : String
+    var imageReference : String
     var facebookURL : String
     var instagramURL : String
     var logoURL : String
@@ -39,7 +39,7 @@ public struct Restaurant{
         self.hours = dictionary["hours"] as! String
         self.phone = dictionary["phone"] as! String
         self.color = dictionary["color"] as! String
-        self.imageRefrence = dictionary["imageRefrence"] as! String
+        self.imageReference = dictionary["imageReference"] as! String
         self.facebookURL = dictionary["facebookURL"] as! String
         self.instagramURL = dictionary["instagramURL"] as! String
         self.logoURL = dictionary["logoURL"] as! String
@@ -57,6 +57,7 @@ public struct FavoriteRestaurant{
     var name : String
     var address: String
     var logoURL : String
+    var imageReference : String
     var notificationsAreOn : Bool
     
     
@@ -67,6 +68,7 @@ public struct FavoriteRestaurant{
         self.name = dictionary["name"] as! String
         self.address = dictionary["address"] as! String
         self.logoURL = dictionary["logoURL"] as! String
+        self.imageReference = dictionary["imageReference"] as! String
         self.notificationsAreOn = dictionary["notificationsAreOn"] as! Bool
        // self.messagingTopic = dictionary["messagingTopic"] as! String
 

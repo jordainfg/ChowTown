@@ -44,8 +44,9 @@ class EstablishmentTableViewCell: UITableViewCell {
     func configureFavorite(restaurant: FavoriteRestaurant){
         name.text = restaurant.name
         address.text = restaurant.address
-        icon.tintColor = UIColor.systemIndigo
-        icon.image = UIImage(systemName: "\(restaurant.name.first?.lowercased() ?? "z").circle.fill")
+        icon.makeImageRounded()
+//        icon.tintColor = UIColor.systemIndigo
+//        icon.image = UIImage(systemName: "\(restaurant.name.first?.lowercased() ?? "z").circle.fill")
     }
     
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {

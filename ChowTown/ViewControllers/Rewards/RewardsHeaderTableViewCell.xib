@@ -23,14 +23,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-fl-FzA">
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="117"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="HI,  RICK! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clU-Fo-Vlq">
-                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="49.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
-                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Badge balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWn-vO-ZGF">
-                                        <rect key="frame" x="0.0" y="51.5" width="165.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're Badge balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWn-vO-ZGF">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="72"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -82,7 +76,6 @@
             <color key="backgroundColor" name="WhiteToBlack"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="name" destination="clU-Fo-Vlq" id="LGW-ge-cWc"/>
                 <outlet property="points" destination="eR7-hN-w4q" id="ay9-pQ-VXk"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="134.93303571428569"/>

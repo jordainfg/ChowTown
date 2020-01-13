@@ -15,9 +15,9 @@ class RewardsHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        if let userName = FirebaseService.shared.authenticationState?.name{
-            name.text = "HI, \(userName.uppercased())!"
-        }
+//        if let userName = FirebaseService.shared.authenticationState?.name{
+//            name.text = "HI, \(userName.uppercased())!"
+//        }
        
     }
 

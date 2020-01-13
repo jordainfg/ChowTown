@@ -158,12 +158,25 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
         case let .lightModeButton(name, type):
             let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
             cell.configure(name: name, type: type)
-            cell.accessoryType = UserDefaults.standard.bool(forKey: "lightModeIsOn") ? .checkmark : .none
+            if self.traitCollection.userInterfaceStyle == .dark {
+                // User Interface is Dark
+                cell.accessoryType = .none
+            } else {
+                // User Interface is Light
+                cell.accessoryType = .checkmark
+            }
+            
             return cell
         case let .darkModeButton(name, type):
             let cell = tableView.dequeueReusableCell(withIdentifier: SettingsButtonTableViewCell.reuseIdentifier()) as! SettingsButtonTableViewCell
             cell.configure(name: name, type: type)
-            cell.accessoryType = UserDefaults.standard.bool(forKey: "lightModeIsOn") ? .none : .checkmark
+            if self.traitCollection.userInterfaceStyle == .dark {
+                // User Interface is Dark
+                cell.accessoryType = .checkmark
+            } else {
+                // User Interface is Light
+                cell.accessoryType = .none
+            }
             return cell
         case let .refrencetextBox(text):
             let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTextBoxTableViewCell.reuseIdentifier()) as! SettingsTextBoxTableViewCell
@@ -281,7 +294,7 @@ extension SelectedOptionViewController : AuthenticationDelegate{
                               options: .transitionCrossDissolve,
                               animations: { self.tableView.reloadData() })
         } else{
-
+            
             header[1] = "Options".uppercased()
             tableViewcellTypes = [[.LoginButton("Log in", .deadly)]]
             UIView.transition(with: self.tableView,
@@ -299,20 +312,20 @@ extension SelectedOptionViewController : appearanceSwitchDelegator{
     func AppearanceOptions(isDisplayed: Bool) {
         if isDisplayed{
             let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automatically")], [.lightModeButton("Always Light", .normal),.darkModeButton("Always Dark", .normal)]]
-                    tableViewcellTypes = types
-                    UIView.transition(with: self.tableView,
-                                      duration: 0.5,
-                                      options: .transitionCrossDissolve,
-                                      animations: { self.tableView.reloadData() })
+            tableViewcellTypes = types
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
         }
         else {
-        let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automatically")]]
-                   tableViewcellTypes = types
-                   UIView.transition(with: self.tableView,
-                                     duration: 0.5,
-                                     options: .transitionCrossDissolve,
-                                     animations: { self.tableView.reloadData() })
-                   
+            let types: [[SettingDataType]] = [[],[.autoDarkModeSwitch("Automatically")]]
+            tableViewcellTypes = types
+            UIView.transition(with: self.tableView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
         }
         
     }

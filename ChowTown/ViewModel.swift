@@ -54,6 +54,7 @@ public class ViewModel{
     var restaurants : [Restaurant] = []
     var filterdRestaurants : [Restaurant] = []
     var favoriteRestaurants : [FavoriteRestaurant] = []
+    var filterdFavoriteRestaurants : [FavoriteRestaurant] = []
     var selectedRestaurant : Restaurant?
     
     var menus : [Menu] = []

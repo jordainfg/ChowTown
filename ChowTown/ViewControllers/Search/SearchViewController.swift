@@ -63,6 +63,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
                         switch result {
                         case .success:
                             self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                            self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
                             UIView.transition(with: self.tableView,
                                               duration: 0.5,
                                               options: .transitionCrossDissolve,
@@ -71,6 +72,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
                             self.tableView.LoadingIndicator(isVisable: false)
                         case .failure:
                             self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                            self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
                             UIView.transition(with: self.tableView,
                                               duration: 0.5,
                                               options: .transitionCrossDissolve,
@@ -82,6 +84,7 @@ class SearchViewController: UIViewController ,searchViewControllerCellDelegator 
                     }
                 } else {
                     self.viewModel.filterdRestaurants = self.viewModel.restaurants
+                    self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
                     self.viewModel.favoriteRestaurants.removeAll()
                     UIView.transition(with: self.tableView,
                                       duration: 0.5,
@@ -154,7 +157,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         switch section {
             
         case 0:
-            return viewModel.searchTableViewcellTypes[section].count
+            return self.viewModel.filterdFavoriteRestaurants.count
             
         case 1:
             
@@ -173,7 +176,8 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         case let .favorite(favorite):
             let cell = tableView.dequeueReusableCell(withIdentifier: EstablishmentTableViewCell.reuseIdentifier()) as! EstablishmentTableViewCell
             cell.configureFavorite(restaurant: favorite)
-            
+            let storageRefrence = viewModel.storage.reference(forURL: favorite.logoURL)
+            cell.icon.sd_setImage(with: storageRefrence, placeholderImage: UIImage(named: "placeHolder"))
             return cell
             
         case let .restaurant(Restaurant):
@@ -206,8 +210,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
             } else {
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-        default:
-            return
+        
         }
     }
     // set the height of the row based on the chosen cell
@@ -252,7 +255,7 @@ extension SearchViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch section {
         case 0 :
-            if viewModel.favoriteRestaurants.isEmpty{
+            if viewModel.filterdFavoriteRestaurants.isEmpty{
                 return 0
             } else{
                 return 40
@@ -283,6 +286,7 @@ extension SearchViewController: UISearchBarDelegate
         //Filter function
         if searchText.isEmpty{
             self.viewModel.filterdRestaurants = self.viewModel.restaurants
+            self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
@@ -291,7 +295,9 @@ extension SearchViewController: UISearchBarDelegate
             
         } else{
             self.viewModel.filterdRestaurants = self.viewModel.restaurants
+            self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
             self.viewModel.filterdRestaurants = self.viewModel.filterdRestaurants.filter { $0.name.range(of: searchText) != nil}
+            self.viewModel.filterdFavoriteRestaurants = self.viewModel.filterdFavoriteRestaurants.filter { $0.name.range(of: searchText) != nil}
             UIView.transition(with: self.tableView,
                               duration: 0.5,
                               options: .transitionCrossDissolve,
@@ -308,10 +314,10 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
         
-        //        guard let term = searchBar.text , term.trim().isEmpty == false else {
-        //
-        //            //Notification "White spaces are not permitted"
-        //            return
+//                guard let term = searchBar.text , term.trim().isEmpty == false else {
+//
+//                    //Notification "White spaces are not permitted"
+//                    return
     }
     
     //Filter function
@@ -325,6 +331,7 @@ extension SearchViewController: UISearchBarDelegate
         searchBar.text = String()
         searchBar.resignFirstResponder()
         filterdRestaurants =  viewModel.restaurants
+        self.viewModel.filterdFavoriteRestaurants = self.viewModel.favoriteRestaurants
         UIView.transition(with: self.tableView,
                           duration: 0.5,
                           options: .transitionCrossDissolve,
