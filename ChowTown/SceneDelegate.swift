@@ -20,14 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         
-        if UserDefaults.standard.bool(forKey: "AutoModeIsOn"){  //Always true on first install of app
+        if !UserDefaults.standard.bool(forKey: "AutoModeIsOn") {  //Always true on first install of app
          self.window?.overrideUserInterfaceStyle = .unspecified
         }
-        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && UserDefaults.standard.bool(forKey: "darkModeIsOn"){
+        else if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && UserDefaults.standard.bool(forKey: "darkModeIsOn"){
             
             self.window?.overrideUserInterfaceStyle = .dark
         }
-        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && !UserDefaults.standard.bool(forKey: "darkModeIsOn"){
+        else if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && !UserDefaults.standard.bool(forKey: "darkModeIsOn"){
         self.window?.overrideUserInterfaceStyle = .light
         }
     }

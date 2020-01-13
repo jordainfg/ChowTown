@@ -182,7 +182,9 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     
     // MARK: - Setup View and TableView
     func setupTableView() {
-       
+        tableView.tableFooterView = UIView(frame: CGRect.zero)//Remove vertical space between sections in a Grouped UITableView
+       tableView.sectionFooterHeight = 0.0 //Remove vertical space between sections in a Grouped UITableView
+    
         tableView.register(UINib(nibName: MenuSpecialsTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: MenuSpecialsTableViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: HeaderForTableViewSection.nibName(), bundle: nil), forCellReuseIdentifier: HeaderForTableViewSection.reuseIdentifier())
         tableView.register(UINib(nibName: SubMenuTableViewCell.nibName(), bundle: nil), forCellReuseIdentifier: SubMenuTableViewCell.reuseIdentifier())
@@ -249,6 +251,9 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     func numberOfSections(in _: UITableView) -> Int {
         return viewModel.choiceMenuTableViewCellTypes.count
     }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
     
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.choiceMenuTableViewCellTypes[section].count
@@ -270,6 +275,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: SubMenuTableViewCell.reuseIdentifier()) as! SubMenuTableViewCell
             cell.setMenus(menus: foodMenus)
             cell.tint = UIColor.white
+            cell.selectionStyle = .none
             cell.delegate = self
             return cell
             
@@ -278,6 +284,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
             cell.setMenus(menus: drinkMenu)
             cell.tint = UIColor.white
             cell.delegate = self
+            cell.selectionStyle = .none
             return cell
             
         case let .MenuHeader(rest):
@@ -341,7 +348,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         case .MenuDrinks(_):
             return 150
         case .MenuHeader(_):
-            return UITableView.automaticDimension
+            return 90
         }
     }
     
@@ -373,7 +380,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
     
     func tableView(_: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 40
+        return 30
     }
     
     

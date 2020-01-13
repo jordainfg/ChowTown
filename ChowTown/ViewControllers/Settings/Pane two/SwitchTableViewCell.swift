@@ -21,7 +21,10 @@ class SwitchTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        toggle.setOn(AutoModeIsOn, animated: true)
+        
+        toggle.setOn(!AutoModeIsOn, animated: true)
+        
+        
         
     }
     
@@ -45,13 +48,13 @@ class SwitchTableViewCell: UITableViewCell {
         AutoModeIsOn = !AutoModeIsOn
         UserDefaults.standard.set(AutoModeIsOn, forKey: "AutoModeIsOn")
         
-        if AutoModeIsOn{
+        if !AutoModeIsOn{
             UIApplication.shared.windows.forEach { window in
                        window.overrideUserInterfaceStyle = .unspecified
                    }
                    delegate?.AppearanceOptions(isDisplayed: false)
             
-        } else if !AutoModeIsOn {
+        } else if AutoModeIsOn {
                  delegate?.AppearanceOptions(isDisplayed: true)
                  UIApplication.shared.windows.forEach { window in
                     window.overrideUserInterfaceStyle = .light

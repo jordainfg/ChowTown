@@ -66,7 +66,7 @@ class SelectedOptionViewController: UIViewController {
         case let .appearance(name):
             header[1] = "Light & dark mode".uppercased()
             header[2] = "The selected appearance will be used. System appearance will be ignored"
-            AppearanceOptions(isDisplayed: !UserDefaults.standard.bool(forKey: "AutoModeIsOn"))
+            AppearanceOptions(isDisplayed: UserDefaults.standard.bool(forKey: "AutoModeIsOn"))
             self.title = name
             
         case .review(_):

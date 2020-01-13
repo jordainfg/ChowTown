@@ -104,7 +104,7 @@ class RewardsViewController: UIViewController {
             self.tableView.setEmptyViewWithImage(title: "Oops", message: "This restaurant doesn't participate in our rewards program.", messageImage: #imageLiteral(resourceName: "appLogo"))
             self.refreshControl.endRefreshing()
             UIView.transition(with: self.tableView,
-                              duration: 0.9,
+                              duration: 0.5,
                               options: .transitionCrossDissolve,
                               animations: { self.tableView.reloadData()
                                 
@@ -115,7 +115,7 @@ class RewardsViewController: UIViewController {
                 switch result{
                 case .success:
                     UIView.transition(with: self.tableView,
-                                      duration: 0.9,
+                                      duration: 0.5,
                                       options: .transitionCrossDissolve,
                                       animations: { self.tableView.reloadData()
                                         
@@ -124,23 +124,23 @@ class RewardsViewController: UIViewController {
                         switch result{
                         case .success:
                             UIView.transition(with: self.tableView,
-                                              duration: 0.9,
+                                              duration: 0.5,
                                               options: .transitionCrossDissolve,
                                               animations: { self.tableView.reloadData()
                                                 self.redeemButton.alpha = 1
                             })
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                                 self.refreshControl.endRefreshing()
                             })
                         case let .failure(error):
                             UIView.transition(with: self.tableView,
-                                              duration: 0.9,
+                                              duration: 0.5,
                                               options: .transitionCrossDissolve,
                                               animations: { self.tableView.reloadData()
                                                 
                             })
                             print("Error for getRewardPointsForRestaurant method:\(error)")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                                 self.refreshControl.endRefreshing()
                             })
                         }
@@ -150,7 +150,7 @@ class RewardsViewController: UIViewController {
                     self.tableView.reloadData()
                     self.tableView.setEmptyViewWithImage(title: "Oops", message: "Something went wrong, try again later or contact the developer in settings", messageImage: #imageLiteral(resourceName: "appLogo"))
                     print("Error for getRewards method:\(error)")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.9, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         self.refreshControl.endRefreshing()
                     })
                 }

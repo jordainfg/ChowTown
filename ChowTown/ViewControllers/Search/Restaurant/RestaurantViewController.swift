@@ -34,7 +34,7 @@ class RestaurantViewController: UIViewController , MFMailComposeViewControllerDe
     var restaurant : Restaurant?
     
     var tableViewcellTypes: [[RestaurantDataType]] {
-        let types: [[RestaurantDataType]] = [[.header(restaurant?.name ?? "No info",restaurant?.about ?? "No info"),.address(restaurant?.address ?? "No info"),.hours(restaurant?.hours ?? "No info"),.phone(restaurant?.phone ?? "No info"),.emailAddress(restaurant?.emailAddress ?? "No info"),.website(restaurant?.websiteURL ?? "No info"),.button]]
+        let types: [[RestaurantDataType]] = [[.header(restaurant?.name ?? "No info",restaurant?.about ?? "No info"), .button,.address(restaurant?.address ?? "No info"),.hours(restaurant?.hours ?? "No info"),.phone(restaurant?.phone ?? "No info"),.emailAddress(restaurant?.emailAddress ?? "No info"),.website(restaurant?.websiteURL ?? "No info")]]
         
         return types
     }
@@ -172,8 +172,15 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             return cell
             
         case .button:
-        let cell = tableView.dequeueReusableCell(withIdentifier: showMenuButtonTableViewCell.reuseIdentifier()) as! showMenuButtonTableViewCell
-        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: showMenuButtonTableViewCell.reuseIdentifier()) as! showMenuButtonTableViewCell
+//        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
+//        return cell
+            
+        let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
+        cell.accessoryType = .disclosureIndicator
+        cell.label.text = "Menu"
+        
+        cell.icon.image = UIImage(named: "icMenu")
         return cell
                       
         }
@@ -268,7 +275,7 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             return heightForIcons
             
         case .button:
-        return UITableView.automaticDimension
+        return heightForIcons
             
         }
     }
