@@ -19,25 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if (UserDefaults.standard.bool(forKey: "AutoModeIsOn")) {
-           // App already launched
-
-        } else {
-           // This is the first launch ever
-           UserDefaults.standard.set(true, forKey: "AutoModeIsOn")
-           
-           UserDefaults.standard.synchronize()
-        }
         
         if UserDefaults.standard.bool(forKey: "AutoModeIsOn"){  //Always true on first install of app
          self.window?.overrideUserInterfaceStyle = .unspecified
         }
-        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && UserDefaults.standard.bool(forKey: "lightModeIsOn"){
+        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && UserDefaults.standard.bool(forKey: "darkModeIsOn"){
             
-            self.window?.overrideUserInterfaceStyle = .light
+            self.window?.overrideUserInterfaceStyle = .dark
         }
-        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && !UserDefaults.standard.bool(forKey: "lightModeIsOn"){
-        self.window?.overrideUserInterfaceStyle = .dark
+        if  !UserDefaults.standard.bool(forKey: "AutoModeIsOn") && !UserDefaults.standard.bool(forKey: "darkModeIsOn"){
+        self.window?.overrideUserInterfaceStyle = .light
         }
     }
 

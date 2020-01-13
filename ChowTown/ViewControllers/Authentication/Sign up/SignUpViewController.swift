@@ -143,9 +143,9 @@ extension SignUpViewController : UITableViewDataSource , UITableViewDelegate, UI
         let type = tableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
         case .email:
-            return 60
+            return 80
         case .password:
-            return 60
+            return 80
         case .createButon:
             return 90
         default:

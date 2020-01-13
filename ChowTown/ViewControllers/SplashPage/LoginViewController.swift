@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkForAppreanceMode()
+        getFavoriteRestaurantsAndRestaurants()
         //setUpNavBar()
       
         setupTableView()
@@ -45,17 +45,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
      //   FirebaseService.shared.createUser(withEmail: "Booooon@gmail.com", password: "boombam1234" ){_ in }
     }
     
-    func checkForAppreanceMode(){
-//      if UserDefaults.standard.bool(forKey: "AutoModeIsOn"){  //Always true on first install of app
-//        overrideUserInterfaceStyle = .unspecified
-//        }
-//        if  UserDefaults.standard.bool(forKey: "lightModeIsOn"){
-//            
-//            overrideUserInterfaceStyle = .light
-//        }
-//        else{
-//          overrideUserInterfaceStyle = .light
-//        }
+  func getFavoriteRestaurantsAndRestaurants(){
+    
+        viewModel.getRestaurants { result in
+            switch result {
+            case .success:
+                
+                print("Got the restaurants from the login page")
+            case .failure:
+                
+                 print("Error getting restaurants from the login page")
+                
+            }
+            
+        }
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -89,8 +93,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     }
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
            switch segue.identifier {
-           case "toSearch":
-               let secondVC = segue.destination as! SearchViewController
+           case "toScanView":
+               let secondVC = segue.destination as! ScanViewController
                secondVC.viewModel = self.viewModel
            default:
                return

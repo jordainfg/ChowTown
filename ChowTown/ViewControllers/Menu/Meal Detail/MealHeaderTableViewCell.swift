@@ -13,6 +13,7 @@ class MealHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var specialHeaderView: UIView!
     @IBOutlet weak var specialName: UILabel!
     @IBOutlet weak var specialSubTitle: UILabel!
+    @IBOutlet var price: DesignableButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,7 @@ class MealHeaderTableViewCell: UITableViewCell {
     func configure(meal : Meal){
         specialName.text = meal.name
         specialSubTitle.text = meal.detail
+        price.setTitle("\(meal.price)", for: .normal)
     }
     
     

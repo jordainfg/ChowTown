@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseService.shared.configure()
         FirebaseService.shared.checkAuthenticationState()
         
-        
+      
         
         // Notification Service
         Messaging.messaging().delegate = self

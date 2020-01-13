@@ -36,7 +36,7 @@ class AuthenticationViewController: UIViewController {
     var password : String = ""
     var buttonIsActive : Bool = false
     var tableViewcellTypes: [[authenticationDataType]] {
-        let types: [[authenticationDataType]] = [[.header,.loginOptions,.email,.password,.loginButon],[.footer]]
+        let types: [[authenticationDataType]] = [[.header,.email,.password,.loginButon],[.footer]]
         
         return types
     }
@@ -160,9 +160,9 @@ extension AuthenticationViewController : UITableViewDataSource , UITableViewDele
         let type = tableViewcellTypes[indexPath.section][indexPath.row]
         switch type {
         case .email:
-            return 60
+            return 80
         case .password:
-            return 60
+            return 80
         case .loginButon:
             return 90
         default:

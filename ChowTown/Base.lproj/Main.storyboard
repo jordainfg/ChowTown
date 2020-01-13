@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-RJ-cgl">
-                                <rect key="frame" x="0.0" y="200.5" width="414" height="695.5"/>
+                                <rect key="frame" x="0.0" y="104.5" width="414" height="791.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CwO-Kv-Fug" id="Eku-5q-Puj"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S THE OCCASION ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-pP-ea4">
-                                <rect key="frame" x="86" y="170" width="242.5" height="23"/>
+                                <rect key="frame" x="86" y="74" width="242.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,11 +65,11 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="RlT-QF-hhs" customClass="ReservationDetailsViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgm-Ac-WKC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-FW-r78">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="RlT-QF-hhs" id="4Fr-h1-gjc"/>
@@ -235,19 +235,6 @@
             </objects>
             <point key="canvasLocation" x="8414.4927536231899" y="79.6875"/>
         </scene>
-        <!--Scan View Controller-->
-        <scene sceneID="0r1-gd-gmB">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="JQC-7o-9D2" customClass="ScanViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="je2-a2-bAr"/>
-                    <connections>
-                        <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="moR-fd-9Rm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xDk-XP-1iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3318.840579710145" y="-609.375"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="cxI-Jc-hcn">
             <objects>
@@ -303,8 +290,8 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Egn-JN-Pi6"/>
                     <connections>
                         <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
-                        <segue destination="JQC-7o-9D2" kind="show" identifier="toScanView" id="luz-0y-2TV"/>
                         <segue destination="nKH-y5-QHz" kind="show" identifier="toSearch" id="ocm-tu-oZZ"/>
+                        <segue destination="3cG-xI-7cs" kind="show" identifier="toScanView" id="1rr-Hs-Msk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnd-Wz-oWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -341,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-aB-jSS">
-                                <rect key="frame" x="0.0" y="192.5" width="414" height="683.5"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7LW-fw-8pr" id="yrm-WO-ssK"/>
@@ -370,11 +357,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhz-sP-4vj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="192.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-8t-ndO">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Berry® Rewards" largeTitleDisplayMode="never" id="Cnx-cO-1uh">
@@ -577,7 +564,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -586,7 +573,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-U4-RnO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                         </subviews>
@@ -604,20 +591,9 @@
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" selectedImage="Reservation-50" id="rCm-58-mFa"/>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="lJj-uh-xV2">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="34P-yc-n24"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icChangeLocation" id="Qb9-ix-L01">
-                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="changeLocationButtonPressed:" destination="ulw-qS-t2C" id="NbS-XD-aSN"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="calendar" catalog="system" id="Kqr-pJ-0dL">
-                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="CwO-Kv-Fug" kind="show" id="IX6-Iq-BMh"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Create meeting" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="70B-9y-GHA">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="icArrowLeft" id="aDC-12-zZy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="wQ0-ii-pcr"/>
                     </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -847,16 +823,94 @@
             </objects>
             <point key="canvasLocation" x="1602.8985507246377" y="-609.375"/>
         </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="fhN-bG-cAU">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3cG-xI-7cs" customClass="ScanViewController" customModule="Berry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jZ2-Gk-hWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-GK-rEf">
+                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1R-XO-YIX">
+                                        <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align it with the viewfinder bellow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-kp-3bk">
+                                        <rect key="frame" x="0.0" y="46.5" width="232.5" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb8-mh-WhF">
+                                <rect key="frame" x="20" y="666" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5wd-QL-3B6"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Cancel" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="3cG-xI-7cs" eventType="touchUpInside" id="5ho-yN-uwG"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="POG-Xw-OAL">
+                                <rect key="frame" x="134" y="800" width="146.5" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berry™️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-NH-WU2">
+                                        <rect key="frame" x="46" y="0.0" width="54" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Jordain F Gijsbertha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqQ-no-pkl">
+                                        <rect key="frame" x="0.0" y="22.5" width="146.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pb8-mh-WhF" secondAttribute="bottom" constant="200" id="7Mt-mv-sS6"/>
+                            <constraint firstItem="POG-Xw-OAL" firstAttribute="centerX" secondItem="jZ2-Gk-hWc" secondAttribute="centerX" id="AJ3-tp-4un"/>
+                            <constraint firstItem="Qzd-xh-VxO" firstAttribute="trailing" secondItem="pb8-mh-WhF" secondAttribute="trailing" constant="20" id="J8e-q4-5bf"/>
+                            <constraint firstItem="Qzd-xh-VxO" firstAttribute="bottom" secondItem="POG-Xw-OAL" secondAttribute="bottom" constant="20" id="iJY-Gv-jux"/>
+                            <constraint firstItem="tvH-GK-rEf" firstAttribute="top" secondItem="Qzd-xh-VxO" secondAttribute="top" constant="20" id="jnY-a7-L1S"/>
+                            <constraint firstItem="tvH-GK-rEf" firstAttribute="centerX" secondItem="jZ2-Gk-hWc" secondAttribute="centerX" id="qaP-WJ-eY4"/>
+                            <constraint firstItem="pb8-mh-WhF" firstAttribute="leading" secondItem="Qzd-xh-VxO" secondAttribute="leading" constant="20" id="w9G-y4-Pid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qzd-xh-VxO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ein-Ue-0WY"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="pb8-mh-WhF" id="vkb-GU-BpM"/>
+                        <outlet property="footerTextStackView" destination="POG-Xw-OAL" id="AAB-w2-9a5"/>
+                        <outlet property="headerTextStackView" destination="tvH-GK-rEf" id="AY4-fJ-0gv"/>
+                        <segue destination="WA2-C4-63L" kind="show" identifier="toRestaurant" id="81E-r8-JEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgn-0n-PTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3318.840579710145" y="-609.375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
         <image name="Reservation-50" width="25" height="25"/>
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="icChangeLocation" width="24" height="24"/>
+        <image name="icArrowLeft" width="16" height="16"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
         <image name="star.circle" catalog="system" width="64" height="60"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="BlackToOrange">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -878,7 +932,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="moR-fd-9Rm"/>
+        <segue reference="81E-r8-JEu"/>
         <segue reference="Qbn-Ya-zpw"/>
         <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>

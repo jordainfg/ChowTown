@@ -34,10 +34,12 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
          self.view.bringSubviewToFront(headerTextStackView)
         self.view.bringSubviewToFront(footerTextStackView)
     }
-    
+  
  
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+       navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Segues
@@ -162,13 +164,23 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         present(ac, animated: true)
         captureSession = nil
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        if captureSession?.isRunning == true {
-            captureSession.stopRunning()
-        }
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+
+          if (captureSession?.isRunning == false) {
+              captureSession.startRunning()
+          }
+      }
+
+      override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+
+          if (captureSession?.isRunning == true) {
+              captureSession.stopRunning()
+          }
     }
+      
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -179,7 +191,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func metadataOutput(_: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from _: AVCaptureConnection) {
-        //   setLoading()
+      captureSession.stopRunning()
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
@@ -197,15 +209,16 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func found(code: String) {
-        
+        print("found")
       selectedRestaurant = viewModel.restaurants.first(where: {$0.restID == code})
         if selectedRestaurant != nil{
                      performSegue(withIdentifier: "toRestaurant", sender: nil)
-                     
+
         } else {
-                     let Alert = UIAlertController(title: "Oops", message: "The QR-code doesn't match our records. Please try searching manually.", preferredStyle: UIAlertController.Style.alert)
+      let Alert = UIAlertController(title: "Oops", message: "The QR-code doesn't match our records. Please try searching manually.", preferredStyle: UIAlertController.Style.alert)
                                 Alert.addAction(UIAlertAction(title: "Okay", style: .default) { (_: UIAlertAction) in
-                                    self.dismiss(animated: true, completion: nil)
+                                     self.dismiss(animated: true, completion: {});
+                                           self.navigationController?.popToRootViewController(animated: true)
                                 })
                                 self.present(Alert, animated: true)
         }

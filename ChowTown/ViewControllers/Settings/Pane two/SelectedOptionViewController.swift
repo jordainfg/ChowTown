@@ -205,7 +205,7 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
         case .LoginButton:
             performSegue(withIdentifier: "presentAuthentication", sender: nil)
         case .lightModeButton(_):
-            UserDefaults.standard.set(true, forKey: "lightModeIsOn")
+            UserDefaults.standard.set(false, forKey: "darkModeIsOn")
             if let cell = tableView.cellForRow(at: indexPath) {
                 resetChecks()
                 // tableView.deselectRow(at: indexPath, animated: true)
@@ -216,7 +216,7 @@ extension SelectedOptionViewController : UITableViewDataSource , UITableViewDele
                 window.overrideUserInterfaceStyle = .light
             }
         case .darkModeButton(_):
-            UserDefaults.standard.set(false, forKey: "lightModeIsOn")
+            UserDefaults.standard.set(true, forKey: "darkModeIsOn")
             if let cell = tableView.cellForRow(at: indexPath) {
                 resetChecks()
                 cell.accessoryType = .checkmark

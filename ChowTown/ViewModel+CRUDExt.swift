@@ -304,7 +304,7 @@ extension ViewModel{
                 } else {
                     //If there is a new user the below lines will add a new document to the users rewards collection so they can start saving award points.
                     print("Document does not exist")
-                    self.addRewardPoints(points: 30) { (result) in
+                    self.addRewardPoints(points: 50) { (result) in
                         switch result{
                         case .success:
                             completionHandler(.success(.documentAdded))

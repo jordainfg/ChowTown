@@ -12,7 +12,7 @@ public struct Meal{
     var companyID : String
     var name: String
     var detail : String
-    var price : Int
+    var price : Double
     var about : Array<Int>
     var allergens: Array<Any>
     var calories : String
@@ -28,7 +28,7 @@ public struct Meal{
             self.companyID = companyID
             self.name = dictionary["name"] as! String
              self.detail = dictionary["detail"] as! String
-             self.price = dictionary["price"] as! Int
+             self.price = dictionary["price"] as! Double
              self.about = dictionary["about"] as! Array<Int>
              self.allergens = dictionary["allergens"] as! Array<Any>
              self.protein = dictionary["protein"] as! String

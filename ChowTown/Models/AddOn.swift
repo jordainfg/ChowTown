@@ -12,7 +12,7 @@ import Foundation
 public struct AddOn{
     
     var name : String
-    var price: Int
+    var price: Double
     var iconNumber: Int
     
     

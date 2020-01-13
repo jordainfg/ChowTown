@@ -46,19 +46,24 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         return .darkContent
     }
     
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: {});
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     func setupView(){
-        let backButton = UIBarButtonItem()
-        backButton.title = "" //in your case it will be empty or you can put the title of your choice
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        let backImage = UIImage(systemName: "chevron.left.circle.fill")
-        backButton.tintColor = UIColor.label
-        
-        
-        self.navigationController?.navigationBar.backIndicatorImage = backImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
-        self.navigationController?.navigationBar.backgroundColor = nil
-         self.navigationController?.navigationBar.shadowImage = nil
-        
+//        let backButton = UIBarButtonItem()
+//        backButton.title = "" //in your case it will be empty or you can put the title of your choice
+//        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+////        let backImage = UIImage(systemName: "chevron.left.circle.fill")
+////        backButton.tintColor = UIColor.label
+////
+//////
+//////        self.navigationController?.navigationBar.backIndicatorImage = backImage
+//////        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+//////        self.navigationController?.navigationBar.backgroundColor = nil
+//////         self.navigationController?.navigationBar.shadowImage = nil
+       // navigationItem.backBarButtonItem = UIBarButtonItem(title: "s", style: .plain, target: nil, action: nil)
+       
         self.banner.onTap = {
                                 // Do something regarding the banner
             self.getMenusAndSpecials()
@@ -74,24 +79,28 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+   //  self.tabBarController?.navigationItem.hidesBackButton = true //hides back bu
+        self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
         self.navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
     }
     
     
     func notificationButtonPressed(rest : Restaurant) {
         var text = ["add","to"]
-         
+          var text2 = ["add","no longer"]
         if isFavorite{
-           
+            
+             text2 = ["remove","no longer"]
             text = ["remove","from"]
           
         } else if !isFavorite{
             text  = ["add","to"]
+            text2 = ["add",""]
            //item could not be found
         }
 
         // 1
-        let optionMenu = UIAlertController(title: "Notification preferences", message: "Would you like \(text[0]) this restaurant \(text[1]) your favorites?", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: "Restaurant preferences", message: "Would you like \(text[0]) this restaurant \(text[1]) your favorites? Once you \(text2[0]) this restaurant you will \(text2[1]) receive notifications about menu updates, specials and more.", preferredStyle: .actionSheet)
         
         // 2 Add to favorites
         let addRestaurantToFavoritesAction = UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
@@ -301,7 +310,10 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         let type = viewModel.choiceMenuTableViewCellTypes[indexPath.section][indexPath.row]
                switch type {
                case let .MenuHeader(restaurant):
-                notificationButtonPressed(rest: restaurant)
+                if restaurant.subscriptionPlan == 3  && FirebaseService.shared.authState == .isLoggedIn{
+                    notificationButtonPressed(rest: restaurant)
+                }
+               
                tableView.deselectRow(at: indexPath, animated: true)
                case .MenuFood(_):
                

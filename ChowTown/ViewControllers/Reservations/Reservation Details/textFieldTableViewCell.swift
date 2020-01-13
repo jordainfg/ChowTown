@@ -144,6 +144,7 @@ class textFieldTableViewCell: UITableViewCell {
          
         case .email:
             checkIfEmpty()
+            
             delegate?.didEditTextField(text: sender.text!, type: .email)
             if let text = textField.text {
                 if textField != nil {
@@ -153,7 +154,7 @@ class textFieldTableViewCell: UITableViewCell {
                     } else if text.isValidEmail() {
                         
                     } else if !text.isValidEmail() {
-                        
+                        textField.setError(errorString: "Invalid email")
                     }
                 }
             }
