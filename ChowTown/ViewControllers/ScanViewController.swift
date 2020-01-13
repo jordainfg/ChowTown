@@ -15,6 +15,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var headerTextStackView: UIStackView!
     @IBOutlet weak var footerTextStackView: UIStackView!
+    
+    var viewModel = ViewModel()
+    var selectedRestaurant : Restaurant?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startQRScanner()
@@ -35,6 +39,21 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Segues
+       override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+           switch segue.identifier {
+           case "toRestaurant":
+               let secondVC = segue.destination as! RestaurantViewController
+               secondVC.restaurant = selectedRestaurant
+               viewModel.selectedRestaurant = selectedRestaurant
+               secondVC.viewModel = self.viewModel
+           default:
+               return
+           }
+           
+       }
+    
     
     func createOverlay(frame: CGRect,
                        xOffset: CGFloat,
@@ -167,7 +186,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
         } else{
-            let Alert = UIAlertController(title: "Check in failed", message: "Please try again or use our doorbel", preferredStyle: UIAlertController.Style.alert)
+            let Alert = UIAlertController(title: "Oops", message: "Please try again or search for the restaurant.", preferredStyle: UIAlertController.Style.alert)
             Alert.addAction(UIAlertAction(title: "Okay", style: .default) { (_: UIAlertAction) in
                 self.dismiss(animated: true, completion: nil)
             })
@@ -178,6 +197,18 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func found(code: String) {
+        
+      selectedRestaurant = viewModel.restaurants.first(where: {$0.restID == code})
+        if selectedRestaurant != nil{
+                     performSegue(withIdentifier: "toRestaurant", sender: nil)
+                     
+        } else {
+                     let Alert = UIAlertController(title: "Oops", message: "The QR-code doesn't match our records. Please try searching manually.", preferredStyle: UIAlertController.Style.alert)
+                                Alert.addAction(UIAlertAction(title: "Okay", style: .default) { (_: UIAlertAction) in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+                                self.present(Alert, animated: true)
+        }
         
         
     }

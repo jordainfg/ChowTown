@@ -658,6 +658,7 @@
 			children = (
 				11F3DCD9237C248000EA1932 /* SplashPage */,
 				1117BB1B237EC31000CB1CD9 /* Search */,
+				11F3DCEC237C397F00EA1932 /* ScanViewController.swift */,
 				1162FE892382ED1700943CEE /* Menu */,
 				11A4EBCE2397AC4A00D26756 /* Reservations */,
 				11A90E972382BA7B00388093 /* Rewards */,
@@ -762,7 +763,6 @@
 				11F3DCDF237C24ED00EA1932 /* LoginHeaderTableViewCell.xib */,
 				11F3DCE4237C2B6600EA1932 /* LoginBodyTableViewCell.swift */,
 				11F3DCE5237C2B6600EA1932 /* LoginBodyTableViewCell.xib */,
-				11F3DCEC237C397F00EA1932 /* ScanViewController.swift */,
 			);
 			path = SplashPage;
 			sourceTree = "<group>";
