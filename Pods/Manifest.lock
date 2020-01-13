@@ -310,7 +310,6 @@ PODS:
   - SnapKit (5.0.1)
   - SPAlert (2.0.28)
   - SPLarkController (1.1)
-  - SPStorkController (1.7.9)
 
 DEPENDENCIES:
   - CocoaTextField (~> 1.0.0)
@@ -326,7 +325,6 @@ DEPENDENCIES:
   - NotificationBannerSwift (~> 3.0.0)
   - SPAlert
   - SPLarkController
-  - SPStorkController
 
 SPEC REPOS:
   trunk:
@@ -364,7 +362,6 @@ SPEC REPOS:
     - SnapKit
     - SPAlert
     - SPLarkController
-    - SPStorkController
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -401,8 +398,7 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SPAlert: c85505faa96cd3bd33a1982b67eb92721c56241f
   SPLarkController: 22c79e54b12a29705b87ee0179455e1c51f2fdc8
-  SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
 
-PODFILE CHECKSUM: 47c3d57e9264248a369a75b1994be11aa7c5aafb
+PODFILE CHECKSUM: 6caa4d2e18d101188cb9a749ef14670e0b857f5b
 
 COCOAPODS: 1.8.4

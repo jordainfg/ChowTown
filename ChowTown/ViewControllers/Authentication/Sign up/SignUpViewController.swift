@@ -8,7 +8,6 @@
 
 import UIKit
 import UIKit
-import SPStorkController
 import Firebase
 enum signUpDataType {
     case header

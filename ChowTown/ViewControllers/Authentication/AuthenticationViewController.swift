@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SPStorkController
 import Firebase
 enum authenticationDataType {
     case header

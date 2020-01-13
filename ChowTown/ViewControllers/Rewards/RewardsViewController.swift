@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SPStorkController
 import SPLarkController
 
 class RewardsViewController: UIViewController {
