@@ -85,7 +85,7 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        // selectedSpecial = indexPath.ro
-        self.delegate.callSegueFromCell(segueIdentifier: "toMeal", index: indexPath.row, selected: "")
+        self.delegate.callSegueFromCell(segueIdentifier: "toMeal", selectedMeal: meals[indexPath.row], selected: "")
         
         //performSegue(withIdentifier: "bla", sender: nil)
     }

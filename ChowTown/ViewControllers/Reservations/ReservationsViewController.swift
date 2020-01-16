@@ -47,7 +47,7 @@ class ReservationsViewController: UIViewController , MyCustomCellDelegator {
     }
     
     // MARK: - Segue methods
-       func callSegueFromCell(segueIdentifier: String, index : Int, selected : Any) {
+       func callSegueFromCell(segueIdentifier: String, selectedMeal : Meal?, selected : Any) {
          
            self.performSegue(withIdentifier: segueIdentifier, sender: nil )
        }

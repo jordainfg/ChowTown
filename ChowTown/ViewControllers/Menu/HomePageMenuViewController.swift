@@ -15,7 +15,7 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     
     // MARK: - Variables
     var viewModel = ViewModel()
-    var selectedSpecial = 0
+    var selectedSpecial : Meal?
     var selectedMenu : Menu?
     var subScriptionPan = 0 
     
@@ -193,8 +193,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
     }
     
     // MARK: - Segue methods
-    func callSegueFromCell(segueIdentifier: String, index : Int, selected : Any) {
-        selectedSpecial = index
+    func callSegueFromCell(segueIdentifier: String, selectedMeal : Meal?, selected : Any) {
+        selectedSpecial = selectedMeal
         selectedMenu = selected as? Menu
         self.performSegue(withIdentifier: segueIdentifier, sender: nil )
     }
@@ -204,8 +204,8 @@ class HomePageMenuViewController: UIViewController,MyCustomCellDelegator {
         switch segue.identifier {
         case "toMeal":
             let secondVC = segue.destination as! SpecialsDetailViewController
-            secondVC.specialHeroID = selectedSpecial
-            secondVC.meal = viewModel.Popularmeals[selectedSpecial]
+            viewModel.selectedMeal = selectedSpecial
+            secondVC.meal = selectedSpecial
             secondVC.isPopOver = true
             secondVC.viewModel = self.viewModel
         case "toSubMenuMealsAndDrinks":

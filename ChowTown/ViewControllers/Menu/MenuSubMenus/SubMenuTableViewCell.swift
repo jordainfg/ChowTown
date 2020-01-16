@@ -79,7 +79,7 @@ extension SubMenuTableViewCell: UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate.callSegueFromCell(segueIdentifier: "toSubMenuMealsAndDrinks", index: indexPath.row, selected: menus[indexPath.row])
+        self.delegate.callSegueFromCell(segueIdentifier: "toSubMenuMealsAndDrinks", selectedMeal: nil, selected: menus[indexPath.row])
         
     }
     

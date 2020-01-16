@@ -33,7 +33,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         super.viewDidLoad()
         getFavoriteRestaurantsAndRestaurants()
         //setUpNavBar()
-      
+     viewModel.addMeal(refMenu: nil)
+    viewModel.addPopularMeal()
         setupTableView()
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)
@@ -86,7 +87,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
        }
     //MARK: - MyCustomCellDelegator Methods
 
-    func callSegueFromCell(segueIdentifier : String, index : Int, selected : Any) {
+    func callSegueFromCell(segueIdentifier : String, selectedMeal : Meal?, selected : Any) {
       //try not to send self, just to avoid retain cycles(depends on how you handle the code on the next controller)
         self.performSegue(withIdentifier: segueIdentifier, sender: nil )
 

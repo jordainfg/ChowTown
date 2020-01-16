@@ -43,7 +43,7 @@ class iconCollectionViewCell: UICollectionViewCell {
             iCon.image = #imageLiteral(resourceName: "icPeanut")
             allergenName.text = "Peanuts"
         case 6:
-            iCon.image = #imageLiteral(resourceName: "icWheat")
+            iCon.image = #imageLiteral(resourceName: "icNoGluten")
             allergenName.text = "Gluten"
         case 7:
             iCon.image = #imageLiteral(resourceName: "icNut")
@@ -80,8 +80,8 @@ class iconCollectionViewCell: UICollectionViewCell {
             allergenName.text = "Organic"
             
         default:
-            iCon.image = #imageLiteral(resourceName: "icMilk")
-            allergenName.text = "Milk"
+            iCon.image = #imageLiteral(resourceName: "icError")
+            allergenName.text = "Error"
         }
     }
     

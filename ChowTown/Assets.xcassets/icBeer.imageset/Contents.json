@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icNoGluten.png",
+      "filename" : "icBeer.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icNoGluten@2x.png",
+      "filename" : "icBeer@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icNoGluten@3x.png",
+      "filename" : "icBeer@3x.png",
       "scale" : "3x"
     }
   ],

@@ -76,7 +76,7 @@ extension ReservationTableViewCell: UICollectionViewDataSource, UICollectionView
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      self.delegate.callSegueFromCell(segueIdentifier: "toReservationDetails", index: indexPath.row, selected: "")
+      self.delegate.callSegueFromCell(segueIdentifier: "toReservationDetails", selectedMeal: nil, selected: "")
              
     }
   

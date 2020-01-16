@@ -28,7 +28,7 @@ class SpecialsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // imageView.hero.id = "specialHeroID\(specialHeroID)"
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         // TODO - Needs a better implementation, force unwrapping has to go, needs a placeholder image
         httpsReference =   viewModel.storage.reference(forURL: meal!.imageRef)
         imageView.sd_setImage(with: httpsReference!, placeholderImage: placeholderImage)
@@ -46,6 +46,7 @@ class SpecialsDetailViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     
     func setUpView(){
         

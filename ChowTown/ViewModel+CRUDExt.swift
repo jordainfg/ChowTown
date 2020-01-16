@@ -12,23 +12,24 @@ import Firebase
 extension ViewModel{
     // MARK: - CR MEALS
     func addMeal( refMenu :DocumentReference?){
+      //   func addMeal( refMenu :DocumentReference?){
         //let restID = UserDefaults.standard.string(forKey: "selectedRestaurant")!
-        if let menuID = refMenu?.documentID {
-            let refMeal = db.collection("Restaurant/ss/Menu/\(menuID)/Meals").document()
+       // if let menuID = refMenu?.documentID {
+            let refMeal = db.collection("Restaurant/ss/Menu/jUimVTbs2aBvDDvjk54e/Meals").document()
             refMeal.setData([
-                "companyID": "2",
-                "name": "Acai bowl",
-                "detail": "Choose from Berries, pears, apples, grapes, citrus. winter: grapefruit, oranges, kiwi,",
-                "price" : 15,
-                "about": [1,2,3,5,6,7],
-                "allergens": [1,2,3,4],
-                "protein": "200",
-                "fat": "20",
-                "calories": "900",
-                "carbs": "100",
-                "additions": ["Avocado,4", "Onions,8"],
-                "isPopular": true,
-                "imageRef": "gs://chow-town-bc783.appspot.com/Meals/placeholder7.jpg",
+                       "companyID": "2",
+                             "name": "INDIAN CURRY WITH RICE",
+                             "detail": "Spice up your midweek meal with our homemade lamb koftas nestled in a fragrant curry. Served with rice for a hearty meal for four.",
+                             "price" : 8.90,
+                             "about": [20,23,24,26],
+                             "allergens": [4,5,9,8,7,3,2],
+                             "protein": "41.9g",
+                             "fat": "15.9g",
+                             "calories": "899",
+                             "carbs": "55.6g",
+                             "additions": ["Watermelon,2", "Mangoes,2"],
+                             "isPopular": true,
+                             "imageRef": "gs://chow-town-bc783.appspot.com/caroline-attwood-bpPTlXWTOvg-unsplash.jpg",
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
@@ -36,7 +37,7 @@ extension ViewModel{
                     print("Meal added with ID: \(refMeal.documentID)")
                 }
             }
-        }
+        
     }
     
     func addPopularMeal(){
@@ -45,18 +46,18 @@ extension ViewModel{
         let refMeal = db.collection("Restaurant/ss/PopularMeals").document()
         refMeal.setData([
             "companyID": "2",
-            "name": "Acai bowl",
-            "detail": "Choose from Berries, pears, apples, grapes, citrus. winter: grapefruit, oranges, kiwi,",
-            "price" : 15,
-            "about": [1,2,3,5,6,7],
-            "allergens": [1,2,3,4],
-            "protein": "200",
-            "fat": "20",
-            "calories": "900",
-            "carbs": "100",
-            "additions": ["Avocado,4", "Onions,8"],
+            "name": "INDIAN CURRY WITH RICE",
+            "detail": "Spice up your midweek meal with our homemade lamb koftas nestled in a fragrant curry. Served with rice for a hearty meal for four.",
+            "price" : 8.90,
+            "about": [20,23,24,26],
+            "allergens": [4,5,9,8,7,3,2],
+            "protein": "41.9g",
+            "fat": "15.9g",
+            "calories": "899",
+            "carbs": "55.6g",
+            "additions": ["Watermelon,2", "Mangoes,2"],
             "isPopular": true,
-            "imageRef": "gs://chow-town-bc783.appspot.com/Meals/placeholder7.jpg",
+            "imageRef": "gs://chow-town-bc783.appspot.com/caroline-attwood-bpPTlXWTOvg-unsplash.jpg",
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
