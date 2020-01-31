@@ -75,13 +75,19 @@ class iconCollectionViewCell: UICollectionViewCell {
         case 25:
             iCon.image = #imageLiteral(resourceName: "icNoGluten")
             allergenName.text = "Gluten Free"
-            case 26:
-            iCon.image = #imageLiteral(resourceName: "icOrganic")
-            allergenName.text = "Organic"
-            
+        case 26:
+        iCon.image = #imageLiteral(resourceName: "icOrganic")
+        allergenName.text = "Organic"
+        case 27:
+        iCon.image = #imageLiteral(resourceName: "icSugar")
+        allergenName.text = "Refined Sugar Free"
+//        case 28:
+//        iCon.image = #imageLiteral(resourceName: "icCoffee")
+//        allergenName.text = "Refined Sugar Free"
+
         default:
-            iCon.image = #imageLiteral(resourceName: "icError")
-            allergenName.text = "Error"
+            iCon.image = #imageLiteral(resourceName: "appLogo")
+            allergenName.text = ""
         }
     }
     

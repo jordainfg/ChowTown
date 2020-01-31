@@ -33,8 +33,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
         super.viewDidLoad()
         getFavoriteRestaurantsAndRestaurants()
         //setUpNavBar()
-     viewModel.addMeal(refMenu: nil)
-    viewModel.addPopularMeal()
+//     viewModel.addMeal(refMenu: nil)
+//    viewModel.addPopularMeal()
         setupTableView()
         // Do any additional setup after loading the view.
         registerForKeyboardWillShowNotification(tableView)

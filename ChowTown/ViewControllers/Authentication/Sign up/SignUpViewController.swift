@@ -123,7 +123,7 @@ extension SignUpViewController : UITableViewDataSource , UITableViewDelegate, UI
                                                         self.dismiss(animated: true, completion: nil)
                         }))
                     case .failure(_):
-                        let alert = UIAlertController(title: "Oops", message: "Looks like currently you can't sign up, please try again later", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Oops", message: "It looks like you currently can't sign up. Your account already exists or the password isn't 6 characters long or more.", preferredStyle: UIAlertController.Style.alert)
                         self.present(alert, animated: true)
                         alert.addAction(UIAlertAction(title: "Okay",
                                                       style: UIAlertAction.Style.default,

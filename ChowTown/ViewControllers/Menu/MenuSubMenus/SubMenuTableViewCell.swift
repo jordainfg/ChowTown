@@ -75,7 +75,7 @@ extension SubMenuTableViewCell: UICollectionViewDataSource, UICollectionViewDele
        // cell.cardView.backgroundColor = UIColor.hexStringToUIColor(hex: Menus[indexPath.row].color)
         cell.backgroundColor = UIColor.clear
         cell.subMenuName.text = menus[indexPath.row].title
-        
+        cell.subMenuSubTitle.text = menus[indexPath.row].detail
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

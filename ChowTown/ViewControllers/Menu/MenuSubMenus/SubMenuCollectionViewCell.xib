@@ -89,6 +89,7 @@
                 <outlet property="cardImage" destination="hiv-gR-GVF" id="AzM-Qk-IDR"/>
                 <outlet property="cardView" destination="lsF-5Z-n2y" id="IMx-kg-1bO"/>
                 <outlet property="subMenuName" destination="vqa-oA-ovR" id="BXr-mi-EmC"/>
+                <outlet property="subMenuSubTitle" destination="n5R-N5-geM" id="doC-PT-76e"/>
             </connections>
             <point key="canvasLocation" x="198.55072463768118" y="183.81696428571428"/>
         </collectionViewCell>
