@@ -64,14 +64,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate , MyCustomCellD
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     override func viewWillAppear(_ animated: Bool) {
     setUpNavBar()
     }
     func setUpNavBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")

@@ -41,7 +41,7 @@ class RestaurantViewController: UIViewController , MFMailComposeViewControllerDe
     
     var headerHeight : CGFloat?
     var headerView: UIView!
-    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 3.8
+    var kTableHeaderHeight:CGFloat = UIScreen.main.bounds.height / 5.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,26 +144,31 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = address
             cell.icon.image = UIImage(systemName: "location.fill")
+            cell.icon.tintColor = UIColor.systemBlue
             return cell
         case let .emailAddress(emailAddress):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = emailAddress
             cell.icon.image = UIImage(systemName: "envelope.fill")
+            cell.icon.tintColor = UIColor.softBlue
             return cell
         case let .hours(hours):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = hours
             cell.icon.image = UIImage(systemName: "clock.fill")
+            cell.icon.tintColor = UIColor.orange
             return cell
         case let .phone(phone):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = phone
             cell.icon.image = UIImage(systemName: "phone.fill")
+            cell.icon.tintColor = UIColor.systemGreen
             return cell
         case let .website(website):
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
             cell.label.text = website
             cell.icon.image = UIImage(systemName: "link.circle.fill")
+            
             return cell
         case .social:
             let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
@@ -178,9 +183,9 @@ extension RestaurantViewController : UITableViewDataSource , UITableViewDelegate
             
         let cell = tableView.dequeueReusableCell(withIdentifier: iconWithLabelTableViewCell.reuseIdentifier()) as! iconWithLabelTableViewCell
         cell.accessoryType = .disclosureIndicator
-        cell.label.text = "Menu"
-        
-        cell.icon.image = UIImage(named: "icMenu")
+        cell.label.text = "Explore the menu"
+        cell.icon.tintColor = UIColor.systemIndigo
+        cell.icon.image = UIImage(systemName: "magnifyingglass")
         return cell
                       
         }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cm8-5y-hX2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cm8-5y-hX2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -287,7 +287,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJz-Ms-2Rc"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Egn-JN-Pi6"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Egn-JN-Pi6"/>
                     <connections>
                         <outlet property="tableView" destination="bgP-Tz-Rs7" id="TYD-hB-bfN"/>
                         <segue destination="nKH-y5-QHz" kind="show" identifier="toSearch" id="ocm-tu-oZZ"/>
@@ -298,12 +298,12 @@
             </objects>
             <point key="canvasLocation" x="2513.04347826087" y="-609.375"/>
         </scene>
-        <!--Menu-->
+        <!--Discover-->
         <scene sceneID="ND7-Ep-Gde">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="PuI-ev-v0e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Menu" id="Lgq-fx-zNa"/>
+                    <navigationItem key="navigationItem" title="Discover" largeTitleDisplayMode="always" id="Lgq-fx-zNa"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFG-kT-nDX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -328,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-aB-jSS">
-                                <rect key="frame" x="0.0" y="132" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="192.5" width="414" height="683.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7LW-fw-8pr" id="yrm-WO-ssK"/>
@@ -357,11 +357,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhz-sP-4vj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="192.5"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-8t-ndO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Berry® Rewards" largeTitleDisplayMode="never" id="Cnx-cO-1uh">
@@ -542,6 +542,11 @@
                             <constraint firstAttribute="trailing" secondItem="800-AV-q23" secondAttribute="trailing" id="kHZ-Vu-ge7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ioa-LB-ZYz"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="800-AV-q23"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Lunch" largeTitleDisplayMode="always" id="GW7-f2-x55">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="4g8-KG-6uc"/>
@@ -564,7 +569,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-oo-sDc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" name="WhiteToBlack"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -573,7 +578,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-U4-RnO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
                                 <color key="backgroundColor" name="Grouped"/>
                             </view>
                         </subviews>
@@ -586,12 +591,17 @@
                             <constraint firstItem="XqS-U4-RnO" firstAttribute="leading" secondItem="Nqa-H2-Ovw" secondAttribute="leading" id="X8F-3S-x8D"/>
                             <constraint firstItem="xvf-oo-sDc" firstAttribute="bottom" secondItem="Nqa-H2-Ovw" secondAttribute="bottom" id="dVU-rG-5xE"/>
                             <constraint firstItem="XqS-U4-RnO" firstAttribute="trailing" secondItem="Nqa-H2-Ovw" secondAttribute="trailing" id="flf-Bd-Qxw"/>
-                            <constraint firstItem="xvf-oo-sDc" firstAttribute="top" secondItem="XqS-U4-RnO" secondAttribute="bottom" id="xDz-i7-Zer"/>
+                            <constraint firstItem="xvf-oo-sDc" firstAttribute="top" secondItem="XqS-U4-RnO" secondAttribute="bottom" constant="-1" id="xDz-i7-Zer"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqa-H2-Ovw"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XqS-U4-RnO"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="Reservation-50" selectedImage="Reservation-50" id="rCm-58-mFa"/>
-                    <navigationItem key="navigationItem" title="Create meeting" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="70B-9y-GHA">
+                    <tabBarItem key="tabBarItem" title="Discover" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="rCm-58-mFa"/>
+                    <navigationItem key="navigationItem" title="Create meeting" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="70B-9y-GHA">
                         <barButtonItem key="leftBarButtonItem" title="Back" image="icArrowLeft" id="aDC-12-zZy"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="wQ0-ii-pcr"/>
                     </navigationItem>
@@ -651,7 +661,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhk-6d-IAa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fPS-Ly-odg">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="fPS-Ly-odg">
                         <barButtonItem key="backBarButtonItem" title="Search" id="Yfb-0s-X1s"/>
                     </navigationItem>
                     <connections>
@@ -811,7 +821,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cm8-5y-hX2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OuO-Wa-Jeh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -832,7 +842,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-GK-rEf">
-                                <rect key="frame" x="91" y="108" width="232.5" height="64.5"/>
+                                <rect key="frame" x="91" y="160" width="232.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Qr-code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1R-XO-YIX">
                                         <rect key="frame" x="0.0" y="0.0" width="232.5" height="33.5"/>
@@ -904,10 +914,10 @@
     </scenes>
     <resources>
         <image name="BackGroundChowTown" width="4480" height="6720"/>
-        <image name="Reservation-50" width="25" height="25"/>
         <image name="bluebrryPlaceHolder" width="4000" height="5333"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="icArrowLeft" width="16" height="16"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
         <image name="star.circle" catalog="system" width="64" height="60"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
@@ -932,7 +942,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="81E-r8-JEu"/>
+        <segue reference="Gvu-n7-VaL"/>
         <segue reference="Qbn-Ya-zpw"/>
         <segue reference="z51-tV-LkX"/>
     </inferredMetricsTieBreakers>

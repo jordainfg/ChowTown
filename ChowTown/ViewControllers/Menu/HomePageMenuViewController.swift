@@ -344,7 +344,7 @@ extension HomePageMenuViewController : UITableViewDataSource , UITableViewDelega
         case .MenuFood:
             return 150
         case .MenuSpecials:
-            return 330
+            return 350
         case .MenuDrinks(_):
             return 150
         case .MenuHeader(_):

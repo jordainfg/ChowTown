@@ -102,7 +102,7 @@ extension MenuSpecialsTableViewCell: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 1.8  , height: collectionView.frame.size.height  / 1.4
+        return CGSize(width: collectionView.frame.size.width / 1.7  , height: collectionView.frame.size.height  / 1.4
             
         )
     }
